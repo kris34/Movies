@@ -33,6 +33,14 @@ const movieSchema = new Schema({
     required: true,
     minLength: [10, 'Description should be at least 10 charakters long!'],
   },
-  
-
+  directors: {
+    type: [String],
+    required: true,
+    minLength: [1, 'You cannot add less then 1 Director!'],
+  },
+  ratings: { type: [Types.ObjectId], ref: 'User', default: [] },
 });
+
+const Movie = new model('Movie', movieSchema);
+
+module.exports = Movie

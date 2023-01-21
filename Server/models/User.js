@@ -8,17 +8,18 @@ const userSchema = new Schema({
   },
   email: { type: String, required: true },
   hashedPassword: { type: String, required: true },
+  ratedMovies: { type: [Types.ObjectId], ref: 'Movie', default: [] },
+  addedMovies: { type: [Types.ObjectId], ref: 'Movie', default: [] },
 });
 
 userSchema.index(
-    { username: 1 },
-    {
-      collation: {
-        locale: 'en',
-        strength: 2,
-      },
-    }
-  );
+  { username: 1 },
+  {
+    collation: {
+      locale: 'en',
+      strength: 2,
+    },
+  }
+);
 
-  const User = model('User', userSchema)
-  
+const User = model('User', userSchema);
