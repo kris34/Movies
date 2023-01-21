@@ -34,4 +34,5 @@ const movieSchema = new Schema({
     minLength: [10, 'Description should be at least 10 charakters long!'],
   },
   
+
 });
