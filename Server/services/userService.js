@@ -60,7 +60,9 @@ async function login(email, password) {
   return createToken(user);
 }
 
-function logout() {}
+async function logout(token) {
+    tokenBlacklist.add(token)
+}
 
 //create session token
 async function createToken(user) {

@@ -1,6 +1,6 @@
 const authController = require('express').Router();
 const validator = require('express-validator');
-const { register, login } = require('../services/userService');
+const { register, login, logout } = require('../services/userService');
 
 authController.post(
   '/register',
@@ -34,20 +34,26 @@ authController.post(
 
 authController.post('/login', async (req, res) => {
   try {
-    const token = await login(req.body.email, req.body.password)
-
-   /*  if (!token) {
-      throw new Error('Invalid user');
-    } */
-   
-    res.status(200).json(token);
+    const token = await login(req.body.email, req.body.password);
+    console.log(token);
     
+     if (!token) {
+      throw new Error('Invalid user');
+    } 
+
+    res.status(200).json(token);
   } catch (error) {
-   console.log(error);
+    console.log(error);
     res.status(400).json({ error: error.message });
   }
 });
 
+authController.get('/logout', async (req, res) => {
+  const token = req.token;
+  console.log(req.body);
+  await logout(token);
 
+  res.status(204).end();
+});
 
 module.exports = authController;

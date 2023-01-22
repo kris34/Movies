@@ -37,8 +37,10 @@ const movieSchema = new Schema({
     type: String,
     required: true,
   },
+  comments: { type: [Types.ObjectId], ref: 'Comment', default: [] },
   actors: { type: String, required: true },
   ratings: { type: [Types.ObjectId], ref: 'User', default: [] },
+  owner: { type: Types.ObjectId, ref: 'User' },
 });
 
 const Movie = new model('Movie', movieSchema);
