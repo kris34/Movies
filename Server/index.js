@@ -5,7 +5,7 @@ const authController = require('./controllers/authController');
 const cors = require('./middlewares/cors');
 const port = '3000';
 
-const connectionString = 'mongodb://localhost:27017/furniture';
+const connectionString = 'mongodb://localhost:27017/movies2';
 
 start();
 
@@ -13,7 +13,7 @@ function start() {
   mongoose.connect(connectionString);
 
   const app = express();
-  
+
   app.use(cors());
   app.use(express.json());
 
