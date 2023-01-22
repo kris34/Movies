@@ -32,7 +32,22 @@ async function register(username, email, password) {
 }
 
 async function login(email, password) {
-    const existing
+  const user = User.findOne({ email }).collation({
+    locale: 'en',
+    strength: 2,
+  });
+
+  if (!user) {
+    throw new Error('Incorrect email or password!');
+  }
+
+  const match = await bcrypt.compare(password, user.hashedPassword);
+
+  if (!match) {
+    throw new Error('Invalid email or password!');
+  }
+
+  return createToken(user);
 }
 
 function logout() {}
