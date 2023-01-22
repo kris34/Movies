@@ -1,14 +1,14 @@
 const authController = require('express').Router();
 const validator = require('express-validator');
-const { register } = require('../services/userService');
+const { register, login } = require('../services/userService');
 
 authController.post(
   '/register',
-  /* validator.body('email').isEmail().withMessage('Invalid Email'),
+  validator.body('email').isEmail().withMessage('Invalid Email'),
   validator
     .body('password')
     .isLength({ min: 5 })
-    .withMessage('Password should be at least 5 charakters long'), */
+    .withMessage('Password should be at least 5 charakters long'),
   async (req, res) => {
     try {
       const { errors } = validator.validationResult(req);
@@ -25,11 +25,29 @@ authController.post(
         req.body.password
       );
 
-      res.json(token);
+      res.status(200).json(token);
     } catch (error) {
       res.status(400).json({ error: error.message });
     }
   }
 );
+
+authController.post('/login', async (req, res) => {
+  try {
+    const token = await login(req.body.email, req.body.password)
+
+   /*  if (!token) {
+      throw new Error('Invalid user');
+    } */
+   
+    res.status(200).json(token);
+    
+  } catch (error) {
+   console.log(error);
+    res.status(400).json({ error: error.message });
+  }
+});
+
+
 
 module.exports = authController;

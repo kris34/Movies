@@ -39,7 +39,7 @@ async function register(username, email, password) {
 //login
 async function login(email, password) {
   //check if user is existing or not
-  const user = User.findOne({ email }).collation({
+  const user = await User.findOne({ email }).collation({
     locale: 'en',
     strength: 2,
   });
@@ -67,13 +67,11 @@ async function createToken(user) {
   const payload = {
     _id: user._id,
     email: user.email,
-    username: user.username,
   };
 
   return {
     _id: user._id,
     email: user.email,
-    username: user.username,
     accessToken: jwt.sign(payload, JWT_SECRET),
   };
 }
