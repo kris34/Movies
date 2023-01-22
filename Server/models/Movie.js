@@ -23,7 +23,7 @@ const movieSchema = new Schema({
     required: true,
     validate: {
       validator: (value) => {
-        IMAGE_REGEX.text(value);
+        IMAGE_REGEX.test(value);
       },
       message: 'Invalid Image URl!',
     },
@@ -40,7 +40,7 @@ const movieSchema = new Schema({
   comments: { type: [Types.ObjectId], ref: 'Comment', default: [] },
   actors: { type: String, required: true },
   ratings: { type: [Types.ObjectId], ref: 'User', default: [] },
-  owner: { type: Types.ObjectId, ref: 'User' },
+  _ownerId: { type: Types.ObjectId, ref: 'User', required: true },
 });
 
 const Movie = new model('Movie', movieSchema);
