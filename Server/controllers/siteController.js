@@ -1,6 +1,7 @@
-const siteController = require('express').Router()
+const siteController = require('express').Router();
 
+siteController.get('/site/catalog',  (req, res) => {
+    
+});
 
-
-
-module.exports = siteController
+module.exports = siteController;
