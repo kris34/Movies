@@ -46,3 +46,17 @@ const movieSchema = new Schema({
 const Movie = new model('Movie', movieSchema);
 
 module.exports = Movie;
+
+
+
+
+
+
+
+
+
+
+
+
+
+//BE RIGHT BACK

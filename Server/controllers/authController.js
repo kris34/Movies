@@ -35,7 +35,6 @@ authController.post(
 authController.post('/login', async (req, res) => {
   try {
     const token = await login(req.body.email, req.body.password);
-    console.log(token);
     
      if (!token) {
       throw new Error('Invalid user');

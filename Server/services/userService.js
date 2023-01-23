@@ -86,6 +86,7 @@ async function parseToken(token) {
   return jwt.verify(token, JWT_SECRET);
 }
 
+
 module.exports = {
   register,
   login,
