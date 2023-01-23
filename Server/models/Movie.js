@@ -33,30 +33,11 @@ const movieSchema = new Schema({
     required: true,
     minLength: [10, 'Description should be at least 10 charakters long!'],
   },
-  directors: {
-    type: String,
-    required: true,
-  },
-  comments: { type: [Types.ObjectId], ref: 'Comment', default: [] },
-  actors: { type: String, required: true },
-  ratings: { type: [Types.ObjectId], ref: 'User', default: [] },
   _ownerId: { type: Types.ObjectId, ref: 'User', required: true },
 });
 
 const Movie = new model('Movie', movieSchema);
 
 module.exports = Movie;
-
-
-
-
-
-
-
-
-
-
-
-
 
 //BE RIGHT BACK

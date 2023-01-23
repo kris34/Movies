@@ -8,10 +8,12 @@ const userSchema = new Schema({
     minLength: [3, 'Username should be at least 3 charakters long!'],
   },
   email: { type: String, unique: true, required: true },
-  hashedPassword: { type: String, required: true },
-  ratedMovies: { type: [Types.ObjectId], ref: 'Movie', default: [] },
+  hashedPassword: {
+    type: String,
+    required: true,
+    minLength: [5, 'Password has to be at least 5 charakters long!'],
+  },
   addedMovies: { type: [Types.ObjectId], ref: 'Movie', default: [] },
-  commented: { type: [Types.ObjectId], ref: 'Movie', default: [] },
 });
 
 userSchema.index(

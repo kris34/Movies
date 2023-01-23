@@ -17,7 +17,6 @@ authController.post(
         throw errors;
       }
 
-      console.log('test');
 
       const token = await register(
         req.body.username,
