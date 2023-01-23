@@ -13,13 +13,16 @@ async function getMovieById(id) {
   return await Movie.findById(id);
 }
 
-async function getMyMovies(id){ 
-  
+async function addMyMovie(userId, movieId) {
+  const movie = await Movie.findById(movieId);
+  const user = await User.findById(userId);
+  user.myMovies.push(movie._id);
+  return user.save();
 }
 
 module.exports = {
   createMovie,
   getAll,
   getMovieById,
-  
+  addMyMovie
 };

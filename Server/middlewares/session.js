@@ -1,11 +1,11 @@
 const { parseToken } = require('../services/userService');
 
-module.exports = () => async (req, res, next) => {
+module.exports = () =>  (req, res, next) => {
     const token = req.headers['x-authorization'];
 
   if (token) {
     try {
-      const payload = await parseToken(token);
+      const payload =  parseToken(token);
       req.user = payload;
 
       req.token = token;

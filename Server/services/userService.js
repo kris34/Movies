@@ -25,10 +25,10 @@ async function register(username, email, password, repass) {
     throw new Error('Username is already in use!'); // Username is taken also valid
   }
 
-  if (password != repass) {
+  /*  if (password != repass) {
     throw new Error("Passwords don't match!");
-  }
-
+  } 
+ */
   //create user
   const user = await User.create({
     email,
@@ -69,7 +69,7 @@ async function logout(token) {
 }
 
 //create session token
-async function createToken(user) {
+ function createToken(user) {
   const payload = {
     _id: user._id,
     email: user.email,
@@ -82,13 +82,15 @@ async function createToken(user) {
   };
 }
 
-async function parseToken(token) {
+ function parseToken(token) {
   if (tokenBlacklist.has(token)) {
     throw new Error('Token is blacklisted');
   }
 
   return jwt.verify(token, JWT_SECRET);
 }
+
+
 
 module.exports = {
   register,
