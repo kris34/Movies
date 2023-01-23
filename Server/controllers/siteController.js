@@ -12,9 +12,8 @@ siteController.post('/', async (req, res) => {
   try {
     const data = Object.assign({ _ownerId: req.user._id }, req.body);
     const movie = await createMovie(data);
-    const user = await User.findById(req.user._id);
+    
     await addMyMovie(req.user._id, movie._id);
-    console.log(user);
     res.status(200).json(movie);
   } catch (error) {
     res.status(400).json({ error: error.message });
@@ -33,6 +32,11 @@ siteController.get('/', async (req, res) => {
 siteController.get('/:id', async (req, res) => {
   try {
     const movie = await getMovieById(req.params.id);
+
+    if (!!movie) {
+      throw new Error("Movie doesnt exist!")
+    }
+
     res.status(200).json(movie);
   } catch (error) {
     res.status(400).json({ error: error.message });
