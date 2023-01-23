@@ -54,7 +54,13 @@ siteController.get('/:id/like', async (req, res) => {
     if (existing == false) {
       throw new Error('Movie doesnt exist!');
     }
+
+    const user = await User.findById(req.user?._id);
     
+    if (user.likedMovies.includes(req.params.id) == true) {
+      throw new Error('You cannot like the same movie twice!');
+    }
+
     await likeMovie(req.params.id, req.user._id);
     const movie = await getMovieById(req.params.id);
 
