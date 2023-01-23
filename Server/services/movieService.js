@@ -43,5 +43,6 @@ module.exports = {
   getAll,
   getMovieById,
   addMyMovie,
-  existingMovie
+  existingMovie,
+  likeMovie
 };

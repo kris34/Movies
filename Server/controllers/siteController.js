@@ -4,6 +4,8 @@ const {
   createMovie,
   getMovieById,
   addMyMovie,
+  existingMovie,
+  likeMovie,
 } = require('../services/movieService');
 
 const siteController = require('express').Router();
@@ -31,11 +33,13 @@ siteController.get('/', async (req, res) => {
 
 siteController.get('/:id', async (req, res) => {
   try {
-    const movie = await getMovieById(req.params.id);
+    const existing = await existingMovie(req.params.id);
 
-    if (!!movie) {
+    if (existing == false) {
       throw new Error('Movie doesnt exist!');
     }
+
+    const movie = await getMovieById(req.params.id);
 
     res.status(200).json(movie);
   } catch (error) {
@@ -45,15 +49,15 @@ siteController.get('/:id', async (req, res) => {
 
 siteController.get('/:id/like', async (req, res) => {
   try {
-    const movies = await getAll();
+    const existing = await existingMovie(req.params.id);
 
-    const existing = movies.filter((m) => m._id == req.params.id);
-     
-    if(existing.length < 1){ 
-      throw new Error("Movie doesnt exist")   //BREAK
+    if (existing == false) {
+      throw new Error('Movie doesnt exist!');
     }
 
-    res.json('page works');
+    await likeMovie(req.params.id);
+    const movie = await getMovieById(req.params.id);
+    res.status(200).json(movie);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
