@@ -10,7 +10,6 @@ const siteController = require('express').Router();
 siteController.post('/', async (req, res) => {
   try {
     const data = Object.assign({ _ownerId: req.user._id }, req.body);
-    console.log(req.user);
     const movie = await createMovie(data);
     res.status(200).json(movie);
   } catch (error) {
@@ -22,6 +21,7 @@ siteController.get('/', async (req, res) => {
   try {
     const movies = await getAll();
     res.status(200).json(movies);
+
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -30,11 +30,10 @@ siteController.get('/', async (req, res) => {
 siteController.get('/:id', async (req, res) => {
   try {
     const movie = await getMovieById(req.params.id);
-   res.status(200).json(movie)
-   res.end()
-    console.log(movie);
+    res.status(200).json(movie);
+   
   } catch (error) {
-    console.log(error);
+    res.status(400).json({ error: error.message });
   }
 });
 

@@ -13,6 +13,10 @@ async function getMovieById(id) {
   return await Movie.findById(id);
 }
 
+async function getMyMovies(id){ 
+  
+}
+
 module.exports = {
   createMovie,
   getAll,

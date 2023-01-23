@@ -61,7 +61,7 @@ async function login(email, password) {
     throw new Error('Invalid email or password!');
   }
 
-  return createToken(user);
+  return  createToken(user);
 }
 
 async function logout(token) {
