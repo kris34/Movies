@@ -6,7 +6,7 @@ const JWT_SECRET = 'p-2-309r8wioeaf';
 const tokenBlacklist = new Set();
 
 //register
-async function register(username, email, password) {
+async function register(username, email, password, repass) {
   const existing = await User.findOne({ email }).collation({
     locale: 'en',
     strength: 2,
@@ -23,6 +23,10 @@ async function register(username, email, password) {
 
   if (existingUsername) {
     throw new Error('Username is already in use!'); // Username is taken also valid
+  }
+
+  if (password != repass) {
+    throw new Error("Passwords don't match!");
   }
 
   //create user
@@ -61,7 +65,7 @@ async function login(email, password) {
 }
 
 async function logout(token) {
-    tokenBlacklist.add(token)
+  tokenBlacklist.add(token);
 }
 
 //create session token
@@ -85,7 +89,6 @@ async function parseToken(token) {
 
   return jwt.verify(token, JWT_SECRET);
 }
-
 
 module.exports = {
   register,
