@@ -20,10 +20,12 @@ async function addMyMovie(userId, movieId) {
   return user.save();
 }
 
-async function likeMovie(id) {
-  const movie = await Movie.findById(id);
+async function likeMovie(movieId, userId) {
+  const movie = await Movie.findById(movieId);
+  const user =  await User.findById(userId)
+  user.likedMovies.push(movieId)
   movie.likes++;
-  return movie.save();
+  return movie.save(), user.save()
 }
 
 async function existingMovie(movieId) {

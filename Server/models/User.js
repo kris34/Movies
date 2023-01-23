@@ -13,6 +13,7 @@ const userSchema = new Schema({
     required: true,
     minLength: [5, 'Password has to be at least 5 charakters long!'],
   },
+  likedMovies: {type: [Types.ObjectId], ref: "Movie", default: []},
   myMovies: { type: [Types.ObjectId], ref: 'Movie', default: [] },
 });
 

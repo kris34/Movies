@@ -54,9 +54,10 @@ siteController.get('/:id/like', async (req, res) => {
     if (existing == false) {
       throw new Error('Movie doesnt exist!');
     }
-
-    await likeMovie(req.params.id);
+    
+    await likeMovie(req.params.id, req.user._id);
     const movie = await getMovieById(req.params.id);
+
     res.status(200).json(movie);
   } catch (error) {
     res.status(400).json({ error: error.message });
