@@ -12,7 +12,7 @@ siteController.post('/', async (req, res) => {
   try {
     const data = Object.assign({ _ownerId: req.user._id }, req.body);
     const movie = await createMovie(data);
-    
+
     await addMyMovie(req.user._id, movie._id);
     res.status(200).json(movie);
   } catch (error) {
@@ -34,10 +34,26 @@ siteController.get('/:id', async (req, res) => {
     const movie = await getMovieById(req.params.id);
 
     if (!!movie) {
-      throw new Error("Movie doesnt exist!")
+      throw new Error('Movie doesnt exist!');
     }
 
     res.status(200).json(movie);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+siteController.get('/:id/like', async (req, res) => {
+  try {
+    const movies = await getAll();
+
+    const existing = movies.filter((m) => m._id == req.params.id);
+     
+    if(existing.length < 1){ 
+      throw new Error("Movie doesnt exist")   //BREAK
+    }
+
+    res.json('page works');
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

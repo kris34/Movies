@@ -20,9 +20,28 @@ async function addMyMovie(userId, movieId) {
   return user.save();
 }
 
+async function likeMovie(id) {
+  const movie = await Movie.findById(id);
+  movie.likes++;
+  return movie.save();
+}
+
+async function existingMovie(movieId) {
+  const movies = await getAll();
+  const movieArr = movies.filter((m) => m._id == movieId);
+  let existing = true;
+
+  if (movieArr < 1) {
+    existing = false;
+  }
+
+  return existing;
+}
+
 module.exports = {
   createMovie,
   getAll,
   getMovieById,
-  addMyMovie
+  addMyMovie,
+  existingMovie
 };
