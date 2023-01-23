@@ -16,6 +16,7 @@ async function getMovieById(id) {
 async function addMyMovie(userId, movieId) {
   const movie = await Movie.findById(movieId);
   const user = await User.findById(userId);
+  
   user.myMovies.push(movie._id);
   return user.save();
 }
@@ -39,6 +40,8 @@ async function existingMovie(movieId) {
 
   return existing;
 }
+
+
 
 module.exports = {
   createMovie,

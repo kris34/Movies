@@ -1,4 +1,5 @@
 const User = require('../models/User');
+
 const {
   getAll,
   createMovie,
@@ -7,6 +8,7 @@ const {
   existingMovie,
   likeMovie,
 } = require('../services/movieService');
+const { getUser } = require('../services/userService');
 
 const siteController = require('express').Router();
 
@@ -14,7 +16,6 @@ siteController.post('/', async (req, res) => {
   try {
     const data = Object.assign({ _ownerId: req.user._id }, req.body);
     const movie = await createMovie(data);
-
     await addMyMovie(req.user._id, movie._id);
     res.status(200).json(movie);
   } catch (error) {
@@ -50,21 +51,25 @@ siteController.get('/:id', async (req, res) => {
 siteController.get('/:id/like', async (req, res) => {
   try {
     const existing = await existingMovie(req.params.id);
+    const movie = await getMovieById(req.params.id);
+
+    if (movie._ownerId == req.user._id) {
+      throw new Error('You cannot like your own movie!');
+    }
 
     if (existing == false) {
       throw new Error('Movie doesnt exist!');
     }
 
     const user = await User.findById(req.user?._id);
-    
-    if (user.likedMovies.includes(req.params.id) == true) {
+
+    if (user.likedMovies.includes(req.params.id)) {
       throw new Error('You cannot like the same movie twice!');
     }
 
     await likeMovie(req.params.id, req.user._id);
-    const movie = await getMovieById(req.params.id);
 
-    res.status(200).json(movie);
+    res.status(200).end();
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

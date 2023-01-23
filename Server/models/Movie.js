@@ -18,6 +18,7 @@ const movieSchema = new Schema({
       message: 'Year cannot be lower then 1900 and higher then 2030!',
     },
   },
+  directors: { type: String, required: true },
   imageUrl: {
     type: String,
     required: true,

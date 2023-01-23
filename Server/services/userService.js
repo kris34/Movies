@@ -61,7 +61,7 @@ async function login(email, password) {
     throw new Error('Invalid email or password!');
   }
 
-  return  createToken(user);
+  return createToken(user);
 }
 
 async function logout(token) {
@@ -69,7 +69,7 @@ async function logout(token) {
 }
 
 //create session token
- function createToken(user) {
+function createToken(user) {
   const payload = {
     _id: user._id,
     email: user.email,
@@ -82,7 +82,7 @@ async function logout(token) {
   };
 }
 
- function parseToken(token) {
+function parseToken(token) {
   if (tokenBlacklist.has(token)) {
     throw new Error('Token is blacklisted');
   }
@@ -90,11 +90,14 @@ async function logout(token) {
   return jwt.verify(token, JWT_SECRET);
 }
 
-
+async function getUser(id) {
+  return await User.findById(id);
+}
 
 module.exports = {
   register,
   login,
   logout,
   parseToken,
+  getUser
 };
