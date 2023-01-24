@@ -7,6 +7,7 @@ const {
   addMyMovie,
   existingMovie,
   likeMovie,
+  dislikeMovie,
 } = require('../services/movieService');
 const { getUser } = require('../services/userService');
 
@@ -54,12 +55,11 @@ siteController.get('/:id/like', async (req, res) => {
       throw new Error('Movie doesnt exist!');
     }
     const movie = await getMovieById(req.params.id);
+    const user = await User.findById(req.user?._id);
 
     if (movie._ownerId == req.user._id) {
       throw new Error('You cannot like your own movie!');
     }
-
-    const user = await User.findById(req.user?._id);
 
     if (user.likedMovies.includes(req.params.id)) {
       throw new Error('You cannot like the same movie twice!');
@@ -86,11 +86,13 @@ siteController.get('/:id/dislike', async (req, res) => {
       throw new Error('You cannot dislike your own movie!');
     }
 
-    if (user.dislikedMovies.includes(req.user._id)) {
+    if (user.dislikedMovies.includes(req.params.id)) {
       throw new Error('You cannot dislike the same movie twice!');
     }
 
-    res.end();
+    await dislikeMovie(req.params.id, req.user._id);
+
+    res.status(200).end();
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

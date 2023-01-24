@@ -24,6 +24,12 @@ async function addMyMovie(userId, movieId) {
 async function likeMovie(movieId, userId) {
   const movie = await Movie.findById(movieId);
   const user = await User.findById(userId);
+
+  if (user.dislikedMovies.includes(movieId)) {
+    user.dislikedMovies = user.dislikedMovies.filter((id) => id != movieId);
+    movie.dislikes--;
+  }
+  
   user.likedMovies.push(movieId);
   movie.likes++;
   return movie.save(), user.save();
@@ -32,6 +38,12 @@ async function likeMovie(movieId, userId) {
 async function dislikeMovie(movieId, userId) {
   const movie = await Movie.findById(movieId);
   const user = await User.findById(userId);
+
+  if (user.likedMovies.includes(movieId)) {
+    user.likedMovies = user.likedMovies.filter((id) => id != movieId);
+    movie.likes--;
+  }
+
   user.dislikedMovies.push(movieId);
   movie.dislikes++;
   return movie.save(), user.save();
@@ -56,4 +68,5 @@ module.exports = {
   addMyMovie,
   existingMovie,
   likeMovie,
+  dislikeMovie,
 };
