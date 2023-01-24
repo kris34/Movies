@@ -50,15 +50,13 @@ siteController.get('/:id', async (req, res) => {
 
 siteController.get('/:id/like', async (req, res) => {
   try {
-    const existing = await existingMovie(req.params.id);
+    if ((await existingMovie(req.params.id)) == false) {
+      throw new Error('Movie doesnt exist!');
+    }
     const movie = await getMovieById(req.params.id);
 
     if (movie._ownerId == req.user._id) {
       throw new Error('You cannot like your own movie!');
-    }
-
-    if (existing == false) {
-      throw new Error('Movie doesnt exist!');
     }
 
     const user = await User.findById(req.user?._id);
@@ -70,6 +68,29 @@ siteController.get('/:id/like', async (req, res) => {
     await likeMovie(req.params.id, req.user._id);
 
     res.status(200).end();
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+siteController.get('/:id/dislike', async (req, res) => {
+  try {
+    if ((await existingMovie(req.params.id)) == false) {
+      throw new Error('Movie doesnt exist!');
+    }
+
+    const movie = await getMovieById(req.params.id);
+    const user = await getUser(req.user._id);
+
+    if (movie._ownerId == req.user._id) {
+      throw new Error('You cannot dislike your own movie!');
+    }
+
+    if (user.dislikedMovies.includes(req.user._id)) {
+      throw new Error('You cannot dislike the same movie twice!');
+    }
+
+    res.end();
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
