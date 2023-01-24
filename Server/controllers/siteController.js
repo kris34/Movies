@@ -98,4 +98,18 @@ siteController.get('/:id/dislike', async (req, res) => {
   }
 });
 
+siteController.delete('/:id/delete', async (req, res) => {
+  try {
+    const movie = await getMovieById(req.params.id);
+    if (movie._ownerId != req.user?._id) {
+      throw new Error('You cannot delete this movie!');
+    }
+    
+    await delete
+
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
 module.exports = siteController;
