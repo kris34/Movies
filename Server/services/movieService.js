@@ -16,17 +16,25 @@ async function getMovieById(id) {
 async function addMyMovie(userId, movieId) {
   const movie = await Movie.findById(movieId);
   const user = await User.findById(userId);
-  
+
   user.myMovies.push(movie._id);
   return user.save();
 }
 
 async function likeMovie(movieId, userId) {
   const movie = await Movie.findById(movieId);
-  const user =  await User.findById(userId)
-  user.likedMovies.push(movieId)
+  const user = await User.findById(userId);
+  user.likedMovies.push(movieId);
   movie.likes++;
-  return movie.save(), user.save()
+  return movie.save(), user.save();
+}
+
+async function dislikeMovie(movieId, userId) {
+  const movie = await Movie.findById(movieId);
+  const user = await User.findById(userId);
+  user.dislikedMovies.push(movieId);
+  movie.dislikes++;
+  return movie.save(), user.save();
 }
 
 async function existingMovie(movieId) {
@@ -41,13 +49,11 @@ async function existingMovie(movieId) {
   return existing;
 }
 
-
-
 module.exports = {
   createMovie,
   getAll,
   getMovieById,
   addMyMovie,
   existingMovie,
-  likeMovie
+  likeMovie,
 };
