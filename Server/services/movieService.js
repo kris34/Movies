@@ -61,6 +61,10 @@ async function existingMovie(movieId) {
   return existing;
 }
 
+async function deleteMovie(movieId){ 
+  return Movie.findByIdAndDelete(movieId)
+}
+
 module.exports = {
   createMovie,
   getAll,
