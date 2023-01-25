@@ -8,6 +8,7 @@ const {
   existingMovie,
   likeMovie,
   dislikeMovie,
+  deleteMovie,
 } = require('../services/movieService');
 const { getUser } = require('../services/userService');
 
@@ -51,7 +52,10 @@ siteController.get('/:id', async (req, res) => {
 
 siteController.get('/:id/like', async (req, res) => {
   try {
-    if ((await existingMovie(req.params.id)) == false) {
+   
+    await likeMovie(req.params.id, req.user?._id)
+    res.status(200).json('liked')
+   /*  if ((await existingMovie(req.params.id)) == false) {
       throw new Error('Movie doesnt exist!');
     }
     const movie = await getMovieById(req.params.id);
@@ -67,7 +71,7 @@ siteController.get('/:id/like', async (req, res) => {
 
     await likeMovie(req.params.id, req.user._id);
 
-    res.status(200).end();
+    res.status(200).end(); */
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -105,8 +109,9 @@ siteController.delete('/:id/delete', async (req, res) => {
       throw new Error('You cannot delete this movie!');
     }
     
-    await delete
-
+    await deleteMovie(req.params?.id?.toString())
+    
+    res.status(200).json("deleted")
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

@@ -22,17 +22,18 @@ async function addMyMovie(userId, movieId) {
 }
 
 async function likeMovie(movieId, userId) {
-  const movie = await Movie.findById(movieId);
-  const user = await User.findById(userId);
+  const movie = await getMovieById(movieId)
 
-  if (user.dislikedMovies.includes(movieId)) {
-    user.dislikedMovies = user.dislikedMovies.filter((id) => id != movieId);
-    movie.dislikes--;
+  if (movie.likes.includes(userId)) {
+    throw new Error('You have already liked this movie');
   }
-  
-  user.likedMovies.push(movieId);
-  movie.likes++;
-  return movie.save(), user.save();
+
+  if (movie._ownerId == userId) {
+    throw new Error('You cannot like your own movie!');
+  }
+  movie.likes.push(userId);
+
+  return movie.save();
 }
 
 async function dislikeMovie(movieId, userId) {
@@ -61,8 +62,8 @@ async function existingMovie(movieId) {
   return existing;
 }
 
-async function deleteMovie(movieId){ 
-  return Movie.findByIdAndDelete(movieId)
+async function deleteMovie(movieId) {
+  return Movie.findByIdAndDelete(movieId);
 }
 
 module.exports = {
@@ -73,4 +74,5 @@ module.exports = {
   existingMovie,
   likeMovie,
   dislikeMovie,
+  deleteMovie,
 };
