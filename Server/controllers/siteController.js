@@ -52,26 +52,11 @@ siteController.get('/:id', async (req, res) => {
 
 siteController.get('/:id/like', async (req, res) => {
   try {
-   
-    await likeMovie(req.params.id, req.user?._id)
-    res.status(200).json('liked')
-   /*  if ((await existingMovie(req.params.id)) == false) {
-      throw new Error('Movie doesnt exist!');
+    if (!req.user) {
+      throw new Error('Invalid user!');
     }
-    const movie = await getMovieById(req.params.id);
-    const user = await User.findById(req.user?._id);
-
-    if (movie._ownerId == req.user._id) {
-      throw new Error('You cannot like your own movie!');
-    }
-
-    if (user.likedMovies.includes(req.params.id)) {
-      throw new Error('You cannot like the same movie twice!');
-    }
-
     await likeMovie(req.params.id, req.user._id);
-
-    res.status(200).end(); */
+    res.status(200).json('Liked!');
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -108,10 +93,10 @@ siteController.delete('/:id/delete', async (req, res) => {
     if (movie._ownerId != req.user?._id) {
       throw new Error('You cannot delete this movie!');
     }
-    
-    await deleteMovie(req.params?.id?.toString())
-    
-    res.status(200).json("deleted")
+
+    await deleteMovie(req.params?.id?.toString());
+
+    res.status(200).json('deleted');
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
