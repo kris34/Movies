@@ -69,19 +69,15 @@ siteController.get('/:id/like', async (req, res) => {
 
 siteController.get('/:id/dislike', async (req, res) => {
   try {
-    const movie = await getMovieById(req.params.id);
-    const user = await getUser(req.user._id);
-
-    if (movie._ownerId == req.user._id) {
-      throw new Error('You cannot dislike your own movie!');
+    if (!req.user) {
+      throw new Error('Invalid user!');
     }
 
-    if (user.dislikedMovies.includes(req.params.id)) {
-      throw new Error('You cannot dislike the same movie twice!');
+    if ((await existingMovie(req.params.id)) == false) {
+      throw new Error('Movie doesnt exist!');
     }
 
     await dislikeMovie(req.params.id, req.user._id);
-
     res.status(200).end();
   } catch (error) {
     res.status(400).json({ error: error.message });
