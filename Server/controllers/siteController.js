@@ -99,4 +99,14 @@ siteController.delete('/:id/delete', async (req, res) => {
   }
 });
 
+siteController.put('/:id/edit', async (req, res) => {
+  const movie = await getMovieById(req.params.id);
+
+  if (movie._ownerId != req.user._id) {
+    throw new Error('You cannot modify this record!');
+  }
+
+  try{}
+});
+
 module.exports = siteController;

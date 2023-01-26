@@ -77,6 +77,18 @@ async function deleteMovie(movieId) {
   return Movie.findByIdAndDelete(movieId);
 }
 
+async function editMovie(id, data) {
+  const movie = await getMovieById(id);
+
+  movie.title = data.title;
+  movie.year = data.year;
+  movie.directors = data.directors;
+  movie.imageUrl = data.imageUrl;
+  movie.description = data.description;
+
+  return movie.save();
+}
+
 module.exports = {
   createMovie,
   getAll,
