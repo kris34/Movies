@@ -1,3 +1,4 @@
+const { hasUser } = require('../middlewares/guards');
 const User = require('../models/User');
 
 const {
@@ -15,7 +16,7 @@ const { getUser } = require('../services/userService');
 
 const siteController = require('express').Router();
 
-siteController.post('/', async (req, res) => {
+siteController.post('/', hasUser(), async (req, res) => {
   try {
     const data = Object.assign({ _ownerId: req.user._id }, req.body);
     const movie = await createMovie(data);
@@ -51,7 +52,7 @@ siteController.get('/:id', async (req, res) => {
   }
 });
 
-siteController.get('/:id/like', async (req, res) => {
+siteController.get('/:id/like', hasUser(), async (req, res) => {
   try {
     if (!req.user) {
       throw new Error('Invalid user!');
@@ -68,7 +69,7 @@ siteController.get('/:id/like', async (req, res) => {
   }
 });
 
-siteController.get('/:id/dislike', async (req, res) => {
+siteController.get('/:id/dislike', hasUser(), async (req, res) => {
   try {
     if (!req.user) {
       throw new Error('Invalid user!');
@@ -85,7 +86,7 @@ siteController.get('/:id/dislike', async (req, res) => {
   }
 });
 
-siteController.delete('/:id', async (req, res) => {
+siteController.delete('/:id', hasUser(), async (req, res) => {
   try {
     const movie = await getMovieById(req.params.id);
     if (movie._ownerId != req.user?._id) {
@@ -100,7 +101,7 @@ siteController.delete('/:id', async (req, res) => {
   }
 });
 
-siteController.put('/:id', async (req, res) => {
+siteController.put('/:id', hasUser(), async (req, res) => {
   try {
     const movie = await getMovieById(req.params.id);
 
