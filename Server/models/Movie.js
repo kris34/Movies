@@ -6,6 +6,7 @@ const movieSchema = new Schema({
   title: {
     type: String,
     required: true,
+    unique: true,
     minLength: [2, 'Title should be at least 2 charakters long!'],
   },
   year: {

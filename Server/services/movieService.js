@@ -98,4 +98,5 @@ module.exports = {
   likeMovie,
   dislikeMovie,
   deleteMovie,
+  editMovie
 };

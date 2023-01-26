@@ -9,6 +9,7 @@ const {
   likeMovie,
   dislikeMovie,
   deleteMovie,
+  editMovie,
 } = require('../services/movieService');
 const { getUser } = require('../services/userService');
 
@@ -84,7 +85,7 @@ siteController.get('/:id/dislike', async (req, res) => {
   }
 });
 
-siteController.delete('/:id/delete', async (req, res) => {
+siteController.delete('/:id', async (req, res) => {
   try {
     const movie = await getMovieById(req.params.id);
     if (movie._ownerId != req.user?._id) {
@@ -99,14 +100,19 @@ siteController.delete('/:id/delete', async (req, res) => {
   }
 });
 
-siteController.put('/:id/edit', async (req, res) => {
-  const movie = await getMovieById(req.params.id);
+siteController.put('/:id', async (req, res) => {
+  try {
+    const movie = await getMovieById(req.params.id);
 
-  if (movie._ownerId != req.user._id) {
-    throw new Error('You cannot modify this record!');
+    if (movie._ownerId != req.user._id) {
+      throw new Error('You cannot modify this record!');
+    }
+    console.log(req.body);
+    await editMovie(req.params.id, req.body);
+    res.status(200).end();
+  } catch (error) {
+    res.status(400).json({ error: error.message });
   }
-
-  try{}
 });
 
 module.exports = siteController;
