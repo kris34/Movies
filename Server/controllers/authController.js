@@ -17,7 +17,6 @@ authController.post(
         throw errors;
       }
 
-
       const token = await register(
         req.body.username,
         req.body.email,
@@ -34,10 +33,10 @@ authController.post(
 authController.post('/login', async (req, res) => {
   try {
     const token = await login(req.body.email, req.body.password);
-    
-     if (!token) {
+
+    if (!token) {
       throw new Error('Invalid user');
-    } 
+    }
 
     res.status(200).json(token);
   } catch (error) {
