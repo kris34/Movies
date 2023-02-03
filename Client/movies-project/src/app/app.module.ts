@@ -18,6 +18,6 @@ import { CoreModule } from './core/core.module';
      AuthModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] 
 })
 export class AppModule { }
