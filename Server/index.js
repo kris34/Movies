@@ -4,7 +4,7 @@ const siteController = require('./controllers/siteController');
 const authController = require('./controllers/authController');
 const cors = require('./middlewares/cors');
 const session = require('./middlewares/session');
-const port = '3000';
+const port = '3001';
 
 const connectionString = 'mongodb://localhost:27017/movies2';
 
