@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 
 
@@ -13,7 +14,9 @@ import { MainComponent } from './main/main.component';
     MainComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatSlideToggleModule
+    
   ],
   exports: [
     HeaderComponent,
