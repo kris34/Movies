@@ -1,16 +1,14 @@
 <mat-toolbar color="accent" class="navbar">
-  <span>My App</span>
-  <span class="spacer"></span>
+  <span>
+    <a mat-menu-item color="warn" class="home-btn" routerLink="/">My App</a>
+  </span>
   <button mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>more_vert</mat-icon>
+    <mat-icon>account_circle</mat-icon>
   </button>
-
   <mat-menu #menu>
-    <ng-template matMenuContent>
-      <button mat-menu-item >Settings</button>
-      <button mat-menu-item>Log off</button>
+    <ng-template matMenuContent #loggedInTemplate>
+      <button mat-menu-item>Profile</button>
+      <button mat-menu-item>Test</button>
     </ng-template>
   </mat-menu>
-
-  
 </mat-toolbar>
