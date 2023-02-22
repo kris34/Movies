@@ -1,14 +1,16 @@
-<mat-toolbar>
+<mat-toolbar color="accent" class="navbar">
   <span>My App</span>
-  <ul>
-    <li>
-      <a routerLink="/">Register</a>
-    </li>
-    <li>
-        <a routerLink="/">Logout</a>
-    </li>
-    <li>
-        <a routerLink="/">Login</a>
-    </li>
-  </ul>
+  <span class="spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+  <mat-menu #menu>
+    <ng-template matMenuContent>
+      <button mat-menu-item >Settings</button>
+      <button mat-menu-item>Log off</button>
+    </ng-template>
+  </mat-menu>
+
+  
 </mat-toolbar>

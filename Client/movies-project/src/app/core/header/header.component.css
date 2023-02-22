@@ -1,13 +1,9 @@
-mat-toolbar {
+.navbar {
   justify-content: space-between;
-  margin: 0 auto;
-  display: flex;
-}
-ul {
-  display: flex;
+  position: relative;
+  padding: 1rem;
 }
 
-li {
-  list-style: none;
-  margin: 10px;
+.test { 
+  background-color: none;
 }
