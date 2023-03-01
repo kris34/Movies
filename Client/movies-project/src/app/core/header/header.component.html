@@ -1,22 +1,23 @@
 <mat-toolbar color="primary">
   <a class="home-btn" mat-button routerLink="/">Home</a>
   <div class="spacer"></div>
-  <button mat-icon-button [mat-menu-trigger-for]="menu">
+  <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
   </button>
 
-<ng-template #loggedInTemplate>
-
-</ng-template>
-
-<ng-template #loggedOutTemplate>
-  
-</ng-template>
-
- <mat-menu #menu>
-  <ng-template>
-    *ngTemplateOutlet="isLoggedIn ? loggedInTemplate : loggedOutTemplate"
+  <mat-menu #menu="matMenu">
+    <ng-container
+      *ngTemplateOutlet="isLoggedIn ? loggedInTemplate : loggedOutTemplate"
+    >
+    </ng-container>
+  </mat-menu>
+  <ng-template #loggedInTemplate>
+    <a mat-menu-item routerLink="/">Profile</a>
+    <a mat-menu-item routerLink="/">Logout</a>
   </ng-template>
-</mat-menu>
- 
+
+  <ng-template #loggedOutTemplate>
+    <a mat-menu-item routerLink="/register">Sign Up</a>
+    <a mat-menu-item routerLink="/login"> Login</a>
+  </ng-template>
 </mat-toolbar>
