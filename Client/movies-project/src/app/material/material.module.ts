@@ -4,6 +4,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule, MatMenuTrigger } from '@angular/material/menu';
+import { MatTabsModule } from '@angular/material/tabs';
 
 const materialComponents = [
   MatButtonModule,
@@ -12,6 +13,7 @@ const materialComponents = [
   MatIconModule,
   MatMenuModule,
   MatMenuTrigger,
+  MatTabsModule,
 ];
 
 @NgModule({
@@ -21,6 +23,7 @@ const materialComponents = [
     MatListModule,
     MatIconModule,
     MatMenuModule,
+    MatTabsModule,
   ],
   exports: [materialComponents],
 })
