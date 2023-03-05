@@ -5,6 +5,7 @@ import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 
+
 @NgModule({
   declarations: [HeaderComponent, FooterComponent],
   imports: [CommonModule, MaterialModule, RouterModule,],

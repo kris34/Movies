@@ -10,6 +10,7 @@ export class HeaderComponent {
   get isLoggedIn() {
     return true;
   }
+  
 
   constructor(private router: Router) {}
 }
