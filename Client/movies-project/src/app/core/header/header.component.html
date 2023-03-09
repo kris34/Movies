@@ -17,14 +17,14 @@
   </ng-template>
 
   <ng-template #loggedOutTemplate>
-    <a mat-menu-item routerLink="/register">Sign Up</a>
+    <a mat-menu-item routerLink="/auth/register">Sign Up</a>
     <a mat-menu-item routerLink="/login"> Login</a>
   </ng-template>
 </mat-toolbar>
 
 <ng-container *ngIf="isLoggedIn">
   <mat-tab-group backgroundColor="accent">
-    <mat-tab label="Latest Movies"> Content 1 </mat-tab>
+    <mat-tab routerLink="/test" label="Latest Movies"> Content 1 </mat-tab>
     <mat-tab label="Post a movie"> Content 2 </mat-tab>
     <mat-tab label="My List"> Content 3 </mat-tab>
   </mat-tab-group>
