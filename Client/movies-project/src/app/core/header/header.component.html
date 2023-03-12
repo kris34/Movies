@@ -11,6 +11,7 @@
     >
     </ng-container>
   </mat-menu>
+
   <ng-template #loggedInTemplate>
     <a mat-menu-item routerLink="/">Profile</a>
     <a mat-menu-item routerLink="/">Logout</a>
@@ -22,12 +23,6 @@
   </ng-template>
 </mat-toolbar>
 
-<ng-container *ngIf="isLoggedIn">
-  <mat-tab-group backgroundColor="accent">
-    <mat-tab routerLink="/test" label="Latest Movies"> Content 1 </mat-tab>
-    <mat-tab label="Post a movie"> Content 2 </mat-tab>
-    <mat-tab label="My List"> Content 3 </mat-tab>
-  </mat-tab-group>
-</ng-container>
+
 
  

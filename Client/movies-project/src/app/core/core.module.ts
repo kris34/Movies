@@ -10,6 +10,6 @@ import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, HomeComponent],
   imports: [CommonModule, MaterialModule, RouterModule,],
-  exports: [HeaderComponent, FooterComponent],
+  exports: [HeaderComponent, FooterComponent, HomeComponent],
 })
 export class CoreModule {}
