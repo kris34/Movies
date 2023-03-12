@@ -4,10 +4,11 @@ import { HeaderComponent } from './header/header.component';
 import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent],
+  declarations: [HeaderComponent, FooterComponent, HomeComponent],
   imports: [CommonModule, MaterialModule, RouterModule,],
   exports: [HeaderComponent, FooterComponent],
 })
