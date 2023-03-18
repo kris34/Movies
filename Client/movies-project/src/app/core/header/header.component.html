@@ -1,5 +1,8 @@
- <mat-toolbar color="primary">
+<mat-toolbar color="primary">
   <a class="home-btn" mat-button routerLink="/">Home</a>
+
+  <p class="greet">Welcome user!</p>
+  
   <div class="spacer"></div>
   <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
@@ -22,7 +25,3 @@
     <a mat-menu-item routerLink="/auth/login"> Login</a>
   </ng-template>
 </mat-toolbar>
-
-
-
- 
