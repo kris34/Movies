@@ -11,5 +11,11 @@ export class HeaderComponent {
     return true;
   }
 
+  user: String = '';
+
+  get username() {
+    return (this.user = 'Peter');
+  }
+
   constructor(private router: Router) {}
 }

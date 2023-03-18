@@ -1,8 +1,8 @@
 <mat-toolbar color="primary">
   <a class="home-btn" mat-button routerLink="/">Home</a>
 
-  <p class="greet">Welcome user!</p>
-  
+  <span class="greet"> Welcome, {{ username }}! </span>
+
   <div class="spacer"></div>
   <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
@@ -16,12 +16,13 @@
   </mat-menu>
 
   <ng-template #loggedInTemplate>
-    <a mat-menu-item routerLink="/auth/profile">Profile</a>
+    <a mat-menu-item routerLink="/auth/profile">Your activity</a>
+    <a mat-menu-item routerLink="/auth/profile/edit">Edit Profile </a>
     <a mat-menu-item routerLink="/">Logout</a>
   </ng-template>
 
   <ng-template #loggedOutTemplate>
     <a mat-menu-item routerLink="/auth/register">Sign Up</a>
-    <a mat-menu-item routerLink="/auth/login"> Login</a>
+    <a mat-menu-item routerLink="/auth/login">Login</a>
   </ng-template>
 </mat-toolbar>
