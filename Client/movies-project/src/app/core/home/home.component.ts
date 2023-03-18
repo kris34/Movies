@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class HomeComponent {
 
   get isLoggedIn() {
-    return true;
+    return false;
   }
 
   constructor(private router: Router) {}

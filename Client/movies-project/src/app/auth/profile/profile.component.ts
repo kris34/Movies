@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
 
+
+  get isLoggedIn() {
+    return false;
+  }
+
+  constructor() {}
 }
