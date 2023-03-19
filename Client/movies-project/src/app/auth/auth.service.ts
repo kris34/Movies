@@ -11,12 +11,27 @@ const apiUrl = environment.apiURL;
 })
 export class AuthService {
   user!: IUser | null;
+  isLoggedIn: boolean = false;
 
   constructor(private http: HttpClient) {}
 
   register(userData: {}) {
-    return this.http.post<IUser>(`${apiUrl}/auth/register`, userData).pipe(tap((response) => {
-      if (!response._id) { return }
-    }))
+    return this.http.post<IUser>(`${apiUrl}/auth/register`, userData).pipe(
+      tap((response) => {
+        if (!response._id) {
+          return;
+        }
+      })
+    );
+  }
+
+  login(userData: {}) {
+    return this.http.post<IUser>(`${apiUrl}/auth/login`, userData).pipe(
+      tap((response) => {
+        if (!response._id) {
+          return;
+        }
+      })
+    );
   }
 }
