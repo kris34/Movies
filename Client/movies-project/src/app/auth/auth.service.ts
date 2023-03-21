@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'environments/environment';
 import { tap } from 'rxjs';
 import { IUser } from '../shared/interfaces/user';
+import { setSession } from '../shared/sessions';
 
 const apiUrl = environment.apiURL;
 
@@ -19,6 +20,8 @@ export class AuthService {
     return this.http.post<IUser>(`${apiUrl}/auth/register`, userData).pipe(
       tap((user) => {
         this.user = user;
+        setSession(user);
+        console.log(user);
       })
     );
   }
@@ -30,6 +33,4 @@ export class AuthService {
       })
     );
   }
-
-
 }
