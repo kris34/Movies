@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { getSession } from 'src/app/shared/sessions';
 
 @Component({
   selector: 'app-header',
@@ -7,14 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
+
   get isLoggedIn() {
+    
+
     return true;
-  }
-
-  user: String = '';
-
-  get username() {
-    return (this.user = 'Peter');
   }
 
   constructor(private router: Router) {}

@@ -21,7 +21,6 @@ export class AuthService {
       tap((user) => {
         this.user = user;
         setSession(user);
-        console.log(user);
       })
     );
   }
