@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { matchingPass } from 'src/app/shared/validators/password-validator';
+import { passwordValidator } from 'src/app/shared/validators/password-validator';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class RegisterComponent {
     username: ['', [Validators.minLength(5), Validators.required]],
     email: ['', [Validators.required]],
     password: ['', [Validators.required, Validators.minLength(5)]],
-    repass: ['', [Validators.required]],
+    repass: ['', [Validators.required, passwordValidator]],
   });
 
   constructor(

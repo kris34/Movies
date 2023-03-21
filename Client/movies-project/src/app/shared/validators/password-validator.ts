@@ -1,11 +1,12 @@
-import { FormGroup, ValidatorFn } from '@angular/forms';
+import { AbstractControl, ValidationErrors } from '@angular/forms';
 
-export function matchingPass(control1: string, control2: string): ValidatorFn {
-  return (control) => {
-    const group = control as FormGroup;
-    const pass = group.get(control1);
-    const repass = group.get(control2);
-
-    return pass?.value == repass?.value ? null : { matchingPass: true };
-  };
+export function passwordValidator(
+  control: AbstractControl
+): ValidationErrors | null {
+  if (!control.value) {
+    return null;
+  }
+  const password = control.parent?.get('password')?.value;
+  const rePassword = control.value;
+  return password == rePassword ? null : { invalidPasswords: true };
 }
