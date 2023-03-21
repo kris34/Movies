@@ -11,7 +11,11 @@ import { AuthService } from '../auth.service';
 export class RegisterComponent {
   form = this.fb.group({
     username: ['', [Validators.minLength(5), Validators.required]],
-    
+    email: ['', [Validators.required]],
+    pass: this.fb.group({
+      password: ['', [Validators.required, Validators.minLength(5)]],
+      repass: [],
+    }),
   });
 
   constructor(
@@ -19,4 +23,6 @@ export class RegisterComponent {
     private fb: FormBuilder,
     private router: Router
   ) {}
+
+  
 }
