@@ -25,10 +25,10 @@ async function register(username, email, password, repass) {
     throw new Error('Username is already in use!'); // Username is taken also valid
   }
 
-  /*  if (password != repass) {
+  if (password != repass) {
     throw new Error("Passwords don't match!");
-  } 
- */
+  }
+
   //create user
   const user = await User.create({
     email,
@@ -99,5 +99,5 @@ module.exports = {
   login,
   logout,
   parseToken,
-  getUser
+  getUser,
 };
