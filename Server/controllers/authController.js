@@ -20,8 +20,7 @@ authController.post(
       const token = await register(
         req.body.username,
         req.body.email,
-        req.body.password,
-        req.body.repass
+        req.body.password
       );
 
       res.status(200).json(token);

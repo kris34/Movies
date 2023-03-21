@@ -6,7 +6,7 @@ const JWT_SECRET = 'p-2-309r8wioeaf';
 const tokenBlacklist = new Set();
 
 //register
-async function register(username, email, password, repass) {
+async function register(username, email, password) {
   const existing = await User.findOne({ email }).collation({
     locale: 'en',
     strength: 2,
@@ -23,10 +23,6 @@ async function register(username, email, password, repass) {
 
   if (existingUsername) {
     throw new Error('Username is already in use!'); // Username is taken also valid
-  }
-
-  if (password != repass) {
-    throw new Error("Passwords don't match!");
   }
 
   //create user
