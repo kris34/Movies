@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { passwordValidator } from 'src/app/shared/validators/password-validator';
 import { AuthService } from '../auth.service';
@@ -40,4 +40,6 @@ export class RegisterComponent {
       },
     });
   }
+
+
 }

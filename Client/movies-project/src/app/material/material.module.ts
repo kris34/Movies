@@ -5,7 +5,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule, MatMenuTrigger } from '@angular/material/menu';
 import { MatTabsModule } from '@angular/material/tabs';
-import {MatSidenavModule} from '@angular/material/sidenav'; 
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card'; 
+import {MatInputModule} from '@angular/material/input'; 
 const materialComponents = [
   MatButtonModule,
   MatToolbarModule,
@@ -14,7 +17,10 @@ const materialComponents = [
   MatMenuModule,
   MatMenuTrigger,
   MatTabsModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatFormFieldModule,
+  MatCardModule,
+  MatInputModule
 ];
 
 @NgModule({
@@ -25,7 +31,10 @@ const materialComponents = [
     MatIconModule,
     MatMenuModule,
     MatTabsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatInputModule
   ],
   exports: [materialComponents],
 })
