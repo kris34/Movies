@@ -3,31 +3,43 @@
     <mat-toolbar class="login-toolbar" color="accent">REGISTER</mat-toolbar>
     <div class="spacer"></div>
 
-    <form class="register-form"   [formGroup]="form" class="register" (ngSubmit)="registerHandler()">
+    <form
+      class="register-form"
+      [formGroup]="form"
+      class="register"
+      (ngSubmit)="registerHandler()"
+    >
+      <!-- username -->
       <mat-form-field class="form-field">
         <mat-label>Username</mat-label>
-        <input type="email" matInput formControlName="username"  />
+        <input type="email" matInput formControlName="username" />
         <mat-error *ngIf="form.get('username')?.errors?.['required']">
-          Please enter a valid username!  
+          Please enter a valid username!
         </mat-error>
-        <mat-error  *ngIf="form.get('username')?.errors?.['minlength']" >
+        <mat-error *ngIf="form.get('username')?.errors?.['minlength']">
           Username has to be at least 5 charakters long!
         </mat-error>
       </mat-form-field>
 
+      <!-- email -->
       <mat-form-field class="form-field">
         <mat-label>Email</mat-label>
-        <input type="email" matInput />
+        <input type="email" matInput formControlName="email" />
+        <mat-error *ngIf="form.get('email')?.errors?.['required']">
+          Email Required!
+        </mat-error>
       </mat-form-field>
 
+      <!-- password -->
       <mat-form-field class="form-field">
         <mat-label>Password</mat-label>
-        <input type="email" matInput />
+        <input type="password" matInput formControlName="password" />
       </mat-form-field>
 
+      <!-- repass -->
       <mat-form-field class="form-field">
         <mat-label>Repeat Password</mat-label>
-        <input type="email" matInput />
+        <input type="password" matInput formControlName="repass" />
       </mat-form-field>
 
       <div class="socialMediaFlex">

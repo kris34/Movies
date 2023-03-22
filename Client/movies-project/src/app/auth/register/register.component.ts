@@ -10,6 +10,9 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent {
+  emailregex: RegExp =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   form = this.fb.group({
     username: ['', [Validators.minLength(5), Validators.required]],
     email: ['', [Validators.required]],
@@ -23,6 +26,13 @@ export class RegisterComponent {
     private router: Router
   ) {}
 
+  emailErrors() {
+    return this.form.get('email')?.hasError('required')
+      ? 'Email Reqired!'
+      : this.form.get('email')?.hasError('pattern')
+      ? 'Email is invalid!'
+      : '';
+  }
   registerHandler() {
     if (this.form.invalid) {
       return;
@@ -40,6 +50,4 @@ export class RegisterComponent {
       },
     });
   }
-
-
 }
