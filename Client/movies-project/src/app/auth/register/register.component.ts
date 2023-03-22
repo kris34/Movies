@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { appEmailValidator } from 'src/app/shared/validators/email-validator';
 import { passwordValidator } from 'src/app/shared/validators/password-validator';
 import { AuthService } from '../auth.service';
 
@@ -10,12 +11,11 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent {
-  emailregex: RegExp =
-    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  pattern = '^[a-z0-9A-Z\.-]{3,}@[a-z]+\.[a-z]+$'
 
   form = this.fb.group({
     username: ['', [Validators.minLength(5), Validators.required]],
-    email: ['', [Validators.required]],
+    email: ['', [Validators.required, appEmailValidator()]],
     password: ['', [Validators.required, Validators.minLength(5)]],
     repass: ['', [Validators.required, passwordValidator]],
   });
@@ -26,13 +26,7 @@ export class RegisterComponent {
     private router: Router
   ) {}
 
-  emailErrors() {
-    return this.form.get('email')?.hasError('required')
-      ? 'Email Reqired!'
-      : this.form.get('email')?.hasError('pattern')
-      ? 'Email is invalid!'
-      : '';
-  }
+  
   registerHandler() {
     if (this.form.invalid) {
       return;

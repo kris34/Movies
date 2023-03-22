@@ -37,10 +37,12 @@ form {
   display: flex;
 }
 
-.spacer-reg {
-  margin-left: 10px;
-}
-
 .spacer {
   margin-top: 20px;
+}
+
+.mat-raised-button {
+  width: 100%;
+  height: 60px;
+  margin-top: 15px;
 }

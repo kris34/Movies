@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [RegisterComponent, LoginComponent, ProfileComponent],
@@ -16,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     MaterialModule,
     ReactiveFormsModule,
+    SharedModule
   ],
 })
 export class AuthModule {}
