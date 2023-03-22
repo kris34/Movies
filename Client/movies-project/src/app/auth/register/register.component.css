@@ -19,16 +19,28 @@ form {
   justify-content: center;
 }
 
-.register-form{
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-  }
-  
-  .form-field {
-    width: 100%;
-  }
+.register-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
 
-  .spacer { 
-    margin-top: 20px;
-  }
+.form-field {
+  width: 100%;
+}
+
+.spacer-reg {
+  flex: 1 1 auto;
+}
+
+.socialMediaFlex {
+  display: flex;
+}
+
+.spacer-reg {
+  margin-left: 10px;
+}
+
+.spacer {
+  margin-top: 20px;
+}

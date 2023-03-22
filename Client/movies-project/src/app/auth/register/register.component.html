@@ -23,6 +23,23 @@
         <mat-label>Repeat Password</mat-label>
         <input type="email" matInput />
       </mat-form-field>
+
+      <div class="socialMediaFlex">
+        <button
+          style="width: 25%"
+          type="submit"
+          mat-raised-button
+          color="accent"
+          [disabled]="form.invalid"
+        >
+          Submit
+        </button>
+        <div class="spacer-reg"></div>
+        <p class="text-center">
+          Have an account?
+          <a routerLink="/auth/login">Log In</a>
+        </p>
+      </div>
     </form>
   </div>
 </div>
