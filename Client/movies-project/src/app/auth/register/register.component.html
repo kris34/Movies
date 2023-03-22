@@ -3,10 +3,16 @@
     <mat-toolbar class="login-toolbar" color="accent">REGISTER</mat-toolbar>
     <div class="spacer"></div>
 
-    <form class="register-form">
+    <form class="register-form"   [formGroup]="form" class="register" (ngSubmit)="registerHandler()">
       <mat-form-field class="form-field">
         <mat-label>Username</mat-label>
-        <input type="email" matInput />
+        <input type="email" matInput formControlName="username"  />
+        <mat-error *ngIf="form.get('username')?.errors?.['required']">
+          Please enter a valid username!  
+        </mat-error>
+        <mat-error  *ngIf="form.get('username')?.errors?.['minlength']" >
+          Username has to be at least 5 charakters long!
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field class="form-field">
