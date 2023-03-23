@@ -32,9 +32,8 @@ form {
   flex: 1 1 auto;
 }
 
-.socialMediaFlex{
- 
-  display:flex;
+.socialMediaFlex {
+  display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
 }
@@ -49,7 +48,23 @@ form {
   margin-top: 15px;
 }
 
-.submit-btn { 
+.submit-btn {
   margin-right: 50;
   width: 25%;
+}
+
+.bg-image {
+  background-image: url(https://collider.com/wp-content/uploads/film-collage-2013-x.jpg);
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }

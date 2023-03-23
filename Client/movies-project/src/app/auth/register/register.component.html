@@ -1,5 +1,6 @@
 <div class="login-container">
   <div class="login-content">
+    
     <mat-card>
       <mat-toolbar class="login-toolbar" color="accent">REGISTER</mat-toolbar>
       <div class="spacer"></div>
@@ -20,6 +21,7 @@
           <mat-error *ngIf="form.get('username')?.errors?.['minlength']">
             Username has to be at least 5 charakters long!
           </mat-error>
+          
         </mat-form-field>
 
         <!-- email -->
@@ -66,8 +68,9 @@
           </button>
         </div>
       </form>
+
     </mat-card>
     <p>Have an account? Sign in <a routerLink="/auth/login">Here</a></p>
-    <p>{{error }}</p>
+    <p>{{error}}</p>
   </div>
-</div>
+</div>  
