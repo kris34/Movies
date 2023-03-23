@@ -12,10 +12,12 @@ form {
   width: 400px;
   display: block;
   margin: 0 auto;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.6);
 }
 
 .login-toolbar {
   justify-content: center;
+  
 }
 
 .register-form {
@@ -53,18 +55,6 @@ form {
   width: 25%;
 }
 
-.bg-image {
-  background-image: url(https://collider.com/wp-content/uploads/film-collage-2013-x.jpg);
-
-  /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-repeat: no-repeat;
-  background-size: cover;
-
+.error-msg {
+  
 }
