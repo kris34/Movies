@@ -44,7 +44,7 @@ export class RegisterComponent {
         this.router.navigate(['/']);
       },
       error: (err) => {
-        console.log(err);
+        console.log(err.error);
       },
     });
   }
