@@ -4,12 +4,7 @@
       <mat-toolbar class="login-toolbar" color="accent">REGISTER</mat-toolbar>
       <div class="spacer"></div>
 
-      <form
-        class="register-form"
-        [formGroup]="form"
-        class="register"
-        (ngSubmit)="registerHandler()"
-      >
+      <form class="register-form" [formGroup]="form" class="register" (ngSubmit)="registerHandler()">
         <!-- username -->
         <mat-form-field class="form-field">
           <mat-label>Username</mat-label>
@@ -50,18 +45,13 @@
           <mat-label>Repeat Password</mat-label>
           <input type="password" matInput formControlName="repass" />
 
-         <mat-error  *ngIf="form.get('repass')?.invalid">
+          <mat-error *ngIf="form.get('repass')?.invalid">
             Passwords don't match!
-          </mat-error> 
-        </mat-form-field>      
+          </mat-error>
+        </mat-form-field>
+        <!-- submit button -->
         <div class="socialMediaFlex">
-          <button
-            style="width: 50%"
-            [disabled]="form.invalid"
-            type="submit"
-            mat-raised-button
-            color="primary"
-          >
+          <button style="width: 50%" [disabled]="form.invalid" mat-raised-button color="primary">
             Submit
           </button>
         </div>
