@@ -4,7 +4,12 @@
       <mat-toolbar class="login-toolbar" color="accent">REGISTER</mat-toolbar>
       <div class="spacer"></div>
 
-      <form class="register-form" [formGroup]="form" class="register" (ngSubmit)="registerHandler()">
+      <form
+        class="register-form"
+        [formGroup]="form"
+        class="register"
+        (ngSubmit)="registerHandler()"
+      >
         <!-- username -->
         <mat-form-field class="form-field">
           <mat-label>Username</mat-label>
@@ -51,11 +56,17 @@
         </mat-form-field>
         <!-- submit button -->
         <div class="socialMediaFlex">
-          <button style="width: 75%" [disabled]="form.invalid" mat-raised-button color="primary">
+          <button
+            style="width: 75%"
+            [disabled]="form.invalid"
+            mat-raised-button
+            color="primary"
+          >
             Submit
           </button>
         </div>
       </form>
     </mat-card>
+    <p>Have an account? Sing in <a href="">Here</a></p>
   </div>
 </div>
