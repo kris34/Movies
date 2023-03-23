@@ -13,6 +13,8 @@ import { repassValidator } from 'src/app/shared/validators/repass-validator';
 export class RegisterComponent {
   pattern = '^[a-z0-9A-Z.-]{3,}@[a-z]+.[a-z]+$';
 
+  error: string = ""
+
   passwordControl = new FormControl('', [
     Validators.required,
     Validators.minLength(5),
@@ -22,7 +24,7 @@ export class RegisterComponent {
     username: ['', [Validators.minLength(5), Validators.required]],
     email: ['', [Validators.required, appEmailValidator()]],
     password: this.passwordControl,
-    repass:  new FormControl('', [repassValidator(this.passwordControl)]),
+    repass: new FormControl('', [repassValidator(this.passwordControl)]),
   });
 
   constructor(
@@ -44,7 +46,8 @@ export class RegisterComponent {
         this.router.navigate(['/']);
       },
       error: (err) => {
-        console.log(err.error);
+        console.log(err.error.error);
+        this.error = err.error.error;
       },
     });
   }
