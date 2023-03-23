@@ -40,7 +40,7 @@
           <mat-label>Password</mat-label>
           <input type="password" matInput formControlName="password" />
 
-          <mat-error *ngIf="form.get('password')?.errors?.['required']">
+          <mat-error *ngIf="form.get('password')?.errors?.['minlength']">
             Password must me at least 5 charakters!
           </mat-error>
         </mat-form-field>
@@ -49,11 +49,22 @@
         <mat-form-field class="form-field">
           <mat-label>Repeat Password</mat-label>
           <input type="password" matInput formControlName="repass" />
-        </mat-form-field>
 
+         <mat-error  *ngIf="form.get('repass')?.invalid">
+            Passwords don't match!
+          </mat-error> 
+        </mat-form-field>      
         <div class="socialMediaFlex">
-        	<button style="width:50%" [disabled]="form.invalid"    type="submit" mat-raised-button color="primary">Submit</button>
-      </div>
+          <button
+            style="width: 50%"
+            [disabled]="form.invalid"
+            type="submit"
+            mat-raised-button
+            color="primary"
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </mat-card>
   </div>
