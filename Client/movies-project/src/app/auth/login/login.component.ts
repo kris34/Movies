@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -9,15 +9,16 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent {
 
-  
-  form = this.fb.group({ 
-    
-  })
+
+  form = this.fb.group({
+    email: ['', [Validators.required]],
+    password: ['', [Validators.required]],
+  });
 
   constructor(private auth: AuthService, private fb: FormBuilder) {}
 
-  loginHandler(){ 
+  loginHandler() {
 
+    
   }
-
 }

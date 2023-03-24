@@ -1,56 +1,51 @@
 <div class="login-container">
-    <div class="login-content">
-      <mat-card>
-        <mat-toolbar class="login-toolbar" color="accent">Login</mat-toolbar>
-        <div class="spacer"></div>
-  
-        <form
-          class="register-form"
-          [formGroup]="form"
-          class="register"
-          (ngSubmit)="loginHandler()"
-        >
-        
-          <!-- email -->
-          <mat-form-field class="form-field">
-            <mat-label>Email</mat-label>
-            <input type="email" matInput formControlName="email" />
-            <mat-error *ngIf="form.get('email')?.errors?.['required']">
-              Email Required!
-            </mat-error>
-  
-            <mat-error *ngIf="form.get('email')?.errors?.['appEmailValidator']">
-              Invalid Email!
-            </mat-error>
-          </mat-form-field>
-  
-          <!-- password -->
-          <mat-form-field class="form-field">
-            <mat-label>Password</mat-label>
-            <input type="password" matInput formControlName="password" />
-  
-            <mat-error *ngIf="form.get('password')?.errors?.['minlength']">
-              Password must me at least 5 charakters!
-            </mat-error>
-          </mat-form-field>
-  
-         
-          <!-- submit button -->
-          <div class="socialMediaFlex">
-            <button
-              style="width: 75%"
-              [disabled]="form.invalid"
-              mat-raised-button
-              color="primary"
-            >
-              Submit
-            </button>
-          </div>
-        </form>
-        <div>Still dont have an account? Sign up <a routerLink="/auth/register">Here!</a></div>
-     <!--   <div>  {{error}}</div> -->
-      </mat-card>
-     
-    </div>
+  <div class="login-content">
+    <mat-card>
+      <mat-toolbar class="login-toolbar" color="accent">Login</mat-toolbar>
+      <div class="spacer"></div>
+
+      <form
+        class="register-form"
+        [formGroup]="form"
+        class="register"
+        (ngSubmit)="loginHandler()"
+      >
+        <!-- email -->
+        <mat-form-field class="form-field">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="email" />
+          <mat-error *ngIf="form.get('email')?.errors?.['required']">
+            Email required!
+          </mat-error>
+        </mat-form-field>
+
+        <!-- password -->
+        <mat-form-field class="form-field">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput formControlName="password" />
+
+          <mat-error *ngIf="form.get('password')?.errors?.['required']">
+            Password required!
+          </mat-error>
+        </mat-form-field>
+
+        <!-- submit button -->
+        <div class="socialMediaFlex">
+          <button
+            style="width: 75%"
+            [disabled]="form.invalid"
+            mat-raised-button
+            color="primary"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+      <div>
+        Still dont have an account? Sign up
+        <a routerLink="/auth/register">Here!</a>
+      </div>
+      <!--   <div>  {{error}}</div> -->
+    </mat-card>
   </div>
-  
+</div>

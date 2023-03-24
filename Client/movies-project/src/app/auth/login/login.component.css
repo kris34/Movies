@@ -38,7 +38,8 @@
   .socialMediaFlex {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    margin-top: 5px;
   }
   
   .spacer {
