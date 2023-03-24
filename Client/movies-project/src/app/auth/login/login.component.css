@@ -1,5 +1,5 @@
 .login-container {
-    margin-top: 50px;
+    margin-top: 100px;
     width: 100%;
     display: flex;
     
@@ -10,7 +10,7 @@
   }
   
   .login-content {
-    width: 400px;
+    width: 325px;
     display: block;
     margin: 0 auto;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.6);
