@@ -9,7 +9,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  error: string = '';
+  error: string | undefined = undefined;
 
   form = this.fb.group({
     email: ['', [Validators.required]],
@@ -27,14 +27,14 @@ export class LoginComponent {
       return;
     }
 
-    const user = this.form;
+    const user = this.form.value;
 
     this.auth.login(user).subscribe({
       next: () => {
         this.router.navigate(['/']);
       },
       error: (err) => {
-         this.error = err.error.error;
+        console.log(err);
       },
     });
   }

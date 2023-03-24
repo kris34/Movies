@@ -29,6 +29,7 @@ export class AuthService {
     return this.http.post<IUser>(`${apiUrl}/auth/login`, userData).pipe(
       tap((user) => {
         this.user = user;
+        setSession(user)
       })
     );
   }
