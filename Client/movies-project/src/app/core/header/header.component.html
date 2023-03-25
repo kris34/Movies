@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
   <a class="home-btn" mat-button routerLink="/">Home</a>
   <div class="spacer"></div>
-  <ng-container *ngIf="this.auth.isLoggedIn"> <span class="greet"> Welcome, {{user!.email}}! </span></ng-container>
+  <ng-container *ngIf="this.auth.isLogged"> <span class="greet"> Welcome, {{user!.email}}! </span></ng-container>
 
   <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
@@ -9,7 +9,7 @@
 
   <mat-menu #menu="matMenu">
     <ng-container
-      *ngTemplateOutlet="this.auth.isLoggedIn ? loggedInTemplate : loggedOutTemplate"
+      *ngTemplateOutlet="this.auth.isLogged ? loggedInTemplate : loggedOutTemplate"
     >
     </ng-container>
   </mat-menu>
