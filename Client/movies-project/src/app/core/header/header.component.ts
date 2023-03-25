@@ -8,16 +8,14 @@ import { getSession } from 'src/app/shared/sessions';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent implements DoCheck {
-  isLoggedIn: boolean = false
+export class HeaderComponent {
+ 
 
   constructor(private router: Router, public auth: AuthService) {}
 
-  get user(){
-    return this.auth.user
+  get user() {
+    return this.auth.user;
   }
 
-  ngDoCheck(): void {
-    this.isLoggedIn = this.auth.isLoggedIn;
-  }
+  
 }

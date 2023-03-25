@@ -51,7 +51,7 @@ export class AuthService {
     );
   }
 
-  setLoginInfo(user: IUser | null, status: boolean) {
+  setUserInfo(user: IUser | null, status: boolean) {
     return (this.user = user), (this.isLogged = status);
   }
 }

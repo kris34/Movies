@@ -13,9 +13,9 @@ export class AppComponent {
 
   constructor(private http: HttpClient, private auth: AuthService) {
     if (!getSession()) {
-      this.auth.setLoginInfo(null, false);
+      this.auth.setUserInfo(null, false);
       return;
     }
-    this.auth.setLoginInfo(getSession(), true);
+    this.auth.setUserInfo(getSession(), true);
   }
 }
