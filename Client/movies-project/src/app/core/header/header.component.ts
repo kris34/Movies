@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth/auth.service';
 import { getSession } from 'src/app/shared/sessions';
 
 @Component({
@@ -7,13 +8,16 @@ import { getSession } from 'src/app/shared/sessions';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements DoCheck {
+  isLoggedIn: boolean = false
 
-  get isLoggedIn() {
-    
+  constructor(private router: Router, public auth: AuthService) {}
 
-    return false;
+  get user(){
+    return this.auth.user
   }
 
-  constructor(private router: Router) {}
+  ngDoCheck(): void {
+    this.isLoggedIn = this.auth.isLoggedIn;
+  }
 }

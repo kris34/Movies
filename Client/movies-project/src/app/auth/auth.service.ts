@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import { environment } from 'environments/environment';
-import { tap } from 'rxjs';
+import { BehaviorSubject, filter, Subscription, tap } from 'rxjs';
 import { IUser } from '../shared/interfaces/user';
 import { setSession } from '../shared/sessions';
 
@@ -11,15 +11,32 @@ const apiUrl = environment.apiURL;
   providedIn: 'root',
 })
 export class AuthService {
-  user!: IUser | null;
-  isLoggedIn: boolean = false;
+  private user$$ = new BehaviorSubject<undefined | null | IUser>(undefined);
 
-  constructor(private http: HttpClient) {}
+  user$ = this.user$$
+    .asObservable()
+    .pipe(filter((val): val is IUser | null => val !== undefined));
+
+  user: IUser | null = null;
+
+  get isLoggedIn() {
+    return this.user != null;
+  }
+
+  isLogged: boolean = false;
+
+  subscription: Subscription;
+
+  constructor(private http: HttpClient) {
+    this.subscription = this.user$.subscribe((user) => {
+      this.user = user;
+    });
+  }
 
   register(userData: {}) {
     return this.http.post<IUser>(`${apiUrl}/auth/register`, userData).pipe(
       tap((user) => {
-        this.user = user;
+        this.user$$.next(user);
         setSession(user);
       })
     );
@@ -28,9 +45,13 @@ export class AuthService {
   login(userData: {}) {
     return this.http.post<IUser>(`${apiUrl}/auth/login`, userData).pipe(
       tap((user) => {
-        this.user = user;
-        setSession(user)
+        this.user$$.next(user);
+        setSession(user);
       })
     );
+  }
+
+  setLoginInfo(user: IUser | null, status: boolean) {
+    return (this.user = user), (this.isLogged = status);
   }
 }
