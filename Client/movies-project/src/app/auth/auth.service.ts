@@ -43,7 +43,7 @@ export class AuthService {
   }
 
   login(userData: {}) {
-    return this.http.post<IUser>(`${apiUrl}/auth/login`, userData).pipe(
+    return this.http.post<IUser>(`${apiUrl}/auth/login`, userData,  {withCredentials: true}).pipe(
       tap((user) => {
         this.user$$.next(user);
         setSession(user);

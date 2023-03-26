@@ -1,5 +1,5 @@
 module.exports = () => (req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:55694');
   res.header('Access-Control-Allow-Credentials', true);
   res.setHeader(
     'Access-Control-Allow-Methods',
