@@ -11,16 +11,21 @@ const apiUrl = environment.apiURL;
   providedIn: 'root',
 })
 export class AuthService {
-  user: IUser | null = null;
-
-  isLogged: boolean = false;
-
-  subscription: Subscription;
   private user$$ = new BehaviorSubject<undefined | null | IUser>(undefined);
 
   user$ = this.user$$
     .asObservable()
     .pipe(filter((val): val is IUser | null => val !== undefined));
+
+  user: IUser | null = null;
+
+  isLogged: boolean = false;
+
+  subscription: Subscription;
+
+  get isLoggedIn() {
+    return this.user != null;
+  }
 
   constructor(private http: HttpClient) {
     this.subscription = this.user$.subscribe((user) => {
@@ -29,7 +34,7 @@ export class AuthService {
   }
 
   register(userData: {}) {
-    return this.http.post<IUser>(`${apiUrl}/auth/register`, userData).pipe(
+    return this.http.post<IUser>(`${apiUrl}/auth/register`, userData, {withCredentials: true}).pipe(
       tap((user) => {
         this.user$$.next(user);
         setSession(user);

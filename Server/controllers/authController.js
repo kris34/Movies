@@ -22,7 +22,8 @@ authController.post(
         req.body.email,
         req.body.password
       );
-
+      
+      res.cookie(`Cookie token name`,`encrypted cookie string Value`);
       res.status(200).json(token);
     } catch (error) {
       res.status(400).json({ error: error.message });

@@ -3,9 +3,11 @@ const mongoose = require('mongoose');
 const siteController = require('./controllers/siteController');
 const authController = require('./controllers/authController');
 const cors = require('./middlewares/cors');
+const appCORS = require('cors');
 const session = require('./middlewares/session');
 const port = '3001';
-
+const cookieParser = require('cookie-parser');
+const cookieController = require('./controllers/cookieController');
 const connectionString = 'mongodb://localhost:27017/movies2';
 
 start();
@@ -17,7 +19,8 @@ function start() {
 
   app.use(cors());
   app.use(express.json());
-  app.use(session())
+  app.use(session());
+  app.use(cookieParser());
 
   app.get('/', (req, res) => {
     res.json({ message: 'REST service operational' });
@@ -25,6 +28,7 @@ function start() {
 
   app.use('/auth', authController);
   app.use('/site/catalog', siteController);
+  app.use('/cookie', cookieController);
 
   app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
