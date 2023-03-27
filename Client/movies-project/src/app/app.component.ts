@@ -12,10 +12,10 @@ export class AppComponent {
   title = 'movies-project';
 
   constructor(private http: HttpClient, private auth: AuthService) {
-    if (!getSession()) {
+   /*  if (!getSession()) {
       this.auth.setUserInfo(null, false);
       return;
     }
-    this.auth.setUserInfo(getSession(), true);
+    this.auth.setUserInfo(getSession(), true); */
   }
 }

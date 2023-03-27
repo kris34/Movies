@@ -9,6 +9,8 @@ import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
+import { appInterceptorProvider } from './app.interceptor';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +24,7 @@ import { AuthModule } from './auth/auth.module';
     SharedModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [appInterceptorProvider, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

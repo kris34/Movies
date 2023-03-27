@@ -27,7 +27,7 @@ function start() {
   });
 
   app.use('/auth', authController);
-  app.use('/site/catalog', siteController);
+  app.use('/catalog', siteController);
   app.use('/cookie', cookieController);
 
   app.listen(port, () => {
