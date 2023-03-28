@@ -9,13 +9,13 @@ import { getSession } from 'src/app/shared/sessions';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
- 
-
-  constructor(private router: Router, public auth: AuthService) {}
-
   get user() {
     return this.auth.user;
   }
 
-  
+  get isLoggedIn() {
+    return this.auth.isLoggedIn;
+  }
+
+  constructor(private router: Router, public auth: AuthService) {}
 }

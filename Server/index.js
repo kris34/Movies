@@ -26,9 +26,8 @@ function start() {
     res.json({ message: 'REST service operational' });
   });
 
-  app.use('/auth', authController);
-  app.use('/catalog', siteController);
-  app.use('/cookie', cookieController);
+  app.use('/api', authController);
+  app.use('/api', siteController);
 
   app.listen(port, () => {
     console.log(`Server listening on port ${port}`);

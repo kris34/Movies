@@ -9,14 +9,14 @@ import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
-import { appInterceptorProvider } from './app.interceptor';
+import { httpInterceptorProviders } from './app.interceptor';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AuthModule,   
+    AuthModule,
     AppRoutingModule,
     CoreModule,
     BrowserAnimationsModule,
@@ -24,7 +24,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     SharedModule,
     HttpClientModule,
   ],
-  providers: [appInterceptorProvider, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
