@@ -3,17 +3,15 @@ const mongoose = require('mongoose');
 const siteController = require('./controllers/siteController');
 const authController = require('./controllers/authController');
 const cors = require('./middlewares/cors');
-const appCORS = require('cors');
 const session = require('./middlewares/session');
 const port = '3001';
 const cookieParser = require('cookie-parser');
-const cookieController = require('./controllers/cookieController');
-const connectionString = 'mongodb://localhost:27017/movies2';
+const DBConnectionString = 'mongodb://localhost:27017/movies2';
 
 start();
 
 function start() {
-  mongoose.connect(connectionString);
+  mongoose.connect(DBConnectionString);
 
   const app = express();
 

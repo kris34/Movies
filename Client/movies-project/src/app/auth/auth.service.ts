@@ -34,7 +34,7 @@ export class AuthService {
   }
 
   register(userData: {}) {
-    return this.http.post<IUser>(`${apiUrl}/register`, userData).pipe(
+    return this.http.post<IUser>(`${apiUrl}/auth/register`, userData).pipe(
       tap((user) => {
         this.user$$.next(user);
        setSession(user);
