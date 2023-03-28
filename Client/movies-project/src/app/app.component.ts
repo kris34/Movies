@@ -25,5 +25,4 @@ export class AppComponent implements OnInit {
     }
     this.auth.setUserInfo(getSession(), true);
   }
-
 }

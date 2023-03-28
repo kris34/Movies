@@ -57,7 +57,12 @@ authController.post('/login', async (req, res) => {
 
 authController.get('/logout', async (req, res) => {
   const token = req.token;
-  console.log(req.body);
+
+  res.cookie('token', '', {
+    httpOnly: true,
+    secure: true,
+    sameSite: 'none',
+  });
   await logout(token);
 
   res.status(204).end();

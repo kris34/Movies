@@ -37,7 +37,7 @@ export class AuthService {
     return this.http.post<IUser>(`${apiUrl}/auth/register`, userData).pipe(
       tap((user) => {
         this.user$$.next(user);
-       setSession(user);
+        setSession(user);
       })
     );
   }
@@ -51,7 +51,15 @@ export class AuthService {
     );
   }
 
+  logout(userData:{}) {
+    return this.http.post<IUser>(`${apiUrl}/logout`, )
+  }
+
   setUserInfo(user: IUser | null, status: boolean) {
     return (this.user = user), (this.isLogged = status);
+  }
+
+  setLogout(user: IUser | null, status: boolean) {
+    return (this.user = null), (this.isLogged = false);
   }
 }
