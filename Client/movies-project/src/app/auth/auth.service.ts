@@ -34,7 +34,7 @@ export class AuthService {
   }
 
   register(userData: {}) {
-    return this.http.post<IUser>(`${apiUrl}/auth/register`, userData).pipe(
+    return this.http.post<IUser>(`${apiUrl}/register`, userData).pipe(
       tap((user) => {
         this.user$$.next(user);
         setSession(user);
@@ -51,15 +51,19 @@ export class AuthService {
     );
   }
 
-  logout(userData:{}) {
-    return this.http.post<IUser>(`${apiUrl}/logout`, )
+  logout() {
+    return this.http.post<IUser>(`${apiUrl}/logout`, {}).pipe(
+     tap(() => { 
+      console.log('asd');
+      
+     })
+     
+    );
   }
 
   setUserInfo(user: IUser | null, status: boolean) {
     return (this.user = user), (this.isLogged = status);
   }
 
-  setLogout(user: IUser | null, status: boolean) {
-    return (this.user = null), (this.isLogged = false);
-  }
+  
 }

@@ -62,6 +62,7 @@ async function login(email, password) {
 
 async function logout(token) {
   tokenBlacklist.add(token);
+  console.log(tokenBlacklist);
 }
 
 //create session token

@@ -9,7 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
-import { httpInterceptorProviders } from './app.interceptor';
+//import { httpInterceptorProviders } from './app.interceptor';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
@@ -24,7 +24,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     SharedModule,
     HttpClientModule,
   ],
-  providers: [httpInterceptorProviders],
+  providers: [/* httpInterceptorProviders */],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

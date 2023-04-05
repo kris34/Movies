@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+/* import { Injectable } from '@angular/core';
 import {
   HttpEvent,
   HttpInterceptor,
@@ -25,3 +25,4 @@ export class HttpRequestInterceptor implements HttpInterceptor {
 export const httpInterceptorProviders = [
   { provide: HTTP_INTERCEPTORS, useClass: HttpRequestInterceptor, multi: true },
 ];
+ */

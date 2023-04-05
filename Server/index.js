@@ -18,7 +18,6 @@ function start() {
   app.use(cors());
   app.use(express.json());
   app.use(session());
-  app.use(cookieParser());
 
   app.get('/', (req, res) => {
     res.json({ message: 'REST service operational' });

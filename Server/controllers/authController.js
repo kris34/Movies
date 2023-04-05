@@ -1,6 +1,11 @@
 const authController = require('express').Router();
 const validator = require('express-validator');
-const { register, login, logout } = require('../services/userService');
+const {
+  register,
+  login,
+  logout,
+  parseToken,
+} = require('../services/userService');
 
 authController.post(
   '/register',
@@ -42,7 +47,7 @@ authController.post('/login', async (req, res) => {
     if (!token) {
       throw new Error('Invalid user');
     }
-
+   console.log('easd');
     res.cookie(`token`, token, {
       httpOnly: true,
       secure: true,
@@ -55,17 +60,18 @@ authController.post('/login', async (req, res) => {
   }
 });
 
-authController.get('/logout', async (req, res) => {
-  const token = req.token;
+authController.post('/logout', async (req, res) => {
+  const token = req.cookies
+  console.log(token);
+  await logout(token._id);
 
   res.cookie('token', '', {
     httpOnly: true,
     secure: true,
     sameSite: 'none',
   });
-  await logout(token);
-
-  res.status(204).end();
+ console.log('------------------');
+  res.status(204).json('logged out!').end();
 });
 
 module.exports = authController;
