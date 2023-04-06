@@ -28,11 +28,11 @@ authController.post(
         req.body.password
       );
 
-      res.cookie(`token`, token, {
+     /*  res.cookie(`token`, token, {
         httpOnly: true,
         secure: true,
         sameSite: 'none',
-      });
+      }); */
       res.status(200).json(token);
     } catch (error) {
       res.status(400).json({ error: error.message });
@@ -47,12 +47,11 @@ authController.post('/login', async (req, res) => {
     if (!token) {
       throw new Error('Invalid user');
     }
-   console.log('easd');
-    res.cookie(`token`, token, {
+   /*  res.cookie(`token`, token, {
       httpOnly: true,
       secure: true,
       sameSite: 'none',
-    });
+    }); */
     res.status(200).json(token);
   } catch (error) {
     console.log(error);
