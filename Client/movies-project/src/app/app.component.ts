@@ -19,10 +19,10 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    if (!getSession()) {
+/*     if (!getSession()) {
       this.auth.setUserInfo(null, false);
       return;
-    }
+    } */
     this.auth.setUserInfo(getSession(), true);
   }
 }

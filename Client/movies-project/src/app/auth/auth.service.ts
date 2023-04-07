@@ -55,7 +55,8 @@ export class AuthService {
   logout() {
     sessionStorage.clear();
     localStorage.clear();
-    this.router.navigate(['/']);
+    this.setUserInfo(null, false)
+    this.router.navigate(['/login']);
   }
 
   setUserInfo(user: IUser | null, status: boolean) {
