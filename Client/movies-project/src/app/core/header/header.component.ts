@@ -9,6 +9,8 @@ import { getSession } from 'src/app/shared/sessions';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
+
+  
   get user() {
     return this.auth.user;
   }
@@ -23,5 +25,5 @@ export class HeaderComponent {
   logout() {
     this.auth.logout()
   }
-  
+
 }

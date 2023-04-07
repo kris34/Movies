@@ -1,8 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './auth/auth.service';
 import { getSession } from './shared/sessions';
-import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -12,15 +10,22 @@ import { CookieService } from 'ngx-cookie-service';
 export class AppComponent implements OnInit {
   title = 'movies-project';
 
-  constructor(
-    private auth: AuthService,
-  ) {}
-
-  ngOnInit(): void {
-   if (!getSession()) {
+  constructor(private auth: AuthService) {
+    if (!getSession()) {
+      console.log('yes');
       this.auth.setUserInfo(null, false);
       return;
     } 
     this.auth.setUserInfo(getSession(), true);
+  }
+
+  ngOnInit(): void {
+   /*  if (!getSession()) {
+      console.log('yes');
+
+      this.auth.setUserInfo(null, false);
+      return;
+    }
+    this.auth.setUserInfo(getSession(), true); */
   }
 }
