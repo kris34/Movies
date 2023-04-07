@@ -13,16 +13,14 @@ export class AppComponent implements OnInit {
   title = 'movies-project';
 
   constructor(
-    private http: HttpClient,
     private auth: AuthService,
-    private cookie: CookieService
   ) {}
 
   ngOnInit(): void {
-/*     if (!getSession()) {
+   if (!getSession()) {
       this.auth.setUserInfo(null, false);
       return;
-    } */
+    } 
     this.auth.setUserInfo(getSession(), true);
   }
 }

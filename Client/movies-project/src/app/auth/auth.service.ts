@@ -14,9 +14,9 @@ const apiUrl = environment.apiURL;
 export class AuthService {
   private user$$ = new BehaviorSubject<undefined | null | IUser>(undefined);
 
-  user$ = this.user$$
+   user$ = this.user$$
     .asObservable()
-    .pipe(filter((val): val is IUser | null => val !== undefined));
+    .pipe(filter((val): val is IUser | null => val !== undefined)); 
 
   user: IUser | null = null;
 
@@ -31,13 +31,13 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) {
     this.subscription = this.user$.subscribe((user) => {
       this.user = user;
-    });
+    }); 
   }
 
   register(userData: {}) {
     return this.http.post<IUser>(`${apiUrl}/register`, userData).pipe(
       tap((user) => {
-        this.user$$.next(user);
+       // this.user$$.next(user);
         setSession(user);
       })
     );
@@ -46,7 +46,7 @@ export class AuthService {
   login(userData: {}) {
     return this.http.post<IUser>(`${apiUrl}/login`, userData).pipe(
       tap((user) => {
-        this.user$$.next(user);
+       // this.user$$.next(user);
         setSession(user);
       })
     );

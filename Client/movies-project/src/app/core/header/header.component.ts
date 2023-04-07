@@ -17,11 +17,11 @@ export class HeaderComponent {
     return this.auth.isLoggedIn;
   }
 
-  token = this.auth.user;
 
   constructor(private router: Router, public auth: AuthService) {}
 
   logout() {
     this.auth.logout()
   }
+  
 }
