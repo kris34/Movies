@@ -1,1 +1,75 @@
-<p>create works!</p>
+<div class="login-container">
+    <div class="login-content">
+      <mat-card>
+        <mat-toolbar class="login-toolbar" color="accent">Create Movie</mat-toolbar>
+        <div class="spacer"></div>
+  
+        <form
+          class="register-form"
+          [formGroup]="form"
+          class="register"
+          (ngSubmit)="createMovieHandler()"
+        >
+          <!-- username -->
+          <mat-form-field class="form-field">
+            <mat-label>Username</mat-label>
+            <input type="email" matInput formControlName="username" />
+            <mat-error *ngIf="form.get('username')?.errors?.['required']">
+              Please enter a valid username!
+            </mat-error>
+            <mat-error *ngIf="form.get('username')?.errors?.['minlength']">
+              Username has to be at least 5 charakters long!
+            </mat-error>
+          </mat-form-field>
+  
+          <!-- email -->
+          <mat-form-field class="form-field">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email" />
+            <mat-error *ngIf="form.get('email')?.errors?.['required']">
+              Email Required!
+            </mat-error>
+  
+            <mat-error *ngIf="form.get('email')?.errors?.['appEmailValidator']">
+              Invalid Email!
+            </mat-error>
+          </mat-form-field>
+  
+          <!-- password -->
+          <mat-form-field class="form-field">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="password" />
+  
+            <mat-error *ngIf="form.get('password')?.errors?.['minlength']">
+              Password must me at least 5 charakters!
+            </mat-error>
+          </mat-form-field>
+  
+          <!-- repass -->
+          <mat-form-field class="form-field">
+            <mat-label>Repeat Password</mat-label>
+            <input type="password" matInput formControlName="repass" />
+  
+            <mat-error *ngIf="form.get('repass')?.invalid">
+              Passwords don't match!
+            </mat-error>
+          </mat-form-field>
+          <!-- submit button -->
+          <div class="socialMediaFlex">
+            <button
+              style="width: 75%"
+              [disabled]="form.invalid"
+              mat-raised-button
+              color="primary"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+        <div>Have an account? Sign in <a routerLink="/login">Here!</a></div>
+       <div>  </div>
+      </mat-card>
+     
+    </div>
+  </div>
+  

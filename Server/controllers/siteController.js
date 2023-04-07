@@ -16,7 +16,7 @@ const { getUser } = require('../services/userService');
 
 const siteController = require('express').Router();
 
-siteController.post('/', hasUser(), async (req, res) => {
+siteController.post('/movie/create', hasUser(), async (req, res) => {
   try {
     const data = Object.assign({ _ownerId: req.user._id }, req.body);
     const movie = await createMovie(data);
