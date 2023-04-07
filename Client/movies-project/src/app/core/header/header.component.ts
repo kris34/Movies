@@ -22,13 +22,6 @@ export class HeaderComponent {
   constructor(private router: Router, public auth: AuthService) {}
 
   logout() {
-    this.auth.logout().subscribe({
-      next: () => {
-        this.router.navigate(['/login']);
-      },
-      error: () => {
-        this.router.navigate(['/login']);
-      },
-    });
+    this.auth.logout()
   }
 }

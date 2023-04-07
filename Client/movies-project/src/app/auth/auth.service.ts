@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from 'environments/environment';
 import { BehaviorSubject, filter, Subscription, tap } from 'rxjs';
 import { IUser } from '../shared/interfaces/user';
@@ -27,7 +28,7 @@ export class AuthService {
     return this.user != null;
   }
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     this.subscription = this.user$.subscribe((user) => {
       this.user = user;
     });
@@ -52,18 +53,12 @@ export class AuthService {
   }
 
   logout() {
-    return this.http.post<IUser>(`${apiUrl}/logout`, {}).pipe(
-     tap(() => { 
-      console.log('asd');
-      
-     })
-     
-    );
+    sessionStorage.clear();
+    localStorage.clear();
+    this.router.navigate(['/']);
   }
 
   setUserInfo(user: IUser | null, status: boolean) {
     return (this.user = user), (this.isLogged = status);
   }
-
-  
 }

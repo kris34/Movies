@@ -28,7 +28,7 @@ authController.post(
         req.body.password
       );
 
-     /*  res.cookie(`token`, token, {
+      /*  res.cookie(`token`, token, {
         httpOnly: true,
         secure: true,
         sameSite: 'none',
@@ -47,7 +47,7 @@ authController.post('/login', async (req, res) => {
     if (!token) {
       throw new Error('Invalid user');
     }
-   /*  res.cookie(`token`, token, {
+    /*  res.cookie(`token`, token, {
       httpOnly: true,
       secure: true,
       sameSite: 'none',
@@ -59,18 +59,6 @@ authController.post('/login', async (req, res) => {
   }
 });
 
-authController.post('/logout', async (req, res) => {
-  const token = req.cookies
-  console.log(token);
-  await logout(token._id);
 
-  res.cookie('token', '', {
-    httpOnly: true,
-    secure: true,
-    sameSite: 'none',
-  });
- console.log('------------------');
-  res.status(204).json('logged out!').end();
-});
 
 module.exports = authController;
