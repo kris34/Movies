@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { MovieModule } from '../movie/movie.module';
 
 @NgModule({
   declarations: [RegisterComponent, LoginComponent, ProfileComponent],
@@ -17,7 +18,8 @@ import { SharedModule } from '../shared/shared.module';
     FormsModule,
     MaterialModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    MovieModule
   ],
 })
 export class AuthModule {}

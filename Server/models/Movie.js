@@ -10,6 +10,7 @@ const movieSchema = new Schema({
     minLength: [2, 'Title should be at least 2 charakters long!'],
   },
   genre: {type: String, required: true},
+  actors: {type: String, required: true},
   year: {
     type: Number,
     required: true,

@@ -15,9 +15,10 @@ import { MovieService } from '../movie.service';
 })
 export class CreateComponent {
   form = this.fb.group({
-    title: ['', [Validators.required, Validators.minLength(2)]],
+    title: ['', [Validators.required]],
     genre: ['', [Validators.required]],
     directors: ['', [Validators.required]],
+    actors: ['', [Validators.required]],
     year: ['', [Validators.required]],
     imageUrl: ['', [Validators.required]],
     description: ['', [Validators.required]],
