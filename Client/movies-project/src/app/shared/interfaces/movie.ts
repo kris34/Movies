@@ -9,6 +9,7 @@ export interface IMovie {
   actors: string;
   imageUrl: string;
   description: string;
+  productionCompanies: string;
   likes: [];
   dislikes: [];
   userId: IUser

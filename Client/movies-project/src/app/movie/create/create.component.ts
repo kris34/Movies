@@ -22,6 +22,7 @@ export class CreateComponent {
     year: ['', [Validators.required]],
     imageUrl: ['', [Validators.required]],
     description: ['', [Validators.required]],
+    productionCompanies: ['', [Validators.required]],
   });
 
   constructor(
@@ -35,7 +36,13 @@ export class CreateComponent {
       return;
     }
 
-    this.movie.createMovie(this.form);
-    this.router.navigate(['/']);
+    this.movie.createMovie(this.form.value).subscribe({
+      next: () => {
+        this.router.navigate(['/']);
+      },
+      error: (err) => {
+        console.log(err.error.error);
+      },
+    });
   }
 }

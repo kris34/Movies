@@ -12,8 +12,9 @@
         class="register"
         (ngSubmit)="createMovieHandler()"
       >
-        <!-- title -->
+        <!-- form group one -->
         <div class="form-groupc1">
+          <!-- title -->
           <mat-form-field class="form-field">
             <mat-label>Title</mat-label>
             <input type="text" matInput formControlName="title" />
@@ -40,7 +41,20 @@
               Image required!
             </mat-error>
           </mat-form-field>
+
+          <mat-form-field class="form-field">
+            <mat-label>Studio</mat-label>
+            <input type="text" matInput formControlName="productionCompanies" />
+
+            <mat-error
+              *ngIf="form.get('productionCompanies')?.errors?.['required']"
+            >
+              Studio required!
+            </mat-error>
+          </mat-form-field>
         </div>
+
+        <!-- form group two -->
         <div class="form-groupc2">
           <!-- directors -->
           <mat-form-field class="form-field">
@@ -71,17 +85,18 @@
               Year required!
             </mat-error>
           </mat-form-field>
+
+          <!--  description  -->
+
+          <mat-form-field id="description" class="form-field">
+            <mat-label>Description</mat-label>
+            <input type="text" matInput formControlName="description" />
+
+            <mat-error *ngIf="form.get('description')?.errors?.['required']">
+              Description required!
+            </mat-error>
+          </mat-form-field>
         </div>
-
-        <!--  description  -->
-        <mat-form-field id="description" class="form-field">
-          <mat-label>Description</mat-label>
-          <input type="text" matInput formControlName="description" />
-
-          <mat-error *ngIf="form.get('description')?.errors?.['required']">
-            Description required!
-          </mat-error>
-        </mat-form-field>
 
         <!-- submit button -->
         <div class="socialMediaFlex">
@@ -96,7 +111,6 @@
         </div>
       </form>
       <div>Have an account? Sign in <a routerLink="/login">Here!</a></div>
-      <div></div>
     </mat-card>
   </div>
 </div>

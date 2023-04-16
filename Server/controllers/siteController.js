@@ -16,7 +16,7 @@ const { getUser } = require('../services/userService');
 
 const siteController = require('express').Router();
 
-siteController.post('/movie/create', hasUser(), async (req, res) => {
+siteController.post('/movie/create',  async (req, res) => {
   try {
     const data = Object.assign({ _ownerId: req.user._id }, req.body);
     const movie = await createMovie(data);
@@ -26,7 +26,7 @@ siteController.post('/movie/create', hasUser(), async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 });
-
+ 
 siteController.get('/', async (req, res) => {
   try {
     const movies = await getAll();
@@ -115,6 +115,5 @@ siteController.put('/:id', hasUser(), async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 });
-
 
 module.exports = siteController;
