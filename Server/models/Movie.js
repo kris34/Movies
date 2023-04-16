@@ -9,8 +9,8 @@ const movieSchema = new Schema({
     unique: true,
     minLength: [2, 'Title should be at least 2 charakters long!'],
   },
-  genre: {type: String, required: true},
-  actors: {type: String, required: true},
+  genre: { type: String, required: true },
+  actors: { type: String, required: true },
   year: {
     type: Number,
     required: true,
@@ -37,13 +37,15 @@ const movieSchema = new Schema({
     required: true,
     minLength: [10, 'Description should be at least 10 charakters long!'],
   },
-  
-  likes: { type: [Types.ObjectId], ref: "User", default: [] },
-  dislikes: {type: [Types.ObjectId], ref: "User", default: [] },
+  productionCompanies: {
+    type: String,
+    required: true,
+  },
+  likes: { type: [Types.ObjectId], ref: 'User', default: [] },
+  dislikes: { type: [Types.ObjectId], ref: 'User', default: [] },
   _ownerId: { type: Types.ObjectId, ref: 'User', required: true },
 });
 
 const Movie = new model('Movie', movieSchema);
 
 module.exports = Movie;
-
