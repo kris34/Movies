@@ -37,6 +37,7 @@ const movieSchema = new Schema({
     required: true,
     minLength: [10, 'Description should be at least 10 charakters long!'],
   },
+  
   likes: { type: [Types.ObjectId], ref: "User", default: [] },
   dislikes: {type: [Types.ObjectId], ref: "User", default: [] },
   _ownerId: { type: Types.ObjectId, ref: 'User', required: true },

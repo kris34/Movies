@@ -13,62 +13,68 @@
         (ngSubmit)="createMovieHandler()"
       >
         <!-- title -->
-        <mat-form-field class="form-field">
-          <mat-label>Title</mat-label>
-          <input type="text" matInput formControlName="title" />
-          <mat-error *ngIf="form.get('title')?.errors?.['required']">
-            Please enter a valid title!
-          </mat-error>
-        </mat-form-field>
+        <div class="form-groupc1">
+          <mat-form-field class="form-field">
+            <mat-label>Title</mat-label>
+            <input type="text" matInput formControlName="title" />
+            <mat-error *ngIf="form.get('title')?.errors?.['required']">
+              Please enter a valid title!
+            </mat-error>
+          </mat-form-field>
 
-        <!-- Genre -->
-        <mat-form-field class="form-field">
-          <mat-label>Genre</mat-label>
-          <input type="text" matInput formControlName="genre" />
-          <mat-error *ngIf="form.get('email')?.errors?.['required']">
-            Genre required!
-          </mat-error>
-        </mat-form-field>
+          <!-- Genre -->
+          <mat-form-field class="form-field">
+            <mat-label>Genre</mat-label>
+            <input type="text" matInput formControlName="genre" />
+            <mat-error *ngIf="form.get('email')?.errors?.['required']">
+              Genre required!
+            </mat-error>
+          </mat-form-field>
 
-        <!-- directors -->
-        <mat-form-field class="form-field">
-          <mat-label>Directors</mat-label>
-          <input type="text" matInput formControlName="directors" />
+          <!--  image -->
+          <mat-form-field class="form-field">
+            <mat-label>Image</mat-label>
+            <input type="text" matInput formControlName="imageUrl" />
 
-          <mat-error *ngIf="form.get('directors')?.errors?.['required']">
-            Directors required!
-          </mat-error>
-        </mat-form-field>
+            <mat-error *ngIf="form.get('imageUrl')?.errors?.['required']">
+              Image required!
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-groupc2">
+          <!-- directors -->
+          <mat-form-field class="form-field">
+            <mat-label>Directors</mat-label>
+            <input type="text" matInput formControlName="directors" />
 
-        <!-- actors -->
-        <mat-form-field class="form-field">
-          <mat-label>Actors</mat-label>
-          <input type="text" matInput formControlName="actors" />
+            <mat-error *ngIf="form.get('directors')?.errors?.['required']">
+              Directors required!
+            </mat-error>
+          </mat-form-field>
 
-          <mat-error *ngIf="form.get('actors')?.errors?.['required']">
-            Actors required!
-          </mat-error>
-        </mat-form-field>
+          <!-- actors -->
+          <mat-form-field class="form-field">
+            <mat-label>Actors</mat-label>
+            <input type="text" matInput formControlName="actors" />
 
-        <mat-form-field class="form-field">
-          <mat-label>Year</mat-label>
-          <input type="number" matInput formControlName="year" />
+            <mat-error *ngIf="form.get('actors')?.errors?.['required']">
+              Actors required!
+            </mat-error>
+          </mat-form-field>
 
-          <mat-error *ngIf="form.get('year')?.errors?.['required']">
-            Year required!
-          </mat-error>
-        </mat-form-field>
+          <!-- year -->
+          <mat-form-field class="form-field">
+            <mat-label>Year</mat-label>
+            <input type="number" matInput formControlName="year" />
 
-        <mat-form-field class="form-field">
-          <mat-label>Image</mat-label>
-          <input type="text" matInput formControlName="imageUrl" />
+            <mat-error *ngIf="form.get('year')?.errors?.['required']">
+              Year required!
+            </mat-error>
+          </mat-form-field>
+        </div>
 
-          <mat-error *ngIf="form.get('imageUrl')?.errors?.['required']">
-            Image required!
-          </mat-error>
-        </mat-form-field>
-
-        <mat-form-field class="form-field">
+        <!--  description  -->
+        <mat-form-field id="description" class="form-field">
           <mat-label>Description</mat-label>
           <input type="text" matInput formControlName="description" />
 
