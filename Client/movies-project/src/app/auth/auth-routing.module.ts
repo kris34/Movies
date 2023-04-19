@@ -4,6 +4,7 @@ import { HomeComponent } from '../core/home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,10 @@ const routes: Routes = [
     path: 'profile',
     component: ProfileComponent,
   },
-  
+  {
+    path: "edit-profile",
+    component: EditProfileComponent 
+  }
 ];
 
 export const AuthRoutingModule = RouterModule.forChild(routes);
