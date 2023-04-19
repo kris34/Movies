@@ -5,6 +5,7 @@ const {
   login,
   logout,
   parseToken,
+  editProfile,
 } = require('../services/userService');
 
 authController.post(
@@ -59,6 +60,16 @@ authController.post('/login', async (req, res) => {
   }
 });
 
-
+authController.post('/edit-profile', async (req, res) => {
+  try {
+    const data = req.body;
+    const updatedUser = await editProfile(req.user._id, data);
+    console.log(updatedUser);
+    res.status(200).json(updatedUser);
+  } catch (err) {
+    console.log(err);
+    res.status(400).json({ error: error.message });
+  }
+});
 
 module.exports = authController;

@@ -91,10 +91,20 @@ async function getUser(id) {
   return await User.findById(id);
 }
 
+async function editProfile(id, data) {
+  const existing = await User.findById(id);
+
+  existing.email = data.email;
+  existing.username = data.username;
+
+  return existing.save();
+}
+
 module.exports = {
   register,
   login,
   logout,
   parseToken,
   getUser,
+  editProfile
 };
