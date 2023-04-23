@@ -21,11 +21,11 @@
   
           <!-- password -->
           <mat-form-field class="form-field">
-            <mat-label>Password</mat-label>
-            <input type="password" matInput formControlName="password" />
+            <mat-label>Username</mat-label>
+            <input type="password" matInput formControlName="username" />
   
-            <mat-error *ngIf="form.get('password')?.errors?.['required']">
-              Password required!
+            <mat-error *ngIf="form.get('username')?.errors?.['required']">
+              Username required!
             </mat-error>
           </mat-form-field>
   
@@ -41,10 +41,10 @@
             </button>
           </div>
         </form>
-        <div>
+       <!--  <div>
           Still don't have an account? Sign up
           <a routerLink="/register">Here!</a>
-        </div>
+        </div> -->
         <div>{{ error }}</div>
       </mat-card>
     </div>

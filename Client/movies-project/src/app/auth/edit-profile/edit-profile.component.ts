@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-profile',
@@ -12,8 +12,9 @@ export class EditProfileComponent {
   error: string | undefined = undefined;
 
   form = this.fb.group({
-    
-  })
+    email: ['', [Validators.required]],
+    username: ['', [Validators.required]],
+  });
 
   constructor(private auth: AuthService, private fb: FormBuilder) {}
 
