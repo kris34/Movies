@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { environment } from 'environments/environment';
 import { BehaviorSubject, filter, Subscription, tap } from 'rxjs';
 import { IUser } from '../shared/interfaces/user';
-import { setSession } from '../shared/sessions';
+import { getSession, setSession } from '../shared/sessions';
 
 const apiUrl = environment.apiURL;
 
@@ -60,7 +60,9 @@ export class AuthService {
   }
 
   edit(data: {}) {
-    return this.http.post(`${apiUrl}/edit-profile`, data).pipe();
+    return this.http.post<any>(`${apiUrl}/edit-profile`, data, {
+      headers: { 'x-authorization': getSession().accessToken },
+    });
   }
 
   setUserInfo(user: IUser | null, status: boolean) {
