@@ -59,6 +59,10 @@ export class AuthService {
     this.router.navigate(['/']);
   }
 
+  edit(data: {}) {
+    return this.http.post(`${apiUrl}/edit-profile`, data).pipe();
+  }
+
   setUserInfo(user: IUser | null, status: boolean) {
     return (this.user = user), (this.isLogged = status);
   }
