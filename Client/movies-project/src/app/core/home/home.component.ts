@@ -10,7 +10,7 @@ import { IMovie } from 'src/app/shared/interfaces/movie';
 export class HomeComponent {
   movies: IMovie[] | null = null;
 
-  constructor(private router: Router, private api: ApiService) {}
+  constructor(private router: Router) {}
 
 
 }
