@@ -9,12 +9,13 @@ const apiUrl = environment.apiURL;
 @Injectable({
   providedIn: 'root',
 })
-
 export class MovieService {
   constructor(private http: HttpClient) {}
 
   createMovie(data: {}) {
     console.log(data);
-    return this.http.post<any>(`${apiUrl}/movie/create`, data, { headers: { 'x-authorization': getSession().accessToken } });
+    return this.http.post<any>(`${apiUrl}/movie/create`, data, {
+      headers: { 'x-authorization': getSession().accessToken },
+    });
   }
 }
