@@ -9,9 +9,9 @@ import { getSession } from 'src/app/shared/sessions';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-
-  
   get user() {
+    console.log(sessionStorage.getItem('User'));
+
     return this.auth.user;
   }
 
@@ -19,11 +19,9 @@ export class HeaderComponent {
     return this.auth.isLoggedIn;
   }
 
-
   constructor(private router: Router, public auth: AuthService) {}
 
   logout() {
-    this.auth.logout()
+    this.auth.logout();
   }
-
 }

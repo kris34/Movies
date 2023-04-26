@@ -26,10 +26,7 @@ export class EditProfileComponent {
   editHandler() {
     if (this.form.invalid) {
       return;
-    }
-
-    console.log(this.form.value);
-    
+    }    
 
     this.auth.edit(this.form.value).subscribe({
       next: () => {

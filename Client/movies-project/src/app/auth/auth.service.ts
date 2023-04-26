@@ -60,9 +60,16 @@ export class AuthService {
   }
 
   edit(data: {}) {
-    return this.http.post<any>(`${apiUrl}/edit-profile`, data, {
-      headers: { 'x-authorization': getSession().accessToken },
-    });
+    return this.http
+      .post<any>(`${apiUrl}/edit-profile`, data, {
+        headers: { 'x-authorization': getSession().accessToken },
+      })
+      .pipe(
+        tap((user) => {
+          this.user$$.next(user);
+          setSession(user);
+        })
+      );
   }
 
   setUserInfo(user: IUser | null, status: boolean) {
