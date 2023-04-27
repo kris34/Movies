@@ -27,7 +27,7 @@ siteController.post('/movie/create', async (req, res) => {
   }
 });
 
-siteController.get('/', async (req, res) => {
+siteController.get('/movies', async (req, res) => {
   try {
     const movies = await getAll();
     res.status(200).json(movies);
@@ -116,7 +116,7 @@ siteController.put('/:id', hasUser(), async (req, res) => {
   }
 });
 
-siteController.get('/movies', async (req, res) => {
+/* siteController.get('/movies', async (req, res) => {
   try {
     const movies = await getAll();
     console.log(movies);
@@ -124,6 +124,6 @@ siteController.get('/movies', async (req, res) => {
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
-});
+}); */
 
 module.exports = siteController;

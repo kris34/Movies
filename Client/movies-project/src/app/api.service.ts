@@ -13,6 +13,6 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   loadMovies() {
-    return this.http.get<any>(`${apiUrl}`);
+    return this.http.get<any>(`${apiUrl}/movies`);
   }
 }
