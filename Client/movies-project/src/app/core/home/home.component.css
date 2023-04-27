@@ -21,6 +21,7 @@ img {
   justify-content: center;
 }
 
-.home-cards {
-  justify-content: center;
+
+.mat-cards { 
+  display: inline-block;
 }
