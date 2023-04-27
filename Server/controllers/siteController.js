@@ -119,9 +119,10 @@ siteController.put('/:id', hasUser(), async (req, res) => {
 siteController.get('/movies', async (req, res) => {
   try {
     const movies = await getAll();
+    console.log(movies);
     res.status(200).json(movies);
-  } catch (err) {
-    res.status(400).json({error: err.message})
+  } catch (error) {
+    res.status(400).json({ error: error.message });
   }
 });
 

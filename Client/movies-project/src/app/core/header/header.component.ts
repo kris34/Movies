@@ -10,7 +10,7 @@ import { getSession } from 'src/app/shared/sessions';
 })
 export class HeaderComponent {
   get user() {
-    console.log(sessionStorage.getItem('User'));
+    //console.log(sessionStorage.getItem('User'));
 
     return this.auth.user;
   }
