@@ -1,5 +1,7 @@
 .example-card {
-  max-width: 300px;
+  width: 300px;
+  height: 100%;
+  max-height: 500px;
   margin-left: 10px;
   margin-top: 15px;
 }
@@ -7,10 +9,6 @@
 .example-header-image {
   background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
   background-size: cover;
-} 
-
-mat-card {
-  display: inline-block;
 }
 
 img {
@@ -18,8 +16,12 @@ img {
   height: 200px;
   margin-top: 25px;
   margin-left: 15px;
+  justify-content: center;
 }
 
-.mat-cards {
-  display: inline-block;
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
+
