@@ -5,11 +5,13 @@ import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { ShortenPipe } from '../shared/shorten.pipe';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, HomeComponent],
-  imports: [CommonModule, MaterialModule, RouterModule,],
+  imports: [CommonModule, MaterialModule, RouterModule, SharedModule],
   exports: [HeaderComponent, FooterComponent, HomeComponent],
 })
 export class CoreModule {}

@@ -11,7 +11,7 @@
       <img mat-card-image src="{{ movie.imageUrl }}" alt="Photo of a movie" />
       <mat-card-content>
         <p>
-          {{ movie.description }}
+          {{ movie.description | shorten }}
         </p>
       </mat-card-content>
       <mat-card-actions>
