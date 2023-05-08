@@ -4,7 +4,7 @@
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>
-          <a routerLink="/">{{ movie.title }}</a>
+          <a routerLink="/">{{ movie.title | titleShorten  }}</a>
         </mat-card-title>
         <mat-card-subtitle>{{ movie.genre }}</mat-card-subtitle>
       </mat-card-header>

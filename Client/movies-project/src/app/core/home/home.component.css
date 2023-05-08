@@ -12,11 +12,12 @@
 }
 
 img {
-  width: 235px;
-  height: 200px;
-  margin-top: 25px;
-  margin-left: 15px;
-  justify-content: center;
+  width: 75%;
+  height: 20vw;
+  padding-left: 10px
+  ;
+  padding-top:  10px;
+  object-fit: cover;
 }
 
 .card-container {
@@ -25,3 +26,6 @@ img {
   gap: 10px;
 }
 
+.mat-mdc-card-header { 
+    padding: 5 5 5 5  ; 
+}
