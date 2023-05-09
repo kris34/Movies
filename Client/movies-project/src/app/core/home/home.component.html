@@ -1,26 +1,43 @@
-  <div class="card-container">
-  <div class="mat-cards" *ngFor="let movie of movies">
-    <mat-card class="example-card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>
-          <a routerLink="/">{{ movie.title | titleShorten  }}</a>
-        </mat-card-title>
-        <mat-card-subtitle>{{ movie.genre }}</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src="{{ movie.imageUrl }}" alt="Photo of a movie" />
-      <mat-card-content>
-        <p>
-          {{ movie.description | shorten }}
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-    </mat-card>
+<div class="home-container">
+  <div class="movie-card-container">
+    <div class="mat-cards" *ngFor="let movie of movies">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>
+            <a routerLink="/">{{ movie.title | titleShorten }}</a>
+          </mat-card-title>
+          <mat-card-subtitle>{{ movie.genre }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{ movie.imageUrl }}" alt="Photo of a movie" />
+        <mat-card-content>
+          <p>
+            {{ movie.description | shorten }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+  <h2>this is just some text</h2>
+
+  <div class="buttons">
+    <a routerLink="/cars">
+      <button>All Cars</button>
+    </a>
+    <a routerLink="/login">
+      <button>Login</button>
+    </a>
+    <a routerLink="/register">
+      <button>Register</button>
+    </a>
   </div>
 </div>
+
 <!--   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
