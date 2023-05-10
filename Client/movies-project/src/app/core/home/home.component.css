@@ -30,7 +30,7 @@ img {
   padding: 5 5 5 5;
 }
 
- h2 {
+h2 {
   position: absolute;
   top: 90%;
   text-align: center;
@@ -40,7 +40,7 @@ img {
   font-size: 1.5rem;
 }
 
-.buttons { 
+.buttons {
   position: absolute;
   top: 95%;
   text-align: center;
@@ -50,5 +50,6 @@ img {
   font-size: 1.5rem;
 }
 
-
-
+a { 
+  margin: 5px;
+}
