@@ -30,17 +30,6 @@ img {
   padding: 5 5 5 5;
 }
 
-h2 {
-  position: absolute;
-  top: 90%;
-  text-align: center;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgb(255, 255, 255);
-  font-size: 1.5rem;
-  font-style: italic;
-}
-
 .buttons {
   position: absolute;
   top: 95%;
@@ -51,7 +40,14 @@ h2 {
   font-size: 1.5rem;
 }
 
-a { 
+a {
   margin: 5px;
 }
 
+mat-card-subtitle {
+  padding-left: 10px;
+}
+
+mat-card-title {
+  padding-left: 6px;
+}
