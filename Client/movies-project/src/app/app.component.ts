@@ -12,7 +12,6 @@ export class AppComponent implements OnInit {
 
   constructor(private auth: AuthService) {
     if (!getSession()) {
-      console.log('yes');
       this.auth.setUserInfo(null, false);
       return;
     } 

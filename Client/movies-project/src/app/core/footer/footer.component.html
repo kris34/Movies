@@ -1,18 +1,19 @@
 <mat-toolbar class="footer" color="primary">
-    <footer>
-        <h2>Your best option to keep track of your favourite movies</h2>
-    
-        <div class="buttons">
-          <a routerLink="/cars">
-            <button mat-raised-button color="accent">Top 250</button>
-          </a>
-          <a routerLink="/login">
-            <button mat-raised-button color="accent">Login</button>
-          </a>
-          <a routerLink="/register">
-            <button mat-raised-button color="accent">Register</button>
-          </a>
-        </div>
-      </footer>
-</mat-toolbar> 
+  <footer>
+    <h2>Your best option to keep track of your favourite movies</h2>
 
+    <div class="buttons">
+      <a routerLink="/cars">
+        <button mat-raised-button color="accent">Top 250</button>
+      </a>
+      <ng-container *ngIf="!isLoggedIn" >
+        <a routerLink="/login">
+          <button mat-raised-button color="accent">Login</button>
+        </a>
+        <a routerLink="/register">
+          <button mat-raised-button color="accent">Register</button>
+        </a>
+      </ng-container>
+    </div>
+  </footer>
+</mat-toolbar>
