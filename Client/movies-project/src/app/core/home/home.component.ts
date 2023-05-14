@@ -18,9 +18,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.api.loadMovies().subscribe({
       next: (v) => {
-        this.movies = v;
-        console.log(this.movies);
-        
+        this.movies = v.slice(-4);
       },
       error: (err) => {
         console.log(err);
