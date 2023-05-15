@@ -5,6 +5,7 @@ import { environment } from 'environments/environment';
 import { BehaviorSubject, filter, Subscription, tap } from 'rxjs';
 import { IUser } from '../shared/interfaces/user';
 import { getSession, setSession } from '../shared/sessions';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 const apiUrl = environment.apiURL;
 
@@ -28,10 +29,20 @@ export class AuthService {
     return this.user != null;
   }
 
-  constructor(private http: HttpClient, private router: Router) {
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private jwtHelper: JwtHelperService
+  ) {
     this.subscription = this.user$.subscribe((user) => {
       this.user = user;
     });
+  }
+
+  public isAuthenticated(): boolean {
+    const jwt = localStorage.getItem('user');
+
+    return !this.jwtHelper.isTokenExpired(jwt);
   }
 
   register(userData: {}) {

@@ -20,7 +20,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     MaterialModule,
     ReactiveFormsModule,
     SharedModule,
-    MovieModule
+    MovieModule,
   ],
 })
 export class AuthModule {}

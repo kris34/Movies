@@ -5,11 +5,13 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
+    canActivate:[AuthGuardService]
   },
   {
     path: 'login',
