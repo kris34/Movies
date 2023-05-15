@@ -10,7 +10,6 @@ import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
 //import { httpInterceptorProviders } from './app.interceptor';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +22,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     MaterialModule,
     SharedModule,
     HttpClientModule,
+    
   ],
   providers: [/* httpInterceptorProviders */],
   bootstrap: [AppComponent],

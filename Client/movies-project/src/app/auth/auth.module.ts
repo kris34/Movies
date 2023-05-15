@@ -12,7 +12,12 @@ import { MovieModule } from '../movie/movie.module';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 @NgModule({
-  declarations: [RegisterComponent, LoginComponent, ProfileComponent, EditProfileComponent],
+  declarations: [
+    RegisterComponent,
+    LoginComponent,
+    ProfileComponent,
+    EditProfileComponent,
+  ],
   imports: [
     CommonModule,
     AuthRoutingModule,
@@ -21,6 +26,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     ReactiveFormsModule,
     SharedModule,
     MovieModule,
+    
   ],
 })
 export class AuthModule {}
