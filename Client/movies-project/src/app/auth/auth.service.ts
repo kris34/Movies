@@ -34,7 +34,7 @@ export class AuthService {
     });
   }
 
-  public isAuthenticated(): boolean {
+  isAuthenticated(): boolean {
     const jwt = localStorage.getItem('User');
 
     if (jwt) {

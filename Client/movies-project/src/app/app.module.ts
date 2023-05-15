@@ -15,16 +15,17 @@ import { AuthModule } from './auth/auth.module';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AuthModule,
     AppRoutingModule,
+    AuthModule,
     CoreModule,
     BrowserAnimationsModule,
     MaterialModule,
     SharedModule,
     HttpClientModule,
-    
   ],
-  providers: [/* httpInterceptorProviders */],
+  providers: [
+    /* httpInterceptorProviders */
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

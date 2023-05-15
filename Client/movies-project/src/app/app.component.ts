@@ -7,7 +7,7 @@ import { getSession } from './shared/sessions';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent  {
   title = 'movies-project';
 
   constructor(private auth: AuthService) {
@@ -18,13 +18,5 @@ export class AppComponent implements OnInit {
     this.auth.setUserInfo(getSession(), true);
   }
 
-  ngOnInit(): void {
-   /*  if (!getSession()) {
-      console.log('yes');
-
-      this.auth.setUserInfo(null, false);
-      return;
-    }
-    this.auth.setUserInfo(getSession(), true); */
-  }
+ 
 }
