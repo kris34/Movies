@@ -7,10 +7,10 @@
         <button mat-raised-button color="accent">Top 250</button>
       </a>
       <ng-container *ngIf="!isLoggedIn" >
-        <a routerLink="/login">
+        <a routerLink="/auth/login">
           <button mat-raised-button color="accent">Login</button>
         </a>
-        <a routerLink="/register">
+        <a routerLink="/auth/register">
           <button mat-raised-button color="accent">Register</button>
         </a>
       </ng-container>
