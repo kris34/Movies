@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   movies: IMovie[] | null = null;
 
   constructor(private router: Router, private api: ApiService) {
-    /*  this.getMovies(); */
+    /*  this.getMovies(); */  
   }
 
   ngOnInit(): void {
