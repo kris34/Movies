@@ -6,15 +6,16 @@ import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieRoutingModule } from './movie-routing.module';
+import { MovieComponent } from './movie/movie.component';
 
 
 @NgModule({
   declarations: [
-    CreateComponent
+    CreateComponent,
+    MovieComponent
   ],
   imports: [
     CommonModule,
-  MovieRoutingModule,
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,

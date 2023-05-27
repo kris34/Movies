@@ -37,7 +37,7 @@ siteController.get('/movies', async (req, res) => {
   }
 });
 
-siteController.get('/:id', async (req, res) => {
+siteController.get('/movies/:id', async (req, res) => {
   try {
     const existing = await existingMovie(req.params.id);
 
