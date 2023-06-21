@@ -17,14 +17,14 @@ import { MovieModule } from './movie/movie.module';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     AuthModule,
+    AppRoutingModule,
     CoreModule,
     BrowserAnimationsModule,
     MaterialModule,
     SharedModule,
     HttpClientModule,
-    MovieModule
+    MovieModule,
   ],
   providers: [
     /* httpInterceptorProviders */
