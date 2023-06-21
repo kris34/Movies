@@ -16,7 +16,7 @@ export class ApiService {
     return this.http.get<IMovie[]>(`${apiUrl}/movies`);
   }
 
-  loadMovie(){ 
+  loadMovie(id:number){ 
     return this.http.get<IMovie>(`${apiUrl}/:id`)
   }
 }
