@@ -9,7 +9,7 @@ import { ShortenPipe } from '../shared/pipes/shorten.pipe';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, HomeComponent],
+  declarations: [HeaderComponent, FooterComponent, HomeComponent, ],
   imports: [CommonModule, MaterialModule, RouterModule, SharedModule],
   exports: [HeaderComponent, FooterComponent, HomeComponent],
 })

@@ -9,6 +9,8 @@ import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
+import { MovieComponent } from './movie/details/movie.component';
+import { MovieModule } from './movie/movie.module';
 //import { httpInterceptorProviders } from './app.interceptor';
 
 @NgModule({
@@ -22,6 +24,7 @@ import { AuthModule } from './auth/auth.module';
     MaterialModule,
     SharedModule,
     HttpClientModule,
+    MovieModule
   ],
   providers: [
     /* httpInterceptorProviders */

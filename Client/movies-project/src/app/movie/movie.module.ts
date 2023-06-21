@@ -11,6 +11,7 @@ import { MovieComponent } from './details/movie.component';
 @NgModule({
   declarations: [CreateComponent, MovieComponent],
   imports: [
+    MovieRoutingModule,
     CommonModule,
     MaterialModule,
     FormsModule,
