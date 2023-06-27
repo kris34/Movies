@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ResolverResolver } from './resolver.resolver';
+import { MovieResolver } from './movie.resolver';
 
 describe('ResolverResolver', () => {
-  let resolver: ResolverResolver;
+  let resolver: MovieResolver;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    resolver = TestBed.inject(ResolverResolver);
+    resolver = TestBed.inject(MovieResolver);
   });
 
   it('should be created', () => {

@@ -5,25 +5,27 @@ import {
   RouterStateSnapshot,
   ActivatedRouteSnapshot,
 } from '@angular/router';
-import { Observable, of } from 'rxjs';
+import { Observable, catchError, of } from 'rxjs';
 import { ApiService } from 'src/app/api.service';
 import { IMovie } from 'src/app/shared/interfaces/movie';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ResolverResolver implements Resolve<IMovie | null> {
+export class MovieResolver implements Resolve<IMovie | null> {
   constructor(private api: ApiService, private router: Router) {}
 
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-  ): IMovie | null | Observable<IMovie> | Promise<IMovie> {
-    const movieId = Number(route.params['id']);
-    if (!movieId) {
-      this.router.navigate(['/theme/recent']);
-      return null;
-    }
-    return this.api.loadMovie(movieId);
+  ): IMovie | null | Observable<IMovie | null> | Promise<IMovie> {
+    const movieId = route.params['id'];
+
+    return this.api.loadMovie(movieId).pipe(
+      catchError((err) => {
+        this.router.navigate(['/']);
+        return of(null);
+      })
+    );
   }
 }

@@ -25,8 +25,6 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     MaterialModule,
     ReactiveFormsModule,
     SharedModule,
-  
-    
   ],
 })
 export class AuthModule {}

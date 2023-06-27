@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Router, RouterModule, Routes } from '@angular/router';
 import { CreateComponent } from './create/create.component';
 import { MovieComponent } from './details/movie.component';
+import { MovieResolver } from './resolvers/movie.resolver';
 
 const routes: Routes = [
   {
@@ -10,8 +11,15 @@ const routes: Routes = [
   },
   {
     path: ':id',
+    resolve: {
+      cres: MovieResolver,
+    },
     component: MovieComponent,
   },
 ];
 
-export const MovieRoutingModule = RouterModule.forChild(routes);
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
+})
+export class MovieRoutingModule {}

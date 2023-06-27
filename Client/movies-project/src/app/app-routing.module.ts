@@ -16,7 +16,8 @@ const routes: Routes = [
     path: 'movie',
     loadChildren: () =>
       import('./movie/movie.module').then((m) => m.MovieModule),
-  },  {
+  },
+  {
     path: '**',
     redirectTo: '/',
   },

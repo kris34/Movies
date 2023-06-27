@@ -9,14 +9,15 @@ const apiUrl = environment.apiURL;
   providedIn: 'root',
 })
 export class ApiService {
-
   constructor(private http: HttpClient) {}
 
   loadMovies() {
     return this.http.get<IMovie[]>(`${apiUrl}/movies`);
   }
 
-  loadMovie(id:number){ 
-    return this.http.get<IMovie>(`${apiUrl}/:id`)
+  loadMovie(id: string | null) {
+    return this.http.get<IMovie>(`${apiUrl}/movies/${id}`);
   }
+
+  
 }
