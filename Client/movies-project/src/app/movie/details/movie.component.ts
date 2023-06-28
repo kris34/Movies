@@ -9,7 +9,7 @@ import { IMovie } from 'src/app/shared/interfaces/movie';
   templateUrl: './movie.component.html',
   styleUrls: ['./movie.component.css'],
 })
-export class MovieComponent /* implements OnInit */ {
+export class MovieComponent {
   /* private id$$ = new BehaviorSubject<undefined | null | string>(undefined);
  
   id$ = this.id$$
@@ -20,22 +20,21 @@ export class MovieComponent /* implements OnInit */ {
 
   id: string | null | undefined = null; */
 
-  constructor( private route: ActivatedRoute, private api: ApiService) {
-      
+  movie: IMovie | null = null;
+
+  constructor(private route: ActivatedRoute, private api: ApiService) {
+    this.getMovie();
   }
 
   getMovie() {
     const id = this.route.snapshot.paramMap.get('id');
-
     return this.api.loadMovie(id).subscribe({
-      next: (v) => {},
+      next: (v) => {
+        this.movie = v;
+      },
       error: (err) => {
         console.log(err);
       },
     });
   }
-
-  /* ngOnInit(): void {
-    console.log(this.getId());
-  } */
 }
