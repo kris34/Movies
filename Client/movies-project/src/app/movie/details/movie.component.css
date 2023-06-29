@@ -1,6 +1,18 @@
 .box {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-    margin-top: 50px ;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  background-color: white;
+  position: relative;
+  top: 35px;
+}
+
+img {
+  width: 278px;
+  height: 414px;
+}
+
+section {
+  display: block;
+  margin: auto;
 }
