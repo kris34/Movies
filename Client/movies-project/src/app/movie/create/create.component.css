@@ -3,6 +3,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  border-radius: 3px;
 }
 
 form {
@@ -14,20 +15,24 @@ form {
   display: block;
   margin: 0 auto;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.6);
+  
 }
 
 .login-toolbar {
   justify-content: center;
+  border-radius: 3px;
 }
 
 .register-form {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
+  
 }
 
 .form-field {
   width: 100%;
+  
 }
 
 .spacer-reg {
@@ -38,10 +43,13 @@ form {
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
+  
 }
 
 .spacer {
   margin-top: 20px;
+
+  
 }
 
 .mat-raised-button {
@@ -60,6 +68,7 @@ form {
   display: inline-block;
   width: 45%;
   margin-left: 14px;
+  
 }
 
 

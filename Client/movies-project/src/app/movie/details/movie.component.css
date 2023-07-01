@@ -5,13 +5,21 @@
   margin-left: auto;
   margin-top: 50px;
   height: 500px;
-  background: teal;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.6);
 }
 
 img {
   position: absolute;
   width: 200px;
   height: 300px;
-  top: 30px;
+  top: 35px;
   left: 10px;
+}
+
+h3 {
+  top: -15px;
+  left: 10px;
+  position: absolute;
 }
