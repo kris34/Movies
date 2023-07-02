@@ -1,14 +1,6 @@
 .example-card {
-  width: 300px;
-  height: 100%;
-  max-height: 500px;
+  
   margin-left: 10px;
-  margin-top: 15px;
-}
-
-.example-header-image {
-  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
-  background-size: cover;
 }
 
 img {
@@ -21,12 +13,11 @@ img {
 
 .movie-card-container {
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
   
+  margin: 5%;
 }
-
 
 .buttons {
   position: absolute;
@@ -42,7 +33,7 @@ a {
   margin: 5px;
 }
 
-mat-card-subtitle { 
+mat-card-subtitle {
   padding-left: 1px;
 }
 

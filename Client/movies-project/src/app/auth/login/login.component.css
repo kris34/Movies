@@ -18,6 +18,8 @@ form {
 
 .login-toolbar {
   justify-content: center;
+  border-radius: 3px;
+
 }
 
 .register-form {

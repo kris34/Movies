@@ -17,7 +17,8 @@ form {
 }
 
 .login-toolbar {
-  justify-content: center; 
+  justify-content: center;
+  border-radius: 3px;
 }
 
 .register-form {
@@ -54,4 +55,3 @@ form {
   margin-right: 50;
   width: 25%;
 }
-
