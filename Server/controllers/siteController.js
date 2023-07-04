@@ -46,7 +46,7 @@ siteController.get('/movies/:id', async (req, res) => {
     }
 
     const movie = await getMovieById(req.params.id);
-     
+
     res.status(200).json(movie);
   } catch (error) {
     res.status(400).json({ error: error.message });
@@ -55,6 +55,7 @@ siteController.get('/movies/:id', async (req, res) => {
 
 siteController.get('/:id/like', hasUser(), async (req, res) => {
   try {
+    console.log(req.user);
     if (!req.user) {
       throw new Error('Invalid user!');
     }

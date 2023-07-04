@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { IMovie } from 'src/app/shared/interfaces/movie';
 
@@ -10,9 +10,14 @@ import { IMovie } from 'src/app/shared/interfaces/movie';
 })
 export class HomeComponent implements OnInit {
   movies: IMovie[] | null = null;
+  movie: IMovie | null = null;
 
-  constructor(private router: Router, private api: ApiService) {
-    /*  this.getMovies(); */  
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private api: ApiService
+  ) {
+    /*  this.getMovies(); */
   }
 
   ngOnInit(): void {
@@ -25,6 +30,17 @@ export class HomeComponent implements OnInit {
       },
     });
   }
+
+   like(id: string) {
+    this.api.likeMovie(id, ).subscribe({
+      next: (v) => {
+        console.log(v);
+      },
+      error: (err) => {
+      },
+    });
+  } 
+
   /* getMovies() {
     this.api.loadMovies().subscribe({
       next: (v) => {

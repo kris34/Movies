@@ -1,29 +1,33 @@
-<div class="home-container">
-  <div class="movie-card-container">
-    <div class="mat-cards" *ngFor="let movie of movies">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <!-- <div mat-card-avatar class="example-header-image"></div> -->
-          <mat-card-title>
-            <a routerLink="/movie/{{movie._id}}">{{ movie.title | titleShorten }}</a>
-          </mat-card-title>
-          <mat-card-subtitle>{{ movie.genre }}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="{{ movie.imageUrl }}" alt="Photo of a movie" />
-        <mat-card-content>
-          <p>
-            {{ movie.description | shorten }}
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
-    </div>
+<div class="movie-card-container">
+  <div class="mat-cards" *ngFor="let movie of movies">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <!-- <div mat-card-avatar class="example-header-image"></div> -->
+        <mat-card-title>
+          <a routerLink="/movie/{{ movie._id }}">{{
+            movie.title | titleShorten
+          }}</a>
+        </mat-card-title>
+        <mat-card-subtitle>{{ movie.genre }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{ movie.imageUrl }}" alt="Photo of a movie" />
+      <mat-card-content>
+        <p>
+          {{ movie.description | shorten }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="like(movie._id)">
+          <a routerLink="/movie/{{ movie._id }}">LIKE</a>
+        </button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
   </div>
+</div>
 
-  
+<div class="watch-container">
+  <app-whattowatch></app-whattowatch>
 </div>
 
 <!--   <mat-card class="example-card">

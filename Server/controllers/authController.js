@@ -44,7 +44,7 @@ authController.post(
 authController.post('/login', async (req, res) => {
   try {
     const token = await login(req.body.email, req.body.password);
-
+    
     if (!token) {
       throw new Error('Invalid user');
     }
@@ -63,14 +63,12 @@ authController.post('/login', async (req, res) => {
 authController.post('/edit-profile', async (req, res) => {
   try {
     const data = req.body;
-    console.log();
     const updatedUser = await editProfile(req.user._id, data);
     console.log(updatedUser);
     res.status(200).json(updatedUser);
   } catch (err) {
-    console.log(err);
     res.status(400).json({ error: err.message });
-  } 
+  }
 });
 
 module.exports = authController;

@@ -1,5 +1,4 @@
 .example-card {
-  
   margin-left: 10px;
 }
 
@@ -15,7 +14,12 @@ img {
   display: flex;
   gap: 10px;
   justify-content: center;
-  
+  margin: 5%;
+}
+.movie-card-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
   margin: 5%;
 }
 
