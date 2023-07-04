@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
    like(id: string) {
     this.api.likeMovie(id, ).subscribe({
       next: (v) => {
+        this.router.navigate(['/'])
         console.log(v);
       },
       error: (err) => {
