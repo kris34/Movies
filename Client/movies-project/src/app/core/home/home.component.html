@@ -8,7 +8,7 @@
             movie.title | titleShorten
           }}</a>
         </mat-card-title>
-       
+
         <mat-card-subtitle>{{ movie.genre }}</mat-card-subtitle>
       </mat-card-header>
       <img mat-card-image src="{{ movie.imageUrl }}" alt="Photo of a movie" />
@@ -20,13 +20,9 @@
       <mat-card-actions>
         <button mat-button (click)="like(movie._id)">
           <mat-icon>thumb_up</mat-icon>
-          <!--  <a routerLink="/movie/{{ movie._id }}">LIKE</a> -->
+          <div>{{ this.movie.likes.length }}</div>
         </button>
-       <!--  <button mat-button>SHARE</button> -->
-      <!--  <div class="like-icon"></div> -->
-       
       </mat-card-actions>
-
     </mat-card>
   </div>
 </div>
