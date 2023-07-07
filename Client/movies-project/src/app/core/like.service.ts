@@ -1,16 +1,14 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subscription, filter } from 'rxjs';
-import { ApiService } from 'src/app/api.service';
-import { IMovie } from 'src/app/shared/interfaces/movie';
+import { IMovie } from '../shared/interfaces/movie';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
-@Component({
-  selector: 'app-like',
-  templateUrl: './like.component.html',
-  styleUrls: ['./like.component.css'],
+@Injectable({
+  providedIn: 'root'
 })
-export class LikeComponent {
+export class LikeService {
+
   private movie$$ = new BehaviorSubject<undefined | null | IMovie>(undefined);
 
   movie$ = this.movie$$
@@ -32,6 +30,4 @@ export class LikeComponent {
       this.movie = movie;
     });
   }
-
-  
 }

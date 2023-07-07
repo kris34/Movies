@@ -36,7 +36,6 @@ async function likeMovie(movieId, userId) {
     movie.dislikes = movie.dislikes.filter((id) => id != userId);
   }
   movie.likes.push(userId);
-  movie.likesNum++;
   return movie.save();
 }
 

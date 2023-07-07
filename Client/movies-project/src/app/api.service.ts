@@ -3,7 +3,7 @@ import { Injectable, Input } from '@angular/core';
 import { environment } from 'environments/environment';
 import { IMovie } from './shared/interfaces/movie';
 import { getSession } from './shared/sessions';
-import { Subject, startWith } from 'rxjs';
+import { Subject, startWith, tap } from 'rxjs';
 
 const apiUrl = environment.apiURL;
 
@@ -28,6 +28,6 @@ export class ApiService {
       .get<IMovie>(`${apiUrl}/${id}/like`, {
         headers: { 'x-authorization': getSession().accessToken },
       })
-      
+      .pipe(tap((_) => console.log(`liked movie ${id}`)));
   }
 }
