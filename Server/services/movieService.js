@@ -35,9 +35,8 @@ async function likeMovie(movieId, userId) {
   if (movie.dislikes.includes(userId)) {
     movie.dislikes = movie.dislikes.filter((id) => id != userId);
   }
-
   movie.likes.push(userId);
-
+  movie.likesNum++;
   return movie.save();
 }
 
@@ -98,5 +97,5 @@ module.exports = {
   likeMovie,
   dislikeMovie,
   deleteMovie,
-  editMovie
+  editMovie,
 };

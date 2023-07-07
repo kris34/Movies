@@ -55,7 +55,6 @@ siteController.get('/movies/:id', async (req, res) => {
 
 siteController.get('/:id/like', hasUser(), async (req, res) => {
   try {
-    console.log(req.user);
     if (!req.user) {
       throw new Error('Invalid user!');
     }
@@ -64,8 +63,8 @@ siteController.get('/:id/like', hasUser(), async (req, res) => {
       throw new Error('Movie doesnt exist!');
     }
 
-    await likeMovie(req.params.id, req.user._id);
-    res.status(200).json('Liked!');
+  const likedMovie =   await likeMovie(req.params.id, req.user._id);
+    res.status(200).json(likedMovie);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

@@ -13,4 +13,6 @@ export interface IMovie {
   likes: [];
   dislikes: [];
   userId: IUser
+  isLIked: boolean
+  count: number
 }

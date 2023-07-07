@@ -18,10 +18,11 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button (click)="like(movie._id)">
+        <button mat-button (click)="like(movie._id, movie)">
           <mat-icon>thumb_up</mat-icon>
-          <div>{{ this.movie.likes.length }}</div>
         </button>
+        <div>{{ this.movie.likes.length }}</div>
+        <!-- <app-like>[likes]="currentLikes"</app-like> -->
       </mat-card-actions>
     </mat-card>
   </div>

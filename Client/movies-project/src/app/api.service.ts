@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
 import { environment } from 'environments/environment';
 import { IMovie } from './shared/interfaces/movie';
 import { getSession } from './shared/sessions';
+import { Subject, startWith } from 'rxjs';
 
 const apiUrl = environment.apiURL;
 
@@ -10,6 +11,8 @@ const apiUrl = environment.apiURL;
   providedIn: 'root',
 })
 export class ApiService {
+  @Input() likes: number = 0;
+
   constructor(private http: HttpClient) {}
 
   loadMovies() {
@@ -21,10 +24,10 @@ export class ApiService {
   }
 
   likeMovie(id: string) {
-    return this.http.get<IMovie>(`${apiUrl}/${id}/like`, {
-      headers: { 'x-authorization': getSession().accessToken },
-    });
+    return this.http
+      .get<IMovie>(`${apiUrl}/${id}/like`, {
+        headers: { 'x-authorization': getSession().accessToken },
+      })
+      
   }
-
-  
 }

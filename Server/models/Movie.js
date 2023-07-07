@@ -42,6 +42,7 @@ const movieSchema = new Schema({
     required: true,
   },
   likes: { type: [Types.ObjectId], ref: 'User', default: [] },
+  likesNum: { type: Number, default: 0},
   dislikes: { type: [Types.ObjectId], ref: 'User', default: [] },
   _ownerId: { type: Types.ObjectId, ref: 'User', required: true },
 });

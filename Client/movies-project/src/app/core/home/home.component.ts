@@ -1,5 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subject, concatMap, of, startWith } from 'rxjs';
 import { ApiService } from 'src/app/api.service';
 import { IMovie } from 'src/app/shared/interfaces/movie';
 
@@ -9,9 +17,7 @@ import { IMovie } from 'src/app/shared/interfaces/movie';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  movies: IMovie[] | null = null;
-  movie: IMovie | null = null;
-
+  movies: IMovie[] | null = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -30,24 +36,11 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  like(id: string) {
+  like(id: string, movie: IMovie) {
     this.api.likeMovie(id).subscribe({
       next: (v) => {
-          this.router.navigate(['/']);
         console.log(v);
       },
-      error: (err) => {},
     });
   }
-
-  /* getMovies() {
-    this.api.loadMovies().subscribe({
-      next: (v) => {
-        this.movies = v;
-      },
-      error: (err) => {
-        console.log(err);
-      },
-    });
-  } */
 }
