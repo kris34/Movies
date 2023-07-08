@@ -10,13 +10,12 @@ import { getSession } from './shared/sessions';
 export class AppComponent  {
   title = 'movies-project';
 
-  constructor(private auth: AuthService) {
+  constructor(private auth: AuthService, ) {
     if (!getSession()) {
       this.auth.setUserInfo(null, false);
       return;
     } 
     this.auth.setUserInfo(getSession(), true);
   }
-
  
 }

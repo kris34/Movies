@@ -28,6 +28,7 @@ import { MovieModule } from './movie/movie.module';
   ],
   providers: [
     /* httpInterceptorProviders */
+    
   ],
   bootstrap: [AppComponent],
 })

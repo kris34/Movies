@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 import { environment } from 'environments/environment';
 import { IMovie } from '../shared/interfaces/movie';
 import { getSession } from '../shared/sessions';
+import { BehaviorSubject, Observable, Subscription, filter, tap } from 'rxjs';
+import { Router } from '@angular/router';
+import { ILike } from '../shared/interfaces/like';
 
 const apiUrl = environment.apiURL;
 
@@ -10,7 +13,23 @@ const apiUrl = environment.apiURL;
   providedIn: 'root',
 })
 export class MovieService {
-  constructor(private http: HttpClient) {}
+  private movie$$ = new BehaviorSubject<undefined | null | IMovie>(undefined);
+
+  movie$ = this.movie$$
+    .asObservable()
+    .pipe(filter((val): val is IMovie | null => val !== undefined));
+
+  movie: IMovie | null = null;
+
+  isLiked: boolean = false;
+
+  subscription: Subscription;
+
+  constructor(private http: HttpClient, private router: Router) {
+    this.subscription = this.movie$.subscribe((response) => {
+      this.movie = response;
+    });
+  }
 
   createMovie(data: {}) {
     console.log(data);
@@ -19,5 +38,11 @@ export class MovieService {
     });
   }
 
-  
+  likeMovie(id: string, data: {}) {
+    return this.http
+      .post<IMovie>(`${apiUrl}/${id}/like`,data, {
+        headers: { 'x-authorization': getSession().accessToken },
+      })
+      .pipe(tap((_) => console.log(`liked movie ${id}`)));
+  }
 }

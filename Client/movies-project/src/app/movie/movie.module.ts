@@ -8,9 +8,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieRoutingModule } from './movie-routing.module';
 import { MovieComponent } from './details/movie.component';
 import { MovieResolver } from './resolvers/movie.resolver';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
-  declarations: [CreateComponent, MovieComponent],
+  declarations: [CreateComponent, MovieComponent, LikeComponent],
   imports: [
     MovieRoutingModule,
     CommonModule,
@@ -19,6 +20,6 @@ import { MovieResolver } from './resolvers/movie.resolver';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  exports: [CreateComponent],
+  exports: [CreateComponent, LikeComponent],
 })
 export class MovieModule {}

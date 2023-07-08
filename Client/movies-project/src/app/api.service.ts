@@ -23,11 +23,4 @@ export class ApiService {
     return this.http.get<IMovie>(`${apiUrl}/movies/${id}`);
   }
 
-  likeMovie(id: string) {
-    return this.http
-      .get<IMovie>(`${apiUrl}/${id}/like`, {
-        headers: { 'x-authorization': getSession().accessToken },
-      })
-      .pipe(tap((_) => console.log(`liked movie ${id}`)));
-  }
 }

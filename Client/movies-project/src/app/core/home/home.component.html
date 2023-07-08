@@ -17,13 +17,8 @@
           {{ movie.description | shorten }}
         </p>
       </mat-card-content>
-      <mat-card-actions>
-        <button mat-button (click)="like(movie._id, movie)">
-          <mat-icon>thumb_up</mat-icon>
-        </button>
-        <div>{{ this.movie.likes.length }}</div>
-        <!-- <app-like>[likes]="currentLikes"</app-like> -->
-      </mat-card-actions>
+
+      <app-like [count]="this.movie.likes.length" [movie]="this.movie"></app-like>
     </mat-card>
   </div>
 </div>
