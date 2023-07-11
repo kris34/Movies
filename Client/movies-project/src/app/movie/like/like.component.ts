@@ -18,11 +18,11 @@ export class LikeComponent {
   constructor(
     private api: ApiService,
     private route: ActivatedRoute,
-    private service: MovieService
+    private movieApi: MovieService
   ) {}
 
   like(movie: IMovie) {
-    this.service.likeMovie(movie._id, movie).subscribe({
+    this.movieApi.likeMovie(movie._id, movie).subscribe({
       next: (v) => {
         console.log(v);
         this.count++

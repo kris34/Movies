@@ -17,8 +17,16 @@
           {{ movie.description | shorten }}
         </p>
       </mat-card-content>
-
-      <app-like [count]="this.movie.likes.length" [movie]="this.movie"></app-like>
+      <div class="reactions">
+        <app-like
+          [count]="this.movie.likes.length"
+          [movie]="this.movie"
+        ></app-like>
+        <app-dislike
+          [count]="this.movie.dislikes.length"
+          [movie]="this.movie"
+        ></app-dislike>
+      </div>
     </mat-card>
   </div>
 </div>

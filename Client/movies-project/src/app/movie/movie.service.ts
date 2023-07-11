@@ -40,13 +40,21 @@ export class MovieService {
 
   likeMovie(id: string, data: {}) {
     return this.http
-      .post<IMovie>(`${apiUrl}/${id}/like`,data, {
+      .post<IMovie>(`${apiUrl}/${id}/like`, data, {
         headers: { 'x-authorization': getSession().accessToken },
       })
       .pipe(tap((_) => console.log(`liked movie ${id}`)));
   }
 
-  dislikeMovie(id:string, data: {}){ 
-    return this.http.post<IMovie>()
+  dislikeMovie(id: string, data: {}) {
+    return this.http
+      .post<IMovie>(`${apiUrl}/${id}/dislike`, data, {
+        headers: { 'x-authorization': getSession().accessToken },
+      })
+      .pipe(
+        tap((_) => {
+          console.log(`disliked movie ${id}`);
+        })
+      );
   }
 }

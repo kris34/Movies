@@ -21,6 +21,6 @@ import { DislikeComponent } from './dislike/dislike.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  exports: [CreateComponent, LikeComponent],
+  exports: [CreateComponent, LikeComponent, DislikeComponent],
 })
 export class MovieModule {}
