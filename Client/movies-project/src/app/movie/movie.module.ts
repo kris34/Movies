@@ -9,9 +9,10 @@ import { MovieRoutingModule } from './movie-routing.module';
 import { MovieComponent } from './details/movie.component';
 import { MovieResolver } from './resolvers/movie.resolver';
 import { LikeComponent } from './like/like.component';
+import { DislikeComponent } from './dislike/dislike.component';
 
 @NgModule({
-  declarations: [CreateComponent, MovieComponent, LikeComponent],
+  declarations: [CreateComponent, MovieComponent, LikeComponent, DislikeComponent],
   imports: [
     MovieRoutingModule,
     CommonModule,
