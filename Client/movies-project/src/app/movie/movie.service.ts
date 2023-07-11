@@ -45,4 +45,8 @@ export class MovieService {
       })
       .pipe(tap((_) => console.log(`liked movie ${id}`)));
   }
+
+  dislikeMovie(id:string, data: {}){ 
+    return this.http.post<IMovie>()
+  }
 }

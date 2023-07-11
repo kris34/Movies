@@ -70,7 +70,7 @@ siteController.post('/:id/like', hasUser(), async (req, res) => {
   }
 });
 
-siteController.get('/:id/dislike', hasUser(), async (req, res) => {
+siteController.post('/:id/dislike', hasUser(), async (req, res) => {
   try {
     if (!req.user) {
       throw new Error('Invalid user!');
@@ -80,8 +80,8 @@ siteController.get('/:id/dislike', hasUser(), async (req, res) => {
       throw new Error('Movie doesnt exist!');
     }
 
-    await dislikeMovie(req.params.id, req.user._id);
-    res.status(200).end();
+    const dislikedMovie = await dislikeMovie(req.params.id, req.user._id);
+    res.status(200).json(dislikedMovie);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
