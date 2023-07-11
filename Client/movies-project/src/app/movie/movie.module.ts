@@ -8,12 +8,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieRoutingModule } from './movie-routing.module';
 import { MovieComponent } from './details/movie.component';
 import { MovieResolver } from './resolvers/movie.resolver';
-import { LikeComponent } from './like/like.component';
-import { DislikeComponent } from './dislike/dislike.component';
 import { ReactionsComponent } from './reactions/reactions.component';
 
 @NgModule({
-  declarations: [CreateComponent, MovieComponent, LikeComponent, DislikeComponent, ReactionsComponent],
+  declarations: [CreateComponent, MovieComponent, ReactionsComponent],
   imports: [
     MovieRoutingModule,
     CommonModule,
@@ -22,6 +20,6 @@ import { ReactionsComponent } from './reactions/reactions.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  exports: [CreateComponent, LikeComponent, DislikeComponent, ReactionsComponent],
+  exports: [CreateComponent, ReactionsComponent],
 })
 export class MovieModule {}

@@ -20,6 +20,9 @@ export class ReactionsComponent {
         console.log(v);
         this.likeCount++;
         this.dislikeCount--;
+        if (this.dislikeCount < 0) {
+          this.dislikeCount = 0;
+        }
       },
       error: (err) => {
         console.log(err);
