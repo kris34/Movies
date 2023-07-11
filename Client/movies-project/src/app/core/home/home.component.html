@@ -18,14 +18,11 @@
         </p>
       </mat-card-content>
       <div class="reactions">
-        <app-like
-          [count]="this.movie.likes.length"
+        <app-reactions
+          [likeCount]="this.movie.likes.length"
+          [dislikeCount]="this.movie.dislikes.length"
           [movie]="this.movie"
-        ></app-like>
-        <app-dislike
-          [count]="this.movie.dislikes.length"
-          [movie]="this.movie"
-        ></app-dislike>
+        ></app-reactions>
       </div>
     </mat-card>
   </div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { IMovie } from 'src/app/shared/interfaces/movie';
 import { MovieService } from '../movie.service';
 
@@ -9,15 +9,16 @@ import { MovieService } from '../movie.service';
 })
 export class DislikeComponent {
   @Input() movie: IMovie;
-  @Input() count: number;
-
+  @Input() dislikeCount: number;
+  
   constructor(private moiveApi: MovieService) {}
 
   dislike(movie: IMovie) {
     this.moiveApi.dislikeMovie(this.movie._id, movie).subscribe({
       next: (v) => {
         console.log('disliked');
-        this.count++;
+        this.dislikeCount++;
+       
       },
     });
   }

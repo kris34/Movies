@@ -10,9 +10,10 @@ import { MovieComponent } from './details/movie.component';
 import { MovieResolver } from './resolvers/movie.resolver';
 import { LikeComponent } from './like/like.component';
 import { DislikeComponent } from './dislike/dislike.component';
+import { ReactionsComponent } from './reactions/reactions.component';
 
 @NgModule({
-  declarations: [CreateComponent, MovieComponent, LikeComponent, DislikeComponent],
+  declarations: [CreateComponent, MovieComponent, LikeComponent, DislikeComponent, ReactionsComponent],
   imports: [
     MovieRoutingModule,
     CommonModule,
@@ -21,6 +22,6 @@ import { DislikeComponent } from './dislike/dislike.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  exports: [CreateComponent, LikeComponent, DislikeComponent],
+  exports: [CreateComponent, LikeComponent, DislikeComponent, ReactionsComponent],
 })
 export class MovieModule {}

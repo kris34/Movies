@@ -13,7 +13,8 @@ import { MovieService } from '../movie.service';
 })
 export class LikeComponent {
   @Input() movie: IMovie;
-  @Input() count: number;
+  @Input() likesCount: number;
+ 
 
   constructor(
     private api: ApiService,
@@ -25,7 +26,7 @@ export class LikeComponent {
     this.movieApi.likeMovie(movie._id, movie).subscribe({
       next: (v) => {
         console.log(v);
-        this.count++
+        this.likesCount++;
       },
       error: (err) => {
         console.log(err);

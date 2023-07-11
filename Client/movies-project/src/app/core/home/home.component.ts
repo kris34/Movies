@@ -19,7 +19,6 @@ import { MovieService } from 'src/app/movie/movie.service';
 })
 export class HomeComponent {
   movies: IMovie[] | undefined = [];
-  
 
   constructor(private api: ApiService, private movieService: MovieService) {
     this.api.loadMovies().subscribe({
@@ -31,7 +30,4 @@ export class HomeComponent {
       },
     });
   }
-
-
-
 }
