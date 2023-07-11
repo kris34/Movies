@@ -1,6 +1,5 @@
 .container {
   max-width: 500px;
-  
   position: relative;
   margin-right: auto;
   margin-left: auto;
@@ -19,8 +18,14 @@ img {
   left: 10px;
 }
 
-h3 {
+h2 {
   top: -15px;
   left: 10px;
   position: absolute;
+}
+
+p {
+  position: absolute;
+  top: 67%;
+  left: 10px;
 }
