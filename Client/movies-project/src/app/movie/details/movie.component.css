@@ -2,7 +2,7 @@
   max-width: 400px;
   position: relative;
   margin-right: auto;
-  margin-left: auto;
+  margin-left: auto;  
   margin-top: 60px;
   height: 500px;
   background: white;
@@ -21,8 +21,13 @@ img {
 mat-icon { 
   top: 7px;
   left: 35%;
-  position: absolute;
   color: rgb(241, 172, 53);
+  position: relative;
+}
+
+.genre { 
+  left:  55%;
+  bottom: 2%;
   position: relative;
 }
 
@@ -34,7 +39,7 @@ h2 {
   position: absolute;
 }
 
-p {
+.description {
   position: absolute;
   top: 67%;
   left: 10px;

@@ -25,11 +25,9 @@ export class ReactionsComponent {
       next: (v) => {
         this.likeCount++;
         if (movie.dislikes.includes(this.user!._id)) {
-          this.movie = v;
           this.dislikeCount--;
         }
         this.movie = v;
-
         if (this.dislikeCount < 0) {
           this.dislikeCount = 0;
         }
@@ -46,10 +44,8 @@ export class ReactionsComponent {
         this.dislikeCount++;
         if (this.movie.likes.includes(this.user!._id)) {
           this.likeCount--;
-          this.movie = v;
         }
         this.movie = v;
-
         if (this.likeCount < 0) {
           this.likeCount = 1;
         }
