@@ -11,7 +11,7 @@ import { IMovie } from 'src/app/shared/interfaces/movie';
 })
 export class MovieComponent {
   movie: IMovie | null = null;
-  likes: string[];
+  arr: string[];
 
   constructor(private route: ActivatedRoute, private api: ApiService) {
     this.getMovie();
@@ -22,7 +22,19 @@ export class MovieComponent {
     return this.api.loadMovie(id).subscribe({
       next: (v) => {
         this.movie = v;
-        this.likes = this.movie.likes.slice(-5);
+        if (this.movie.likes.length - this.movie.dislikes.length == 1) {
+          this.arr = this.movie.likes.slice(-1);
+        } else if (this.movie.likes.length - this.movie.dislikes.length == 2) {
+          this.arr = this.movie.likes.slice(-2);
+        } else if (this.movie.likes.length - this.movie.dislikes.length == 3) {
+          this.arr = this.movie.likes.slice(-3);
+        } else if (this.movie.likes.length - this.movie.dislikes.length == 4) {
+          this.arr = this.movie.likes.slice(-4);
+        } else if (this.movie.likes.length - this.movie.dislikes.length >= 5) {
+          this.arr = this.movie.likes.slice(-5);
+        } else {
+          this.arr = this.movie.dislikes.slice(-1);
+        }
       },
       error: (err) => {
         console.log(err);

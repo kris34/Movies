@@ -1,8 +1,10 @@
 <div class="container">
   <h2>{{ movie?.title }}</h2>
-  <ng-template ngFor let-item [ngForOf]="likes" let-i="index">
+
+  <ng-template ngFor let-item [ngForOf]="arr" let-i="index">
     <mat-icon>star</mat-icon>
   </ng-template>
+  
   <img src="{{ movie?.imageUrl }}" alt="{{ movie?.title }}" />
   <p>
     {{ movie?.description }}

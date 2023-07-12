@@ -43,7 +43,7 @@ export class MovieService {
       .post<IMovie>(`${apiUrl}/${id}/like`, data, {
         headers: { 'x-authorization': getSession().accessToken },
       })
-      .pipe(tap((_) => console.log(`liked movie ${id}`)));
+      .pipe(tap((v) => console.log(`liked movie ${v._ownerId}`)));
   }
 
   dislikeMovie(id: string, data: {}) {

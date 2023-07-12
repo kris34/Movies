@@ -10,9 +10,9 @@ export interface IMovie {
   imageUrl: string;
   description: string;
   productionCompanies: string;
-  likes: [];
-  dislikes: [];
-  userId: IUser
+  likes: [string];
+  dislikes: string[];
+  _ownerId: IUser
   isLIked: boolean
   count: number
 }

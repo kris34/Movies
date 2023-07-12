@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { IMovie } from 'src/app/shared/interfaces/movie';
 import { MovieService } from '../movie.service';
+import { AuthService } from 'src/app/auth/auth.service';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-reactions',
@@ -12,14 +14,22 @@ export class ReactionsComponent {
   @Input() dislikeCount: number;
   @Input() likeCount: number;
 
-  constructor(private movieApi: MovieService) {}
+  get user() {
+    return this.auth.user;
+  }
+
+  constructor(private movieApi: MovieService, private auth: AuthService) {}
 
   likeMovie(movie: IMovie) {
     this.movieApi.likeMovie(movie._id, movie).subscribe({
       next: (v) => {
-        console.log(v);
         this.likeCount++;
-        this.dislikeCount--;
+        if (movie.dislikes.includes(this.user!._id)) {
+          this.movie = v;
+          this.dislikeCount--;
+        }
+        this.movie = v;
+
         if (this.dislikeCount < 0) {
           this.dislikeCount = 0;
         }
@@ -33,9 +43,13 @@ export class ReactionsComponent {
   dislikeMovie(movie: IMovie) {
     this.movieApi.dislikeMovie(this.movie._id, movie).subscribe({
       next: (v) => {
-        console.log('disliked');
         this.dislikeCount++;
-        this.likeCount--;
+        if (this.movie.likes.includes(this.user!._id)) {
+          this.likeCount--;
+          this.movie = v;
+        }
+        this.movie = v;
+
         if (this.likeCount < 0) {
           this.likeCount = 1;
         }
