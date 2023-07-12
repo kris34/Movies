@@ -10,6 +10,11 @@ img {
   padding-top: 10px; */
 }
 
+.mat-mdc-card-content {
+  
+  height: 45px;
+}
+
 .movie-card-container {
   display: flex;
   gap: 10px;

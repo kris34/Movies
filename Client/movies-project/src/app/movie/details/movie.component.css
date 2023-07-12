@@ -11,40 +11,28 @@
 }
 
 img {
-  position: absolute;
+  position: relative;
   width: 200px;
   height: 300px;
-  top: 35px;
   left: 10px;
 }
 
 mat-icon {
-  top: 7px;
-  left: 35%;
   color: rgb(241, 172, 53);
-  position: relative;
 }
 
-.genre {
+.specs {
   left: 55%;
-  bottom: 2%;
-  position: relative;
-}
-
-.actors {
-  left: 55%;
-  bottom: 4%;
-  position: relative;
+  top: 7%;
+  position: absolute;
 }
 
 h2 {
-  top: -15px;
   left: 10px;
-  position: absolute;
+  position: relative;
 }
 
 .description {
-  position: absolute;
-  top: 67%;
+  position: relative;
   left: 10px;
 }
