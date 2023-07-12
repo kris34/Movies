@@ -20,6 +20,6 @@ import { ReactionsComponent } from './reactions/reactions.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  exports: [CreateComponent, ReactionsComponent],
+  exports: [CreateComponent, ReactionsComponent, MovieComponent],
 })
 export class MovieModule {}

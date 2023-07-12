@@ -22,7 +22,11 @@ mat-icon {
   top: 7px;
   left: 35%;
   position: absolute;
+  color: rgb(241, 172, 53);
+  position: relative;
 }
+
+
 
 h2 {
   top: -15px;

@@ -11,6 +11,7 @@ import { IMovie } from 'src/app/shared/interfaces/movie';
 })
 export class MovieComponent {
   movie: IMovie | null = null;
+  likes: string[];
 
   constructor(private route: ActivatedRoute, private api: ApiService) {
     this.getMovie();
@@ -21,6 +22,7 @@ export class MovieComponent {
     return this.api.loadMovie(id).subscribe({
       next: (v) => {
         this.movie = v;
+        this.likes = this.movie.likes.slice(-5);
       },
       error: (err) => {
         console.log(err);
