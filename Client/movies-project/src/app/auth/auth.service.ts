@@ -20,7 +20,7 @@ export class AuthService {
 
   user: IUser | null = null;
 
-  userID: string
+  userID: string;
 
   isLogged: boolean = false;
 
@@ -33,7 +33,7 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) {
     this.subscription = this.user$.subscribe((user) => {
       this.user = user;
-      this.userID = this.user!._id
+      this.userID = this.user!._id;
     });
   }
 
@@ -74,7 +74,7 @@ export class AuthService {
 
   edit(data: {}) {
     return this.http
-      .post<any>(`${apiUrl}/edit-profile`, data, {
+      .post<IUser>(`${apiUrl}/edit-profile`, data, {
         headers: { 'x-authorization': getSession().accessToken },
       })
       .pipe(

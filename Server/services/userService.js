@@ -97,7 +97,9 @@ async function editProfile(id, data) {
   existing.email = data.email;
   existing.username = data.username;
 
-  return existing.save();
+  existing.save();
+
+  return createToken(existing);
 }
 
 module.exports = {
@@ -106,5 +108,5 @@ module.exports = {
   logout,
   parseToken,
   getUser,
-  editProfile
+  editProfile,
 };
