@@ -14,25 +14,34 @@ img {
   position: relative;
   width: 200px;
   height: 300px;
-  left: 10px;
+  left: -100%;
+  padding-right: 3px;
 }
 
 mat-icon {
   color: rgb(241, 172, 53);
 }
 
+.text {
+  position: relative;
+  bottom: 19rem;
+}
+
 .specs {
-  left: 55%;
-  top: 7%;
+  left: 52%;
+
   position: absolute;
 }
 
 h2 {
-  left: 10px;
+  
+  padding-left: 3px;
+  font-size: 135%;
   position: relative;
 }
 
 .description {
-  position: relative;
+  position: absolute;
   left: 10px;
+  bottom: 10%;
 }

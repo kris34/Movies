@@ -1,13 +1,16 @@
 <div class="container">
   <h2>{{ movie?.title }}</h2>
-  <img src="{{ movie?.imageUrl }}" alt="{{ movie?.title }}" />
   <div class="specs">
-    <ng-template ngFor let-item [ngForOf]="arr" let-i="index">
-      <mat-icon>star</mat-icon>
-    </ng-template>
-    <p>Genre: {{ movie?.genre }}</p>
-    <p>Year: {{ movie?.year }}</p>
-    <p>Actors: {{ movie?.actors }}</p>
+   
+    <img src="{{ movie?.imageUrl }}" alt="{{ movie?.title }}" />
+    <div class="text">
+      <ng-template ngFor let-item [ngForOf]="arr" let-i="index">
+        <mat-icon>star</mat-icon>
+      </ng-template>
+      <p>Genre: {{ movie?.genre }}</p>
+      <p>Year: {{ movie?.year }}</p>
+      <p>Actors: {{ movie?.actors }}</p>
+    </div>
   </div>
 
   <div class="description">
