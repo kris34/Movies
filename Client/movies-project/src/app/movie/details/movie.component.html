@@ -24,39 +24,28 @@
     </div>
   </div>
 
-  <div class="description">
-    <p>
-      {{ movie?.description }}
-    </p>
+  <div class="bottom">
+    <div class="description">
+      <p>
+        {{ movie?.description }}
+      </p>
+    </div>
+
+    <div class="buttons">
+      <ng-container
+        *ngTemplateOutlet="isOwner ? ownerTemplate : notOwnerTemplate"
+      >
+      </ng-container>
+    </div>
   </div>
 
-  <ng-container *ngTemplateOutlet="isOwner ? ownerTemplate : notOwnerTemplate">
-  </ng-container>
-
   <ng-template #ownerTemplate>
-    <p>kakakakakakakka</p>
-    <p>kakakakakakakka</p>
-
-    <p>kakakakakakakka</p>
-
-    <p>kakakakakakakka</p>
-
-    <p>kakakakakakakka</p>
-
-    <p>kakakakakakakka</p>
-
-    <p>kakakakakakakka</p>
+    <button color="blue" mat-button>Edit</button>
+    <button mat-button>Delete</button>
   </ng-template>
 
   <ng-template #notOwnerTemplate>
-    <p>asdasdasdasd</p>
-    <p>asdasdasdasd</p>
-
-    <p>asdasdasdasd</p>
-
-    <p>asdasdasdasd</p>
-
-    <p>asdasdasdasd</p>
-    <p>asdasdasdasd</p>
+    <button mat-button>Share</button>
+    <button mat-button>Comment</button>
   </ng-template>
 </div>

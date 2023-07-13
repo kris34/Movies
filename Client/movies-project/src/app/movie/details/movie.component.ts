@@ -13,7 +13,7 @@ import { IMovie } from 'src/app/shared/interfaces/movie';
 export class MovieComponent {
   movie: IMovie | null = null;
   arr: string[];
-  isOwner: boolean = false;
+  isOwner: boolean
 
   get userid() {
     return this.auth.user?._id;
@@ -25,6 +25,7 @@ export class MovieComponent {
     private auth: AuthService
   ) {
     this.getMovie();
+    console.log(this.isOwner);
   }
 
   getMovie() {
@@ -32,7 +33,7 @@ export class MovieComponent {
     return this.api.loadMovie(id).subscribe({
       next: (v) => {
         this.isOwner = this.userid == v._ownerId;
-
+        
         this.movie = v;
         if (this.movie.likes.length - this.movie.dislikes.length == 1) {
           this.arr = this.movie.likes.slice(-1);

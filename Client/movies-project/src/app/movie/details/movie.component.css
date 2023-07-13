@@ -10,6 +10,29 @@
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.6);
 }
 
+.mat-mdc-button {
+  position: relative;
+  bottom: -25rem;
+  padding-right: 2px;
+}
+
+.bottom {
+  position: absolute;
+  top: 22rem;
+  left: 10px;
+}
+
+.buttons {
+  position: fixed;
+  top: 180px;
+}
+
+/* .description {
+  position: relative;
+  left: 10px;
+  top: 20rem;
+} */
+
 img {
   position: relative;
   width: 200px;
@@ -31,13 +54,11 @@ img {
   display: flex;
 }
 
-.dislike_count { 
-  
+.dislike_count {
   padding-left: 5px;
 }
 
-.like_count { 
-  
+.like_count {
   padding-left: 5px;
 }
 
@@ -52,18 +73,12 @@ img {
 
 .specs {
   left: 52%;
-
   position: absolute;
+  height: 20rem;
 }
 
 h2 {
   padding-left: 3px;
   font-size: 135%;
   position: relative;
-}
-
-.description {
-  position: absolute;
-  left: 10px;
-  bottom: 10%;
 }
