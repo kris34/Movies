@@ -12,7 +12,7 @@ export interface IMovie {
   productionCompanies: string;
   likes: [string];
   dislikes: string[];
-  _ownerId: IUser
+  _ownerId: string
   isLIked: boolean
   count: number
 }

@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject, Observable, Subscription, filter } from 'rxjs';
 import { ApiService } from 'src/app/api.service';
+import { AuthService } from 'src/app/auth/auth.service';
 import { IMovie } from 'src/app/shared/interfaces/movie';
 
 @Component({
@@ -12,8 +13,17 @@ import { IMovie } from 'src/app/shared/interfaces/movie';
 export class MovieComponent {
   movie: IMovie | null = null;
   arr: string[];
+  isOwner: boolean = false;
 
-  constructor(private route: ActivatedRoute, private api: ApiService) {
+  get userid() {
+    return this.auth.user?._id;
+  }
+
+  constructor(
+    private route: ActivatedRoute,
+    private api: ApiService,
+    private auth: AuthService
+  ) {
     this.getMovie();
   }
 
@@ -21,6 +31,8 @@ export class MovieComponent {
     const id = this.route.snapshot.paramMap.get('id');
     return this.api.loadMovie(id).subscribe({
       next: (v) => {
+        this.isOwner = this.userid == v._ownerId;
+
         this.movie = v;
         if (this.movie.likes.length - this.movie.dislikes.length == 1) {
           this.arr = this.movie.likes.slice(-1);

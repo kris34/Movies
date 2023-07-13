@@ -29,4 +29,34 @@
       {{ movie?.description }}
     </p>
   </div>
+
+  <ng-container *ngTemplateOutlet="isOwner ? ownerTemplate : notOwnerTemplate">
+  </ng-container>
+
+  <ng-template #ownerTemplate>
+    <p>kakakakakakakka</p>
+    <p>kakakakakakakka</p>
+
+    <p>kakakakakakakka</p>
+
+    <p>kakakakakakakka</p>
+
+    <p>kakakakakakakka</p>
+
+    <p>kakakakakakakka</p>
+
+    <p>kakakakakakakka</p>
+  </ng-template>
+
+  <ng-template #notOwnerTemplate>
+    <p>asdasdasdasd</p>
+    <p>asdasdasdasd</p>
+
+    <p>asdasdasdasd</p>
+
+    <p>asdasdasdasd</p>
+
+    <p>asdasdasdasd</p>
+    <p>asdasdasdasd</p>
+  </ng-template>
 </div>

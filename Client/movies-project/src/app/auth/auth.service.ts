@@ -20,6 +20,8 @@ export class AuthService {
 
   user: IUser | null = null;
 
+  userID: string
+
   isLogged: boolean = false;
 
   subscription: Subscription;
@@ -31,6 +33,7 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) {
     this.subscription = this.user$.subscribe((user) => {
       this.user = user;
+      this.userID = this.user!._id
     });
   }
 
