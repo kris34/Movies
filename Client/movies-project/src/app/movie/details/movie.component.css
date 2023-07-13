@@ -18,7 +18,30 @@ img {
   padding-right: 3px;
 }
 
-mat-icon {
+.ratings {
+  display: flex;
+}
+
+.thumb_up {
+  padding-right: 15%;
+  display: flex;
+}
+
+.thumb_down {
+  display: flex;
+}
+
+.dislike_count { 
+  
+  padding-left: 5px;
+}
+
+.like_count { 
+  
+  padding-left: 5px;
+}
+
+.star {
   color: rgb(241, 172, 53);
 }
 
@@ -34,7 +57,6 @@ mat-icon {
 }
 
 h2 {
-  
   padding-left: 3px;
   font-size: 135%;
   position: relative;
