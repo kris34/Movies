@@ -23,4 +23,6 @@ export class ApiService {
     return this.http.get<IMovie>(`${apiUrl}/movies/${id}`);
   }
 
+  
+
 }

@@ -69,6 +69,7 @@ img {
 .text {
   position: relative;
   bottom: 19rem;
+  padding-left: 3px;
 }
 
 .specs {

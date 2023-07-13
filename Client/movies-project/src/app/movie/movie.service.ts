@@ -57,4 +57,10 @@ export class MovieService {
         })
       );
   }
+
+  deleteMovie(id: string) {
+    return this.http.delete<IMovie>(`${apiUrl}/${id}`, {
+      headers: { 'x-authorization': getSession().accessToken },
+    });
+  }
 }

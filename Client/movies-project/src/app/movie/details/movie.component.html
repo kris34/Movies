@@ -1,7 +1,7 @@
 <div class="container">
   <h2>{{ movie?.title }}</h2>
   <div class="specs">
-    <img src="{{ movie?.imageUrl }}" alt="{{ movie?.title }}" />
+    <img src="{{ movie?.imageUrl }}" />
     <div class="text">
       <p>Rating:</p>
       <ng-template ngFor let-item [ngForOf]="arr" let-i="index">
@@ -41,7 +41,7 @@
 
   <ng-template #ownerTemplate>
     <button color="blue" mat-button>Edit</button>
-    <button mat-button>Delete</button>
+    <button mat-button (click)="deleteMovie(this.movie!._id)">Delete</button>
   </ng-template>
 
   <ng-template #notOwnerTemplate>

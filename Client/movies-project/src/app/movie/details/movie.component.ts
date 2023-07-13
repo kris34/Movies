@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BehaviorSubject, Observable, Subscription, filter } from 'rxjs';
 import { ApiService } from 'src/app/api.service';
 import { AuthService } from 'src/app/auth/auth.service';
 import { IMovie } from 'src/app/shared/interfaces/movie';
+import { MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-movie',
@@ -13,7 +14,7 @@ import { IMovie } from 'src/app/shared/interfaces/movie';
 export class MovieComponent {
   movie: IMovie | null = null;
   arr: string[];
-  isOwner: boolean
+  isOwner: boolean;
 
   get userid() {
     return this.auth.user?._id;
@@ -22,10 +23,11 @@ export class MovieComponent {
   constructor(
     private route: ActivatedRoute,
     private api: ApiService,
-    private auth: AuthService
+    private auth: AuthService,
+    private movieApi: MovieService,
+    private router: Router
   ) {
     this.getMovie();
-    console.log(this.isOwner);
   }
 
   getMovie() {
@@ -33,7 +35,7 @@ export class MovieComponent {
     return this.api.loadMovie(id).subscribe({
       next: (v) => {
         this.isOwner = this.userid == v._ownerId;
-        
+
         this.movie = v;
         if (this.movie.likes.length - this.movie.dislikes.length == 1) {
           this.arr = this.movie.likes.slice(-1);
@@ -51,6 +53,14 @@ export class MovieComponent {
       },
       error: (err) => {
         console.log(err);
+      },
+    });
+  }
+
+  deleteMovie(id: string) {
+    this.movieApi.deleteMovie(id).subscribe({
+      next: (v) => {
+        this.router.navigate(['/']);
       },
     });
   }
