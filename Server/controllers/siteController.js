@@ -94,7 +94,7 @@ siteController.delete('/:id', hasUser(), async (req, res) => {
       throw new Error('You cannot delete this movie!');
     }
 
-    await deleteMovie(req.params?.id?.toString());
+    await deleteMovie(req.params?.id?.toString(), req.user?._id);
 
     res.status(200).json('deleted');
   } catch (error) {

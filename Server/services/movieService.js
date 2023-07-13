@@ -36,7 +36,6 @@ async function likeMovie(movieId, userId) {
     movie.dislikes = movie.dislikes.filter((id) => id != userId);
   }
 
- 
   movie.likes.push(userId);
   return movie.save();
 }
@@ -73,7 +72,15 @@ async function existingMovie(movieId) {
   return existing;
 }
 
-async function deleteMovie(movieId) {
+async function deleteMovie(movieId, userId) {
+  const user = await User.findById(userId);
+
+  user.myMovies = user.myMovies.filter((m) => {
+    m != movieId;
+  });
+
+  user.save();
+
   return Movie.findByIdAndDelete(movieId);
 }
 
