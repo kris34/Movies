@@ -40,7 +40,7 @@
   </div>
 
   <ng-template #ownerTemplate>
-    <button class="edit-btn" mat-raised-button>Edit</button>
+    <button class="edit-btn" mat-raised-button><a routerLink="edit">Edit</a></button>
     <button mat-raised-button (click)="deleteMovie(this.movie!._id)">
       Delete
     </button>

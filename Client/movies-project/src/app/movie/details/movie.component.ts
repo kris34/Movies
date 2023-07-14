@@ -64,4 +64,7 @@ export class MovieComponent {
       },
     });
   }
+
+
+
 }

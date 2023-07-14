@@ -3,6 +3,7 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import { CreateComponent } from './create/create.component';
 import { MovieComponent } from './details/movie.component';
 import { MovieResolver } from './resolvers/movie.resolver';
+import { EditComponent } from './edit/edit.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
       cres: MovieResolver,
     },
     component: MovieComponent,
+  },
+  {
+    path: ':id/edit',
+    component: EditComponent
   },
 ];
 
