@@ -22,7 +22,7 @@ export class CreateComponent {
     year: ['', [Validators.required]],
     imageUrl: ['', [Validators.required]],
     description: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(180)]],
-    productionCompanies: ['', [Validators.required]],
+    
   });
 
   constructor(
