@@ -88,12 +88,12 @@ async function editMovie(id, data) {
   const movie = await getMovieById(id);
 
   movie.title = data.title;
+  movie.genre = data.genre;
   movie.year = data.year;
   movie.directors = data.directors;
   movie.imageUrl = data.imageUrl;
   movie.description = data.description;
-  movie.actors = data.actors
-  
+  movie.actors = data.actors;
 
   return movie.save();
 }

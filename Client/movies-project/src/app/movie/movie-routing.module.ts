@@ -19,6 +19,9 @@ const routes: Routes = [
   },
   {
     path: ':id/edit',
+    resolve: {
+      cres: MovieResolver,
+    },
     component: EditComponent
   },
 ];

@@ -1,47 +1,53 @@
 <div class="login-container">
-    <div class="login-content">
-      <mat-card>
-        <mat-toolbar class="login-toolbar" color="accent"
-          >Create Movie</mat-toolbar
-        >
-        <div class="spacer"></div>
-  
-        <form
-          class="register-form"
-          [formGroup]="form"
-          class="register"
-          (ngSubmit)="updateMovie()"
-        >
-          <!-- form group one -->
-          <div class="form-groupc1">
-            <!-- title -->
-            <mat-form-field class="form-field">
-              <mat-label>Title</mat-label>
-              <input type="text" matInput formControlName="title" />
-              <mat-error *ngIf="form.get('title')?.errors?.['required']">
-                Please enter a valid title!
-              </mat-error>
-            </mat-form-field>
-  
-            <!-- Genre -->
-            <mat-form-field class="form-field">
-              <mat-label>Genre</mat-label>
-              <input type="text" matInput formControlName="genre" />
-              <mat-error *ngIf="form.get('genre')?.errors?.['required']">
-                Genre required!
-              </mat-error>
-            </mat-form-field>
-  
-            <!--  image -->
-            <mat-form-field id="image" class="form-field">
-              <mat-label>Image</mat-label>
-              <input type="text" matInput formControlName="imageUrl" />
-  
-              <mat-error *ngIf="form.get('imageUrl')?.errors?.['required']">
-                Image required!
-              </mat-error>
-            </mat-form-field>
-  
+  <div class="login-content">
+    <mat-card>
+      <mat-toolbar class="login-toolbar" color="accent"
+        >Edit Movie</mat-toolbar
+      >
+      <div class="spacer"></div>
+
+      <form
+        class="register-form"
+        [formGroup]="form"
+        class="register"
+        (ngSubmit)="updateMovie()"
+      >
+        <!-- form group one --> 
+        <div class="form-groupc1">
+          <!-- title -->
+          <mat-form-field class="form-field">
+            <mat-label>Title</mat-label>
+            <input
+              matInput
+              type="text"
+              value="Sushi"
+              formControlName="title"
+              value="{{ movie?.title }}"
+            />
+            <mat-error *ngIf="form.get('title')?.errors?.['required']">
+              Please enter a valid title!
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Genre -->
+          <mat-form-field class="form-field">
+            <mat-label>Genre</mat-label>
+            <input type="text" matInput formControlName="genre" value="{{movie?.genre}}"/>
+            <mat-error *ngIf="form.get('genre')?.errors?.['required']">
+              Genre required!
+            </mat-error>
+          </mat-form-field>
+
+          <!--  image -->
+          <mat-form-field id="image" class="form-field">
+            <mat-label>Image</mat-label>
+            <input type="text" matInput formControlName="imageUrl" value="{{movie?.imageUrl}}" />
+
+            <mat-error *ngIf="form.get('imageUrl')?.errors?.['required']">
+              Image required!
+            </mat-error>
+          </mat-form-field>
+
           <!--   <mat-form-field class="form-field">
               <mat-label>Studio</mat-label>
               <input type="text" matInput formControlName="productionCompanies" />
@@ -52,76 +58,78 @@
                 Studio required!
               </mat-error>
             </mat-form-field>  -->
-          </div>
-  
-          <!-- form group two -->
-          <div class="form-groupc2">
-            <!-- directors -->
-            <mat-form-field class="form-field">
-              <mat-label>Creator</mat-label>
-              <input type="text" matInput formControlName="directors" />
-  
-              <mat-error *ngIf="form.get('directors')?.errors?.['required']">
-                Creator required!
-              </mat-error>
-            </mat-form-field>
-  
-            <!-- actors -->
-            <mat-form-field class="form-field">
-              <mat-label>Stars</mat-label>
-              <input type="text" matInput formControlName="actors" />
-  
-              <mat-error *ngIf="form.get('actors')?.errors?.['required']">
-                Stars required!
-              </mat-error>
-            </mat-form-field>
-  
-            <!-- year -->
-            <mat-form-field class="form-field">
-              <mat-label>Year</mat-label>
-              <input type="number" matInput formControlName="year" />
-  
-              <mat-error *ngIf="form.get('year')?.errors?.['required']">
-                Year required!
-              </mat-error>
-            </mat-form-field>
-  
-            <!--  description  -->
-  
-            <mat-form-field id="description" class="form-field">
-              <mat-label>Description</mat-label>
-              <input type="text" matInput formControlName="description" />
-  
-             <mat-error *ngIf="form.get('description')?.errors?.['required']">
-                Description required!
-              </mat-error> 
-  
-              <mat-error *ngIf="form.get('description')?.errors?.['minlength']">
-                Description too short!
-              </mat-error>
-  
-              <mat-error *ngIf="form.get('description')?.errors?.['maxlength']">
-                Description too long!
-              </mat-error>
-            </mat-form-field>
-          </div>
-  
-          <!-- submit button -->
-          <div class="socialMediaFlex">
-            <button
-              style="width: 75%"
-              [disabled]="form.invalid"
-              mat-raised-button
-              color="primary"
-            >
-              Submit
-            </button>
-          </div>
-        </form>
-        <!--  <div>Have an account? Sign in <a routerLink="/login">Here!</a></div> -->
-      </mat-card>
-    </div>
+        </div>
+
+        <!-- form group two -->
+        <div class="form-groupc2">
+          <!-- directors -->
+          <mat-form-field class="form-field">
+            <mat-label>Creator</mat-label>
+            <input type="text" matInput formControlName="directors" value="{{movie?.directors}}"/>
+
+            <mat-error *ngIf="form.get('directors')?.errors?.['required']">
+              Creator required!
+            </mat-error>
+          </mat-form-field>
+
+          <!-- actors -->
+          <mat-form-field class="form-field">
+            <mat-label>Stars</mat-label>
+            <input type="text" matInput formControlName="actors" value="{{movie?.actors}}"/>
+
+            <mat-error *ngIf="form.get('actors')?.errors?.['required']">
+              Stars required!
+            </mat-error>
+          </mat-form-field>
+
+          <!-- year -->
+          <mat-form-field class="form-field">
+            <mat-label>Year</mat-label>
+            <input type="number" matInput formControlName="year" value="{{movie?.year}}"/>
+
+            <mat-error *ngIf="form.get('year')?.errors?.['required']">
+              Year required!
+            </mat-error>
+          </mat-form-field>
+
+          <!--  description  -->
+
+          <mat-form-field id="description" class="form-field">
+            <mat-label>Description</mat-label>
+            <input type="text" matInput formControlName="description" value="{{movie?.description}}" />
+
+            <mat-error *ngIf="form.get('description')?.errors?.['required']">
+              Description required!
+            </mat-error>
+
+            <mat-error *ngIf="form.get('description')?.errors?.['minlength']">
+              Description too short!
+            </mat-error>
+
+            <mat-error *ngIf="form.get('description')?.errors?.['maxlength']">
+              Description too long!
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <!-- submit button -->
+        <div class="socialMediaFlex">
+          <button
+            style="width: 75%"
+            [disabled]="form.invalid"
+            mat-raised-button
+            color="primary"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+      <!--  <div>Have an account? Sign in <a routerLink="/login">Here!</a></div> -->
+    </mat-card>
   </div>
-  
-  <h2 class="warning">This app is in alpha version, please add real movies, otherwise bugs might occur.</h2>
-  
+</div>
+
+<h2 class="warning">
+  This app is in alpha version, please add real movies, otherwise bugs might
+  occur.
+</h2>

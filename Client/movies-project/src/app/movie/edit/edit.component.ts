@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { MovieService } from '../movie.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ApiService } from 'src/app/api.service';
+import { IMovie } from 'src/app/shared/interfaces/movie';
 
 @Component({
   selector: 'app-edit',
@@ -9,6 +11,8 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./edit.component.css'],
 })
 export class EditComponent {
+  movie: IMovie | null;
+
   form = this.fb.group({
     title: ['', [Validators.required]],
     genre: ['', [Validators.required]],
@@ -28,16 +32,33 @@ export class EditComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private api: MovieService,
+    private movieApi: MovieService,
     private router: Router,
-    private fb: FormBuilder
-  ) {}
+    private fb: FormBuilder,
+    private api: ApiService
+  ) {
+    this.getMovie();
+  }
+
+  getMovie() {
+    const id = this.route.snapshot.paramMap.get('id');
+
+    return this.api.loadMovie(id).subscribe({
+      next: (v) => {
+        this.movie = v;
+        console.log(this.movie);
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+  }
 
   updateMovie() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.api.editMovie(id!, this.form.value).subscribe({
+    this.movieApi.editMovie(id!, this.form.value).subscribe({
       next: (v) => {
-        this.router.navigate(['/'])
+        this.router.navigate(['/']);
       },
       error: (err) => {
         console.log(err);

@@ -35,7 +35,6 @@ export class MovieComponent {
     return this.api.loadMovie(id).subscribe({
       next: (v) => {
         this.isOwner = this.userid == v._ownerId;
-
         this.movie = v;
         if (this.movie.likes.length - this.movie.dislikes.length == 1) {
           this.arr = this.movie.likes.slice(-1);
@@ -64,7 +63,4 @@ export class MovieComponent {
       },
     });
   }
-
-
-
 }
