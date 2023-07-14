@@ -58,21 +58,21 @@
         <div class="form-groupc2">
           <!-- directors -->
           <mat-form-field class="form-field">
-            <mat-label>Directors</mat-label>
+            <mat-label>Creator</mat-label>
             <input type="text" matInput formControlName="directors" />
 
             <mat-error *ngIf="form.get('directors')?.errors?.['required']">
-              Directors required!
+              Creator required!
             </mat-error>
           </mat-form-field>
 
           <!-- actors -->
           <mat-form-field class="form-field">
-            <mat-label>Actors</mat-label>
+            <mat-label>Stars</mat-label>
             <input type="text" matInput formControlName="actors" />
 
             <mat-error *ngIf="form.get('actors')?.errors?.['required']">
-              Actors required!
+              Stars required!
             </mat-error>
           </mat-form-field>
 
