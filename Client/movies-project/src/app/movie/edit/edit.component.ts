@@ -37,7 +37,10 @@ export class EditComponent {
     const id = this.route.snapshot.paramMap.get('id');
     this.api.editMovie(id!, this.form.value).subscribe({
       next: (v) => {
-        console.log(v);
+        this.router.navigate(['/'])
+      },
+      error: (err) => {
+        console.log(err);
       },
     });
   }

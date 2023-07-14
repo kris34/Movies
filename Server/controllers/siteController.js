@@ -102,7 +102,7 @@ siteController.delete('/:id', hasUser(), async (req, res) => {
   }
 });
 
-siteController.put('/:id', hasUser(), async (req, res) => {
+siteController.put('/:id/edit', hasUser(), async (req, res) => {
   try {
     const movie = await getMovieById(req.params.id);
 
@@ -110,8 +110,8 @@ siteController.put('/:id', hasUser(), async (req, res) => {
       throw new Error('You cannot modify this record!');
     }
     console.log(req.body);
-    await editMovie(req.params.id, req.body);
-    res.status(200).end();
+   const newMovie =  await editMovie(req.params.id, req.body);
+    res.status(200).json(newMovie);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
