@@ -31,7 +31,7 @@
       </p>
     </div>
 
-    <div class="buttons">
+    <div>
       <ng-container
         *ngTemplateOutlet="isOwner ? ownerTemplate : notOwnerTemplate"
       >
@@ -40,12 +40,14 @@
   </div>
 
   <ng-template #ownerTemplate>
-    <button color="blue" mat-button>Edit</button>
-    <button mat-button (click)="deleteMovie(this.movie!._id)">Delete</button>
+    <button class="edit-btn" mat-raised-button>Edit</button>
+    <button mat-raised-button (click)="deleteMovie(this.movie!._id)">
+      Delete
+    </button>
   </ng-template>
 
   <ng-template #notOwnerTemplate>
-    <button mat-button>Share</button>
-    <button mat-button>Comment</button>
+    <button class="share-btn" mat-raised-button>Share</button>
+    <button mat-raised-button>Comment</button>
   </ng-template>
 </div>

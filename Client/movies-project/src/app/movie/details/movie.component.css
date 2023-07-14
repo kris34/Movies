@@ -1,5 +1,5 @@
 .container {
-  max-width: 400px;
+  max-width: 450px;
   position: relative;
   margin-right: auto;
   margin-left: auto;
@@ -22,16 +22,19 @@
   left: 10px;
 }
 
-.buttons {
-  position: fixed;
-  top: 180px;
-}
-
 /* .description {
   position: relative;
   left: 10px;
   top: 20rem;
 } */
+
+.edit-btn {
+  margin-right: 10px;
+}
+
+.share-btn {
+  margin-right: 10px;
+}
 
 img {
   position: relative;
