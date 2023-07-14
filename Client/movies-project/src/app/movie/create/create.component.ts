@@ -21,7 +21,7 @@ export class CreateComponent {
     actors: ['', [Validators.required]],
     year: ['', [Validators.required]],
     imageUrl: ['', [Validators.required]],
-    description: ['', [Validators.required]],
+    description: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(180)]],
     productionCompanies: ['', [Validators.required]],
   });
 

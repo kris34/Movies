@@ -36,6 +36,7 @@ const movieSchema = new Schema({
     type: String,
     required: true,
     minLength: [10, 'Description should be at least 10 charakters long!'],
+    
   },
   productionCompanies: {
     type: String,

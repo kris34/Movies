@@ -92,8 +92,16 @@
             <mat-label>Description</mat-label>
             <input type="text" matInput formControlName="description" />
 
-            <mat-error *ngIf="form.get('description')?.errors?.['required']">
+           <mat-error *ngIf="form.get('description')?.errors?.['required']">
               Description required!
+            </mat-error> 
+
+            <mat-error *ngIf="form.get('description')?.errors?.['minlength']">
+              Description too short!
+            </mat-error>
+
+            <mat-error *ngIf="form.get('description')?.errors?.['maxlength']">
+              Description too long!
             </mat-error>
           </mat-form-field>
         </div>
