@@ -1,12 +1,11 @@
 <mat-toolbar class="footer" color="primary">
   <footer>
     <h2>Your best option to keep track of your favourite movies</h2>
-
     <div class="buttons">
       <a routerLink="/cars">
         <button mat-raised-button color="accent">Top 250</button>
       </a>
-      <ng-container *ngIf="!isLoggedIn" >
+      <ng-container *ngIf="!isLoggedIn">
         <a routerLink="/auth/login">
           <button mat-raised-button color="accent">Login</button>
         </a>

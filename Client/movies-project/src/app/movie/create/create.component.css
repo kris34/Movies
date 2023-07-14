@@ -9,13 +9,17 @@
 form {
   width: 100%;
 }
+.warning {
+  top: -60px;
+  color: white;
+  text-align: center;
+}
 
 .login-content {
   width: 400px;
   display: block;
   margin: 0 auto;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.6);
-  
 }
 
 .login-toolbar {
@@ -27,12 +31,10 @@ form {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
-  
 }
 
 .form-field {
   width: 100%;
-  
 }
 
 .spacer-reg {
@@ -43,13 +45,10 @@ form {
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
-  
 }
 
 .spacer {
   margin-top: 20px;
-
-  
 }
 
 .mat-raised-button {
@@ -68,7 +67,4 @@ form {
   display: inline-block;
   width: 45%;
   margin-left: 14px;
-  
 }
-
-
