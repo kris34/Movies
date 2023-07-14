@@ -9,9 +9,10 @@ import { MovieRoutingModule } from './movie-routing.module';
 import { MovieComponent } from './details/movie.component';
 import { MovieResolver } from './resolvers/movie.resolver';
 import { ReactionsComponent } from './reactions/reactions.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
-  declarations: [CreateComponent, MovieComponent, ReactionsComponent],
+  declarations: [CreateComponent, MovieComponent, ReactionsComponent, EditComponent],
   imports: [
     MovieRoutingModule,
     CommonModule,
