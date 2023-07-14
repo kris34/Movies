@@ -64,5 +64,9 @@ export class MovieService {
     });
   }
 
-  
+  editMovie(id: string, data: {}) {
+    return this.http.put<any>(`${apiUrl}/${id}/edit`, {
+      header: { 'x-authorization': getSession().accessToken},
+    });
+  }
 }
