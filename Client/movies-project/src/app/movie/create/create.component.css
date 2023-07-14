@@ -68,3 +68,14 @@ form {
   width: 45%;
   margin-left: 14px;
 }
+
+#description {
+  width: 375px;
+  position: relative;
+  right: 195px;
+}
+
+.form-groupc1 {
+  position: relative;
+  bottom: 78px;
+}

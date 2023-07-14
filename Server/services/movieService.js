@@ -92,6 +92,8 @@ async function editMovie(id, data) {
   movie.directors = data.directors;
   movie.imageUrl = data.imageUrl;
   movie.description = data.description;
+  movie.actors = data.actors
+  
 
   return movie.save();
 }
