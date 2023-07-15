@@ -4,9 +4,9 @@ const siteController = require('./controllers/siteController');
 const authController = require('./controllers/authController');
 const cors = require('./middlewares/cors');
 const session = require('./middlewares/session');
-const port = '3001';
+const port = '3000';
 const cookieParser = require('cookie-parser');
-const DBConnectionString = 'mongodb://localhost:27017/movies2';
+const DBConnectionString = 'mongodb+srv://kris:kasi4kata9@movies.hwvqfuh.mongodb.net/?retryWrites=true&w=majority';
 
 start();
 
