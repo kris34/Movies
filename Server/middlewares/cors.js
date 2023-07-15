@@ -1,5 +1,8 @@
 module.exports = () => (req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://64b29f7b3071ba0f6f8785c8--glittery-buttercream-62041e.netlify.app/');
+  res.setHeader(
+    'Access-Control-Allow-Origin',
+    'https://64b2a8118584bd10b0a7ad9c--stupendous-mousse-71e4a4.netlify.app/'
+  );
   res.header('Access-Control-Allow-Credentials', true);
   res.setHeader(
     'Access-Control-Allow-Methods',
