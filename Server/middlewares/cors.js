@@ -1,7 +1,7 @@
 module.exports = () => (req, res, next) => {
   res.setHeader(
     'Access-Control-Allow-Origin',
-    'https://marvelous-axolotl-d0539f.netlify.app/'
+    'https://whimsical-kleicha-a01824.netlify.app/'
   );
   res.header('Access-Control-Allow-Credentials', true);
   res.setHeader(
