@@ -1,4 +1,4 @@
 export const environment = {
-  production: true,
-  apiURL: 'https://movies-app-ot5p.onrender.com/api',
+  production: false,
+  apiURL: 'http://localhost:3001/api',
 };
