@@ -55,6 +55,10 @@ export class EditComponent {
   }
 
   updateMovie() {
+    if (this.form.invalid) {
+      return;
+    }
+    
     const id = this.route.snapshot.paramMap.get('id');
     this.movieApi.editMovie(id!, this.form.value).subscribe({
       next: (v) => {

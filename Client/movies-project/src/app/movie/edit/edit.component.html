@@ -1,9 +1,7 @@
 <div class="login-container">
   <div class="login-content">
     <mat-card>
-      <mat-toolbar class="login-toolbar" color="accent"
-        >Edit Movie</mat-toolbar
-      >
+      <mat-toolbar class="login-toolbar" color="accent">Edit Movie</mat-toolbar>
       <div class="spacer"></div>
 
       <form
@@ -12,7 +10,7 @@
         class="register"
         (ngSubmit)="updateMovie()"
       >
-        <!-- form group one --> 
+        <!-- form group one -->
         <div class="form-groupc1">
           <!-- title -->
           <mat-form-field class="form-field">
@@ -32,7 +30,12 @@
           <!-- Genre -->
           <mat-form-field class="form-field">
             <mat-label>Genre</mat-label>
-            <input type="text" matInput formControlName="genre" value="{{movie?.genre}}"/>
+            <input
+              type="text"
+              matInput
+              formControlName="genre"
+              value="{{ movie?.genre }}"
+            />
             <mat-error *ngIf="form.get('genre')?.errors?.['required']">
               Genre required!
             </mat-error>
@@ -41,7 +44,12 @@
           <!--  image -->
           <mat-form-field id="image" class="form-field">
             <mat-label>Image</mat-label>
-            <input type="text" matInput formControlName="imageUrl" value="{{movie?.imageUrl}}" />
+            <input
+              type="text"
+              matInput
+              formControlName="imageUrl"
+              value="{{ movie?.imageUrl }}"
+            />
 
             <mat-error *ngIf="form.get('imageUrl')?.errors?.['required']">
               Image required!
@@ -65,7 +73,12 @@
           <!-- directors -->
           <mat-form-field class="form-field">
             <mat-label>Creator</mat-label>
-            <input type="text" matInput formControlName="directors" value="{{movie?.directors}}"/>
+            <input
+              type="text"
+              matInput
+              formControlName="directors"
+              value="{{ movie?.directors }}"
+            />
 
             <mat-error *ngIf="form.get('directors')?.errors?.['required']">
               Creator required!
@@ -75,7 +88,12 @@
           <!-- actors -->
           <mat-form-field class="form-field">
             <mat-label>Stars</mat-label>
-            <input type="text" matInput formControlName="actors" value="{{movie?.actors}}"/>
+            <input
+              type="text"
+              matInput
+              formControlName="actors"
+              value="{{ movie?.actors }}"
+            />
 
             <mat-error *ngIf="form.get('actors')?.errors?.['required']">
               Stars required!
@@ -85,7 +103,12 @@
           <!-- year -->
           <mat-form-field class="form-field">
             <mat-label>Year</mat-label>
-            <input type="number" matInput formControlName="year" value="{{movie?.year}}"/>
+            <input
+              type="number"
+              matInput
+              formControlName="year"
+              value="{{ movie?.year }}"
+            />
 
             <mat-error *ngIf="form.get('year')?.errors?.['required']">
               Year required!
@@ -96,7 +119,12 @@
 
           <mat-form-field id="description" class="form-field">
             <mat-label>Description</mat-label>
-            <input type="text" matInput formControlName="description" value="{{movie?.description}}" />
+            <input
+              type="text"
+              matInput
+              formControlName="description"
+              value="{{ movie?.description }}"
+            />
 
             <mat-error *ngIf="form.get('description')?.errors?.['required']">
               Description required!
@@ -114,12 +142,7 @@
 
         <!-- submit button -->
         <div class="socialMediaFlex">
-          <button
-            style="width: 75%"
-            [disabled]="form.invalid"
-            mat-raised-button
-            color="primary"
-          >
+          <button style="width: 75%" mat-raised-button color="primary">
             Submit
           </button>
         </div>

@@ -38,11 +38,10 @@
 }
 
 img {
-  position: relative;
+  position: fixed;
   width: 200px;
   height: 300px;
-  left: -100%;
-  padding-right: 3px;
+  left: 38%;
 }
 
 .ratings {
@@ -72,8 +71,7 @@ img {
 
 .text {
   position: relative;
-  bottom: 19rem;
-  padding-left: 3px;
+  right: 20px;
 }
 
 .specs {
