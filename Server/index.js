@@ -6,20 +6,12 @@ const cors = require('./middlewares/cors');
 const session = require('./middlewares/session');
 const port = '3000';
 const cookieParser = require('cookie-parser');
-const DBConnectionString =
-  'mongodb+srv://kris:kasi4kata9@movies.hwvqfuh.mongodb.net/?retryWrites=true&w=majority';
+const DBConnectionString = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@movies.hwvqfuh.mongodb.net/?retryWrites=true&w=majority`;
 
 start();
 
 function start() {
-  mongoose.connect(
-    process.env.MONGO_URL,
-    { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
-    (err) => {
-      if (err) console.log(err);
-      else console.log('mongdb is connected');
-    }
-  );
+  mongoose.connect(DBConnectionString);
 
   const app = express();
 
