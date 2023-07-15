@@ -4,6 +4,7 @@ const siteController = require('./controllers/siteController');
 const authController = require('./controllers/authController');
 const cors = require('./middlewares/cors');
 const session = require('./middlewares/session');
+const dotenv = require('dotenv')
 const port = '3000';
 const cookieParser = require('cookie-parser');
 const DBConnectionString = `mongodb+srv://kris:kasi4kata9@movies.hwvqfuh.mongodb.net/?retryWrites=true&w=majority`;
@@ -11,16 +12,14 @@ const DBConnectionString = `mongodb+srv://kris:kasi4kata9@movies.hwvqfuh.mongodb
 start();
 
 function start() {
+  dotenv.config();
+
   mongoose.connect(
     process.env.MONGO_URL,
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-    },
+ 
     (err) => {
-     if(err) console.log(err) 
-     else console.log("mongdb is connected");
+      if (err) console.log(err);
+      else console.log('mongdb is connected');
     }
   );
 
