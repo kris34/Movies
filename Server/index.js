@@ -11,7 +11,13 @@ const DBConnectionString = 'mongodb+srv://kris:kasi4kata9@movies.hwvqfuh.mongodb
 start();
 
 function start() {
-  mongoose.connect(DBConnectionString);
+  mongoose.connect(
+    process.env.MONGO_URL,
+    { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
+    () => {
+      console.log('Connected to MongoDB');
+    }
+  );
 
   const app = express();
 
