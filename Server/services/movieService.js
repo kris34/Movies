@@ -98,6 +98,8 @@ async function editMovie(id, data) {
   return movie.save();
 }
 
+
+
 module.exports = {
   createMovie,
   getAll,
