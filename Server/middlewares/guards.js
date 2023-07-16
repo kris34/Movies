@@ -11,3 +11,4 @@ function hasUser(req, res, next) {
 module.exports = {
   hasUser,
 };
+ 

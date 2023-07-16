@@ -1,0 +1,11 @@
+.container {
+  width: 700px;
+  height: 500px;
+  border-style: dotted;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
+}
+
+
