@@ -25,6 +25,8 @@ export class ApiService {
   }
 
   loadProfile() {
-    return this.http.get<IUser>(`${apiUrl}/profile`)
+    return this.http.get<IUser>(`${apiUrl}/profile`, {
+      headers: { 'x-authorization': getSession().accessToken },
+    });
   }
 }
