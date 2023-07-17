@@ -11,11 +11,15 @@ import { ApiService } from 'src/app/api.service';
   styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent {
-  
-
   constructor(private auth: AuthService, private api: ApiService) {
-   
+    this.getUser();
   }
 
-  
+  getUser() {
+    return this.api.loadProfile().subscribe({
+      next: (v) => {
+        console.log(v);
+      },
+    });
+  }
 }

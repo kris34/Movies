@@ -4,6 +4,7 @@ import { environment } from 'environments/environment';
 import { IMovie } from './shared/interfaces/movie';
 import { getSession } from './shared/sessions';
 import { Subject, startWith, tap } from 'rxjs';
+import { IUser } from './shared/interfaces/user';
 
 const apiUrl = environment.apiURL;
 
@@ -23,6 +24,7 @@ export class ApiService {
     return this.http.get<IMovie>(`${apiUrl}/movies/${id}`);
   }
 
-  
-
+  loadProfile() {
+    return this.http.get<IUser>(`${apiUrl}/profile`)
+  }
 }
