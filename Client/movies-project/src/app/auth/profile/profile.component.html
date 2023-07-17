@@ -1,5 +1,9 @@
 <div class="container">
   <div class="user-info">
-    {{this.user?.email}}
+    <h2 class="title">User Info:</h2>
+    <div class="stats">
+      <p>Username: {{ this.user?.username }}</p>
+      <p id="added-movies">Added movies: {{ this.user?.myMovies?.length }}</p>
+    </div>
   </div>
 </div>

@@ -1,11 +1,33 @@
 .container {
   width: 850px;
   height: 600px;
-  border-style: dotted;
+ /*  border-style: dotted; */
   position: relative;
   margin-right: auto;
   margin-left: auto;
   margin-top: 5%;
+  background-color: rgb(255, 255, 255);
 }
 
+.user-info {
+  width: 300px;
+  height: 300px;
+ /*  border-style: dotted; */
+}
 
+.title {
+  color: black;
+  margin-top: 5px;
+  margin-left: 3px;
+}
+
+.stats {
+  color: black;
+  margin-bottom: 3px;
+  font-size: 20px;
+  margin-left: 3px;
+}
+
+#added-movies {
+  margin-top: -10px;
+}
