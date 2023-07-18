@@ -1,3 +1,4 @@
+const { move } = require('../controllers/siteController');
 const Movie = require('../models/Movie');
 const User = require('../models/User');
 
@@ -98,7 +99,13 @@ async function editMovie(id, data) {
   return movie.save();
 }
 
+async function addWatchlist(movieId, userId) {
+  const user = await User.findById(userId);
 
+  user.myWatchlist.push(movieId);
+
+  return user.save();
+}
 
 module.exports = {
   createMovie,

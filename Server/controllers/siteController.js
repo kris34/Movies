@@ -110,13 +110,29 @@ siteController.put('/:id/edit', hasUser(), async (req, res) => {
       throw new Error('You cannot modify this record!');
     }
     console.log(req.body);
-   const newMovie =  await editMovie(req.params.id, req.body);
+    const newMovie = await editMovie(req.params.id, req.body);
     res.status(200).json(newMovie);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
 });
 
+siteController.post('/:id/add', hasUser(), async (req, res) => {
+  try {
+    const movie = await getMovieById(this.param.id);
 
+    if (movie._ownerId != req.user._id) {
+      throw new Error('You cannot add your own movie to your watchlist!');
+    }
+
+    const addeedMovie = await addMyMovie(req.user?._id, movie._id);
+
+    res.status(200).json(addeedMovie);
+
+    
+  } catch (error) {
+    req.status(400).json({ error: error.message });
+  }
+});
 
 module.exports = siteController;
