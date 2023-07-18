@@ -1,7 +1,7 @@
 <div class="container">
   <h2>{{ movie?.title }}</h2>
   <div class="specs">
-    <img src="{{ movie?.imageUrl }}" />
+    <img src="{{ movie?.imageUrl }}" alt="Photo of a movie" />
     <div class="text">
       <p>Rating:</p>
       <ng-template ngFor let-item [ngForOf]="arr" let-i="index">
@@ -49,7 +49,7 @@
   <ng-template #notOwnerTemplate>
     <button class="share-btn" mat-raised-button>Share</button>
     <button mat-raised-button>Comment</button>
-    <button class="watchlist-btn" mat-raised-button>Add to watchlist</button>
+    <button class="watchlist-btn" mat-raised-button (click)="addMovie()" >Add to watchlist</button>
 
   </ng-template>
 </div>

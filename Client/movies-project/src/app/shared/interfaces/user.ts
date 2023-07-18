@@ -4,4 +4,5 @@ export interface IUser {
   _id: string;
   accessToken: string;
   myMovies: string[];
+  myWatchlist: any[];
 }

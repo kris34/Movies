@@ -42,10 +42,10 @@
 }
 
 img {
-  position: fixed;
+  position: absolute;
   width: 200px;
   height: 300px;
-  left: 38%;
+  right: 112%;
 }
 
 .ratings {

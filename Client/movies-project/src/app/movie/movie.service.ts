@@ -66,9 +66,13 @@ export class MovieService {
 
   editMovie(id: string, data: {}) {
     return this.http.put<any>(`${apiUrl}/${id}/edit`, data, {
-      headers: { 'x-authorization': getSession().accessToken},
+      headers: { 'x-authorization': getSession().accessToken },
     });
   }
 
-  
+  addMovie(id: string, data: {}) {
+    return this.http.post<any>(`${apiUrl}/${id}/add`, data, {
+      headers: { 'x-authorization': getSession().accessToken },
+    });
+  }
 }

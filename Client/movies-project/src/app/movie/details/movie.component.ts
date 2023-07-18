@@ -63,4 +63,14 @@ export class MovieComponent {
       },
     });
   }
+
+  addMovie() {
+    const id = this.route.snapshot.paramMap.get('id');
+
+    this.movieApi.addMovie(id!, {}).subscribe({
+      next: (v) => {
+        console.log(v);
+      },
+    });
+  }
 }
