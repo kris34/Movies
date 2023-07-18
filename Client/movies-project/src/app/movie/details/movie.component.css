@@ -37,6 +37,10 @@
   margin-right: 10px;
 }
 
+.watchlist-btn { 
+  margin-left: 10px;
+}
+
 img {
   position: fixed;
   width: 200px;
