@@ -20,14 +20,15 @@
 .title {
   color: black;
   margin-top: 5px;
-  margin-left: 3px;
+  margin-left: 5%;
 }
 
 .stats {
   color: black;
   margin-bottom: 3px;
   font-size: 20px;
-  margin-left: 3px;
+  margin-left: 5%;
+  position: relative;
 }
 
 #added-count {
@@ -39,22 +40,37 @@
 }
 
 .added-movies {
+  height: 330px;
+  width: 600px;
   position: relative;
-  margin-left: 4.4%;
+  margin-left: 1.6%;
   position: center;
   bottom: 25%;
-  /* border-style: dotted; */
-  height: 330px;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.your-movies-title {
+  position: relative;
+  left: 5px;
+  bottom: 15px;
 }
 
 .m-added {
+  position: relative;
+  left: 5px;
+  bottom: 16px;
   margin-top: -10px;
 }
 
 .small-movie {
   height: 180px;
   width: 150px;
-  margin-left: 3px;
+  position: relative;
+  bottom: 15px;
+  margin-right: 5px;
+  left: 5px;
 }
 
 img {
@@ -66,7 +82,7 @@ img {
   display: flex;
 }
 
-.movie-title { 
-    position: relative;
-    bottom: 2%;
+.movie-title {
+  position: relative;
+  bottom: 2%;
 }
