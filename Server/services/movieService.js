@@ -101,7 +101,8 @@ async function editMovie(id, data) {
 
 async function addWatchlist(movieId, userId) {
   const user = await User.findById(userId);
-
+  console.log(user);
+  
   user.myWatchlist.push(movieId);
 
   return user.save();
@@ -117,4 +118,5 @@ module.exports = {
   dislikeMovie,
   deleteMovie,
   editMovie,
+  addWatchlist,
 };

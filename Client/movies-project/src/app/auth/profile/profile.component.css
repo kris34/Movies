@@ -1,18 +1,20 @@
 .container {
   width: 850px;
   height: 600px;
- /*  border-style: dotted; */
+  /*  border-style: dotted; */
   position: relative;
   margin-right: auto;
   margin-left: auto;
   margin-top: 5%;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
 }
 
 .user-info {
   width: 300px;
   height: 300px;
- /*  border-style: dotted; */
+  /*  border-style: dotted; */
 }
 
 .title {
@@ -28,6 +30,35 @@
   margin-left: 3px;
 }
 
-#added-movies {
+#added-count {
   margin-top: -10px;
+}
+
+#bookmarked-count {
+  margin-top: -10px;
+}
+
+.added-movies {
+  position: relative;
+  margin-left: 3px;
+  bottom: 25%;
+  border-style: dotted;
+  height: 330px;
+  
+}
+
+.m-added {
+  margin-top: -10px;
+}
+
+.small-movie {
+  height: 180px;
+  width: 150px;
+  border-style: dotted;
+
+}
+
+img {
+  height: 180px;
+  width: 150px;
 }

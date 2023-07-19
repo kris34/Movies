@@ -1,8 +1,10 @@
+import { IMovie } from './movie';
+
 export interface IUser {
   username: string;
   email: string;
   _id: string;
   accessToken: string;
-  myMovies: string[];
+  myMovies: IMovie[];
   myWatchlist: any[];
 }

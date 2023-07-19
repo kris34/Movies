@@ -11,6 +11,7 @@ const {
   dislikeMovie,
   deleteMovie,
   editMovie,
+  addWatchlist,
 } = require('../services/movieService');
 const { getUser } = require('../services/userService');
 
@@ -119,19 +120,29 @@ siteController.put('/:id/edit', hasUser(), async (req, res) => {
 
 siteController.post('/:id/add', hasUser(), async (req, res) => {
   try {
-    const movie = await getMovieById(this.param.id);
+    const movie = await getMovieById(req.params.id);
+    const user = await User.findById(req.user._id);
+    if (!req.user) {
+      throw new Error('Invalid user!');
+    }
 
-    if (movie._ownerId != req.user._id) {
+    if (user.myWatchlist.includes(movie._id)) {
+      throw new Error('Movie is already in your watchlist!');
+    }
+
+    if ((await existingMovie(req.params.id)) == false) {
+      throw new Error('Movie doesnt exist!');
+    }
+
+    if (movie._ownerId == req.user._id) {
       throw new Error('You cannot add your own movie to your watchlist!');
     }
 
-    const addeedMovie = await addMyMovie(req.user?._id, movie._id);
+    const addedMovie = await addWatchlist(movie._id, req.user?._id);
 
-    res.status(200).json(addeedMovie);
-
-    
+    res.status(200).json(addedMovie);
   } catch (error) {
-    req.status(400).json({ error: error.message });
+    res.status(400).json({ error: error.message });
   }
 });
 
