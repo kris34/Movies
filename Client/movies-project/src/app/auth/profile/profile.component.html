@@ -9,16 +9,32 @@
       </p>
     </div>
   </div>
-  <div class="added-movies">
-    <h2 class="your-movies-title">Your Movies</h2>
-    <p class="m-added">Most recently added</p>
-    <div class="small-movies">
-      <div class="small-movie" *ngFor="let movie of movies">
-        <img src="{{ movie.imageUrl }}" alt="" />
-        <a class="movie-title" routerLink="/movie/{{ movie._id }}">{{
-          movie.title
-        }}</a>
+
+  <div class="containers">
+    <div class="added-movies">
+      <h2 class="your-movies-title">Your Movies</h2>
+      <p class="m-added">Most recently added</p>
+      <div class="small-movies">
+        <div class="small-movie" *ngFor="let movie of movies">
+          <img src="{{ movie.imageUrl }}" alt="" />
+          <a class="movie-title" routerLink="/movie/{{ movie._id }}">{{
+            movie.title
+          }}</a>
+        </div>
       </div>
     </div>
+
+    <div class="added-movies">
+      <h2 class="your-movies-title">Your Watchlist</h2>
+      <p class="m-added">Most recently added</p>
+      <div class="small-movies">
+        <div class="small-movie" *ngFor="let movie of watchlist">
+          <img src="{{ movie.imageUrl }}" alt="" />
+          <a class="movie-title" routerLink="/movie/{{ movie._id }}">{{
+            movie.title
+          }}</a>
+        </div>
+      </div>
+    </div> 
   </div>
 </div>

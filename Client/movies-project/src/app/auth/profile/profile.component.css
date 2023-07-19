@@ -1,6 +1,6 @@
 .container {
-  width: 850px;
-  height: 600px;
+  width: 990px;
+  height: 500px;
   /*  border-style: dotted; */
   position: relative;
   margin-right: auto;
@@ -14,6 +14,8 @@
 .user-info {
   width: 300px;
   height: 300px;
+  position: relative;
+  top: 10px;
   /*  border-style: dotted; */
 }
 
@@ -40,12 +42,12 @@
 }
 
 .added-movies {
-  height: 330px;
-  width: 600px;
+  height: 300px;
+  width: 470px;
   position: relative;
   margin-left: 1.6%;
   position: center;
-  bottom: 25%;
+ 
   border-radius: 8px;
   border-style: solid;
   border-width: 1px;
@@ -85,4 +87,10 @@ img {
 .movie-title {
   position: relative;
   bottom: 2%;
+}
+
+.containers {
+  display: flex;
+  bottom: 25%;
+  position: relative;
 }

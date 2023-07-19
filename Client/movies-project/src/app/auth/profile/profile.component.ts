@@ -14,6 +14,7 @@ import { subscribeOn } from 'rxjs';
 export class ProfileComponent {
   user: IUser | null = null;
   movies: IMovie[] = [];
+  watchlist: IMovie[] = [];
 
   constructor(
     private auth: AuthService,
@@ -27,12 +28,23 @@ export class ProfileComponent {
     this.api.loadProfile().subscribe({
       next: (v) => {
         this.user = v;
-        const ids = this.user.myMovies;
+        let ids = this.user.myMovies;
+        let watchlistIds = this.user.myWatchlist;
+
+        watchlistIds.forEach((id) =>
+          this.api.loadMovie(id).subscribe({
+            next: (v) => {
+              this.watchlist.push(v);
+              this.watchlist = this.watchlist.slice(-3);
+            },
+          })
+        );
+
         ids.forEach((id) =>
           this.api.loadMovie(id).subscribe({
             next: (v) => {
               this.movies.push(v);
-              this.movies = this.movies.slice(-4)
+              this.movies = this.movies.slice(-3);
             },
           })
         );
