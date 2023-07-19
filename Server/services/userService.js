@@ -102,8 +102,6 @@ async function editProfile(id, data) {
   return createToken(existing);
 }
 
-
-
 module.exports = {
   register,
   login,

@@ -1,19 +1,25 @@
-<div class="container">
+<!-- <div class="container">
   <div class="user-info">
     <h2 class="title">User Info:</h2>
     <div class="stats">
       <p>Username: {{ this.user?.username }}</p>
       <p id="added-count">Added movies: {{ this.user?.myMovies?.length }}</p>
       <p id="bookmarked-count">
-        Bookmarked: {{ this.user?.myWatchlist?.length }}
+        Bookmarked Movies: {{ this.user?.myWatchlist?.length }}
       </p>
     </div>
   </div>
   <div class="added-movies">
-    <h2 >Your Movies</h2>
+    <h2>Your Movies</h2>
     <p class="m-added">Most recently added</p>
-    <div class="small-movie"  *ngFor="let movie of movies">
-      <img src="{{movie.imageUrl}}" alt="">
+    <div class="small-movies">
+      <div class="small-movie" *ngFor="let movie of movies">
+        <img src="{{ movie.imageUrl }}" alt="" />
+        <a class="movie-title" routerLink="/movie/{{ movie._id }}">{{
+          movie.title
+        }}</a>
+      </div>
     </div>
   </div>
 </div>
+ -->

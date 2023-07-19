@@ -13,26 +13,32 @@ import { subscribeOn } from 'rxjs';
 })
 export class ProfileComponent {
   user: IUser | null = null;
-  movies: IMovie[];
+  movies: IMovie[] = [];
 
   constructor(
     private auth: AuthService,
     private api: ApiService,
     private movieApi: MovieService
   ) {
-    this.getUser();
+   // this.getUser();
   }
-
+/* 
   getUser() {
     this.api.loadProfile().subscribe({
       next: (v) => {
         this.user = v;
-        this.movies = v.myMovies;
-        console.log(this.movies);
+        const ids = this.user.myMovies;
+        ids.forEach((id) =>
+          this.api.loadMovie(id).subscribe({
+            next: (v) => {
+              this.movies.push(v);
+            },
+          })
+        ); 
       },
     });
   }
-
+ */
   /* getMovies() {
     return this.api.loadMovies().subscribe({
       next: (v) => {

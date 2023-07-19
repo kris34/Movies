@@ -76,13 +76,13 @@ async function existingMovie(movieId) {
 async function deleteMovie(movieId, userId) {
   const user = await User.findById(userId);
 
-  user.myMovies = user.myMovies.filter((m) => {
-    m != movieId;
-  });
+  user.myMovies = user.myMovies.filter((m) => 
+    m != movieId
+  );
 
   user.save();
 
-  return Movie.findByIdAndDelete(movieId);
+  return await Movie.findByIdAndDelete(movieId);
 }
 
 async function editMovie(id, data) {
@@ -102,7 +102,7 @@ async function editMovie(id, data) {
 async function addWatchlist(movieId, userId) {
   const user = await User.findById(userId);
   console.log(user);
-  
+
   user.myWatchlist.push(movieId);
 
   return user.save();

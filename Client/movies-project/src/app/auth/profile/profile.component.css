@@ -42,9 +42,8 @@
   position: relative;
   margin-left: 3px;
   bottom: 25%;
-  border-style: dotted;
+  /* border-style: dotted; */
   height: 330px;
-  
 }
 
 .m-added {
@@ -54,11 +53,19 @@
 .small-movie {
   height: 180px;
   width: 150px;
-  border-style: dotted;
-
+  margin-left: 3px;
 }
 
 img {
   height: 180px;
   width: 150px;
+}
+
+.small-movies {
+  display: flex;
+}
+
+.movie-title { 
+    position: relative;
+    bottom: 2%;
 }
