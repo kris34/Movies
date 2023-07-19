@@ -20,9 +20,9 @@ export class ProfileComponent {
     private api: ApiService,
     private movieApi: MovieService
   ) {
-   // this.getUser();
+    this.getUser();
   }
-/* 
+
   getUser() {
     this.api.loadProfile().subscribe({
       next: (v) => {
@@ -32,13 +32,14 @@ export class ProfileComponent {
           this.api.loadMovie(id).subscribe({
             next: (v) => {
               this.movies.push(v);
+              this.movies = this.movies.slice(-4)
             },
           })
-        ); 
+        );
       },
     });
   }
- */
+
   /* getMovies() {
     return this.api.loadMovies().subscribe({
       next: (v) => {

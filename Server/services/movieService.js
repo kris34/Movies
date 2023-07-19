@@ -1,4 +1,3 @@
-const { move } = require('../controllers/siteController');
 const Movie = require('../models/Movie');
 const User = require('../models/User');
 
@@ -73,12 +72,26 @@ async function existingMovie(movieId) {
   return existing;
 }
 
+async function removeFromWatchlist(movieId) {
+  const movie = await Movie.findById(movieId);
+
+  for (let userId of movie.bookmarkedUsers) {
+    let user = await User.findById(userId);
+
+    user.myWatchlist = user.myWatchlist.filter(
+      (id) => id.toString() != movieId.toString()
+    );
+    
+    user.save();
+  }
+}
+
 async function deleteMovie(movieId, userId) {
   const user = await User.findById(userId);
 
-  user.myMovies = user.myMovies.filter((m) => 
-    m != movieId
-  );
+  //await removeFromWatchlist(movieId);
+
+  user.myMovies = user.myMovies.filter((m) => m != movieId);
 
   user.save();
 
@@ -101,8 +114,10 @@ async function editMovie(id, data) {
 
 async function addWatchlist(movieId, userId) {
   const user = await User.findById(userId);
-  console.log(user);
+  let movie = await Movie.findById(movieId);
 
+  movie.bookmarkedUsers.push(userId);
+  await movie.save();
   user.myWatchlist.push(movieId);
 
   return user.save();
@@ -112,6 +127,7 @@ module.exports = {
   createMovie,
   getAll,
   getMovieById,
+  removeFromWatchlist,
   addMyMovie,
   existingMovie,
   likeMovie,

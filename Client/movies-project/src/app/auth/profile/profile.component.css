@@ -40,7 +40,8 @@
 
 .added-movies {
   position: relative;
-  margin-left: 3px;
+  margin-left: 4.4%;
+  position: center;
   bottom: 25%;
   /* border-style: dotted; */
   height: 330px;

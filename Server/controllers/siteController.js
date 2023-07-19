@@ -7,6 +7,7 @@ const {
   getMovieById,
   addMyMovie,
   existingMovie,
+  removeFromWatchlist,
   likeMovie,
   dislikeMovie,
   deleteMovie,
@@ -91,6 +92,9 @@ siteController.post('/:id/dislike', hasUser(), async (req, res) => {
 siteController.delete('/:id', hasUser(), async (req, res) => {
   try {
     const movie = await getMovieById(req.params.id);
+
+    await removeFromWatchlist(req.params.id);
+
     if (movie._ownerId != req.user?._id) {
       throw new Error('You cannot delete this movie!');
     }
