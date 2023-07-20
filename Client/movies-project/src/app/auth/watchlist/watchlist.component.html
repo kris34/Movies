@@ -7,6 +7,12 @@
           <a routerLink="/movie/{{ movie._id }}">{{ movie.title }}</a>
         </h2>
       </div>
+      <div class="reactions">
+        <mat-icon class="reaciton-up">thumb_up</mat-icon>
+        <div class="likes-count">{{ movie.likes.length }}</div>
+        <mat-icon class="reaction-down">thumb_down</mat-icon>
+        <div class="dislikes-count">{{ movie.dislikes.length }}</div>
+      </div>
     </div>
   </div>
 </div>

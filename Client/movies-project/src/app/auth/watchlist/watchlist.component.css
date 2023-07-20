@@ -28,3 +28,28 @@ img {
   bottom: 21px;
   left: 5px;
 }
+
+.reactions {
+  margin-left: 20px;
+  display: flex;
+  position: relative;
+}
+
+.likes-count {
+  position: relative;
+  left: 7px;
+  bottom: 3px;
+  font-size: 140%;
+}
+
+.reaction-down {
+  left: 15px;
+  position: relative;
+}
+
+.dislikes-count {
+  position: relative;
+  left: 20px;
+  bottom: 3px;
+  font-size: 140%;
+}

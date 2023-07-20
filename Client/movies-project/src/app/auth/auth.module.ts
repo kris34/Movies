@@ -29,7 +29,6 @@ import { AppModule } from '../app.module';
     MaterialModule,
     AuthRoutingModule,
     ReactiveFormsModule,
-    SharedModule,
   ],
   exports: [],
 })
