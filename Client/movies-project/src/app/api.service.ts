@@ -30,5 +30,9 @@ export class ApiService {
     });
   }
 
-  
+  loadUserWatchlist() {
+    return this.http.get<any>(`${apiUrl}/watchlist`, {
+      headers: { 'x-authorization': getSession().accessToken },
+    });
+  }
 }

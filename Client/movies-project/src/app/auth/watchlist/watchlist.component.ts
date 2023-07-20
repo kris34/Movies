@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-watchlist',
@@ -7,9 +8,15 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./watchlist.component.css'],
 })
 export class WatchlistComponent {
+  constructor(private auth: AuthService, private api: ApiService) {
+    this.getWatchlist()
+  }
 
-
-  constructor(private auth: AuthService) {}
-
-  
+  getWatchlist() {
+    this.api.loadUserWatchlist().subscribe({
+      next: (v) => {
+        console.log(v);
+      },
+    });
+  }
 }

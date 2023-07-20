@@ -13,6 +13,7 @@ const {
   deleteMovie,
   editMovie,
   addWatchlist,
+  getUserWatchlist,
 } = require('../services/movieService');
 const { getUser } = require('../services/userService');
 
@@ -147,6 +148,16 @@ siteController.post('/:id/add', hasUser(), async (req, res) => {
     res.status(200).json(addedMovie);
   } catch (error) {
     res.status(400).json({ error: error.message });
+  }
+});
+
+siteController.get('/watchlist', hasUser(), async (req, res) => {
+  try {
+    const watchlist = await getUserWatchlist(req.user._id);
+
+    res.status(200).json(watchlist);
+  } catch (err) {
+    res.status(400).json({ err: err.message });
   }
 });
 

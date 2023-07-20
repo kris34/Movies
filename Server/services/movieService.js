@@ -81,7 +81,7 @@ async function removeFromWatchlist(movieId) {
     user.myWatchlist = user.myWatchlist.filter(
       (id) => id.toString() != movieId.toString()
     );
-    
+
     user.save();
   }
 }
@@ -123,8 +123,20 @@ async function addWatchlist(movieId, userId) {
   return user.save();
 }
 
+async function getUserWatchlist(userId) {
+  const user = await User.findById(userId);
+  let watchlist = [];
+
+  for (let movie of user.myWatchlist) {
+    watchlist.push(await Movie.findById(movie));
+  }
+
+  return watchlist;
+}
+
 module.exports = {
   createMovie,
+  getUserWatchlist,
   getAll,
   getMovieById,
   removeFromWatchlist,
