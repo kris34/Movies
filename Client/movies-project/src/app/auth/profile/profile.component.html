@@ -25,7 +25,7 @@
     </div>
 
     <div class="added-movies">
-      <h2 class="your-movies-title">Your Watchlist</h2>
+      <h2 class="your-movies-title"><a routerLink="/auth/watchlist">Your Watchlist</a></h2>
       <p class="m-added">Most recently added</p>
       <div class="small-movies">
         <div class="small-movie" *ngFor="let movie of watchlist">
@@ -35,6 +35,6 @@
           }}</a>
         </div>
       </div>
-    </div> 
+    </div>
   </div>
 </div>

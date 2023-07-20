@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { MovieModule } from '../movie/movie.module';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { WatchlistComponent } from './watchlist/watchlist.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     LoginComponent,
     ProfileComponent,
     EditProfileComponent,
+    WatchlistComponent,
   ],
   imports: [
     CommonModule,

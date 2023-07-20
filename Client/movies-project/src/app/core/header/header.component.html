@@ -1,7 +1,9 @@
 <mat-toolbar color="primary">
   <a class="home-btn" mat-button routerLink="/">Home</a>
   <div class="spacer"></div>
-  <ng-container *ngIf="isLoggedIn"> <span class="greet"> Welcome, {{user!.email}}! </span></ng-container>
+  <ng-container *ngIf="isLoggedIn">
+    <span class="greet"> Welcome, {{ user!.email }}! </span></ng-container
+  >
 
   <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
@@ -15,10 +17,12 @@
   </mat-menu>
 
   <ng-template #loggedInTemplate>
-    <a mat-menu-item routerLink="/movie/create">Add Movie</a>
     <a mat-menu-item routerLink="/auth/profile">Your profile</a>
+    <a mat-menu-item routerLink="/auth/watchlist">Your Watchlist</a>
+    <a mat-menu-item routerLink="/movie/create">Add Movie</a>
     <a mat-menu-item routerLink="/auth/edit-profile">Edit Profile </a>
-    <a (click)="logout()" mat-menu-item  >Logout</a>
+
+    <a (click)="logout()" mat-menu-item>Logout</a>
   </ng-template>
 
   <ng-template #loggedOutTemplate>
