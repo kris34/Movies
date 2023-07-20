@@ -26,8 +26,11 @@ const routes: Routes = [
   },
 ];
 
-@NgModule({
+/* @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class MovieRoutingModule {}
+
+
+export class MovieRoutingModule {} */
+export const MovieRoutingModule = RouterModule.forChild(routes);

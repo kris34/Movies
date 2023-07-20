@@ -1,0 +1,30 @@
+.container {
+  width: 40%;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  top: 5%;
+}
+
+img {
+  height: 180px;
+  width: 150px;
+  position: relative;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 4px;
+}
+
+.movie-card {
+  display: flex;
+  position: aboslute;
+  border-style: solid;
+  border-width: thin;
+  background-color: white;
+}
+
+.movie-title {
+  position: relative;
+  bottom: 21px;
+  left: 5px;
+}

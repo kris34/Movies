@@ -8,19 +8,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieRoutingModule } from './movie-routing.module';
 import { MovieComponent } from './details/movie.component';
 import { MovieResolver } from './resolvers/movie.resolver';
-import { ReactionsComponent } from './reactions/reactions.component';
 import { EditComponent } from './edit/edit.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [CreateComponent, MovieComponent, ReactionsComponent, EditComponent],
+  declarations: [
+    CreateComponent,
+    MovieComponent,
+    EditComponent,
+  ],
   imports: [
-    MovieRoutingModule,
     CommonModule,
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MovieRoutingModule,
+    SharedModule
   ],
-  exports: [CreateComponent, ReactionsComponent, MovieComponent],
+  exports: [CreateComponent,  MovieComponent],
 })
 export class MovieModule {}

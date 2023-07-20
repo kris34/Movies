@@ -9,10 +9,23 @@ import { ShortenPipe } from '../shared/pipes/shorten.pipe';
 import { SharedModule } from '../shared/shared.module';
 import { WhattowatchComponent } from './whattowatch/whattowatch.component';
 import { MovieModule } from '../movie/movie.module';
+import { MovieRoutingModule } from '../movie/movie-routing.module';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, HomeComponent, WhattowatchComponent],
-  imports: [CommonModule, MaterialModule, RouterModule, SharedModule, MovieModule],
+  declarations: [
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    WhattowatchComponent,
+  ],
+  imports: [
+    CommonModule,
+    MaterialModule,
+    RouterModule,
+    SharedModule,
+    MovieRoutingModule,
+    MovieModule,
+  ],
   exports: [HeaderComponent, FooterComponent, HomeComponent],
 })
 export class CoreModule {}

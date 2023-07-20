@@ -11,6 +11,9 @@ import { SharedModule } from '../shared/shared.module';
 import { MovieModule } from '../movie/movie.module';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { WatchlistComponent } from './watchlist/watchlist.component';
+import { CoreModule } from '../core/core.module';
+import { MovieRoutingModule } from '../movie/movie-routing.module';
+import { AppModule } from '../app.module';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,12 @@ import { WatchlistComponent } from './watchlist/watchlist.component';
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule,
     FormsModule,
     MaterialModule,
+    AuthRoutingModule,
     ReactiveFormsModule,
     SharedModule,
   ],
+  exports: [],
 })
 export class AuthModule {}

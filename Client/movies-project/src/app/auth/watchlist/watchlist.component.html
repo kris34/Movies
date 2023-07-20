@@ -1,1 +1,12 @@
-<p>watchlist works!</p>
+<div class="container">
+  <div>
+    <div class="movie-card" *ngFor="let movie of watchlist">
+      <img src="{{ movie.imageUrl }}" />
+      <div class="movie-title">
+        <h2>
+          <a routerLink="/movie/{{ movie._id }}">{{ movie.title }}</a>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>

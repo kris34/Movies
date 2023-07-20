@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
 import { MovieComponent } from './movie/details/movie.component';
 import { MovieModule } from './movie/movie.module';
+import { MovieRoutingModule } from './movie/movie-routing.module';
 //import { httpInterceptorProviders } from './app.interceptor';
 
 @NgModule({
@@ -25,6 +26,7 @@ import { MovieModule } from './movie/movie.module';
     SharedModule,
     HttpClientModule,
     MovieModule,
+    MovieRoutingModule,
   ],
   providers: [
     /* httpInterceptorProviders */
