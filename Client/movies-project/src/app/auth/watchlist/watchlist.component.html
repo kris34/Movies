@@ -1,21 +1,23 @@
 <div class="container">
-  <div>
-    <div class="movie-card" *ngFor="let movie of watchlist">
+  <div class="movie-card" *ngFor="let movie of watchlist">
+    <div class="img">
       <img src="{{ movie.imageUrl }}" />
-      <div class="movie-title">
-        <h2>
+      <div class="container-specs">
+        <h2 class="title">
           <a routerLink="/movie/{{ movie._id }}">{{ movie.title }}</a>
+          <div class="reactions">
+            <div class="thumb-up">
+              <mat-icon>thumb_up</mat-icon>
+              <div class="positive-num">{{ movie.likes.length }}</div>
+            </div>
+            <mat-icon>thumb_down</mat-icon>
+            <div class="negative-num">{{ movie.dislikes.length }}</div>
+          </div>
         </h2>
       </div>
-      <div class="reactions">
-        <mat-icon class="reaciton-up">thumb_up</mat-icon>
-        <div class="likes-count">{{ movie.likes.length }}</div>
-        <mat-icon class="reaction-down">thumb_down</mat-icon>
-        <div class="dislikes-count">{{ movie.dislikes.length }}</div>
-      </div>
-      <div class="description">
-        {{movie.description}}
-      </div>
+    </div>
+    <div class="description">
+      <p>{{ movie.description }}</p>
     </div>
   </div>
 </div>
