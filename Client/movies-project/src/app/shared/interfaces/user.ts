@@ -7,4 +7,5 @@ export interface IUser {
   accessToken: string;
   myMovies: string[];
   myWatchlist: any[];
+  isAdded: boolean;
 }

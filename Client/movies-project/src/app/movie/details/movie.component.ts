@@ -15,6 +15,7 @@ export class MovieComponent {
   movie: IMovie | null = null;
   arr: string[];
   isOwner: boolean;
+  isAdded: boolean = false;
 
   get userid() {
     return this.auth.user?._id;
@@ -66,10 +67,10 @@ export class MovieComponent {
 
   addMovie() {
     const id = this.route.snapshot.paramMap.get('id');
-
     this.movieApi.addMovie(id!, {}).subscribe({
       next: (v) => {
         console.log(v);
+        
       },
     });
   }

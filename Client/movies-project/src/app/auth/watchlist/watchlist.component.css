@@ -53,3 +53,10 @@ img {
   bottom: 3px;
   font-size: 140%;
 }
+
+.description {
+  position: absolute;
+  bottom: 50%;
+  left: 25%;
+  margin: auto;
+}
