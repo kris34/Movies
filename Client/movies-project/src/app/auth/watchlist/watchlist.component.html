@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="movie-card" *ngFor="let movie of watchlist">
+  <div class="movie-card" *ngFor="let movie of watchlist$ | async">
     <div class="img">
       <img src="{{ movie.imageUrl }}" />
       <div class="container-specs">
@@ -21,3 +21,4 @@
     </div>
   </div>
 </div>
+

@@ -113,32 +113,38 @@ async function editMovie(id, data) {
 }
 
 async function addWatchlist(movieId, userId) {
-  const user = await User.findById(userId);
+  let user = await User.findById(userId);
   let movie = await Movie.findById(movieId);
+  const updated = [];
 
   movie.bookmarkedUsers.push(userId);
   await movie.save();
-  user.myWatchlist.push(movieId);
+  updated.push(movie);
 
-  return user.save();
+  user.myWatchlist.push(movieId);
+  await user.save();
+  updated.push(user);
+
+  return updated;
 }
 
 async function removeFromWatchlist(movieId, userId) {
   let user = await User.findById(userId);
   let movie = await Movie.findById(movieId);
-  console.log(user);
-  console.log(movie);
+  const updated = [];
 
   user.myWatchlist = user.myWatchlist.filter(
     (m) => m._id.toString() != movieId.toString()
   );
   await user.save();
-  
+  updated.push(user);
   movie.bookmarkedUsers = movie.bookmarkedUsers.filter(
     (u) => u._id.toString() != userId.toString()
   );
-
   await movie.save();
+  updated.push(movie);
+
+  return updated;
 }
 
 async function getUserWatchlist(userId) {

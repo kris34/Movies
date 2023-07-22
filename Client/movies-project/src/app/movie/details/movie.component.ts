@@ -1,4 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BehaviorSubject, Observable, Subscription, filter } from 'rxjs';
 import { ApiService } from 'src/app/api.service';
@@ -17,7 +24,7 @@ export class MovieComponent {
   isOwner: boolean;
   watchlist: IMovie[] | null = [];
   isAddedToWatchlist: boolean = false;
-  movieId: string 
+  movieId: string;
 
   get userid() {
     return this.auth.user?._id;
@@ -34,6 +41,43 @@ export class MovieComponent {
     this.getWatchlist();
   }
 
+  getWatchlist() {
+    this.api.loadUserWatchlist().subscribe({
+      next: (v) => {
+        this.watchlist = v;
+      },
+    });
+  }
+
+  addToWatchlist(id: string) {
+    this.movieApi.addMovie(id, {}).subscribe({
+      next: (v) => {
+        this.movie = v[0];
+        console.log('added');
+
+        this.isAddedToWatchlist = true;
+      },
+    });
+  }
+
+  removeFromWatchlist(id: string) {
+    this.movieApi.removeFromWatchlist(id).subscribe({
+      next: (v) => {
+        this.movie = v[1];
+        console.log('removed');
+        this.isAddedToWatchlist = false;
+      },
+    });
+  }
+
+  deleteMovie(id: string) {
+    this.movieApi.deleteMovie(id).subscribe({
+      next: (v) => {
+        this.router.navigate(['/']);
+      },
+    });
+  }
+
   getMovie() {
     const id = this.route.snapshot.paramMap.get('id');
     this.movieId = id!;
@@ -41,6 +85,14 @@ export class MovieComponent {
       next: (v) => {
         this.isOwner = this.userid == v._ownerId;
         this.movie = v;
+
+        if (this.movie.bookmarkedUsers.includes(this.userid!)) {
+          console.log('here');
+          this.isAddedToWatchlist = true;
+        } else {
+          this.isAddedToWatchlist = false;
+        }
+
         if (this.movie.likes.length - this.movie.dislikes.length == 1) {
           this.arr = this.movie.likes.slice(-1);
         } else if (this.movie.likes.length - this.movie.dislikes.length == 2) {
@@ -61,43 +113,29 @@ export class MovieComponent {
     });
   }
 
-  deleteMovie(id: string) {
-    this.movieApi.deleteMovie(id).subscribe({
-      next: (v) => {
-        this.router.navigate(['/']);
-      },
-    });
-  }
-
-  addMovie() {
+  /*   addMovie() {
     const id = this.route.snapshot.paramMap.get('id');
     this.movieApi.addMovie(id!, {}).subscribe({
       next: (v) => {
         console.log(v);
       },
     });
-  }
-  getWatchlist() {
-    this.api.loadUserWatchlist().subscribe({
-      next: (v) => {
-        this.watchlist = v;
-        console.log(this.watchlist);
-      },
-    });
-  }
+  } */
 
-  toggleWatchlist(movieId: string) {
-    console.log('here');
-    console.log(this.isMovieInWatchlist(movieId));
-
+  /*   toggleWatchlist(movieId: string) {
     if (this.isMovieInWatchlist(movieId)) {
       this.movieApi.removeFromWatchlist(movieId).subscribe((v) => {
         console.log(v);
+        this.movie = v[1]
         this.isAddedToWatchlist = false;
+        this.button.nativeElement.textContent = 'Add To Watchlist';
       });
     } else {
-      this.movieApi.addMovie(movieId, {}).subscribe(() => {
+      this.movieApi.addMovie(movieId, {}).subscribe((v) => {
+        console.log(v);
+        this.movie = v[1]
         this.isAddedToWatchlist = true;
+        this.button.nativeElement.textContent = 'Remove from Watchlist';
       });
     }
   }
@@ -106,5 +144,5 @@ export class MovieComponent {
     return this.watchlist
       ? this.watchlist.some((movie) => movie._id == movieId)
       : false;
-  }
+  } */
 }

@@ -43,7 +43,7 @@ export class MovieService {
       .post<IMovie>(`${apiUrl}/${id}/like`, data, {
         headers: { 'x-authorization': getSession().accessToken },
       })
-      .pipe(tap((v) => console.log(`liked movie ${v._ownerId}`)));
+      /* .pipe(tap((v) => console.log(`liked movie ${v._ownerId}`))); */
   }
 
   dislikeMovie(id: string, data: {}) {
@@ -51,11 +51,11 @@ export class MovieService {
       .post<IMovie>(`${apiUrl}/${id}/dislike`, data, {
         headers: { 'x-authorization': getSession().accessToken },
       })
-      .pipe(
+      /* .pipe(
         tap((_) => {
           console.log(`disliked movie ${id}`);
         })
-      );
+      ); */
   }
 
   deleteMovie(id: string) {

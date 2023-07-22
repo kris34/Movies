@@ -143,9 +143,9 @@ siteController.post('/:id/add', hasUser(), async (req, res) => {
       throw new Error('You cannot add your own movie to your watchlist!');
     }
 
-    const addedMovie = await addWatchlist(movie._id, req.user?._id);
+    const updated = await addWatchlist(movie._id, req.user?._id);
 
-    res.status(200).json(addedMovie);
+    res.status(200).json(updated);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -165,9 +165,9 @@ siteController.post('/remove/:id', hasUser(), async (req, res) => {
   try {
     const movie = await getMovieById(req.params.id);
 
-    await removeFromWatchlist(movie._id, req.user._id);
+   const updated =  await removeFromWatchlist(movie._id, req.user._id);
 
-    res.status(200).json('removed from watchlist');
+    res.status(200).json(updated);
   } catch (err) {
     res.status(400).json({ err: err.message });
   }

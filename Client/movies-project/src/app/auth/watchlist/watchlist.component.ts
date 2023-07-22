@@ -10,20 +10,23 @@ import { MovieService } from 'src/app/movie/movie.service';
   styleUrls: ['./watchlist.component.css'],
 })
 export class WatchlistComponent {
-  watchlist: IMovie[] | null = [];
+  /* watchlist: IMovie[] | null = []; */
+  watchlist$ = this.api.loadUserWatchlist();
 
-  constructor(private auth: AuthService, private api: ApiService, private movieService: MovieService) {
-    this.getWatchlist();
+  constructor(
+    private auth: AuthService,
+    private api: ApiService,
+    private movieService: MovieService
+  ) {
+    /*  this.getWatchlist(); */
   }
 
-  getWatchlist() {
+  /*   getWatchlist() {
     this.api.loadUserWatchlist().subscribe({
       next: (v) => {
         this.watchlist = v;
         console.log(this.watchlist);
       },
     });
-  }
-
-
+  } */
 }
