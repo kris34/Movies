@@ -123,6 +123,24 @@ async function addWatchlist(movieId, userId) {
   return user.save();
 }
 
+async function removeFromWatchlist(movieId, userId) {
+  let user = await User.findById(userId);
+  let movie = await Movie.findById(movieId);
+  console.log(user);
+  console.log(movie);
+
+  user.myWatchlist = user.myWatchlist.filter(
+    (m) => m._id.toString() != movieId.toString()
+  );
+  await user.save();
+  
+  movie.bookmarkedUsers = movie.bookmarkedUsers.filter(
+    (u) => u._id.toString() != userId.toString()
+  );
+
+  await movie.save();
+}
+
 async function getUserWatchlist(userId) {
   const user = await User.findById(userId);
   let watchlist = [];

@@ -161,4 +161,16 @@ siteController.get('/watchlist', hasUser(), async (req, res) => {
   }
 });
 
+siteController.post('/remove/:id', hasUser(), async (req, res) => {
+  try {
+    const movie = await getMovieById(req.params.id);
+
+    await removeFromWatchlist(movie._id, req.user._id);
+
+    res.status(200).json('removed from watchlist');
+  } catch (err) {
+    res.status(400).json({ err: err.message });
+  }
+});
+
 module.exports = siteController;

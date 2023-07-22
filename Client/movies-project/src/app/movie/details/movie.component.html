@@ -49,8 +49,16 @@
   <ng-template #notOwnerTemplate>
     <button class="share-btn" mat-raised-button>Share</button>
     <button mat-raised-button>Comment</button>
-   
-      <button class="watchlist-btn" mat-raised-button (click)="addMovie()">Add to watchlist</button>
-   
+    <button
+      class="watchlist-btn"
+      mat-raised-button
+      (click)="toggleWatchlist(this.movieId)"
+    >
+      {{
+        isMovieInWatchlist(this.movieId)
+          ? "Remove from Watchlist"
+          : "Add to Watchlist"
+      }}
+    </button>
   </ng-template>
 </div>

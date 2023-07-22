@@ -12,7 +12,7 @@ import { MovieService } from 'src/app/movie/movie.service';
 export class WatchlistComponent {
   watchlist: IMovie[] | null = [];
 
-  constructor(private auth: AuthService, private api: ApiService) {
+  constructor(private auth: AuthService, private api: ApiService, private movieService: MovieService) {
     this.getWatchlist();
   }
 
@@ -24,4 +24,6 @@ export class WatchlistComponent {
       },
     });
   }
+
+
 }

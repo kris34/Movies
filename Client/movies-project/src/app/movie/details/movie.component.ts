@@ -15,7 +15,9 @@ export class MovieComponent {
   movie: IMovie | null = null;
   arr: string[];
   isOwner: boolean;
-  isAdded: boolean = false;
+  watchlist: IMovie[] | null = [];
+  isAddedToWatchlist: boolean = false;
+  movieId: string 
 
   get userid() {
     return this.auth.user?._id;
@@ -29,10 +31,12 @@ export class MovieComponent {
     private router: Router
   ) {
     this.getMovie();
+    this.getWatchlist();
   }
 
   getMovie() {
     const id = this.route.snapshot.paramMap.get('id');
+    this.movieId = id!;
     return this.api.loadMovie(id).subscribe({
       next: (v) => {
         this.isOwner = this.userid == v._ownerId;
@@ -70,8 +74,37 @@ export class MovieComponent {
     this.movieApi.addMovie(id!, {}).subscribe({
       next: (v) => {
         console.log(v);
-        
       },
     });
+  }
+  getWatchlist() {
+    this.api.loadUserWatchlist().subscribe({
+      next: (v) => {
+        this.watchlist = v;
+        console.log(this.watchlist);
+      },
+    });
+  }
+
+  toggleWatchlist(movieId: string) {
+    console.log('here');
+    console.log(this.isMovieInWatchlist(movieId));
+
+    if (this.isMovieInWatchlist(movieId)) {
+      this.movieApi.removeFromWatchlist(movieId).subscribe((v) => {
+        console.log(v);
+        this.isAddedToWatchlist = false;
+      });
+    } else {
+      this.movieApi.addMovie(movieId, {}).subscribe(() => {
+        this.isAddedToWatchlist = true;
+      });
+    }
+  }
+
+  isMovieInWatchlist(movieId: string): boolean {
+    return this.watchlist
+      ? this.watchlist.some((movie) => movie._id == movieId)
+      : false;
   }
 }

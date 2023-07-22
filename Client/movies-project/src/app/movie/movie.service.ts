@@ -75,4 +75,10 @@ export class MovieService {
       headers: { 'x-authorization': getSession().accessToken },
     });
   }
+
+  removeFromWatchlist(id: string) {
+    return this.http.post<any>(`${apiUrl}/remove/${id}`, {}, {
+      headers: { 'x-authorization': getSession().accessToken },
+    });
+  }
 }

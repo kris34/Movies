@@ -19,7 +19,7 @@
 
 .bottom {
   position: absolute;
-  top: 73%;
+  margin-top: 300px;
   left: 10px;
 }
 
@@ -37,7 +37,7 @@
   margin-right: 10px;
 }
 
-.watchlist-btn { 
+.watchlist-btn {
   margin-left: 10px;
 }
 
@@ -72,7 +72,6 @@ img {
 .star {
   color: rgb(241, 172, 53);
 }
-
 
 .specs {
   left: 48%;
