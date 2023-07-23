@@ -94,7 +94,14 @@ siteController.delete('/:id', hasUser(), async (req, res) => {
   try {
     const movie = await getMovieById(req.params.id);
 
-    await removeFromWatchlist(req.params.id);
+    for (let userId of movie.bookmarkedUsers) {
+      const user = await User.findById(userId);
+
+      if (user.myWatchlist.includes(req.params.id)) {
+        user.myWatchlist = user.myWatchlist.filter((id) => id != req.params.id);
+      }
+      await user.save();
+    }
 
     if (movie._ownerId != req.user?._id) {
       throw new Error('You cannot delete this movie!');
@@ -165,7 +172,7 @@ siteController.post('/remove/:id', hasUser(), async (req, res) => {
   try {
     const movie = await getMovieById(req.params.id);
 
-   const updated =  await removeFromWatchlist(movie._id, req.user._id);
+    const updated = await removeFromWatchlist(movie._id, req.user._id);
 
     res.status(200).json(updated);
   } catch (err) {

@@ -38,17 +38,17 @@ export class MovieComponent {
     private router: Router
   ) {
     this.getMovie();
-    this.getWatchlist();
+   // this.getWatchlist();
   }
 
-  getWatchlist() {
+/*   getWatchlist() {
     this.api.loadUserWatchlist().subscribe({
       next: (v) => {
         this.watchlist = v;
       },
     });
   }
-
+ */
   addToWatchlist(id: string) {
     this.movieApi.addMovie(id, {}).subscribe({
       next: (v) => {
@@ -112,30 +112,30 @@ export class MovieComponent {
       },
     });
   }
-
-  /*   addMovie() {
+/* 
+    addMovie() {
     const id = this.route.snapshot.paramMap.get('id');
     this.movieApi.addMovie(id!, {}).subscribe({
       next: (v) => {
         console.log(v);
       },
     });
-  } */
+  }
 
-  /*   toggleWatchlist(movieId: string) {
+    toggleWatchlist(movieId: string) {
     if (this.isMovieInWatchlist(movieId)) {
       this.movieApi.removeFromWatchlist(movieId).subscribe((v) => {
         console.log(v);
         this.movie = v[1]
         this.isAddedToWatchlist = false;
-        this.button.nativeElement.textContent = 'Add To Watchlist';
+       // this.button.nativeElement.textContent = 'Add To Watchlist';
       });
     } else {
       this.movieApi.addMovie(movieId, {}).subscribe((v) => {
         console.log(v);
         this.movie = v[1]
         this.isAddedToWatchlist = true;
-        this.button.nativeElement.textContent = 'Remove from Watchlist';
+       // this.button.nativeElement.textContent = 'Remove from Watchlist';
       });
     }
   }
