@@ -1,7 +1,5 @@
-import { Component, DoCheck } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
-import { getSession } from 'src/app/shared/sessions';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +8,6 @@ import { getSession } from 'src/app/shared/sessions';
 })
 export class HeaderComponent {
   get user() {
-    //console.log(sessionStorage.getItem('User'));
     return this.auth.user;
   }
 
@@ -18,7 +15,7 @@ export class HeaderComponent {
     return this.auth.isLoggedIn;
   }
 
-  constructor(private router: Router, public auth: AuthService) {}
+  constructor(public auth: AuthService) {}
 
   logout() {
     this.auth.logout();

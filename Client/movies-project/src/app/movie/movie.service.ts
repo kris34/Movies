@@ -3,9 +3,8 @@ import { Injectable } from '@angular/core';
 import { environment } from 'environments/environment';
 import { IMovie } from '../shared/interfaces/movie';
 import { getSession } from '../shared/sessions';
-import { BehaviorSubject, Observable, Subscription, filter, tap } from 'rxjs';
+import { BehaviorSubject, Subscription, filter } from 'rxjs';
 import { Router } from '@angular/router';
-import { ILike } from '../shared/interfaces/like';
 
 const apiUrl = environment.apiURL;
 
@@ -43,7 +42,6 @@ export class MovieService {
       .post<IMovie>(`${apiUrl}/${id}/like`, data, {
         headers: { 'x-authorization': getSession().accessToken },
       })
-      /* .pipe(tap((v) => console.log(`liked movie ${v._ownerId}`))); */
   }
 
   dislikeMovie(id: string, data: {}) {
@@ -51,11 +49,7 @@ export class MovieService {
       .post<IMovie>(`${apiUrl}/${id}/dislike`, data, {
         headers: { 'x-authorization': getSession().accessToken },
       })
-      /* .pipe(
-        tap((_) => {
-          console.log(`disliked movie ${id}`);
-        })
-      ); */
+     
   }
 
   deleteMovie(id: string) {

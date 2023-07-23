@@ -1,16 +1,6 @@
-import {
-  ChangeDetectorRef,
-  Component,
-  Input,
-  OnChanges,
-  OnInit,
-  SimpleChanges,
-} from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Observable, Subject, concatMap, of, startWith } from 'rxjs';
+import { Component } from '@angular/core';
+
 import { ApiService } from 'src/app/api.service';
-import { IMovie } from 'src/app/shared/interfaces/movie';
-import { MovieService } from 'src/app/movie/movie.service';
 
 @Component({
   selector: 'app-home',
@@ -18,16 +8,7 @@ import { MovieService } from 'src/app/movie/movie.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  movies: IMovie[] | undefined = [];
+  movies$ = this.api.loadMovies();
 
-  constructor(private api: ApiService, private movieService: MovieService) {
-    this.api.loadMovies().subscribe({
-      next: (v) => {
-        this.movies = v.slice(-4);
-      },
-      error: (err) => {
-        console.log(err);
-      },
-    });
-  }
+  constructor(private api: ApiService) {}
 }

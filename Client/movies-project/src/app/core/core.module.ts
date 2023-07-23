@@ -5,7 +5,6 @@ import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { ShortenPipe } from '../shared/pipes/shorten.pipe';
 import { SharedModule } from '../shared/shared.module';
 import { WhattowatchComponent } from './whattowatch/whattowatch.component';
 import { MovieModule } from '../movie/movie.module';
