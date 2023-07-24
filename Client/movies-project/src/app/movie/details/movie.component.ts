@@ -1,10 +1,7 @@
-import {
-  Component,
-  OnInit,
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
-import { AuthService } from 'src/app/auth/auth.service';
+import { AuthService } from 'src/app/user/auth.service';
 import { IMovie } from 'src/app/shared/interfaces/movie';
 import { MovieService } from '../movie.service';
 
@@ -30,12 +27,10 @@ export class MovieComponent implements OnInit {
     private auth: AuthService,
     private movieApi: MovieService,
     private router: Router
-  ) {
-  }
+  ) {}
   ngOnInit(): void {
     this.getMovie();
   }
-
 
   addToWatchlist(id: string) {
     this.movieApi.addMovie(id, {}).subscribe({
@@ -96,5 +91,4 @@ export class MovieComponent implements OnInit {
       },
     });
   }
-
 }

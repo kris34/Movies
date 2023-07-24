@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './auth/auth.service';
+import { AuthService } from './user/auth.service';
 import { getSession } from './shared/sessions';
 
 @Component({
@@ -7,15 +7,14 @@ import { getSession } from './shared/sessions';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent  {
+export class AppComponent {
   title = 'movies-project';
 
-  constructor(private auth: AuthService, ) {
+  constructor(private auth: AuthService) {
     if (!getSession()) {
       this.auth.setUserInfo(null, false);
       return;
-    } 
+    }
     this.auth.setUserInfo(getSession(), true);
   }
- 
 }

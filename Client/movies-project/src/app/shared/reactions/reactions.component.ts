@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IMovie } from 'src/app/shared/interfaces/movie';
-import { AuthService } from 'src/app/auth/auth.service';
+import { AuthService } from 'src/app/user/auth.service';
 import { MovieService } from 'src/app/movie/movie.service';
 
 @Component({

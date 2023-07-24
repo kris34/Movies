@@ -8,7 +8,7 @@ import { MaterialModule } from './material/material.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
-import { AuthModule } from './auth/auth.module';
+import { AuthModule } from './user/auth.module';
 import { MovieComponent } from './movie/details/movie.component';
 import { MovieModule } from './movie/movie.module';
 import { MovieRoutingModule } from './movie/movie-routing.module';
@@ -30,7 +30,6 @@ import { MovieRoutingModule } from './movie/movie-routing.module';
   ],
   providers: [
     /* httpInterceptorProviders */
-    
   ],
   bootstrap: [AppComponent],
 })
