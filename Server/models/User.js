@@ -16,6 +16,7 @@ const userSchema = new Schema({
   },
   myMovies: { type: [Types.ObjectId], ref: 'Movie', default: [] },
   myWatchlist: { type: [Types.ObjectId], ref: 'Movie', default: [] },
+  comments: { type: [Types.ObjectId], ref: 'Comment', default: [] },
 });
 
 userSchema.index(

@@ -197,4 +197,8 @@ siteController.get('/list', hasUser(), async (req, res) => {
   }
 });
 
+siteController.post('/comment', hasUser(), async (req,res) => { 
+  
+})
+
 module.exports = siteController;
