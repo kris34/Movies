@@ -14,6 +14,7 @@ import { WatchlistComponent } from './watchlist/watchlist.component';
 import { CoreModule } from '../core/core.module';
 import { MovieRoutingModule } from '../movie/movie-routing.module';
 import { AppModule } from '../app.module';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AppModule } from '../app.module';
     ProfileComponent,
     EditProfileComponent,
     WatchlistComponent,
+    ListComponent,
   ],
   imports: [
     CommonModule,

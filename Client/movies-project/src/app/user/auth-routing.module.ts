@@ -5,6 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { AuthGuardService } from './auth-guard.service';
 import { WatchlistComponent } from './watchlist/watchlist.component';
+import { ListComponent } from './list/list.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   { 
     path: "watchlist",
     component: WatchlistComponent
+  },
+  { 
+    path: "list",
+    component: ListComponent
   }
 ];
 
