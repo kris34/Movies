@@ -1,0 +1,70 @@
+.container {
+    width: 40%;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    top: 5px;
+  }
+  
+  img {
+    height: 180px;
+    width: 150px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+  }
+  
+  .img {
+    position: relative;
+  }
+  
+  .container-specs {
+    position: absolute;
+    display: flex;
+  }
+  
+  .movie-card {
+    display: flex;
+    border-style: solid;
+    border-width: thin;
+    background-color: white;
+  }
+  
+  .title {
+    position: relative;
+    left: 160px;
+    bottom: 210px;
+    display: inline-block;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+  }
+  
+  .reactions {
+    display: flex;
+    position: relative;
+    margin-left: 10px;
+    font-weight: 500;
+  }
+  
+  .thumb-up {
+    display: flex;
+    margin-right: 5px;
+  }
+  
+  .negative-num {
+    margin-left: 3px;
+    margin-top: -3px;
+  }
+  
+  .positive-num {
+    margin-left: 3px;
+    margin-top: -3px;
+  }
+  
+  .description {
+    position: relative;
+    top: 20px;
+    left: 4px;
+  }
+  

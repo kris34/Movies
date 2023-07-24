@@ -35,4 +35,10 @@ export class ApiService {
       headers: { 'x-authorization': getSession().accessToken },
     });
   }
+
+  loadUserList() {
+    return this.http.get<any>(`${apiUrl}/list`, {
+      headers: { 'x-authorization': getSession().accessToken },
+    });
+  }
 }

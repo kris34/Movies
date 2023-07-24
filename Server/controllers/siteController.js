@@ -14,6 +14,7 @@ const {
   editMovie,
   addWatchlist,
   getUserWatchlist,
+  getUserMovies,
 } = require('../services/movieService');
 const { getUser } = require('../services/userService');
 
@@ -175,6 +176,22 @@ siteController.post('/remove/:id', hasUser(), async (req, res) => {
     const updated = await removeFromWatchlist(movie._id, req.user._id);
 
     res.status(200).json(updated);
+  } catch (err) {
+    res.status(400).json({ err: err.message });
+  }
+});
+
+siteController.get('/list', hasUser(), async (req, res) => {
+  try {
+    const movies = await getUserMovies(req.user._id);
+    const movieArr = [];
+
+    for (let id of movies) {
+      const movie = await getMovieById(id);
+      movieArr.push(movie);
+    }
+ 
+    res.status(200).json(movieArr);
   } catch (err) {
     res.status(400).json({ err: err.message });
   }

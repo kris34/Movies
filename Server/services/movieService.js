@@ -158,8 +158,15 @@ async function getUserWatchlist(userId) {
   return watchlist;
 }
 
+async function getUserMovies(userId) {
+  const user = await User.findById(userId);
+
+  return user.myMovies;
+}
+
 module.exports = {
   createMovie,
+  getUserMovies,
   getUserWatchlist,
   getAll,
   getMovieById,
