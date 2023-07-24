@@ -5,10 +5,8 @@ const commentSchema = new Schema({
     type: String,
     maxLength: [100, 'Comment cannot exceed 100 charakters!'],
   },
-  post: {
-    type: Types.ObjectId,
-    ref: 'Post',
-  },
+ 
+  _ownerId: { type: Types.ObjectId, ref: 'User', required: true },
 });
 
 const Comment = new model('Comment', commentSchema);

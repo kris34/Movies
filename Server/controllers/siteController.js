@@ -1,5 +1,6 @@
 const { hasUser } = require('../middlewares/guards');
 const User = require('../models/User');
+const { postComment } = require('../services/commentService');
 
 const {
   getAll,
@@ -190,15 +191,24 @@ siteController.get('/list', hasUser(), async (req, res) => {
       const movie = await getMovieById(id);
       movieArr.push(movie);
     }
- 
+
     res.status(200).json(movieArr);
   } catch (err) {
     res.status(400).json({ err: err.message });
   }
 });
 
-siteController.post('/comment', hasUser(), async (req,res) => { 
-  
-})
+siteController.post('/:id/comment', hasUser(), async (req, res) => {
+  try {
+    const movie = await getMovieById(req.params.id);
+    const data = Object.assign({ _ownerId: req.user._id }, req.body);
+    const comment = await postComment(data);
+    movie.comments.push(comment._id);
+   await movie.save();
+    res.status(200).json(comment);
+  } catch (err) {
+    res.status(400).json({ err: err.message });
+  }
+});
 
 module.exports = siteController;
