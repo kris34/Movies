@@ -13,7 +13,7 @@ async function getUserComments(userId) {
   const comments = await getAllComments();
 
   for (let c of comments) {
-    if (c.ownerId == userId) {
+    if (c._ownerId == userId) {
       userComments.push(c);
     }
   }
