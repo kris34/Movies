@@ -200,11 +200,8 @@ siteController.get('/list', hasUser(), async (req, res) => {
 
 siteController.post('/:id/comment', hasUser(), async (req, res) => {
   try {
-    const movie = await getMovieById(req.params.id);
-    const data = Object.assign({ _ownerId: req.user._id }, req.body);
+    const data = Object.assign({ _ownerId: req.user._id }, {_movieId: req.params.id}, req.body);
     const comment = await postComment(data);
-    movie.comments.push(comment._id);
-   await movie.save();
     res.status(200).json(comment);
   } catch (err) {
     res.status(400).json({ err: err.message });
