@@ -1,6 +1,6 @@
 const { hasUser } = require('../middlewares/guards');
 const User = require('../models/User');
-const { postComment } = require('../services/commentService');
+const { postComment, getMovieComments } = require('../services/commentService');
 
 const {
   getAll,
@@ -200,9 +200,23 @@ siteController.get('/list', hasUser(), async (req, res) => {
 
 siteController.post('/:id/comment', hasUser(), async (req, res) => {
   try {
-    const data = Object.assign({ _ownerId: req.user._id }, {_movieId: req.params.id}, req.body);
+    const data = Object.assign(
+      { _ownerId: req.user._id },
+      { _movieId: req.params.id },
+      req.body
+    );
     const comment = await postComment(data);
     res.status(200).json(comment);
+  } catch (err) {
+    res.status(400).json({ err: err.message });
+  }
+});
+
+siteController.get('/:id/comments', hasUser(), async (req, res) => {
+  try {
+    
+    const comments = await getMovieComments(req.params.id);
+    res.status(200).json(comments);
   } catch (err) {
     res.status(400).json({ err: err.message });
   }
