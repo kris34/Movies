@@ -1,10 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  Router,
-  Resolve,
-  RouterStateSnapshot,
-  ActivatedRouteSnapshot,
-} from '@angular/router';
+import { Router, RouterStateSnapshot, ActivatedRouteSnapshot } from '@angular/router';
 import { Observable, catchError, of } from 'rxjs';
 import { ApiService } from 'src/app/api.service';
 import { IMovie } from 'src/app/shared/interfaces/movie';
@@ -12,7 +7,7 @@ import { IMovie } from 'src/app/shared/interfaces/movie';
 @Injectable({
   providedIn: 'root',
 })
-export class MovieResolver implements Resolve<IMovie | null> {
+export class MovieResolver  {
   constructor(private api: ApiService, private router: Router) {}
 
   resolve(
