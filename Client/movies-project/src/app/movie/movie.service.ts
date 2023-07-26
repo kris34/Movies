@@ -38,18 +38,15 @@ export class MovieService {
   }
 
   likeMovie(id: string, data: {}) {
-    return this.http
-      .post<IMovie>(`${apiUrl}/${id}/like`, data, {
-        headers: { 'x-authorization': getSession().accessToken },
-      })
+    return this.http.post<IMovie>(`${apiUrl}/${id}/like`, data, {
+      headers: { 'x-authorization': getSession().accessToken },
+    });
   }
 
   dislikeMovie(id: string, data: {}) {
-    return this.http
-      .post<IMovie>(`${apiUrl}/${id}/dislike`, data, {
-        headers: { 'x-authorization': getSession().accessToken },
-      })
-     
+    return this.http.post<IMovie>(`${apiUrl}/${id}/dislike`, data, {
+      headers: { 'x-authorization': getSession().accessToken },
+    });
   }
 
   deleteMovie(id: string) {
@@ -71,7 +68,17 @@ export class MovieService {
   }
 
   removeFromWatchlist(id: string) {
-    return this.http.post<any>(`${apiUrl}/remove/${id}`, {}, {
+    return this.http.post<any>(
+      `${apiUrl}/remove/${id}`,
+      {},
+      {
+        headers: { 'x-authorization': getSession().accessToken },
+      }
+    );
+  }
+
+  getComments() {
+    return this.http.get<any>(`${apiUrl}/comments`, {
       headers: { 'x-authorization': getSession().accessToken },
     });
   }

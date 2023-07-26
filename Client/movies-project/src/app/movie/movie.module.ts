@@ -10,12 +10,14 @@ import { MovieComponent } from './details/movie.component';
 import { MovieResolver } from './resolvers/movie.resolver';
 import { EditComponent } from './edit/edit.component';
 import { SharedModule } from '../shared/shared.module';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
     CreateComponent,
     MovieComponent,
     EditComponent,
+    CommentComponent,
   ],
   imports: [
     CommonModule,
