@@ -12,6 +12,7 @@ import { AuthModule } from './user/auth.module';
 import { MovieComponent } from './movie/details/movie.component';
 import { MovieModule } from './movie/movie.module';
 import { MovieRoutingModule } from './movie/movie-routing.module';
+import { StoreModule } from '@ngrx/store';
 //import { httpInterceptorProviders } from './app.interceptor';
 
 @NgModule({
@@ -27,6 +28,7 @@ import { MovieRoutingModule } from './movie/movie-routing.module';
     HttpClientModule,
     MovieModule,
     MovieRoutingModule, 
+    StoreModule.forRoot(appReducer)
   ],
   providers: [
     /* httpInterceptorProviders */
