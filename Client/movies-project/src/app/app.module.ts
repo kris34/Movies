@@ -26,7 +26,7 @@ import { MovieRoutingModule } from './movie/movie-routing.module';
     SharedModule,
     HttpClientModule,
     MovieModule,
-    MovieRoutingModule,
+    MovieRoutingModule, 
   ],
   providers: [
     /* httpInterceptorProviders */
