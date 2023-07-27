@@ -50,26 +50,31 @@
     <button class="share-btn" mat-raised-button>Share</button>
     <button mat-raised-button>Comment</button>
     <ng-container
-    *ngTemplateOutlet="isAddedToWatchlist ? removeWatchlist : addWatchlist"
-  >
-  </ng-container>
-
-  <ng-template #removeWatchlist>
-    <button class="watchlist-btn" mat-raised-button (click)="removeFromWatchlist(this.movieId)" >
-      Remove from Watchlist
-    </button>
-  </ng-template>
-
-  <ng-template #addWatchlist>
-    <button
-      class="watchlist-btn"
-      mat-raised-button
-      (click)="addToWatchlist(this.movieId)"
+      *ngTemplateOutlet="isAddedToWatchlist ? removeWatchlist : addWatchlist"
     >
-      Add to Watchlist
-    </button>
-  </ng-template>
-  </ng-template>
+    </ng-container>
 
- 
+    <ng-template #removeWatchlist>
+      <button
+        class="watchlist-btn"
+        mat-raised-button
+        (click)="removeFromWatchlist(this.movieId)"
+      >
+        Remove from Watchlist
+      </button>
+    </ng-template>
+
+    <ng-template #addWatchlist>
+      <button
+        class="watchlist-btn"
+        mat-raised-button
+        (click)="addToWatchlist(this.movieId)"
+      >
+        Add to Watchlist
+      </button>
+    </ng-template>
+  </ng-template>
 </div>
+
+
+<app-comment></app-comment>

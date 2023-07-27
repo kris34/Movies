@@ -26,7 +26,7 @@ import { CommentComponent } from './comment/comment.component';
     ReactiveFormsModule,
     HttpClientModule,
     MovieRoutingModule,
-    SharedModule
+    SharedModule,
   ],
   exports: [CreateComponent,  MovieComponent],
 })

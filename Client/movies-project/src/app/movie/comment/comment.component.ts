@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-import { IComment } from 'src/app/shared/interfaces/comment';
-import { loadComments } from 'src/app/state/comments/comment.actions';
+import { loadComments } from 'src/app/shared/store/comment/comment.actions';
 
 @Component({
   selector: 'app-comment',
@@ -10,12 +8,12 @@ import { loadComments } from 'src/app/state/comments/comment.actions';
   styleUrls: ['./comment.component.css'],
 })
 export class CommentComponent implements OnInit {
-  comments: Observable<IComment[]>;
-
-  constructor(private store: Store) {}
+  constructor(private store: Store<{ comment: { comments: [] } }>) {}
 
   ngOnInit(): void {
-   this.comments = this.store.select(getComments)
     this.store.dispatch(loadComments())
+    this.store.select('comment').subscribe((data) => {
+      console.log(data);
+    });
   }
 }

@@ -77,7 +77,7 @@ export class MovieService {
     );
   }
 
-  getComments() {
+  loadComments() {
     return this.http.get<any>(`${apiUrl}/comments`, {
       headers: { 'x-authorization': getSession().accessToken },
     });
