@@ -1,19 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { loadComments } from 'src/app/shared/store/comment/comment.actions';
+import { Store, select } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import * as CommentActions from './store/comment.actions'
+import { AppStateInterface } from 'src/app/types/appState.interface';
+import { commentsSelector, isLoadingSelector } from './store/comment.selector';
+import { IComment } from 'src/app/shared/interfaces/comment';
+
 
 @Component({
   selector: 'app-comment',
   templateUrl: './comment.component.html',
   styleUrls: ['./comment.component.css'],
 })
-export class CommentComponent implements OnInit {
-  constructor(private store: Store<{ comment: { comments: [] } }>) {}
+export class CommentComponent implements OnInit  {
+  isLoading$: Observable<boolean | void>
+  comments$: Observable<IComment[]>
 
-  ngOnInit(): void {
-    this.store.dispatch(loadComments())
-    this.store.select('comment').subscribe((data) => {
-      console.log(data);
-    });
+  constructor(private store: Store<AppStateInterface>) {
+    this.isLoading$ = this.store.pipe(select(isLoadingSelector))
+    this.comments$ = this.store.pipe(select(commentsSelector))
   }
+
+  
+  ngOnInit(): void {
+    this.store.dispatch(CommentActions.getComments())
+  }
+
+
 }

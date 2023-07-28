@@ -11,6 +11,10 @@ import { MovieResolver } from './resolvers/movie.resolver';
 import { EditComponent } from './edit/edit.component';
 import { SharedModule } from '../shared/shared.module';
 import { CommentComponent } from './comment/comment.component';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './comment/store/comment.reducers';
+import { EffectsModule } from '@ngrx/effects';
+import { CommentEffects } from './comment/store/comment.effects';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,8 @@ import { CommentComponent } from './comment/comment.component';
     CommentComponent,
   ],
   imports: [
+    StoreModule.forFeature('comments',reducers),
+    EffectsModule.forFeature([CommentEffects]),
     CommonModule,
     MaterialModule,
     FormsModule,

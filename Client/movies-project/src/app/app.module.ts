@@ -13,9 +13,7 @@ import { MovieComponent } from './movie/details/movie.component';
 import { MovieModule } from './movie/movie.module';
 import { MovieRoutingModule } from './movie/movie-routing.module';
 import { StoreModule } from '@ngrx/store';
-import { commentReducer } from './shared/store/comment/comment.reducer';
 import { EffectsModule } from '@ngrx/effects';
-import { CommentEffects } from './shared/store/comment/comment.effects';
 //import { httpInterceptorProviders } from './app.interceptor';
 
 @NgModule({
@@ -30,9 +28,9 @@ import { CommentEffects } from './shared/store/comment/comment.effects';
     SharedModule,
     HttpClientModule,
     MovieModule,
-    MovieRoutingModule, 
-   StoreModule.forRoot({comment: commentReducer}),
-   EffectsModule.forRoot([CommentEffects])
+    MovieRoutingModule,
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot(),
   ],
   providers: [
     /* httpInterceptorProviders */
