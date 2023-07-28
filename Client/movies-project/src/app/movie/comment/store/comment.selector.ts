@@ -4,11 +4,11 @@ import { AppStateInterface } from 'src/app/types/appState.interface';
 export const selectFeature = (state: AppStateInterface) => state.comments;
 
 export const isLoadingSelector = createSelector(selectFeature, (state) => {
-  state.isLoading;
+ return state.isLoading;
 });
 
 export const commentsSelector = createSelector(selectFeature, (state) => {
-  state.comments;
+  return state.comments;
 });
 
 export const errorSelector = createSelector(selectFeature, (state) => {
