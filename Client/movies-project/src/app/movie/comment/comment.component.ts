@@ -13,8 +13,8 @@ import { IComment } from 'src/app/shared/interfaces/comment';
   styleUrls: ['./comment.component.css'],
 })
 export class CommentComponent implements OnInit  {
-  isLoading$: Observable<boolean | void>
-  comments$: Observable<IComment[]>
+  isLoading$: Observable<boolean>
+  comments$: Observable<IComment[]>;
 
   constructor(private store: Store<AppStateInterface>) {
     this.isLoading$ = this.store.pipe(select(isLoadingSelector))

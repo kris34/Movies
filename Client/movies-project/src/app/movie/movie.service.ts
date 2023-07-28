@@ -3,8 +3,9 @@ import { Injectable } from '@angular/core';
 import { environment } from 'environments/environment';
 import { IMovie } from '../shared/interfaces/movie';
 import { getSession } from '../shared/sessions';
-import { BehaviorSubject, Subscription, filter } from 'rxjs';
+import { BehaviorSubject, Observable, Subscription, filter } from 'rxjs';
 import { Router } from '@angular/router';
+import { IComment } from '../shared/interfaces/comment';
 
 const apiUrl = environment.apiURL;
 
@@ -77,7 +78,7 @@ export class MovieService {
     );
   }
 
-  loadComments() {
+  loadComments(): Observable<IComment[]> {
     return this.http.get<any>(`${apiUrl}/comments`, {
       headers: { 'x-authorization': getSession().accessToken },
     });
