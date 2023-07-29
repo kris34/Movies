@@ -78,8 +78,14 @@ export class MovieService {
     );
   }
 
-  loadComments(): Observable<IComment[]> {
+  loadUserComments(): Observable<IComment[]> {
     return this.http.get<any>(`${apiUrl}/comments`, {
+      headers: { 'x-authorization': getSession().accessToken },
+    });
+  }
+
+  loadMovieComments(id: string): Observable<IComment[]> {
+    return this.http.get<any>(`${apiUrl}/${id}/comments`, {
       headers: { 'x-authorization': getSession().accessToken },
     });
   }

@@ -18,7 +18,7 @@ export const reducers = createReducer(
   on(getCommentsSuccess, (state, action) => ({
     ...state,
     isLoading: false,
-    comments: action.comments,
+    comments: action.comments
   })),
   on(getCommentsFailure, (state, action) => ({
     ...state,

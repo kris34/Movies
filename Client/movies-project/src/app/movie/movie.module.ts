@@ -12,9 +12,9 @@ import { EditComponent } from './edit/edit.component';
 import { SharedModule } from '../shared/shared.module';
 import { CommentComponent } from './comment/comment.component';
 import { StoreModule } from '@ngrx/store';
-import { reducers } from './comment/store/comment.reducers';
+import { reducers } from '../shared/store/comment/comment.reducers';
 import { EffectsModule } from '@ngrx/effects';
-import { CommentEffects } from './comment/store/comment.effects'
+import { CommentEffects } from '../shared/store/comment/comment.effects';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { CommentEffects } from './comment/store/comment.effects'
     CommentComponent,
   ],
   imports: [
-    StoreModule.forFeature('comments',reducers),
+    StoreModule.forFeature('comments', reducers),
     EffectsModule.forFeature([CommentEffects]),
     CommonModule,
     MaterialModule,
@@ -34,6 +34,6 @@ import { CommentEffects } from './comment/store/comment.effects'
     MovieRoutingModule,
     SharedModule,
   ],
-  exports: [CreateComponent,  MovieComponent],
+  exports: [CreateComponent, MovieComponent],
 })
 export class MovieModule {}
