@@ -1,0 +1,23 @@
+.container {
+  max-width: 800px;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  height: auto;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.6);
+}
+
+.comment-box {
+  border-style: solid;
+  border-width: thin;
+  height: auto;
+  max-height: 40px;
+}
+
+.comment-text {
+    margin-left: 5px;
+}

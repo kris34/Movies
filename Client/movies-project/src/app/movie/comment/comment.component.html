@@ -1,5 +1,6 @@
-<div *ngIf="isLoading$ | async">Loading...</div>
-
-<div *ngFor="let comment of comments$ | async">\
-{{comment._ownerId}}
+<!-- <div *ngIf="isLoading$ | async">Loading...</div> -->
+<div class="container">
+  <div class="comment-box" *ngFor="let comment of comments$ | async">
+    <p class="comment-text">{{ comment.content }}</p>
+  </div>
 </div>

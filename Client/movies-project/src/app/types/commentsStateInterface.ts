@@ -7,3 +7,8 @@ export interface commentsStateInterface {
   error: string | null;
 }
 
+export interface movieStateInterface {
+  isLoading: boolean;
+  movies: IMovie[];
+  error: string | null;
+}
