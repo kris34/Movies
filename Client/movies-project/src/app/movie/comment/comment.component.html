@@ -1,8 +1,13 @@
 <!-- <div *ngIf="isLoading$ | async">Loading...</div> -->
-<mat-form-field id="write-comment" class="form-field">
-  <mat-label>Description</mat-label>
-  <input type="text" matInput formControlName="description" />
-</mat-form-field>
+<form>
+  <div class="write-comment">
+    <mat-form-field id="write-comment-input">
+      <mat-label>Description</mat-label>
+      <input type="text" matInput />
+    </mat-form-field>
+    <button class="submit-btn" mat-raised-button color="accent">Submit</button>
+  </div>
+</form>
 
 <div class="container">
   <div class="comment-box" *ngFor="let comment of comments$ | async">
