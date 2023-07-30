@@ -1,4 +1,9 @@
 <!-- <div *ngIf="isLoading$ | async">Loading...</div> -->
+<mat-form-field id="write-comment" class="form-field">
+  <mat-label>Description</mat-label>
+  <input type="text" matInput formControlName="description" />
+</mat-form-field>
+
 <div class="container">
   <div class="comment-box" *ngFor="let comment of comments$ | async">
     <p class="comment-text">{{ comment.content }}</p>
