@@ -50,7 +50,7 @@ export class CommentComponent implements OnInit {
    
     this.api.postMovieComment('64be7b2a914737b5a76b3812', this.form.value).subscribe({
       next: (v) => {
-        console.log(v);
+        this.store.dispatch(CommentActions.getComments());
       },
       error: (err) => {
         console.log(err);
