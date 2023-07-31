@@ -9,6 +9,8 @@ import {
 } from '../../shared/store/comment/comment.selector';
 import { IComment } from 'src/app/shared/interfaces/comment';
 import { ActivatedRoute } from '@angular/router';
+import { MovieService } from '../movie.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-comment',
@@ -20,12 +22,18 @@ export class CommentComponent implements OnInit {
   comments$: Observable<IComment[]>;
   id: string;
 
+  form = this.fb.group({
+    content: ['']
+  })
+
+
   constructor(
     private store: Store<AppStateInterface>,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private api: MovieService,
+    private fb: FormBuilder
   ) {
     this.id = this.route.snapshot.params['id'];
-    console.log(this.id);
     this.isLoading$ = this.store.pipe(select(isLoadingSelector));
     this.comments$ = this.store.pipe(select(commentsSelector(this.id!)));
   }
@@ -33,5 +41,21 @@ export class CommentComponent implements OnInit {
 
   ngOnInit(): void {
     this.store.dispatch(CommentActions.getComments());
+  }
+
+  onComment() {
+    if (!this.form.valid) {
+      return
+    }
+   
+    this.api.postMovieComment('64be7b2a914737b5a76b3812', this.form.value).subscribe({
+      next: (v) => {
+        console.log(v);
+      },
+      error: (err) => {
+        console.log(err);
+
+      }
+    })
   }
 }

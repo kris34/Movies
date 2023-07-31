@@ -205,12 +205,15 @@ siteController.get('/list', hasUser(), async (req, res) => {
 
 siteController.post('/:id/comment', hasUser(), async (req, res) => {
   try {
+    console.log("here");
     const data = Object.assign(
       { _ownerId: req.user._id },
       { _movieId: req.params.id },
       req.body
     );
+    
     const comment = await postComment(data);
+   
     res.status(200).json(comment);
   } catch (err) {
     res.status(400).json({ err: err.message });
@@ -219,7 +222,7 @@ siteController.post('/:id/comment', hasUser(), async (req, res) => {
 
 siteController.get('/comments', hasUser(), async (req, res) => {
   try {
-    const comments = await getAllComments ();
+    const comments = await getAllComments();
     res.status(200).json(comments);
   } catch (err) {
     res.status(400).json({ err: err.message });

@@ -90,8 +90,8 @@ export class MovieService {
     });
   }
 
-  postMovieComment(data: IComment) {
-    return this.http.post(`${apiUrl}/comments`, data, {
+  postMovieComment(id: string, data: {}) {
+    return this.http.post<any>(`${apiUrl}/${id}/comment`, data, {
       headers: { 'x-authorization': getSession().accessToken },
     });
   }
