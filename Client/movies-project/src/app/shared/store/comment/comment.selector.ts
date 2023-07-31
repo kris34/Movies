@@ -12,8 +12,6 @@ export const commentsSelector = (id: string) => createSelector(selectFeature, (s
 
 });
 
-
-
 export const errorSelector = createSelector(selectFeature, (state) => {
   state.error;
 });

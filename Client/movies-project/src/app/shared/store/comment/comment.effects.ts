@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import * as CommentActions from './comment.actions';
-import { map, mergeMap } from 'rxjs';
+import { map, mergeMap, switchMap } from 'rxjs';
 import { MovieService } from '../../../movie/movie.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -19,6 +19,8 @@ export class CommentEffects {
       })
     )
   );
+
+ 
 
   constructor(
     private actions$: Actions,

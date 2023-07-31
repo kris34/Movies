@@ -89,4 +89,10 @@ export class MovieService {
       headers: { 'x-authorization': getSession().accessToken },
     });
   }
+
+  postMovieComment(data: IComment) {
+    return this.http.post(`${apiUrl}/comments`, data, {
+      headers: { 'x-authorization': getSession().accessToken },
+    });
+  }
 }

@@ -25,9 +25,11 @@ export class CommentComponent implements OnInit {
     private route: ActivatedRoute
   ) {
     this.id = this.route.snapshot.params['id'];
+    console.log(this.id);
     this.isLoading$ = this.store.pipe(select(isLoadingSelector));
     this.comments$ = this.store.pipe(select(commentsSelector(this.id!)));
   }
+
 
   ngOnInit(): void {
     this.store.dispatch(CommentActions.getComments());

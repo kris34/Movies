@@ -4,11 +4,10 @@ import { IMovie } from '../shared/interfaces/movie';
 export interface commentsStateInterface {
   isLoading: boolean;
   comments: IComment[];
+  comment: {},
   error: string | null;
 }
 
-export interface movieStateInterface {
-  isLoading: boolean;
-  movies: IMovie[];
-  error: string | null;
+export interface commentStateInterface {
+  content: IComment;
 }

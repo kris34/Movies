@@ -12,7 +12,7 @@ import { EditComponent } from './edit/edit.component';
 import { SharedModule } from '../shared/shared.module';
 import { CommentComponent } from './comment/comment.component';
 import { StoreModule } from '@ngrx/store';
-import { reducers } from '../shared/store/comment/comment.reducers';
+import { getReducers } from '../shared/store/comment/comment.reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { CommentEffects } from '../shared/store/comment/comment.effects';
 
@@ -24,7 +24,7 @@ import { CommentEffects } from '../shared/store/comment/comment.effects';
     CommentComponent,
   ],
   imports: [
-    StoreModule.forFeature('comments', reducers),
+    StoreModule.forFeature('comments', getReducers),
     EffectsModule.forFeature([CommentEffects]),
     CommonModule,
     MaterialModule,

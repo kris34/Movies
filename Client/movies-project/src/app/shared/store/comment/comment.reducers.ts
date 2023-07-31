@@ -1,6 +1,9 @@
 import { createReducer, on } from '@ngrx/store';
 import { commentsStateInterface } from 'src/app/types/commentsStateInterface';
+import { commentStateInterface } from 'src/app/types/commentsStateInterface';
 import {
+  addComment,
+  addCommentSuccess,
   getComments,
   getCommentsFailure,
   getCommentsSuccess,
@@ -9,20 +12,26 @@ import {
 export const initialState: commentsStateInterface = {
   isLoading: false,
   comments: [],
+  comment: {},
   error: null,
 };
 
-export const reducers = createReducer(
+export const commentInitialState: commentStateInterface = {
+  content: {
+    _id: '',
+    _ownerId: '',
+    _movieId: '',
+    content: '',
+  },
+};
+
+export const getReducers = createReducer(
   initialState,
   on(getComments, (state) => ({ ...state, isLoading: true })),
   on(getCommentsSuccess, (state, action) => ({
     ...state,
     isLoading: false,
-    comments: action.comments
-  })),
-  on(getCommentsFailure, (state, action) => ({
-    ...state,
-    isLoading: false,
-    error: action.error,
+    comments: action.comments,
   }))
 );
+
