@@ -1,5 +1,5 @@
 <div class="movie-card-container">
-  <div class="mat-cards" *ngFor="let movie of movies ">
+  <div class="mat-cards" *ngFor="let movie of movies">
     <mat-card class="example-card">
       <mat-card-header>
         <!-- <div mat-card-avatar class="example-header-image"></div> -->
@@ -22,11 +22,14 @@
           [likeCount]="this.movie.likes.length"
           [dislikeCount]="this.movie.dislikes.length"
           [movie]="this.movie"
-          
         ></app-reactions>
       </div>
     </mat-card>
   </div>
+</div>
+
+<div class="no-movies" *ngIf="noMovies">
+  <p>No movies have been added.</p>
 </div>
 
 <div class="watch-container">

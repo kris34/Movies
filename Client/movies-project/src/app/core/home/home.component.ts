@@ -10,13 +10,17 @@ import { IMovie } from 'src/app/shared/interfaces/movie';
 })
 export class HomeComponent {
   movies: IMovie[] | null = null;
+  noMovies: boolean = false
 
-  constructor(private api: ApiService) {}
+  constructor(private api: ApiService) { }
 
   ngOnInit(): void {
     this.api.loadMovies().subscribe({
       next: (v) => {
         this.movies = v.slice(-4);
+        if (this.movies.length < 1) {
+          this.noMovies = true
+        }
       },
     });
   }
