@@ -1,3 +1,4 @@
+const Comment = require('../models/Comment');
 const Movie = require('../models/Movie');
 const User = require('../models/User');
 
@@ -88,8 +89,12 @@ async function removeFromWatchlist(movieId) {
 
 async function deleteMovie(movieId, userId) {
   const user = await User.findById(userId);
+  const comments = await Comment.find({});
+  const movieComments = comments.filter((c) => c._movieId == movieId);
 
-  //await removeFromWatchlist(movieId);
+  for (let c of movieComments) {
+    await Comment.findByIdAndDelete(c._id);
+  }
 
   user.myMovies = user.myMovies.filter((m) => m != movieId);
 

@@ -72,7 +72,7 @@ siteController.post('/:id/like', hasUser(), async (req, res) => {
     if ((await existingMovie(req.params.id)) == false) {
       throw new Error('Movie doesnt exist!');
     }
-
+      
     const likedMovie = await likeMovie(req.params.id, req.user._id);
     res.status(200).json(likedMovie);
   } catch (error) {

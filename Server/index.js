@@ -7,8 +7,6 @@ const session = require('./middlewares/session');
 const port = '3001';
 const DBConnectionString = 'mongodb://localhost:27017/movies2';
 
-
-
 start();
 
 function start() {
