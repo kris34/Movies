@@ -14,6 +14,11 @@ img {
   height: 45px;
 }
 
+.no-movies {
+font-size: 50px;
+  text-align: center;
+}
+
 .movie-card-container {
   display: flex;
   gap: 10px;
@@ -41,9 +46,4 @@ img {
 
 mat-card-subtitle {
   padding-left: 1px;
-}
-
-.no-movies {
-  margin-left: auto;
-  margin-right: auto;
 }
