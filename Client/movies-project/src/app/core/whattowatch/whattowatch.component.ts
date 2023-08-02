@@ -16,7 +16,7 @@ export class WhattowatchComponent implements OnInit {
   ngOnInit(): void {
     this.api.loadMovies().subscribe({
       next: (v) => {
-        this.movies = v.sort((a, b) => Number(b.likes.length) - Number(a.likes.length))
+        this.movies = v.sort((a, b) => Number(b.likes.length) - Number(a.likes.length)).slice(-4)
 
       },
       error: (err) => {
