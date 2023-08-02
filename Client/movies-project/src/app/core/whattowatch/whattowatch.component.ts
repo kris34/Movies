@@ -11,12 +11,13 @@ import { IMovie } from 'src/app/shared/interfaces/movie';
 export class WhattowatchComponent implements OnInit {
   movies: IMovie[] | null = null;
 
-  constructor(private router: Router, private api: ApiService) {}
+  constructor(private router: Router, private api: ApiService) { }
 
   ngOnInit(): void {
     this.api.loadMovies().subscribe({
       next: (v) => {
-        this.movies = v.slice(-4);
+        this.movies = v.sort((a, b) => Number(b.likes.length) - Number(a.likes.length))
+
       },
       error: (err) => {
         console.log(err);

@@ -1,8 +1,6 @@
 <div class="container">
-
-    <h2>Wondering what to watch?</h2>
-
-    
-    
-
+  <h2>Wondering what to watch?</h2>
+  <div class="movies-container" *ngFor="let movie of movies">
+    <p>{{ movie.description }}</p>
+  </div>
 </div>
