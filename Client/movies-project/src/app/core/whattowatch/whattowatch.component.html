@@ -4,7 +4,7 @@
     <div class="movies">
       <div class="movie" *ngFor="let movie of movies">
         <img src="{{ movie.imageUrl }}" alt="" />
-        <span>{{ movie.title }}</span>
+        <span><a routerLink="/movie/{{ movie._id }}">{{ movie.title }}</a></span>
       </div>
     </div>
   </div>
