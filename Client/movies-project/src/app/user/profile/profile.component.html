@@ -20,7 +20,7 @@
         <div class="small-movie" *ngFor="let movie of movies">
           <img src="{{ movie.imageUrl }}" alt="" />
           <a class="movie-title" routerLink="/movie/{{ movie._id }}">{{
-            movie.title
+            movie.title | titleShorten
           }}</a>
         </div>
       </div>

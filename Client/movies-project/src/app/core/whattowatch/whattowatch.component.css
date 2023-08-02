@@ -13,9 +13,26 @@
 
 .movies {
   display: flex;
+  justify-content: center;
+  margin-left: 33px;
+}
+
+.movie {
+  margin: 10px;
+  height: 180px;
+  width: 150px;
+  position: relative;
+  bottom: 15px;
+  margin-right: 5px;
+  left: 5px;
 }
 
 h2 {
   font-size: 30px;
   text-align: center;
+}
+
+img {
+  height: 180px;
+  width: 150px;
 }

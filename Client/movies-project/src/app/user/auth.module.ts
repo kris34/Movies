@@ -11,24 +11,25 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { WatchlistComponent } from './watchlist/watchlist.component';
 import { ListComponent } from './list/list.component';
 import { ApiService } from '../api.service';
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
-  declarations: [
-    RegisterComponent,
-    LoginComponent,
-    ProfileComponent,
-    EditProfileComponent,
-    WatchlistComponent,
-    ListComponent,
-  ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    MaterialModule,
-    AuthRoutingModule,
-    ReactiveFormsModule,
-    
-  ],
-  exports: [],
+    declarations: [
+        RegisterComponent,
+        LoginComponent,
+        ProfileComponent,
+        EditProfileComponent,
+        WatchlistComponent,
+        ListComponent,
+    ],
+    exports: [],
+    imports: [
+        CommonModule,
+        FormsModule,
+        MaterialModule,
+        AuthRoutingModule,
+        ReactiveFormsModule,
+        SharedModule
+    ]
 })
 export class AuthModule {}

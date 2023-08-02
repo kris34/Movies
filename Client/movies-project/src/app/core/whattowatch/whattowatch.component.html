@@ -3,6 +3,7 @@
   <div class="movies-container">
     <div class="movies">
       <div class="movie" *ngFor="let movie of movies">
+        <img src="{{ movie.imageUrl }}" alt="" />
         <span>{{ movie.title }}</span>
       </div>
     </div>
