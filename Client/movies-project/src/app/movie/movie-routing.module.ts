@@ -4,11 +4,14 @@ import { CreateComponent } from './create/create.component';
 import { MovieComponent } from './details/movie.component';
 import { MovieResolver } from './resolvers/movie.resolver';
 import { EditComponent } from './edit/edit.component';
+import { AuthGuardService } from '../user/auth-guard.service';
+import { MovieGuardService } from './movie-guard.service';
 
 const routes: Routes = [
   {
     path: 'create',
     component: CreateComponent,
+    canActivate: [MovieGuardService]
   },
   {
     path: ':id',
@@ -22,7 +25,8 @@ const routes: Routes = [
     resolve: {
       cres: MovieResolver,
     },
-    component: EditComponent
+    component: EditComponent,
+    canActivate: [MovieGuardService]
   },
 ];
 
