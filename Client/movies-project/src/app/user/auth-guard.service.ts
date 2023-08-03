@@ -7,8 +7,10 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class AuthGuardService  {
-  constructor(private router: Router, private auth: AuthService, ) {}
+export class AuthGuardService {
+  constructor(private router: Router, private auth: AuthService,) { }
+
+
 
   canActivate(): boolean {
     if (this.auth.isAuthenticated()) {
@@ -16,7 +18,6 @@ export class AuthGuardService  {
       return false;
     }
     return true;
-  } 
-  
+  }
 
 }

@@ -6,32 +6,39 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { AuthGuardService } from './auth-guard.service';
 import { WatchlistComponent } from './watchlist/watchlist.component';
 import { ListComponent } from './list/list.component';
+import { authenticationGuard } from '../shared/guards/guest.guard';
 
 const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
-    canActivate:[AuthGuardService]
+    canActivate: [AuthGuardService]
   },
   {
     path: 'login',
     component: LoginComponent,
-    canActivate:[AuthGuardService]
-  },  {
+    canActivate: [AuthGuardService]
+  },
+  {
     path: 'profile',
     component: ProfileComponent,
+    canActivate: [authenticationGuard()]
   },
   {
     path: "edit-profile",
-    component: EditProfileComponent 
+    component: EditProfileComponent,
+    canActivate: [authenticationGuard()]
+
   },
-  { 
+  {
     path: "watchlist",
-    component: WatchlistComponent
+    component: WatchlistComponent,
+    canActivate: [authenticationGuard()]
   },
-  { 
+  {
     path: "list",
-    component: ListComponent
+    component: ListComponent,
+    canActivate: [authenticationGuard()]
   }
 ];
 
