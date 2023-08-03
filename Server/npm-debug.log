@@ -1,0 +1,1675 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   '/usr/local/bin/node',
+1 verbose cli   '/Users/kris/node_modules/.bin/npm',
+1 verbose cli   'install'
+1 verbose cli ]
+2 info using npm@2.15.12
+3 info using node@v20.2.0
+4 verbose readDependencies loading dependencies from /Users/kris/Desktop/Movies/Server/package.json
+5 warn package.json server@1.0.0 No description
+6 warn package.json server@1.0.0 No repository field.
+7 warn package.json server@1.0.0 No README data
+8 verbose install where, deps [
+8 verbose install   '/Users/kris/Desktop/Movies/Server',
+8 verbose install   [
+8 verbose install     'bcrypt',
+8 verbose install     'cookie',
+8 verbose install     'cookie-parser',
+8 verbose install     'cors',
+8 verbose install     'dotenv',
+8 verbose install     'express',
+8 verbose install     'express-validator',
+8 verbose install     'jsonwebtoken',
+8 verbose install     'mongoose',
+8 verbose install     'nodemon'
+8 verbose install   ]
+8 verbose install ]
+9 verbose install where, peers [ '/Users/kris/Desktop/Movies/Server', [] ]
+10 verbose installManyTop reading for lifecycle /Users/kris/Desktop/Movies/Server/package.json
+11 info preinstall server@1.0.0
+12 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/abbrev/package.json
+13 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/accepts/package.json
+14 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/agent-base/package.json
+15 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/ansi-regex/package.json
+16 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/anymatch/package.json
+17 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/aproba/package.json
+18 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/are-we-there-yet/package.json
+19 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/array-flatten/package.json
+20 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/balanced-match/package.json
+21 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/base64-js/package.json
+22 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/bcrypt/package.json
+23 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/binary-extensions/package.json
+24 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/body-parser/package.json
+25 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/bowser/package.json
+26 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/brace-expansion/package.json
+27 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/braces/package.json
+28 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/bson/package.json
+29 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/buffer/package.json
+30 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/buffer-equal-constant-time/package.json
+31 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/bytes/package.json
+32 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/call-bind/package.json
+33 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/chokidar/package.json
+34 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/chownr/package.json
+35 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/color-support/package.json
+36 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/concat-map/package.json
+37 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/console-control-strings/package.json
+38 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/content-disposition/package.json
+39 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/content-type/package.json
+40 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/cookie/package.json
+41 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/cookie-parser/package.json
+42 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/cookie-signature/package.json
+43 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/cors/package.json
+44 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/debug/package.json
+45 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/delegates/package.json
+46 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/depd/package.json
+47 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/destroy/package.json
+48 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/detect-libc/package.json
+49 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/dotenv/package.json
+50 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/ecdsa-sig-formatter/package.json
+51 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/ee-first/package.json
+52 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/emoji-regex/package.json
+53 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/encodeurl/package.json
+54 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/escape-html/package.json
+55 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/etag/package.json
+56 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/express/package.json
+57 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/express-validator/package.json
+58 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/fast-xml-parser/package.json
+59 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/fill-range/package.json
+60 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/finalhandler/package.json
+61 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/forwarded/package.json
+62 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/fresh/package.json
+63 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/fs-minipass/package.json
+64 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/fs.realpath/package.json
+65 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/fsevents/package.json
+66 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/function-bind/package.json
+67 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/gauge/package.json
+68 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/get-intrinsic/package.json
+69 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/glob/package.json
+70 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/glob-parent/package.json
+71 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/has/package.json
+72 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/has-flag/package.json
+73 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/has-symbols/package.json
+74 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/has-unicode/package.json
+75 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/http-errors/package.json
+76 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/https-proxy-agent/package.json
+77 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/iconv-lite/package.json
+78 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/ieee754/package.json
+79 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/ignore-by-default/package.json
+80 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/inflight/package.json
+81 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/inherits/package.json
+82 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/ip/package.json
+83 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/ipaddr.js/package.json
+84 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/is-binary-path/package.json
+85 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/is-extglob/package.json
+86 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/is-fullwidth-code-point/package.json
+87 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/is-glob/package.json
+88 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/is-number/package.json
+89 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/jsonwebtoken/package.json
+90 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/jwa/package.json
+91 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/jws/package.json
+92 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/kareem/package.json
+93 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/lodash/package.json
+94 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/lru-cache/package.json
+95 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/make-dir/package.json
+96 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/media-typer/package.json
+97 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/memory-pager/package.json
+98 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/merge-descriptors/package.json
+99 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/methods/package.json
+100 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/mime/package.json
+101 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/mime-db/package.json
+102 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/mime-types/package.json
+103 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/minimatch/package.json
+104 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/minipass/package.json
+105 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/minizlib/package.json
+106 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/mkdirp/package.json
+107 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/mongodb/package.json
+108 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/mongodb-connection-string-url/package.json
+109 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/mongoose/package.json
+110 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/mpath/package.json
+111 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/mquery/package.json
+112 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/ms/package.json
+113 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/negotiator/package.json
+114 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/node-addon-api/package.json
+115 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/node-fetch/package.json
+116 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/nodemon/package.json
+117 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/nopt/package.json
+118 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/normalize-path/package.json
+119 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/npmlog/package.json
+120 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/object-assign/package.json
+121 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/object-inspect/package.json
+122 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/on-finished/package.json
+123 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/once/package.json
+124 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/parseurl/package.json
+125 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/path-is-absolute/package.json
+126 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/path-to-regexp/package.json
+127 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/picomatch/package.json
+128 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/proxy-addr/package.json
+129 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/pstree.remy/package.json
+130 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/punycode/package.json
+131 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/qs/package.json
+132 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/range-parser/package.json
+133 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/raw-body/package.json
+134 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/readable-stream/package.json
+135 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/readdirp/package.json
+136 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/rimraf/package.json
+137 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/safe-buffer/package.json
+138 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/safer-buffer/package.json
+139 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/saslprep/package.json
+140 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/semver/package.json
+141 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/send/package.json
+142 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/serve-static/package.json
+143 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/set-blocking/package.json
+144 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/setprototypeof/package.json
+145 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/side-channel/package.json
+146 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/sift/package.json
+147 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/signal-exit/package.json
+148 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/simple-update-notifier/package.json
+149 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/smart-buffer/package.json
+150 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/socks/package.json
+151 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/sparse-bitfield/package.json
+152 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/statuses/package.json
+153 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/string-width/package.json
+154 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/string_decoder/package.json
+155 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/strip-ansi/package.json
+156 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/strnum/package.json
+157 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/supports-color/package.json
+158 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/tar/package.json
+159 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/to-regex-range/package.json
+160 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/toidentifier/package.json
+161 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/touch/package.json
+162 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/tr46/package.json
+163 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/tslib/package.json
+164 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/type-is/package.json
+165 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/undefsafe/package.json
+166 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/unpipe/package.json
+167 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/util-deprecate/package.json
+168 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/utils-merge/package.json
+169 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/uuid/package.json
+170 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/validator/package.json
+171 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/vary/package.json
+172 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/webidl-conversions/package.json
+173 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/whatwg-url/package.json
+174 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/wide-align/package.json
+175 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/wrappy/package.json
+176 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/yallist/package.json
+177 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-crypto/ie11-detection/package.json
+178 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-crypto/sha256-browser/package.json
+179 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-crypto/sha256-js/package.json
+180 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-crypto/supports-web-crypto/package.json
+181 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-crypto/util/package.json
+182 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@types/node/package.json
+183 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@types/webidl-conversions/package.json
+184 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@types/whatwg-url/package.json
+185 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/abort-controller/package.json
+186 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/client-cognito-identity/package.json
+187 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/client-sso/package.json
+188 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/client-sso-oidc/package.json
+189 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/client-sts/package.json
+190 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/config-resolver/package.json
+191 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-provider-cognito-identity/package.json
+192 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-provider-env/package.json
+193 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-provider-imds/package.json
+194 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-provider-ini/package.json
+195 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-provider-node/package.json
+196 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-provider-process/package.json
+197 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-provider-sso/package.json
+198 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-provider-web-identity/package.json
+199 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-providers/package.json
+200 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/fetch-http-handler/package.json
+201 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/hash-node/package.json
+202 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/invalid-dependency/package.json
+203 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/is-array-buffer/package.json
+204 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-content-length/package.json
+205 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-endpoint/package.json
+206 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-host-header/package.json
+207 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-logger/package.json
+208 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-recursion-detection/package.json
+209 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-retry/package.json
+210 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-sdk-sts/package.json
+211 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-serde/package.json
+212 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-signing/package.json
+213 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-stack/package.json
+214 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-user-agent/package.json
+215 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/node-config-provider/package.json
+216 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/node-http-handler/package.json
+217 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/property-provider/package.json
+218 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/protocol-http/package.json
+219 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/querystring-builder/package.json
+220 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/querystring-parser/package.json
+221 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/service-error-classification/package.json
+222 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/shared-ini-file-loader/package.json
+223 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/signature-v4/package.json
+224 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/smithy-client/package.json
+225 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/token-providers/package.json
+226 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/types/package.json
+227 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/url-parser/package.json
+228 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-base64/package.json
+229 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-body-length-browser/package.json
+230 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-body-length-node/package.json
+231 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-buffer-from/package.json
+232 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-config-provider/package.json
+233 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-defaults-mode-browser/package.json
+234 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-defaults-mode-node/package.json
+235 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-endpoints/package.json
+236 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-hex-encoding/package.json
+237 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-locate-window/package.json
+238 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-middleware/package.json
+239 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-retry/package.json
+240 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-uri-escape/package.json
+241 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-user-agent-browser/package.json
+242 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-user-agent-node/package.json
+243 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-utf8-browser/package.json
+244 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-utf8-node/package.json
+245 verbose installManyTop reading scoped package data from /Users/kris/Desktop/Movies/Server/node_modules/@mapbox/node-pre-gyp/package.json
+246 info package.json buffer@5.7.1 buffer is also the name of a node core module.
+247 info package.json punycode@2.2.0 punycode is also the name of a node core module.
+248 info package.json string_decoder@1.3.0 string_decoder is also the name of a node core module.
+249 verbose readDependencies loading dependencies from /Users/kris/Desktop/Movies/Server/package.json
+250 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/abbrev/package.json
+251 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/accepts/package.json
+252 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/agent-base/package.json
+253 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/ansi-regex/package.json
+254 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/anymatch/package.json
+255 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/aproba/package.json
+256 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/are-we-there-yet/package.json
+257 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/array-flatten/package.json
+258 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/balanced-match/package.json
+259 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/base64-js/package.json
+260 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/bcrypt/package.json
+261 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/binary-extensions/package.json
+262 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/body-parser/package.json
+263 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/bowser/package.json
+264 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/brace-expansion/package.json
+265 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/braces/package.json
+266 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/bson/package.json
+267 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/buffer/package.json
+268 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/buffer-equal-constant-time/package.json
+269 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/bytes/package.json
+270 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/call-bind/package.json
+271 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/chokidar/package.json
+272 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/chownr/package.json
+273 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/color-support/package.json
+274 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/concat-map/package.json
+275 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/console-control-strings/package.json
+276 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/content-disposition/package.json
+277 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/content-type/package.json
+278 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/cookie/package.json
+279 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/cookie-parser/package.json
+280 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/cookie-signature/package.json
+281 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/cors/package.json
+282 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/debug/package.json
+283 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/delegates/package.json
+284 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/depd/package.json
+285 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/destroy/package.json
+286 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/detect-libc/package.json
+287 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/dotenv/package.json
+288 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/ecdsa-sig-formatter/package.json
+289 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/ee-first/package.json
+290 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/emoji-regex/package.json
+291 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/encodeurl/package.json
+292 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/escape-html/package.json
+293 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/etag/package.json
+294 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/express/package.json
+295 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/express-validator/package.json
+296 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/fast-xml-parser/package.json
+297 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/fill-range/package.json
+298 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/finalhandler/package.json
+299 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/forwarded/package.json
+300 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/fresh/package.json
+301 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/fs-minipass/package.json
+302 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/fs.realpath/package.json
+303 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/fsevents/package.json
+304 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/function-bind/package.json
+305 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/gauge/package.json
+306 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/get-intrinsic/package.json
+307 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/glob/package.json
+308 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/glob-parent/package.json
+309 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/has/package.json
+310 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/has-flag/package.json
+311 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/has-symbols/package.json
+312 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/has-unicode/package.json
+313 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/http-errors/package.json
+314 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/https-proxy-agent/package.json
+315 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/iconv-lite/package.json
+316 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/ieee754/package.json
+317 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/ignore-by-default/package.json
+318 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/inflight/package.json
+319 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/inherits/package.json
+320 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/ip/package.json
+321 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/ipaddr.js/package.json
+322 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/is-binary-path/package.json
+323 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/is-extglob/package.json
+324 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/is-fullwidth-code-point/package.json
+325 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/is-glob/package.json
+326 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/is-number/package.json
+327 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/jsonwebtoken/package.json
+328 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/jwa/package.json
+329 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/jws/package.json
+330 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/kareem/package.json
+331 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/lodash/package.json
+332 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/lru-cache/package.json
+333 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/make-dir/package.json
+334 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/media-typer/package.json
+335 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/memory-pager/package.json
+336 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/merge-descriptors/package.json
+337 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/methods/package.json
+338 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/mime/package.json
+339 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/mime-db/package.json
+340 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/mime-types/package.json
+341 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/minimatch/package.json
+342 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/minipass/package.json
+343 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/minizlib/package.json
+344 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/mkdirp/package.json
+345 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/mongodb/package.json
+346 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/mongodb-connection-string-url/package.json
+347 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/mongoose/package.json
+348 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/mpath/package.json
+349 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/mquery/package.json
+350 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/ms/package.json
+351 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/negotiator/package.json
+352 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/node-addon-api/package.json
+353 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/node-fetch/package.json
+354 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/nodemon/package.json
+355 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/nopt/package.json
+356 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/normalize-path/package.json
+357 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/npmlog/package.json
+358 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/object-assign/package.json
+359 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/object-inspect/package.json
+360 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/on-finished/package.json
+361 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/once/package.json
+362 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/parseurl/package.json
+363 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/path-is-absolute/package.json
+364 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/path-to-regexp/package.json
+365 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/picomatch/package.json
+366 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/proxy-addr/package.json
+367 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/pstree.remy/package.json
+368 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/punycode/package.json
+369 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/qs/package.json
+370 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/range-parser/package.json
+371 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/raw-body/package.json
+372 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/readable-stream/package.json
+373 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/readdirp/package.json
+374 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/rimraf/package.json
+375 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/safe-buffer/package.json
+376 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/safer-buffer/package.json
+377 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/saslprep/package.json
+378 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/semver/package.json
+379 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/send/package.json
+380 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/serve-static/package.json
+381 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/set-blocking/package.json
+382 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/setprototypeof/package.json
+383 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/side-channel/package.json
+384 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/sift/package.json
+385 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/signal-exit/package.json
+386 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/simple-update-notifier/package.json
+387 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/smart-buffer/package.json
+388 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/socks/package.json
+389 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/sparse-bitfield/package.json
+390 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/statuses/package.json
+391 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/string-width/package.json
+392 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/string_decoder/package.json
+393 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/strip-ansi/package.json
+394 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/strnum/package.json
+395 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/supports-color/package.json
+396 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/tar/package.json
+397 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/to-regex-range/package.json
+398 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/toidentifier/package.json
+399 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/touch/package.json
+400 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/tr46/package.json
+401 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/tslib/package.json
+402 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/type-is/package.json
+403 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/undefsafe/package.json
+404 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/unpipe/package.json
+405 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/util-deprecate/package.json
+406 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/utils-merge/package.json
+407 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/uuid/package.json
+408 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/validator/package.json
+409 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/vary/package.json
+410 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/webidl-conversions/package.json
+411 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/whatwg-url/package.json
+412 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/wide-align/package.json
+413 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/wrappy/package.json
+414 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/yallist/package.json
+415 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/.bin/color-support/package.json
+416 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/.bin/fxparser/package.json
+417 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/.bin/mime/package.json
+418 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/.bin/mkdirp/package.json
+419 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/.bin/node-pre-gyp/package.json
+420 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/.bin/nodemon/package.json
+421 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/.bin/nodetouch/package.json
+422 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/.bin/nopt/package.json
+423 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/.bin/rimraf/package.json
+424 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/.bin/semver/package.json
+425 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/.bin/uuid/package.json
+426 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@mapbox/node-pre-gyp/package.json
+427 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-crypto/ie11-detection/package.json
+428 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-crypto/sha256-browser/package.json
+429 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-crypto/sha256-js/package.json
+430 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-crypto/supports-web-crypto/package.json
+431 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-crypto/util/package.json
+432 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/abort-controller/package.json
+433 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/client-cognito-identity/package.json
+434 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/client-sso/package.json
+435 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/client-sso-oidc/package.json
+436 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/client-sts/package.json
+437 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/config-resolver/package.json
+438 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-provider-cognito-identity/package.json
+439 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-provider-env/package.json
+440 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-provider-imds/package.json
+441 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-provider-ini/package.json
+442 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-provider-node/package.json
+443 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-provider-process/package.json
+444 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-provider-sso/package.json
+445 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-provider-web-identity/package.json
+446 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/credential-providers/package.json
+447 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/fetch-http-handler/package.json
+448 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/hash-node/package.json
+449 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/invalid-dependency/package.json
+450 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/is-array-buffer/package.json
+451 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-content-length/package.json
+452 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-endpoint/package.json
+453 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-host-header/package.json
+454 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-logger/package.json
+455 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-recursion-detection/package.json
+456 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-retry/package.json
+457 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-sdk-sts/package.json
+458 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-serde/package.json
+459 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-signing/package.json
+460 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-stack/package.json
+461 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/middleware-user-agent/package.json
+462 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/node-config-provider/package.json
+463 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/node-http-handler/package.json
+464 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/property-provider/package.json
+465 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/protocol-http/package.json
+466 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/querystring-builder/package.json
+467 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/querystring-parser/package.json
+468 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/service-error-classification/package.json
+469 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/shared-ini-file-loader/package.json
+470 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/signature-v4/package.json
+471 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/smithy-client/package.json
+472 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/token-providers/package.json
+473 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/types/package.json
+474 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/url-parser/package.json
+475 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-base64/package.json
+476 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-body-length-browser/package.json
+477 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-body-length-node/package.json
+478 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-buffer-from/package.json
+479 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-config-provider/package.json
+480 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-defaults-mode-browser/package.json
+481 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-defaults-mode-node/package.json
+482 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-endpoints/package.json
+483 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-hex-encoding/package.json
+484 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-locate-window/package.json
+485 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-middleware/package.json
+486 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-retry/package.json
+487 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-uri-escape/package.json
+488 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-user-agent-browser/package.json
+489 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-user-agent-node/package.json
+490 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-utf8-browser/package.json
+491 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@aws-sdk/util-utf8-node/package.json
+492 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@types/node/package.json
+493 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@types/webidl-conversions/package.json
+494 verbose targetResolver reading package data from /Users/kris/Desktop/Movies/Server/node_modules/@types/whatwg-url/package.json
+495 verbose already installed skipping express@^4.18.2 /Users/kris/Desktop/Movies/Server
+496 verbose already installed skipping express-validator@^6.14.3 /Users/kris/Desktop/Movies/Server
+497 verbose already installed skipping jsonwebtoken@^9.0.0 /Users/kris/Desktop/Movies/Server
+498 verbose already installed skipping mongoose@^6.8.4 /Users/kris/Desktop/Movies/Server
+499 verbose already installed skipping nodemon@^2.0.20 /Users/kris/Desktop/Movies/Server
+500 verbose already installed skipping bcrypt@^5.1.0 /Users/kris/Desktop/Movies/Server
+501 verbose already installed skipping cookie@^0.5.0 /Users/kris/Desktop/Movies/Server
+502 verbose already installed skipping cookie-parser@^1.4.6 /Users/kris/Desktop/Movies/Server
+503 verbose already installed skipping cors@^2.8.5 /Users/kris/Desktop/Movies/Server
+504 verbose already installed skipping dotenv@^16.3.1 /Users/kris/Desktop/Movies/Server
+505 silly install resolved []
+506 info build /Users/kris/Desktop/Movies/Server
+507 info linkStuff server@1.0.0
+508 silly linkStuff server@1.0.0 has /Users/kris/Desktop/Movies as its parent node_modules
+509 verbose linkBins server@1.0.0
+510 verbose linkMans server@1.0.0
+511 verbose rebuildBundles server@1.0.0
+512 verbose rebuildBundles [
+512 verbose rebuildBundles   '.bin',
+512 verbose rebuildBundles   '.package-lock.json',
+512 verbose rebuildBundles   '@aws-crypto',
+512 verbose rebuildBundles   '@aws-sdk',
+512 verbose rebuildBundles   '@mapbox',
+512 verbose rebuildBundles   '@types',
+512 verbose rebuildBundles   'abbrev',
+512 verbose rebuildBundles   'accepts',
+512 verbose rebuildBundles   'agent-base',
+512 verbose rebuildBundles   'ansi-regex',
+512 verbose rebuildBundles   'anymatch',
+512 verbose rebuildBundles   'aproba',
+512 verbose rebuildBundles   'are-we-there-yet',
+512 verbose rebuildBundles   'array-flatten',
+512 verbose rebuildBundles   'balanced-match',
+512 verbose rebuildBundles   'base64-js',
+512 verbose rebuildBundles   'bcrypt',
+512 verbose rebuildBundles   'binary-extensions',
+512 verbose rebuildBundles   'body-parser',
+512 verbose rebuildBundles   'bowser',
+512 verbose rebuildBundles   'brace-expansion',
+512 verbose rebuildBundles   'braces',
+512 verbose rebuildBundles   'bson',
+512 verbose rebuildBundles   'buffer',
+512 verbose rebuildBundles   'buffer-equal-constant-time',
+512 verbose rebuildBundles   'bytes',
+512 verbose rebuildBundles   'call-bind',
+512 verbose rebuildBundles   'chokidar',
+512 verbose rebuildBundles   'chownr',
+512 verbose rebuildBundles   'color-support',
+512 verbose rebuildBundles   'concat-map',
+512 verbose rebuildBundles   'console-control-strings',
+512 verbose rebuildBundles   'content-disposition',
+512 verbose rebuildBundles   'content-type',
+512 verbose rebuildBundles   'cookie',
+512 verbose rebuildBundles   'cookie-parser',
+512 verbose rebuildBundles   'cookie-signature',
+512 verbose rebuildBundles   'cors',
+512 verbose rebuildBundles   'debug',
+512 verbose rebuildBundles   'delegates',
+512 verbose rebuildBundles   'depd',
+512 verbose rebuildBundles   'destroy',
+512 verbose rebuildBundles   'detect-libc',
+512 verbose rebuildBundles   'dotenv',
+512 verbose rebuildBundles   'ecdsa-sig-formatter',
+512 verbose rebuildBundles   'ee-first',
+512 verbose rebuildBundles   'emoji-regex',
+512 verbose rebuildBundles   'encodeurl',
+512 verbose rebuildBundles   'escape-html',
+512 verbose rebuildBundles   'etag',
+512 verbose rebuildBundles   'express',
+512 verbose rebuildBundles   'express-validator',
+512 verbose rebuildBundles   'fast-xml-parser',
+512 verbose rebuildBundles   'fill-range',
+512 verbose rebuildBundles   'finalhandler',
+512 verbose rebuildBundles   'forwarded',
+512 verbose rebuildBundles   'fresh',
+512 verbose rebuildBundles   'fs-minipass',
+512 verbose rebuildBundles   'fs.realpath',
+512 verbose rebuildBundles   'fsevents',
+512 verbose rebuildBundles   'function-bind',
+512 verbose rebuildBundles   'gauge',
+512 verbose rebuildBundles   'get-intrinsic',
+512 verbose rebuildBundles   'glob',
+512 verbose rebuildBundles   'glob-parent',
+512 verbose rebuildBundles   'has',
+512 verbose rebuildBundles   'has-flag',
+512 verbose rebuildBundles   'has-symbols',
+512 verbose rebuildBundles   'has-unicode',
+512 verbose rebuildBundles   'http-errors',
+512 verbose rebuildBundles   'https-proxy-agent',
+512 verbose rebuildBundles   'iconv-lite',
+512 verbose rebuildBundles   'ieee754',
+512 verbose rebuildBundles   'ignore-by-default',
+512 verbose rebuildBundles   'inflight',
+512 verbose rebuildBundles   'inherits',
+512 verbose rebuildBundles   'ip',
+512 verbose rebuildBundles   'ipaddr.js',
+512 verbose rebuildBundles   'is-binary-path',
+512 verbose rebuildBundles   'is-extglob',
+512 verbose rebuildBundles   'is-fullwidth-code-point',
+512 verbose rebuildBundles   'is-glob',
+512 verbose rebuildBundles   'is-number',
+512 verbose rebuildBundles   'jsonwebtoken',
+512 verbose rebuildBundles   'jwa',
+512 verbose rebuildBundles   'jws',
+512 verbose rebuildBundles   'kareem',
+512 verbose rebuildBundles   'lodash',
+512 verbose rebuildBundles   'lru-cache',
+512 verbose rebuildBundles   'make-dir',
+512 verbose rebuildBundles   'media-typer',
+512 verbose rebuildBundles   'memory-pager',
+512 verbose rebuildBundles   'merge-descriptors',
+512 verbose rebuildBundles   'methods',
+512 verbose rebuildBundles   'mime',
+512 verbose rebuildBundles   'mime-db',
+512 verbose rebuildBundles   'mime-types',
+512 verbose rebuildBundles   'minimatch',
+512 verbose rebuildBundles   'minipass',
+512 verbose rebuildBundles   'minizlib',
+512 verbose rebuildBundles   ... 71 more items
+512 verbose rebuildBundles ]
+513 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/abbrev
+514 info build /Users/kris/Desktop/Movies/Server/node_modules/abbrev
+515 info preinstall abbrev@1.1.1
+516 info linkStuff abbrev@1.1.1
+517 silly linkStuff abbrev@1.1.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+518 verbose linkBins abbrev@1.1.1
+519 verbose linkMans abbrev@1.1.1
+520 verbose rebuildBundles abbrev@1.1.1
+521 info install abbrev@1.1.1
+522 info postinstall abbrev@1.1.1
+523 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/accepts
+524 info build /Users/kris/Desktop/Movies/Server/node_modules/accepts
+525 info preinstall accepts@1.3.8
+526 info linkStuff accepts@1.3.8
+527 silly linkStuff accepts@1.3.8 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+528 verbose linkBins accepts@1.3.8
+529 verbose linkMans accepts@1.3.8
+530 verbose rebuildBundles accepts@1.3.8
+531 info install accepts@1.3.8
+532 info postinstall accepts@1.3.8
+533 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/agent-base
+534 info build /Users/kris/Desktop/Movies/Server/node_modules/agent-base
+535 info preinstall agent-base@6.0.2
+536 info linkStuff agent-base@6.0.2
+537 silly linkStuff agent-base@6.0.2 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+538 verbose linkBins agent-base@6.0.2
+539 verbose linkMans agent-base@6.0.2
+540 verbose rebuildBundles agent-base@6.0.2
+541 verbose rebuildBundles [ 'debug', 'ms' ]
+542 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/agent-base/node_modules/ms
+543 info build /Users/kris/Desktop/Movies/Server/node_modules/agent-base/node_modules/ms
+544 info preinstall ms@2.1.2
+545 info linkStuff ms@2.1.2
+546 silly linkStuff ms@2.1.2 has /Users/kris/Desktop/Movies/Server/node_modules/agent-base/node_modules as its parent node_modules
+547 verbose linkBins ms@2.1.2
+548 verbose linkMans ms@2.1.2
+549 verbose rebuildBundles ms@2.1.2
+550 info install ms@2.1.2
+551 info postinstall ms@2.1.2
+552 info install agent-base@6.0.2
+553 info postinstall agent-base@6.0.2
+554 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/ansi-regex
+555 info build /Users/kris/Desktop/Movies/Server/node_modules/ansi-regex
+556 info preinstall ansi-regex@5.0.1
+557 info linkStuff ansi-regex@5.0.1
+558 silly linkStuff ansi-regex@5.0.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+559 verbose linkBins ansi-regex@5.0.1
+560 verbose linkMans ansi-regex@5.0.1
+561 verbose rebuildBundles ansi-regex@5.0.1
+562 info install ansi-regex@5.0.1
+563 info postinstall ansi-regex@5.0.1
+564 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/anymatch
+565 info build /Users/kris/Desktop/Movies/Server/node_modules/anymatch
+566 info preinstall anymatch@3.1.3
+567 info linkStuff anymatch@3.1.3
+568 silly linkStuff anymatch@3.1.3 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+569 verbose linkBins anymatch@3.1.3
+570 verbose linkMans anymatch@3.1.3
+571 verbose rebuildBundles anymatch@3.1.3
+572 info install anymatch@3.1.3
+573 info postinstall anymatch@3.1.3
+574 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/aproba
+575 info build /Users/kris/Desktop/Movies/Server/node_modules/aproba
+576 info preinstall aproba@2.0.0
+577 info linkStuff aproba@2.0.0
+578 silly linkStuff aproba@2.0.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+579 verbose linkBins aproba@2.0.0
+580 verbose linkMans aproba@2.0.0
+581 verbose rebuildBundles aproba@2.0.0
+582 info install aproba@2.0.0
+583 info postinstall aproba@2.0.0
+584 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/are-we-there-yet
+585 info build /Users/kris/Desktop/Movies/Server/node_modules/are-we-there-yet
+586 info preinstall are-we-there-yet@2.0.0
+587 info linkStuff are-we-there-yet@2.0.0
+588 silly linkStuff are-we-there-yet@2.0.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+589 verbose linkBins are-we-there-yet@2.0.0
+590 verbose linkMans are-we-there-yet@2.0.0
+591 verbose rebuildBundles are-we-there-yet@2.0.0
+592 info install are-we-there-yet@2.0.0
+593 info postinstall are-we-there-yet@2.0.0
+594 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/array-flatten
+595 info build /Users/kris/Desktop/Movies/Server/node_modules/array-flatten
+596 info preinstall array-flatten@1.1.1
+597 info linkStuff array-flatten@1.1.1
+598 silly linkStuff array-flatten@1.1.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+599 verbose linkBins array-flatten@1.1.1
+600 verbose linkMans array-flatten@1.1.1
+601 verbose rebuildBundles array-flatten@1.1.1
+602 info install array-flatten@1.1.1
+603 info postinstall array-flatten@1.1.1
+604 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/balanced-match
+605 info build /Users/kris/Desktop/Movies/Server/node_modules/balanced-match
+606 info preinstall balanced-match@1.0.2
+607 info linkStuff balanced-match@1.0.2
+608 silly linkStuff balanced-match@1.0.2 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+609 verbose linkBins balanced-match@1.0.2
+610 verbose linkMans balanced-match@1.0.2
+611 verbose rebuildBundles balanced-match@1.0.2
+612 info install balanced-match@1.0.2
+613 info postinstall balanced-match@1.0.2
+614 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/base64-js
+615 info build /Users/kris/Desktop/Movies/Server/node_modules/base64-js
+616 info preinstall base64-js@1.5.1
+617 info linkStuff base64-js@1.5.1
+618 silly linkStuff base64-js@1.5.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+619 verbose linkBins base64-js@1.5.1
+620 verbose linkMans base64-js@1.5.1
+621 verbose rebuildBundles base64-js@1.5.1
+622 info install base64-js@1.5.1
+623 info postinstall base64-js@1.5.1
+624 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/binary-extensions
+625 info build /Users/kris/Desktop/Movies/Server/node_modules/binary-extensions
+626 info preinstall binary-extensions@2.2.0
+627 info linkStuff binary-extensions@2.2.0
+628 silly linkStuff binary-extensions@2.2.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+629 verbose linkBins binary-extensions@2.2.0
+630 verbose linkMans binary-extensions@2.2.0
+631 verbose rebuildBundles binary-extensions@2.2.0
+632 info install binary-extensions@2.2.0
+633 info postinstall binary-extensions@2.2.0
+634 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/body-parser
+635 info build /Users/kris/Desktop/Movies/Server/node_modules/body-parser
+636 info preinstall body-parser@1.20.1
+637 info linkStuff body-parser@1.20.1
+638 silly linkStuff body-parser@1.20.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+639 verbose linkBins body-parser@1.20.1
+640 verbose linkMans body-parser@1.20.1
+641 verbose rebuildBundles body-parser@1.20.1
+642 info install body-parser@1.20.1
+643 info postinstall body-parser@1.20.1
+644 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/bowser
+645 info build /Users/kris/Desktop/Movies/Server/node_modules/bowser
+646 info preinstall bowser@2.11.0
+647 info linkStuff bowser@2.11.0
+648 silly linkStuff bowser@2.11.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+649 verbose linkBins bowser@2.11.0
+650 verbose linkMans bowser@2.11.0
+651 verbose rebuildBundles bowser@2.11.0
+652 info install bowser@2.11.0
+653 info postinstall bowser@2.11.0
+654 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/brace-expansion
+655 info build /Users/kris/Desktop/Movies/Server/node_modules/brace-expansion
+656 info preinstall brace-expansion@1.1.11
+657 info linkStuff brace-expansion@1.1.11
+658 silly linkStuff brace-expansion@1.1.11 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+659 verbose linkBins brace-expansion@1.1.11
+660 verbose linkMans brace-expansion@1.1.11
+661 verbose rebuildBundles brace-expansion@1.1.11
+662 info install brace-expansion@1.1.11
+663 info postinstall brace-expansion@1.1.11
+664 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/braces
+665 info build /Users/kris/Desktop/Movies/Server/node_modules/braces
+666 info preinstall braces@3.0.2
+667 info linkStuff braces@3.0.2
+668 silly linkStuff braces@3.0.2 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+669 verbose linkBins braces@3.0.2
+670 verbose linkMans braces@3.0.2
+671 verbose rebuildBundles braces@3.0.2
+672 info install braces@3.0.2
+673 info postinstall braces@3.0.2
+674 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/bson
+675 info build /Users/kris/Desktop/Movies/Server/node_modules/bson
+676 info preinstall bson@4.7.2
+677 info linkStuff bson@4.7.2
+678 silly linkStuff bson@4.7.2 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+679 verbose linkBins bson@4.7.2
+680 verbose linkMans bson@4.7.2
+681 verbose rebuildBundles bson@4.7.2
+682 info install bson@4.7.2
+683 info postinstall bson@4.7.2
+684 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/buffer
+685 info build /Users/kris/Desktop/Movies/Server/node_modules/buffer
+686 info preinstall buffer@5.7.1
+687 info linkStuff buffer@5.7.1
+688 silly linkStuff buffer@5.7.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+689 verbose linkBins buffer@5.7.1
+690 verbose linkMans buffer@5.7.1
+691 verbose rebuildBundles buffer@5.7.1
+692 info install buffer@5.7.1
+693 info postinstall buffer@5.7.1
+694 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/buffer-equal-constant-time
+695 info build /Users/kris/Desktop/Movies/Server/node_modules/buffer-equal-constant-time
+696 info preinstall buffer-equal-constant-time@1.0.1
+697 info linkStuff buffer-equal-constant-time@1.0.1
+698 silly linkStuff buffer-equal-constant-time@1.0.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+699 verbose linkBins buffer-equal-constant-time@1.0.1
+700 verbose linkMans buffer-equal-constant-time@1.0.1
+701 verbose rebuildBundles buffer-equal-constant-time@1.0.1
+702 info install buffer-equal-constant-time@1.0.1
+703 info postinstall buffer-equal-constant-time@1.0.1
+704 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/bytes
+705 info build /Users/kris/Desktop/Movies/Server/node_modules/bytes
+706 info preinstall bytes@3.1.2
+707 info linkStuff bytes@3.1.2
+708 silly linkStuff bytes@3.1.2 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+709 verbose linkBins bytes@3.1.2
+710 verbose linkMans bytes@3.1.2
+711 verbose rebuildBundles bytes@3.1.2
+712 info install bytes@3.1.2
+713 info postinstall bytes@3.1.2
+714 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/call-bind
+715 info build /Users/kris/Desktop/Movies/Server/node_modules/call-bind
+716 info preinstall call-bind@1.0.2
+717 info linkStuff call-bind@1.0.2
+718 silly linkStuff call-bind@1.0.2 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+719 verbose linkBins call-bind@1.0.2
+720 verbose linkMans call-bind@1.0.2
+721 verbose rebuildBundles call-bind@1.0.2
+722 info install call-bind@1.0.2
+723 info postinstall call-bind@1.0.2
+724 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/chokidar
+725 info build /Users/kris/Desktop/Movies/Server/node_modules/chokidar
+726 info preinstall chokidar@3.5.3
+727 info linkStuff chokidar@3.5.3
+728 silly linkStuff chokidar@3.5.3 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+729 verbose linkBins chokidar@3.5.3
+730 verbose linkMans chokidar@3.5.3
+731 verbose rebuildBundles chokidar@3.5.3
+732 info install chokidar@3.5.3
+733 info postinstall chokidar@3.5.3
+734 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/chownr
+735 info build /Users/kris/Desktop/Movies/Server/node_modules/chownr
+736 info preinstall chownr@2.0.0
+737 info linkStuff chownr@2.0.0
+738 silly linkStuff chownr@2.0.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+739 verbose linkBins chownr@2.0.0
+740 verbose linkMans chownr@2.0.0
+741 verbose rebuildBundles chownr@2.0.0
+742 info install chownr@2.0.0
+743 info postinstall chownr@2.0.0
+744 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/color-support
+745 info build /Users/kris/Desktop/Movies/Server/node_modules/color-support
+746 info preinstall color-support@1.1.3
+747 info linkStuff color-support@1.1.3
+748 silly linkStuff color-support@1.1.3 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+749 verbose linkBins color-support@1.1.3
+750 verbose link bins [
+750 verbose link bins   { 'color-support': 'bin.js' },
+750 verbose link bins   '/Users/kris/Desktop/Movies/Server/node_modules/.bin',
+750 verbose link bins   false
+750 verbose link bins ]
+751 verbose linkMans color-support@1.1.3
+752 verbose rebuildBundles color-support@1.1.3
+753 silly gentlyRm /Users/kris/Desktop/Movies/Server/node_modules/.bin/color-support is being purged
+754 verbose gentlyRm don't care about contents; nuking /Users/kris/Desktop/Movies/Server/node_modules/.bin/color-support
+755 silly vacuum-fs purging /Users/kris/Desktop/Movies/Server/node_modules/.bin/color-support
+756 silly vacuum-fs quitting because other entries in /Users/kris/Desktop/Movies/Server/node_modules/.bin
+757 info install color-support@1.1.3
+758 info postinstall color-support@1.1.3
+759 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/concat-map
+760 info build /Users/kris/Desktop/Movies/Server/node_modules/concat-map
+761 info preinstall concat-map@0.0.1
+762 info linkStuff concat-map@0.0.1
+763 silly linkStuff concat-map@0.0.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+764 verbose linkBins concat-map@0.0.1
+765 verbose linkMans concat-map@0.0.1
+766 verbose rebuildBundles concat-map@0.0.1
+767 info install concat-map@0.0.1
+768 info postinstall concat-map@0.0.1
+769 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/console-control-strings
+770 info build /Users/kris/Desktop/Movies/Server/node_modules/console-control-strings
+771 info preinstall console-control-strings@1.1.0
+772 info linkStuff console-control-strings@1.1.0
+773 silly linkStuff console-control-strings@1.1.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+774 verbose linkBins console-control-strings@1.1.0
+775 verbose linkMans console-control-strings@1.1.0
+776 verbose rebuildBundles console-control-strings@1.1.0
+777 info install console-control-strings@1.1.0
+778 info postinstall console-control-strings@1.1.0
+779 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/content-disposition
+780 info build /Users/kris/Desktop/Movies/Server/node_modules/content-disposition
+781 info preinstall content-disposition@0.5.4
+782 info linkStuff content-disposition@0.5.4
+783 silly linkStuff content-disposition@0.5.4 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+784 verbose linkBins content-disposition@0.5.4
+785 verbose linkMans content-disposition@0.5.4
+786 verbose rebuildBundles content-disposition@0.5.4
+787 info install content-disposition@0.5.4
+788 info postinstall content-disposition@0.5.4
+789 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/content-type
+790 info build /Users/kris/Desktop/Movies/Server/node_modules/content-type
+791 info preinstall content-type@1.0.4
+792 info linkStuff content-type@1.0.4
+793 silly linkStuff content-type@1.0.4 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+794 verbose linkBins content-type@1.0.4
+795 verbose linkMans content-type@1.0.4
+796 verbose rebuildBundles content-type@1.0.4
+797 info install content-type@1.0.4
+798 info postinstall content-type@1.0.4
+799 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/cookie-signature
+800 info build /Users/kris/Desktop/Movies/Server/node_modules/cookie-signature
+801 info preinstall cookie-signature@1.0.6
+802 info linkStuff cookie-signature@1.0.6
+803 silly linkStuff cookie-signature@1.0.6 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+804 verbose linkBins cookie-signature@1.0.6
+805 verbose linkMans cookie-signature@1.0.6
+806 verbose rebuildBundles cookie-signature@1.0.6
+807 info install cookie-signature@1.0.6
+808 info postinstall cookie-signature@1.0.6
+809 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/debug
+810 info build /Users/kris/Desktop/Movies/Server/node_modules/debug
+811 info preinstall debug@2.6.9
+812 info linkStuff debug@2.6.9
+813 silly linkStuff debug@2.6.9 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+814 verbose linkBins debug@2.6.9
+815 verbose linkMans debug@2.6.9
+816 verbose rebuildBundles debug@2.6.9
+817 info install debug@2.6.9
+818 info postinstall debug@2.6.9
+819 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/delegates
+820 info build /Users/kris/Desktop/Movies/Server/node_modules/delegates
+821 info preinstall delegates@1.0.0
+822 info linkStuff delegates@1.0.0
+823 silly linkStuff delegates@1.0.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+824 verbose linkBins delegates@1.0.0
+825 verbose linkMans delegates@1.0.0
+826 verbose rebuildBundles delegates@1.0.0
+827 info install delegates@1.0.0
+828 info postinstall delegates@1.0.0
+829 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/depd
+830 info build /Users/kris/Desktop/Movies/Server/node_modules/depd
+831 info preinstall depd@2.0.0
+832 info linkStuff depd@2.0.0
+833 silly linkStuff depd@2.0.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+834 verbose linkBins depd@2.0.0
+835 verbose linkMans depd@2.0.0
+836 verbose rebuildBundles depd@2.0.0
+837 info install depd@2.0.0
+838 info postinstall depd@2.0.0
+839 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/destroy
+840 info build /Users/kris/Desktop/Movies/Server/node_modules/destroy
+841 info preinstall destroy@1.2.0
+842 info linkStuff destroy@1.2.0
+843 silly linkStuff destroy@1.2.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+844 verbose linkBins destroy@1.2.0
+845 verbose linkMans destroy@1.2.0
+846 verbose rebuildBundles destroy@1.2.0
+847 info install destroy@1.2.0
+848 info postinstall destroy@1.2.0
+849 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/detect-libc
+850 info build /Users/kris/Desktop/Movies/Server/node_modules/detect-libc
+851 info preinstall detect-libc@2.0.1
+852 info linkStuff detect-libc@2.0.1
+853 silly linkStuff detect-libc@2.0.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+854 verbose linkBins detect-libc@2.0.1
+855 verbose linkMans detect-libc@2.0.1
+856 verbose rebuildBundles detect-libc@2.0.1
+857 info install detect-libc@2.0.1
+858 info postinstall detect-libc@2.0.1
+859 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/ecdsa-sig-formatter
+860 info build /Users/kris/Desktop/Movies/Server/node_modules/ecdsa-sig-formatter
+861 info preinstall ecdsa-sig-formatter@1.0.11
+862 info linkStuff ecdsa-sig-formatter@1.0.11
+863 silly linkStuff ecdsa-sig-formatter@1.0.11 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+864 verbose linkBins ecdsa-sig-formatter@1.0.11
+865 verbose linkMans ecdsa-sig-formatter@1.0.11
+866 verbose rebuildBundles ecdsa-sig-formatter@1.0.11
+867 info install ecdsa-sig-formatter@1.0.11
+868 info postinstall ecdsa-sig-formatter@1.0.11
+869 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/ee-first
+870 info build /Users/kris/Desktop/Movies/Server/node_modules/ee-first
+871 info preinstall ee-first@1.1.1
+872 info linkStuff ee-first@1.1.1
+873 silly linkStuff ee-first@1.1.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+874 verbose linkBins ee-first@1.1.1
+875 verbose linkMans ee-first@1.1.1
+876 verbose rebuildBundles ee-first@1.1.1
+877 info install ee-first@1.1.1
+878 info postinstall ee-first@1.1.1
+879 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/emoji-regex
+880 info build /Users/kris/Desktop/Movies/Server/node_modules/emoji-regex
+881 info preinstall emoji-regex@8.0.0
+882 info linkStuff emoji-regex@8.0.0
+883 silly linkStuff emoji-regex@8.0.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+884 verbose linkBins emoji-regex@8.0.0
+885 verbose linkMans emoji-regex@8.0.0
+886 verbose rebuildBundles emoji-regex@8.0.0
+887 info install emoji-regex@8.0.0
+888 info postinstall emoji-regex@8.0.0
+889 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/encodeurl
+890 info build /Users/kris/Desktop/Movies/Server/node_modules/encodeurl
+891 info preinstall encodeurl@1.0.2
+892 info linkStuff encodeurl@1.0.2
+893 silly linkStuff encodeurl@1.0.2 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+894 verbose linkBins encodeurl@1.0.2
+895 verbose linkMans encodeurl@1.0.2
+896 verbose rebuildBundles encodeurl@1.0.2
+897 info install encodeurl@1.0.2
+898 info postinstall encodeurl@1.0.2
+899 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/escape-html
+900 info build /Users/kris/Desktop/Movies/Server/node_modules/escape-html
+901 info preinstall escape-html@1.0.3
+902 info linkStuff escape-html@1.0.3
+903 silly linkStuff escape-html@1.0.3 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+904 verbose linkBins escape-html@1.0.3
+905 verbose linkMans escape-html@1.0.3
+906 verbose rebuildBundles escape-html@1.0.3
+907 info install escape-html@1.0.3
+908 info postinstall escape-html@1.0.3
+909 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/etag
+910 info build /Users/kris/Desktop/Movies/Server/node_modules/etag
+911 info preinstall etag@1.8.1
+912 info linkStuff etag@1.8.1
+913 silly linkStuff etag@1.8.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+914 verbose linkBins etag@1.8.1
+915 verbose linkMans etag@1.8.1
+916 verbose rebuildBundles etag@1.8.1
+917 info install etag@1.8.1
+918 info postinstall etag@1.8.1
+919 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/fast-xml-parser
+920 info build /Users/kris/Desktop/Movies/Server/node_modules/fast-xml-parser
+921 info preinstall fast-xml-parser@4.0.11
+922 info linkStuff fast-xml-parser@4.0.11
+923 silly linkStuff fast-xml-parser@4.0.11 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+924 verbose linkBins fast-xml-parser@4.0.11
+925 verbose link bins [
+925 verbose link bins   { fxparser: './src/cli/cli.js' },
+925 verbose link bins   '/Users/kris/Desktop/Movies/Server/node_modules/.bin',
+925 verbose link bins   false
+925 verbose link bins ]
+926 verbose linkMans fast-xml-parser@4.0.11
+927 verbose rebuildBundles fast-xml-parser@4.0.11
+928 silly gentlyRm /Users/kris/Desktop/Movies/Server/node_modules/.bin/fxparser is being purged
+929 verbose gentlyRm don't care about contents; nuking /Users/kris/Desktop/Movies/Server/node_modules/.bin/fxparser
+930 silly vacuum-fs purging /Users/kris/Desktop/Movies/Server/node_modules/.bin/fxparser
+931 silly vacuum-fs quitting because other entries in /Users/kris/Desktop/Movies/Server/node_modules/.bin
+932 info install fast-xml-parser@4.0.11
+933 info postinstall fast-xml-parser@4.0.11
+934 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/fill-range
+935 info build /Users/kris/Desktop/Movies/Server/node_modules/fill-range
+936 info preinstall fill-range@7.0.1
+937 info linkStuff fill-range@7.0.1
+938 silly linkStuff fill-range@7.0.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+939 verbose linkBins fill-range@7.0.1
+940 verbose linkMans fill-range@7.0.1
+941 verbose rebuildBundles fill-range@7.0.1
+942 info install fill-range@7.0.1
+943 info postinstall fill-range@7.0.1
+944 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/finalhandler
+945 info build /Users/kris/Desktop/Movies/Server/node_modules/finalhandler
+946 info preinstall finalhandler@1.2.0
+947 info linkStuff finalhandler@1.2.0
+948 silly linkStuff finalhandler@1.2.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+949 verbose linkBins finalhandler@1.2.0
+950 verbose linkMans finalhandler@1.2.0
+951 verbose rebuildBundles finalhandler@1.2.0
+952 info install finalhandler@1.2.0
+953 info postinstall finalhandler@1.2.0
+954 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/forwarded
+955 info build /Users/kris/Desktop/Movies/Server/node_modules/forwarded
+956 info preinstall forwarded@0.2.0
+957 info linkStuff forwarded@0.2.0
+958 silly linkStuff forwarded@0.2.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+959 verbose linkBins forwarded@0.2.0
+960 verbose linkMans forwarded@0.2.0
+961 verbose rebuildBundles forwarded@0.2.0
+962 info install forwarded@0.2.0
+963 info postinstall forwarded@0.2.0
+964 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/fresh
+965 info build /Users/kris/Desktop/Movies/Server/node_modules/fresh
+966 info preinstall fresh@0.5.2
+967 info linkStuff fresh@0.5.2
+968 silly linkStuff fresh@0.5.2 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+969 verbose linkBins fresh@0.5.2
+970 verbose linkMans fresh@0.5.2
+971 verbose rebuildBundles fresh@0.5.2
+972 info install fresh@0.5.2
+973 info postinstall fresh@0.5.2
+974 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/fs-minipass
+975 info build /Users/kris/Desktop/Movies/Server/node_modules/fs-minipass
+976 info preinstall fs-minipass@2.1.0
+977 info linkStuff fs-minipass@2.1.0
+978 silly linkStuff fs-minipass@2.1.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+979 verbose linkBins fs-minipass@2.1.0
+980 verbose linkMans fs-minipass@2.1.0
+981 verbose rebuildBundles fs-minipass@2.1.0
+982 verbose rebuildBundles [ 'minipass' ]
+983 info install fs-minipass@2.1.0
+984 info postinstall fs-minipass@2.1.0
+985 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/fs.realpath
+986 info build /Users/kris/Desktop/Movies/Server/node_modules/fs.realpath
+987 info preinstall fs.realpath@1.0.0
+988 info linkStuff fs.realpath@1.0.0
+989 silly linkStuff fs.realpath@1.0.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+990 verbose linkBins fs.realpath@1.0.0
+991 verbose linkMans fs.realpath@1.0.0
+992 verbose rebuildBundles fs.realpath@1.0.0
+993 info install fs.realpath@1.0.0
+994 info postinstall fs.realpath@1.0.0
+995 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/fsevents
+996 info build /Users/kris/Desktop/Movies/Server/node_modules/fsevents
+997 info preinstall fsevents@2.3.2
+998 info linkStuff fsevents@2.3.2
+999 silly linkStuff fsevents@2.3.2 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1000 verbose linkBins fsevents@2.3.2
+1001 verbose linkMans fsevents@2.3.2
+1002 verbose rebuildBundles fsevents@2.3.2
+1003 info install fsevents@2.3.2
+1004 info postinstall fsevents@2.3.2
+1005 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/function-bind
+1006 info build /Users/kris/Desktop/Movies/Server/node_modules/function-bind
+1007 info preinstall function-bind@1.1.1
+1008 info linkStuff function-bind@1.1.1
+1009 silly linkStuff function-bind@1.1.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1010 verbose linkBins function-bind@1.1.1
+1011 verbose linkMans function-bind@1.1.1
+1012 verbose rebuildBundles function-bind@1.1.1
+1013 info install function-bind@1.1.1
+1014 info postinstall function-bind@1.1.1
+1015 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/gauge
+1016 info build /Users/kris/Desktop/Movies/Server/node_modules/gauge
+1017 info preinstall gauge@3.0.2
+1018 info linkStuff gauge@3.0.2
+1019 silly linkStuff gauge@3.0.2 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1020 verbose linkBins gauge@3.0.2
+1021 verbose linkMans gauge@3.0.2
+1022 verbose rebuildBundles gauge@3.0.2
+1023 info install gauge@3.0.2
+1024 info postinstall gauge@3.0.2
+1025 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/get-intrinsic
+1026 info build /Users/kris/Desktop/Movies/Server/node_modules/get-intrinsic
+1027 info preinstall get-intrinsic@1.1.3
+1028 info linkStuff get-intrinsic@1.1.3
+1029 silly linkStuff get-intrinsic@1.1.3 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1030 verbose linkBins get-intrinsic@1.1.3
+1031 verbose linkMans get-intrinsic@1.1.3
+1032 verbose rebuildBundles get-intrinsic@1.1.3
+1033 info install get-intrinsic@1.1.3
+1034 info postinstall get-intrinsic@1.1.3
+1035 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/glob
+1036 info build /Users/kris/Desktop/Movies/Server/node_modules/glob
+1037 info preinstall glob@7.2.3
+1038 info linkStuff glob@7.2.3
+1039 silly linkStuff glob@7.2.3 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1040 verbose linkBins glob@7.2.3
+1041 verbose linkMans glob@7.2.3
+1042 verbose rebuildBundles glob@7.2.3
+1043 info install glob@7.2.3
+1044 info postinstall glob@7.2.3
+1045 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/glob-parent
+1046 info build /Users/kris/Desktop/Movies/Server/node_modules/glob-parent
+1047 info preinstall glob-parent@5.1.2
+1048 info linkStuff glob-parent@5.1.2
+1049 silly linkStuff glob-parent@5.1.2 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1050 verbose linkBins glob-parent@5.1.2
+1051 verbose linkMans glob-parent@5.1.2
+1052 verbose rebuildBundles glob-parent@5.1.2
+1053 info install glob-parent@5.1.2
+1054 info postinstall glob-parent@5.1.2
+1055 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/has
+1056 info build /Users/kris/Desktop/Movies/Server/node_modules/has
+1057 info preinstall has@1.0.3
+1058 info linkStuff has@1.0.3
+1059 silly linkStuff has@1.0.3 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1060 verbose linkBins has@1.0.3
+1061 verbose linkMans has@1.0.3
+1062 verbose rebuildBundles has@1.0.3
+1063 info install has@1.0.3
+1064 info postinstall has@1.0.3
+1065 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/has-flag
+1066 info build /Users/kris/Desktop/Movies/Server/node_modules/has-flag
+1067 info preinstall has-flag@3.0.0
+1068 info linkStuff has-flag@3.0.0
+1069 silly linkStuff has-flag@3.0.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1070 verbose linkBins has-flag@3.0.0
+1071 verbose linkMans has-flag@3.0.0
+1072 verbose rebuildBundles has-flag@3.0.0
+1073 info install has-flag@3.0.0
+1074 info postinstall has-flag@3.0.0
+1075 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/has-symbols
+1076 info build /Users/kris/Desktop/Movies/Server/node_modules/has-symbols
+1077 info preinstall has-symbols@1.0.3
+1078 info linkStuff has-symbols@1.0.3
+1079 silly linkStuff has-symbols@1.0.3 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1080 verbose linkBins has-symbols@1.0.3
+1081 verbose linkMans has-symbols@1.0.3
+1082 verbose rebuildBundles has-symbols@1.0.3
+1083 info install has-symbols@1.0.3
+1084 info postinstall has-symbols@1.0.3
+1085 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/has-unicode
+1086 info build /Users/kris/Desktop/Movies/Server/node_modules/has-unicode
+1087 info preinstall has-unicode@2.0.1
+1088 info linkStuff has-unicode@2.0.1
+1089 silly linkStuff has-unicode@2.0.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1090 verbose linkBins has-unicode@2.0.1
+1091 verbose linkMans has-unicode@2.0.1
+1092 verbose rebuildBundles has-unicode@2.0.1
+1093 info install has-unicode@2.0.1
+1094 info postinstall has-unicode@2.0.1
+1095 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/http-errors
+1096 info build /Users/kris/Desktop/Movies/Server/node_modules/http-errors
+1097 info preinstall http-errors@2.0.0
+1098 info linkStuff http-errors@2.0.0
+1099 silly linkStuff http-errors@2.0.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1100 verbose linkBins http-errors@2.0.0
+1101 verbose linkMans http-errors@2.0.0
+1102 verbose rebuildBundles http-errors@2.0.0
+1103 info install http-errors@2.0.0
+1104 info postinstall http-errors@2.0.0
+1105 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/https-proxy-agent
+1106 info build /Users/kris/Desktop/Movies/Server/node_modules/https-proxy-agent
+1107 info preinstall https-proxy-agent@5.0.1
+1108 info linkStuff https-proxy-agent@5.0.1
+1109 silly linkStuff https-proxy-agent@5.0.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1110 verbose linkBins https-proxy-agent@5.0.1
+1111 verbose linkMans https-proxy-agent@5.0.1
+1112 verbose rebuildBundles https-proxy-agent@5.0.1
+1113 verbose rebuildBundles [ 'debug', 'ms' ]
+1114 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/https-proxy-agent/node_modules/ms
+1115 info build /Users/kris/Desktop/Movies/Server/node_modules/https-proxy-agent/node_modules/ms
+1116 info preinstall ms@2.1.2
+1117 info linkStuff ms@2.1.2
+1118 silly linkStuff ms@2.1.2 has /Users/kris/Desktop/Movies/Server/node_modules/https-proxy-agent/node_modules as its parent node_modules
+1119 verbose linkBins ms@2.1.2
+1120 verbose linkMans ms@2.1.2
+1121 verbose rebuildBundles ms@2.1.2
+1122 info install ms@2.1.2
+1123 info postinstall ms@2.1.2
+1124 info install https-proxy-agent@5.0.1
+1125 info postinstall https-proxy-agent@5.0.1
+1126 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/iconv-lite
+1127 info build /Users/kris/Desktop/Movies/Server/node_modules/iconv-lite
+1128 info preinstall iconv-lite@0.4.24
+1129 info linkStuff iconv-lite@0.4.24
+1130 silly linkStuff iconv-lite@0.4.24 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1131 verbose linkBins iconv-lite@0.4.24
+1132 verbose linkMans iconv-lite@0.4.24
+1133 verbose rebuildBundles iconv-lite@0.4.24
+1134 info install iconv-lite@0.4.24
+1135 info postinstall iconv-lite@0.4.24
+1136 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/ieee754
+1137 info build /Users/kris/Desktop/Movies/Server/node_modules/ieee754
+1138 info preinstall ieee754@1.2.1
+1139 info linkStuff ieee754@1.2.1
+1140 silly linkStuff ieee754@1.2.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1141 verbose linkBins ieee754@1.2.1
+1142 verbose linkMans ieee754@1.2.1
+1143 verbose rebuildBundles ieee754@1.2.1
+1144 info install ieee754@1.2.1
+1145 info postinstall ieee754@1.2.1
+1146 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/ignore-by-default
+1147 info build /Users/kris/Desktop/Movies/Server/node_modules/ignore-by-default
+1148 info preinstall ignore-by-default@1.0.1
+1149 info linkStuff ignore-by-default@1.0.1
+1150 silly linkStuff ignore-by-default@1.0.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1151 verbose linkBins ignore-by-default@1.0.1
+1152 verbose linkMans ignore-by-default@1.0.1
+1153 verbose rebuildBundles ignore-by-default@1.0.1
+1154 info install ignore-by-default@1.0.1
+1155 info postinstall ignore-by-default@1.0.1
+1156 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/inflight
+1157 info build /Users/kris/Desktop/Movies/Server/node_modules/inflight
+1158 info preinstall inflight@1.0.6
+1159 info linkStuff inflight@1.0.6
+1160 silly linkStuff inflight@1.0.6 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1161 verbose linkBins inflight@1.0.6
+1162 verbose linkMans inflight@1.0.6
+1163 verbose rebuildBundles inflight@1.0.6
+1164 info install inflight@1.0.6
+1165 info postinstall inflight@1.0.6
+1166 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/inherits
+1167 info build /Users/kris/Desktop/Movies/Server/node_modules/inherits
+1168 info preinstall inherits@2.0.4
+1169 info linkStuff inherits@2.0.4
+1170 silly linkStuff inherits@2.0.4 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1171 verbose linkBins inherits@2.0.4
+1172 verbose linkMans inherits@2.0.4
+1173 verbose rebuildBundles inherits@2.0.4
+1174 info install inherits@2.0.4
+1175 info postinstall inherits@2.0.4
+1176 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/ip
+1177 info build /Users/kris/Desktop/Movies/Server/node_modules/ip
+1178 info preinstall ip@2.0.0
+1179 info linkStuff ip@2.0.0
+1180 silly linkStuff ip@2.0.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1181 verbose linkBins ip@2.0.0
+1182 verbose linkMans ip@2.0.0
+1183 verbose rebuildBundles ip@2.0.0
+1184 info install ip@2.0.0
+1185 info postinstall ip@2.0.0
+1186 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/ipaddr.js
+1187 info build /Users/kris/Desktop/Movies/Server/node_modules/ipaddr.js
+1188 info preinstall ipaddr.js@1.9.1
+1189 info linkStuff ipaddr.js@1.9.1
+1190 silly linkStuff ipaddr.js@1.9.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1191 verbose linkBins ipaddr.js@1.9.1
+1192 verbose linkMans ipaddr.js@1.9.1
+1193 verbose rebuildBundles ipaddr.js@1.9.1
+1194 info install ipaddr.js@1.9.1
+1195 info postinstall ipaddr.js@1.9.1
+1196 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/is-binary-path
+1197 info build /Users/kris/Desktop/Movies/Server/node_modules/is-binary-path
+1198 info preinstall is-binary-path@2.1.0
+1199 info linkStuff is-binary-path@2.1.0
+1200 silly linkStuff is-binary-path@2.1.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1201 verbose linkBins is-binary-path@2.1.0
+1202 verbose linkMans is-binary-path@2.1.0
+1203 verbose rebuildBundles is-binary-path@2.1.0
+1204 info install is-binary-path@2.1.0
+1205 info postinstall is-binary-path@2.1.0
+1206 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/is-extglob
+1207 info build /Users/kris/Desktop/Movies/Server/node_modules/is-extglob
+1208 info preinstall is-extglob@2.1.1
+1209 info linkStuff is-extglob@2.1.1
+1210 silly linkStuff is-extglob@2.1.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1211 verbose linkBins is-extglob@2.1.1
+1212 verbose linkMans is-extglob@2.1.1
+1213 verbose rebuildBundles is-extglob@2.1.1
+1214 info install is-extglob@2.1.1
+1215 info postinstall is-extglob@2.1.1
+1216 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/is-fullwidth-code-point
+1217 info build /Users/kris/Desktop/Movies/Server/node_modules/is-fullwidth-code-point
+1218 info preinstall is-fullwidth-code-point@3.0.0
+1219 info linkStuff is-fullwidth-code-point@3.0.0
+1220 silly linkStuff is-fullwidth-code-point@3.0.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1221 verbose linkBins is-fullwidth-code-point@3.0.0
+1222 verbose linkMans is-fullwidth-code-point@3.0.0
+1223 verbose rebuildBundles is-fullwidth-code-point@3.0.0
+1224 info install is-fullwidth-code-point@3.0.0
+1225 info postinstall is-fullwidth-code-point@3.0.0
+1226 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/is-glob
+1227 info build /Users/kris/Desktop/Movies/Server/node_modules/is-glob
+1228 info preinstall is-glob@4.0.3
+1229 info linkStuff is-glob@4.0.3
+1230 silly linkStuff is-glob@4.0.3 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1231 verbose linkBins is-glob@4.0.3
+1232 verbose linkMans is-glob@4.0.3
+1233 verbose rebuildBundles is-glob@4.0.3
+1234 info install is-glob@4.0.3
+1235 info postinstall is-glob@4.0.3
+1236 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/is-number
+1237 info build /Users/kris/Desktop/Movies/Server/node_modules/is-number
+1238 info preinstall is-number@7.0.0
+1239 info linkStuff is-number@7.0.0
+1240 silly linkStuff is-number@7.0.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1241 verbose linkBins is-number@7.0.0
+1242 verbose linkMans is-number@7.0.0
+1243 verbose rebuildBundles is-number@7.0.0
+1244 info install is-number@7.0.0
+1245 info postinstall is-number@7.0.0
+1246 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/jwa
+1247 info build /Users/kris/Desktop/Movies/Server/node_modules/jwa
+1248 info preinstall jwa@1.4.1
+1249 info linkStuff jwa@1.4.1
+1250 silly linkStuff jwa@1.4.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1251 verbose linkBins jwa@1.4.1
+1252 verbose linkMans jwa@1.4.1
+1253 verbose rebuildBundles jwa@1.4.1
+1254 info install jwa@1.4.1
+1255 info postinstall jwa@1.4.1
+1256 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/jws
+1257 info build /Users/kris/Desktop/Movies/Server/node_modules/jws
+1258 info preinstall jws@3.2.2
+1259 info linkStuff jws@3.2.2
+1260 silly linkStuff jws@3.2.2 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1261 verbose linkBins jws@3.2.2
+1262 verbose linkMans jws@3.2.2
+1263 verbose rebuildBundles jws@3.2.2
+1264 info install jws@3.2.2
+1265 info postinstall jws@3.2.2
+1266 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/kareem
+1267 info build /Users/kris/Desktop/Movies/Server/node_modules/kareem
+1268 info preinstall kareem@2.5.1
+1269 info linkStuff kareem@2.5.1
+1270 silly linkStuff kareem@2.5.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1271 verbose linkBins kareem@2.5.1
+1272 verbose linkMans kareem@2.5.1
+1273 verbose rebuildBundles kareem@2.5.1
+1274 info install kareem@2.5.1
+1275 info postinstall kareem@2.5.1
+1276 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/lodash
+1277 info build /Users/kris/Desktop/Movies/Server/node_modules/lodash
+1278 info preinstall lodash@4.17.21
+1279 info linkStuff lodash@4.17.21
+1280 silly linkStuff lodash@4.17.21 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1281 verbose linkBins lodash@4.17.21
+1282 verbose linkMans lodash@4.17.21
+1283 verbose rebuildBundles lodash@4.17.21
+1284 info install lodash@4.17.21
+1285 info postinstall lodash@4.17.21
+1286 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/lru-cache
+1287 info build /Users/kris/Desktop/Movies/Server/node_modules/lru-cache
+1288 info preinstall lru-cache@6.0.0
+1289 info linkStuff lru-cache@6.0.0
+1290 silly linkStuff lru-cache@6.0.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1291 verbose linkBins lru-cache@6.0.0
+1292 verbose linkMans lru-cache@6.0.0
+1293 verbose rebuildBundles lru-cache@6.0.0
+1294 info install lru-cache@6.0.0
+1295 info postinstall lru-cache@6.0.0
+1296 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/make-dir
+1297 info build /Users/kris/Desktop/Movies/Server/node_modules/make-dir
+1298 info preinstall make-dir@3.1.0
+1299 info linkStuff make-dir@3.1.0
+1300 silly linkStuff make-dir@3.1.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1301 verbose linkBins make-dir@3.1.0
+1302 verbose linkMans make-dir@3.1.0
+1303 verbose rebuildBundles make-dir@3.1.0
+1304 verbose rebuildBundles [ '.bin', 'semver' ]
+1305 info install make-dir@3.1.0
+1306 info postinstall make-dir@3.1.0
+1307 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/media-typer
+1308 info build /Users/kris/Desktop/Movies/Server/node_modules/media-typer
+1309 info preinstall media-typer@0.3.0
+1310 info linkStuff media-typer@0.3.0
+1311 silly linkStuff media-typer@0.3.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1312 verbose linkBins media-typer@0.3.0
+1313 verbose linkMans media-typer@0.3.0
+1314 verbose rebuildBundles media-typer@0.3.0
+1315 info install media-typer@0.3.0
+1316 info postinstall media-typer@0.3.0
+1317 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/memory-pager
+1318 info build /Users/kris/Desktop/Movies/Server/node_modules/memory-pager
+1319 info preinstall memory-pager@1.5.0
+1320 info linkStuff memory-pager@1.5.0
+1321 silly linkStuff memory-pager@1.5.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1322 verbose linkBins memory-pager@1.5.0
+1323 verbose linkMans memory-pager@1.5.0
+1324 verbose rebuildBundles memory-pager@1.5.0
+1325 info install memory-pager@1.5.0
+1326 info postinstall memory-pager@1.5.0
+1327 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/merge-descriptors
+1328 info build /Users/kris/Desktop/Movies/Server/node_modules/merge-descriptors
+1329 info preinstall merge-descriptors@1.0.1
+1330 info linkStuff merge-descriptors@1.0.1
+1331 silly linkStuff merge-descriptors@1.0.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1332 verbose linkBins merge-descriptors@1.0.1
+1333 verbose linkMans merge-descriptors@1.0.1
+1334 verbose rebuildBundles merge-descriptors@1.0.1
+1335 info install merge-descriptors@1.0.1
+1336 info postinstall merge-descriptors@1.0.1
+1337 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/methods
+1338 info build /Users/kris/Desktop/Movies/Server/node_modules/methods
+1339 info preinstall methods@1.1.2
+1340 info linkStuff methods@1.1.2
+1341 silly linkStuff methods@1.1.2 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1342 verbose linkBins methods@1.1.2
+1343 verbose linkMans methods@1.1.2
+1344 verbose rebuildBundles methods@1.1.2
+1345 info install methods@1.1.2
+1346 info postinstall methods@1.1.2
+1347 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/mime
+1348 info build /Users/kris/Desktop/Movies/Server/node_modules/mime
+1349 info preinstall mime@1.6.0
+1350 info linkStuff mime@1.6.0
+1351 silly linkStuff mime@1.6.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1352 verbose linkBins mime@1.6.0
+1353 verbose link bins [
+1353 verbose link bins   { mime: 'cli.js' },
+1353 verbose link bins   '/Users/kris/Desktop/Movies/Server/node_modules/.bin',
+1353 verbose link bins   false
+1353 verbose link bins ]
+1354 verbose linkMans mime@1.6.0
+1355 verbose rebuildBundles mime@1.6.0
+1356 silly gentlyRm /Users/kris/Desktop/Movies/Server/node_modules/.bin/mime is being purged
+1357 verbose gentlyRm don't care about contents; nuking /Users/kris/Desktop/Movies/Server/node_modules/.bin/mime
+1358 silly vacuum-fs purging /Users/kris/Desktop/Movies/Server/node_modules/.bin/mime
+1359 silly vacuum-fs quitting because other entries in /Users/kris/Desktop/Movies/Server/node_modules/.bin
+1360 info install mime@1.6.0
+1361 info postinstall mime@1.6.0
+1362 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/mime-db
+1363 info build /Users/kris/Desktop/Movies/Server/node_modules/mime-db
+1364 info preinstall mime-db@1.52.0
+1365 info linkStuff mime-db@1.52.0
+1366 silly linkStuff mime-db@1.52.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1367 verbose linkBins mime-db@1.52.0
+1368 verbose linkMans mime-db@1.52.0
+1369 verbose rebuildBundles mime-db@1.52.0
+1370 info install mime-db@1.52.0
+1371 info postinstall mime-db@1.52.0
+1372 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/mime-types
+1373 info build /Users/kris/Desktop/Movies/Server/node_modules/mime-types
+1374 info preinstall mime-types@2.1.35
+1375 info linkStuff mime-types@2.1.35
+1376 silly linkStuff mime-types@2.1.35 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1377 verbose linkBins mime-types@2.1.35
+1378 verbose linkMans mime-types@2.1.35
+1379 verbose rebuildBundles mime-types@2.1.35
+1380 info install mime-types@2.1.35
+1381 info postinstall mime-types@2.1.35
+1382 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/minimatch
+1383 info build /Users/kris/Desktop/Movies/Server/node_modules/minimatch
+1384 info preinstall minimatch@3.1.2
+1385 info linkStuff minimatch@3.1.2
+1386 silly linkStuff minimatch@3.1.2 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1387 verbose linkBins minimatch@3.1.2
+1388 verbose linkMans minimatch@3.1.2
+1389 verbose rebuildBundles minimatch@3.1.2
+1390 info install minimatch@3.1.2
+1391 info postinstall minimatch@3.1.2
+1392 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/minipass
+1393 info build /Users/kris/Desktop/Movies/Server/node_modules/minipass
+1394 info preinstall minipass@4.0.0
+1395 info linkStuff minipass@4.0.0
+1396 silly linkStuff minipass@4.0.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1397 verbose linkBins minipass@4.0.0
+1398 verbose linkMans minipass@4.0.0
+1399 verbose rebuildBundles minipass@4.0.0
+1400 info install minipass@4.0.0
+1401 info postinstall minipass@4.0.0
+1402 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/minizlib
+1403 info build /Users/kris/Desktop/Movies/Server/node_modules/minizlib
+1404 info preinstall minizlib@2.1.2
+1405 info linkStuff minizlib@2.1.2
+1406 silly linkStuff minizlib@2.1.2 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1407 verbose linkBins minizlib@2.1.2
+1408 verbose linkMans minizlib@2.1.2
+1409 verbose rebuildBundles minizlib@2.1.2
+1410 verbose rebuildBundles [ 'minipass' ]
+1411 info install minizlib@2.1.2
+1412 info postinstall minizlib@2.1.2
+1413 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/mkdirp
+1414 info build /Users/kris/Desktop/Movies/Server/node_modules/mkdirp
+1415 info preinstall mkdirp@1.0.4
+1416 info linkStuff mkdirp@1.0.4
+1417 silly linkStuff mkdirp@1.0.4 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1418 verbose linkBins mkdirp@1.0.4
+1419 verbose link bins [
+1419 verbose link bins   { mkdirp: 'bin/cmd.js' },
+1419 verbose link bins   '/Users/kris/Desktop/Movies/Server/node_modules/.bin',
+1419 verbose link bins   false
+1419 verbose link bins ]
+1420 verbose linkMans mkdirp@1.0.4
+1421 verbose rebuildBundles mkdirp@1.0.4
+1422 silly gentlyRm /Users/kris/Desktop/Movies/Server/node_modules/.bin/mkdirp is being purged
+1423 verbose gentlyRm don't care about contents; nuking /Users/kris/Desktop/Movies/Server/node_modules/.bin/mkdirp
+1424 silly vacuum-fs purging /Users/kris/Desktop/Movies/Server/node_modules/.bin/mkdirp
+1425 silly vacuum-fs quitting because other entries in /Users/kris/Desktop/Movies/Server/node_modules/.bin
+1426 info install mkdirp@1.0.4
+1427 info postinstall mkdirp@1.0.4
+1428 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/mongodb
+1429 info build /Users/kris/Desktop/Movies/Server/node_modules/mongodb
+1430 info preinstall mongodb@4.12.1
+1431 info linkStuff mongodb@4.12.1
+1432 silly linkStuff mongodb@4.12.1 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1433 verbose linkBins mongodb@4.12.1
+1434 verbose linkMans mongodb@4.12.1
+1435 verbose rebuildBundles mongodb@4.12.1
+1436 info install mongodb@4.12.1
+1437 info postinstall mongodb@4.12.1
+1438 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/mongodb-connection-string-url
+1439 info build /Users/kris/Desktop/Movies/Server/node_modules/mongodb-connection-string-url
+1440 info preinstall mongodb-connection-string-url@2.6.0
+1441 info linkStuff mongodb-connection-string-url@2.6.0
+1442 silly linkStuff mongodb-connection-string-url@2.6.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1443 verbose linkBins mongodb-connection-string-url@2.6.0
+1444 verbose linkMans mongodb-connection-string-url@2.6.0
+1445 verbose rebuildBundles mongodb-connection-string-url@2.6.0
+1446 info install mongodb-connection-string-url@2.6.0
+1447 info postinstall mongodb-connection-string-url@2.6.0
+1448 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/mpath
+1449 info build /Users/kris/Desktop/Movies/Server/node_modules/mpath
+1450 info preinstall mpath@0.9.0
+1451 info linkStuff mpath@0.9.0
+1452 silly linkStuff mpath@0.9.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1453 verbose linkBins mpath@0.9.0
+1454 verbose linkMans mpath@0.9.0
+1455 verbose rebuildBundles mpath@0.9.0
+1456 info install mpath@0.9.0
+1457 info postinstall mpath@0.9.0
+1458 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/mquery
+1459 info build /Users/kris/Desktop/Movies/Server/node_modules/mquery
+1460 info preinstall mquery@4.0.3
+1461 info linkStuff mquery@4.0.3
+1462 silly linkStuff mquery@4.0.3 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1463 verbose linkBins mquery@4.0.3
+1464 verbose linkMans mquery@4.0.3
+1465 verbose rebuildBundles mquery@4.0.3
+1466 verbose rebuildBundles [ 'debug', 'ms' ]
+1467 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/mquery/node_modules/ms
+1468 info build /Users/kris/Desktop/Movies/Server/node_modules/mquery/node_modules/ms
+1469 info preinstall ms@2.1.2
+1470 info linkStuff ms@2.1.2
+1471 silly linkStuff ms@2.1.2 has /Users/kris/Desktop/Movies/Server/node_modules/mquery/node_modules as its parent node_modules
+1472 verbose linkBins ms@2.1.2
+1473 verbose linkMans ms@2.1.2
+1474 verbose rebuildBundles ms@2.1.2
+1475 info install ms@2.1.2
+1476 info postinstall ms@2.1.2
+1477 info install mquery@4.0.3
+1478 info postinstall mquery@4.0.3
+1479 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/ms
+1480 info build /Users/kris/Desktop/Movies/Server/node_modules/ms
+1481 info preinstall ms@2.0.0
+1482 info linkStuff ms@2.0.0
+1483 silly linkStuff ms@2.0.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1484 verbose linkBins ms@2.0.0
+1485 verbose linkMans ms@2.0.0
+1486 verbose rebuildBundles ms@2.0.0
+1487 info install ms@2.0.0
+1488 info postinstall ms@2.0.0
+1489 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/negotiator
+1490 info build /Users/kris/Desktop/Movies/Server/node_modules/negotiator
+1491 info preinstall negotiator@0.6.3
+1492 info linkStuff negotiator@0.6.3
+1493 silly linkStuff negotiator@0.6.3 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1494 verbose linkBins negotiator@0.6.3
+1495 verbose linkMans negotiator@0.6.3
+1496 verbose rebuildBundles negotiator@0.6.3
+1497 info install negotiator@0.6.3
+1498 info postinstall negotiator@0.6.3
+1499 verbose rebuild bundle /Users/kris/Desktop/Movies/Server/node_modules/node-addon-api
+1500 info build /Users/kris/Desktop/Movies/Server/node_modules/node-addon-api
+1501 info preinstall node-addon-api@5.1.0
+1502 info linkStuff node-addon-api@5.1.0
+1503 silly linkStuff node-addon-api@5.1.0 has /Users/kris/Desktop/Movies/Server/node_modules as its parent node_modules
+1504 verbose linkBins node-addon-api@5.1.0
+1505 verbose linkMans node-addon-api@5.1.0
+1506 verbose rebuildBundles node-addon-api@5.1.0
+1507 info install node-addon-api@5.1.0
+1508 verbose unsafe-perm in lifecycle true
+1509 info node-addon-api@5.1.0 Failed to exec install script
+1510 verbose stack Error: node-addon-api@5.1.0 install: `node-gyp rebuild`
+1510 verbose stack Exit status 1
+1510 verbose stack     at EventEmitter.<anonymous> (/Users/kris/node_modules/npm/lib/utils/lifecycle.js:217:16)
+1510 verbose stack     at EventEmitter.emit (node:events:511:28)
+1510 verbose stack     at ChildProcess.<anonymous> (/Users/kris/node_modules/npm/lib/utils/spawn.js:24:14)
+1510 verbose stack     at ChildProcess.emit (node:events:511:28)
+1510 verbose stack     at maybeClose (node:internal/child_process:1098:16)
+1510 verbose stack     at ChildProcess._handle.onexit (node:internal/child_process:304:5)
+1511 verbose pkgid node-addon-api@5.1.0
+1512 verbose cwd /Users/kris/Desktop/Movies/Server
+1513 error Darwin 22.6.0
+1514 error argv "/usr/local/bin/node" "/Users/kris/node_modules/.bin/npm" "install"
+1515 error node v20.2.0
+1516 error npm  v2.15.12
+1517 error code ELIFECYCLE
+1518 error node-addon-api@5.1.0 install: `node-gyp rebuild`
+1518 error Exit status 1
+1519 error Failed at the node-addon-api@5.1.0 install script 'node-gyp rebuild'.
+1519 error This is most likely a problem with the node-addon-api package,
+1519 error not with npm itself.
+1519 error Tell the author that this fails on your system:
+1519 error     node-gyp rebuild
+1519 error You can get information on how to open an issue for this project with:
+1519 error     npm bugs node-addon-api
+1519 error Or if that isn't available, you can get their info via:
+1519 error
+1519 error     npm owner ls node-addon-api
+1519 error There is likely additional logging output above.
+1520 verbose exit [ 1, true ]
