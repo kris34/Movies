@@ -5,8 +5,8 @@
     "node": ">=18 <19"
   },
   "scripts": {
-    "start": "cd server && npm start",
-    "prebuild": "cd server && npm run build",
-    "build": "cd client && npm run build"
+    "start": "cd Server && npm start",
+    "prebuild": "cd Server && npm run build",
+    "build": "cd Client && npm run build"
   }
 }
