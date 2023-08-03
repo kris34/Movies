@@ -18,7 +18,21 @@
     </div>
     <div class="description">
       <p>{{ movie.description }}</p>
-      <button mat-raised-button color="accent" (click)="deleteMovie(movie._id)">delete</button>
+      <button
+        mat-raised-button
+        color="accent"
+        routerLink="/movie/{{ movie._id }}/edit"
+      >
+        Edit
+      </button>
+      <button
+      class="delete-btn"
+      mat-raised-button
+      color="accent"
+      (click)="deleteMovie(movie._id)"
+    >
+      Delete
+    </button>
     </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { MovieService } from 'src/app/movie/movie.service';
 
@@ -10,7 +11,7 @@ import { MovieService } from 'src/app/movie/movie.service';
 export class ListComponent {
   list$ = this.api.loadUserList();
 
-  constructor(private api: ApiService, private movieService: MovieService) { }
+  constructor(private api: ApiService, private movieService: MovieService, private router: Router) { }
 
   deleteMovie(id: string) {
     this.movieService.deleteMovie(id).subscribe({
@@ -19,6 +20,7 @@ export class ListComponent {
       }
     })
   }
+
 
 
 }
