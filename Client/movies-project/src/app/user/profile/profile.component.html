@@ -18,10 +18,10 @@
       <p class="m-added">Most recently added</p>
       <div class="small-movies">
         <div class="small-movie" *ngFor="let movie of movies">
-          <img src="{{ movie.imageUrl }}" alt="" />
           <a class="movie-title" routerLink="/movie/{{ movie._id }}">{{
             movie.title | titleShorten
           }}</a>
+          <img src="{{ movie.imageUrl }}" alt="" />
         </div>
       </div>
     </div>

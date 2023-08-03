@@ -1,5 +1,5 @@
 .container {
-    width: 40%;
+    width: 50%;
     position: relative;
     margin-right: auto;
     margin-left: auto;
@@ -35,7 +35,6 @@
     left: 160px;
     bottom: 210px;
     display: inline-block;
-    overflow: hidden;
     display: flex;
     white-space: nowrap;
   }
