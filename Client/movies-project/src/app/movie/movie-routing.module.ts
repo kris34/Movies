@@ -6,8 +6,11 @@ import { MovieResolver } from './resolvers/movie.resolver';
 import { EditComponent } from './edit/edit.component';
 import { AuthGuardService } from '../user/auth-guard.service';
 import { MovieGuardService } from './movie-guard.service';
+import { AllMoviesComponent } from './all-movies/all-movies.component';
+import { ProfileComponent } from '../user/profile/profile.component';
 
 const routes: Routes = [
+ 
   {
     path: 'create',
     component: CreateComponent,
@@ -28,6 +31,11 @@ const routes: Routes = [
     component: EditComponent,
     canActivate: [MovieGuardService]
   },
+  {
+    path: 'all-movies',
+    component: AllMoviesComponent
+   },
+
 ];
 
 /* @NgModule({

@@ -15,6 +15,8 @@ import { StoreModule } from '@ngrx/store';
 import { getReducers } from '../shared/store/comment/comment.reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { CommentEffects } from '../shared/store/comment/comment.effects';
+import { CoreModule } from '../core/core.module';
+import { AllMoviesComponent } from './all-movies/all-movies.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { CommentEffects } from '../shared/store/comment/comment.effects';
     MovieComponent,
     EditComponent,
     CommentComponent,
+    AllMoviesComponent,
   ],
   imports: [
     StoreModule.forFeature('comments', getReducers),

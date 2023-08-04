@@ -9,7 +9,6 @@ import { SharedModule } from '../shared/shared.module';
 import { WhattowatchComponent } from './whattowatch/whattowatch.component';
 import { MovieModule } from '../movie/movie.module';
 import { MovieRoutingModule } from '../movie/movie-routing.module';
-import { AllMoviesComponent } from './all-movies/all-movies.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +16,6 @@ import { AllMoviesComponent } from './all-movies/all-movies.component';
     FooterComponent,
     HomeComponent,
     WhattowatchComponent,
-    AllMoviesComponent,
   ],
   imports: [
     CommonModule,

@@ -9,13 +9,17 @@
 .greet {
   margin: 0px;
   padding: 0px;
-  
+
   border: 0px none;
   font: inherit;
   vertical-align: baseline;
   font-size: 16px;
 }
 
-.mat-toolbar.mat-primary { 
-  box-shadow:  0 0 10px 5px rgba(0,0,0,0.6);
+.mat-toolbar.mat-primary {
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.6);
+}
+
+.all-movies-button {
+  margin-right: 20px;
 }

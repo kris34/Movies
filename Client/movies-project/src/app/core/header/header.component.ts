@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/user/auth.service';
 
 @Component({
@@ -15,9 +16,13 @@ export class HeaderComponent {
     return this.auth.isLoggedIn;
   }
 
-  constructor(public auth: AuthService) {}
+  constructor(public auth: AuthService, private router: Router) {}
 
   logout() {
     this.auth.logout();
+  }
+
+  goToPage(location: string){ 
+    this.router.navigate([`${location}`])
   }
 }
