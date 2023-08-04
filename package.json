@@ -2,11 +2,11 @@
   "name": "movies",
   "verison": "1.0.0",
   "engines": {
-    "node": ">=18 <19"
+    "node": ">=18 <21"
   },
   "scripts": {
     "start": "cd Server && npm start",
     "prebuild": "cd Server && npm run build",
-    "build": "cd Client && npm run build"
+    "build": "cd Client && cd movies-project && npm run build"
   }
 }
