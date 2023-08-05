@@ -17,21 +17,14 @@
 }
 
 .bottom {
-  position: absolute;
-  margin-top: 300px;
-  left: 10px;
+  margin-top: 330px;
+  margin-left: 5px;
+  overflow-wrap: break-word;
 }
-
-/* .description {
-  position: relative;
-  left: 10px;
-  top: 20rem;
-} */
 
 .edit-btn {
   margin-right: 10px;
 }
-
 
 img {
   position: absolute;
