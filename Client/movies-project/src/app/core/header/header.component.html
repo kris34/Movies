@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
   <a class="home-btn" mat-button routerLink="/">Home</a>
   <div class="spacer"></div>
-   <button color="accent" mat-raised-button class="all-movies-button" (click)="goToPage('/movie/all-movies')" >asdasd</button>
+   <button color="accent" mat-raised-button class="all-movies-button" (click)="goToPage('/movie/all-movies')" >All Movies</button>
   <ng-container *ngIf="isLoggedIn">
     <span class="greet"> Welcome, {{ user!.email }}! </span></ng-container
   >

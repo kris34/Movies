@@ -10,7 +10,11 @@ import { AllMoviesComponent } from './all-movies/all-movies.component';
 import { ProfileComponent } from '../user/profile/profile.component';
 
 const routes: Routes = [
- 
+  {
+    path: 'all-movies',
+    component: AllMoviesComponent
+  },
+
   {
     path: 'create',
     component: CreateComponent,
@@ -31,10 +35,7 @@ const routes: Routes = [
     component: EditComponent,
     canActivate: [MovieGuardService]
   },
-  {
-    path: 'all-movies',
-    component: AllMoviesComponent
-   },
+
 
 ];
 

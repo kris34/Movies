@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-all-movies',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./all-movies.component.css']
 })
 export class AllMoviesComponent {
+
+  movies$ = this.api.loadMovies()
+
+  constructor(private api: ApiService) {
+  }
 
 }
