@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 
 @Component({
@@ -10,7 +11,9 @@ export class AllMoviesComponent {
 
   movies$ = this.api.loadMovies()
 
-  constructor(private api: ApiService) {
+  constructor(private api: ApiService, private router: Router) {
   }
+
+
 
 }

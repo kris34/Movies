@@ -2,7 +2,7 @@
   <div class="movie-container">
     <div *ngFor="let movie of movies$ | async">
       <div class="movie-card">
-        <p>{{ movie.title }}</p>
+      <p class="title"> <a routerLink="/movie/{{ movie._id }}"> {{ movie.title }}</a></p>
         <img src="{{ movie.imageUrl }}" />
       </div>
     </div>

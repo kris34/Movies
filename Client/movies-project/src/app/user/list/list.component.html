@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="movie-card" *ngFor="let movie of list$ | async">
     <div class="img">
@@ -35,4 +36,9 @@
     </button>
     </div>
   </div>
+</div>
+
+
+<div *ngIf="noMovies" class="no-movies">
+  <p>No movies have been added.</p>
 </div>

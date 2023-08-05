@@ -69,4 +69,10 @@
   
   .delete-btn { 
     margin: 5px;
-  }
+  
+}
+
+.no-movies {
+  font-size: 50px;
+  text-align: center;
+}
