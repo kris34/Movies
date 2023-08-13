@@ -40,9 +40,9 @@
   bottom: 30px;
 }
 
-.comment-user { 
+.comment-user {
   margin-left: 5px;
   position: relative;
   bottom: 15px;
-  
+  font-weight: bolder;
 }

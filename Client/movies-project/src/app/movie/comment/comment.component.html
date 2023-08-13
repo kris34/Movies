@@ -11,7 +11,7 @@
 
 <div class="container">
   <div class="comment-box" *ngFor="let comment of comments$ | async">
-    <p class="comment-user">{{ comment.username }}</p>
+    <p class="comment-user">{{ comment.username }}:</p>
     <p class="comment-text">{{ comment.content }}</p>
   </div>
 </div>
