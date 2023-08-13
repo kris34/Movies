@@ -72,7 +72,7 @@ siteController.post('/:id/like', hasUser(), async (req, res) => {
     if ((await existingMovie(req.params.id)) == false) {
       throw new Error('Movie doesnt exist!');
     }
-      
+
     const likedMovie = await likeMovie(req.params.id, req.user._id);
     res.status(200).json(likedMovie);
   } catch (error) {
@@ -205,15 +205,17 @@ siteController.get('/list', hasUser(), async (req, res) => {
 
 siteController.post('/:id/comment', hasUser(), async (req, res) => {
   try {
-    console.log("here");
+    const user = await getUser(req.user._id);
+
     const data = Object.assign(
       { _ownerId: req.user._id },
       { _movieId: req.params.id },
+      { username: user.username },
       req.body
     );
-    
+
     const comment = await postComment(data);
-   
+
     res.status(200).json(comment);
   } catch (err) {
     res.status(400).json({ err: err.message });
