@@ -21,7 +21,7 @@
   width: 500px;
 }
 
-.submit-btn{
+.submit-btn {
   position: relative;
   display: inline-block;
   margin-left: 10px;
@@ -31,9 +31,18 @@
   border-style: solid;
   border-width: thin;
   height: auto;
-  max-height: 40px;
+  max-height: 45px;
 }
 
 .comment-text {
   margin-left: 5px;
+  position: relative;
+  bottom: 30px;
+}
+
+.comment-user { 
+  margin-left: 5px;
+  position: relative;
+  bottom: 15px;
+  
 }
