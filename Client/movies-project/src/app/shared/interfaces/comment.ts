@@ -3,4 +3,5 @@ export interface IComment {
   _id: string;
   _movieId: string;
   _ownerId: string;
+  username: string;
 }

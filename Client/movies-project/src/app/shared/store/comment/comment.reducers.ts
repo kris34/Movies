@@ -22,6 +22,7 @@ export const commentInitialState: commentStateInterface = {
     _ownerId: '',
     _movieId: '',
     content: '',
+    username: '',
   },
 };
 
@@ -34,4 +35,3 @@ export const getReducers = createReducer(
     comments: action.comments,
   }))
 );
-
