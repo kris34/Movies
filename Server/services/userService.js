@@ -102,7 +102,35 @@ async function editProfile(id, data) {
   return createToken(existing);
 }
 
+async function sendFriendRequest(userId, friendId) {
+  const user = await getUser(userId);
+  const friend = await getUser(friendId);
 
+  user.sentFriendRequests.push(friendId);
+  await user.save();
+  friend.receivedFriendRequests.push(userId);
+  await friend.save();
+
+  return user;
+}
+
+async function acceptFriendRequest(userId, friendId) {
+  const user = await getUser(userId);
+  const friend = await getUser(friendId);
+
+  user.friends.push(friendId);
+  user.sentFriendRequests = user.sentFriendRequests.filter(
+    (id) => id != friendId
+  );
+  await user.save();
+  friend.friends.push(userId);
+  friend.receivedFriendRequests = friend.receivedFriendRequests.filter(
+    (id) => id != userId
+  );
+  await friend.save();
+
+  return user;
+}
 
 module.exports = {
   register,
@@ -110,5 +138,7 @@ module.exports = {
   logout,
   parseToken,
   getUser,
+  acceptFriendRequest,
+  sendFriendRequest,
   editProfile,
 };

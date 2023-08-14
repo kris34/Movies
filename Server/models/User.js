@@ -16,7 +16,8 @@ const userSchema = new Schema({
   },
   myMovies: { type: [Types.ObjectId], ref: 'Movie', default: [] },
   myWatchlist: { type: [Types.ObjectId], ref: 'Movie', default: [] },
-  friendRequests: { type: [Types.ObjectId], ref: 'User', default: [] },
+  receivedFriendRequests: { type: [Types.ObjectId], ref: 'User', default: [] },
+  sentFriendRequests: { type: [Types.ObjectId], ref: 'User', default: [] },
   friends: { type: [Types.ObjectId], ref: 'User', dafault: [] },
 });
 
