@@ -7,6 +7,7 @@ const {
   parseToken,
   editProfile,
   getUser,
+  sendFriendRequest,
 } = require('../services/userService');
 
 authController.post(
@@ -81,4 +82,14 @@ authController.get('/profile', async (req, res) => {
   }
 });
 
+authController.post('/:id/request-friend', async (req, res) => {
+  try {
+    const request = await sendFriendRequest(req.user._id, req.params.id);
+
+    res.status(200).json(request);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+ 
 module.exports = authController;
