@@ -9,6 +9,7 @@ const {
   getUser,
   sendFriendRequest,
   acceptFriendRequest,
+  removeFriend,
 } = require('../services/userService');
 
 authController.post(
@@ -103,10 +104,13 @@ authController.post('/:id/accept-friend', async (req, res) => {
   }
 });
 
-authController.post('/:id/remove-friend', async (req,res) => { 
-  
-})
+authController.post('/:id/remove-friend', async (req, res) => {
+  try {
+    const removed = await removeFriend(req.user._id, req.params.id);
+    res.status(200).json(removed);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
 
-
- 
 module.exports = authController;
