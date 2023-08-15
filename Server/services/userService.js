@@ -132,6 +132,18 @@ async function acceptFriendRequest(userId, friendId) {
   return user;
 }
 
+async function removeFriend(userId, friendId) {
+  const user = await getUser(userId);
+  const friend = await getUser(friendId);
+
+  user.friends = user.friends.filter((id) => id != friendId);
+  await user.save();
+  friend.friends = friend.friends.filter((id) => id != userId);
+  await friend.save();
+
+  return user;
+}
+
 module.exports = {
   register,
   login,
@@ -141,4 +153,5 @@ module.exports = {
   acceptFriendRequest,
   sendFriendRequest,
   editProfile,
+  removeFriend,
 };

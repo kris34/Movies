@@ -103,6 +103,10 @@ authController.post('/:id/accept-friend', async (req, res) => {
   }
 });
 
+authController.post('/:id/remove-friend', async (req,res) => { 
+  
+})
+
 
  
 module.exports = authController;
