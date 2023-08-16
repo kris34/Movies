@@ -28,7 +28,12 @@ const siteController = require('express').Router();
 
 siteController.post('/movie/create', async (req, res) => {
   try {
-    const data = Object.assign({ _ownerId: req.user._id }, req.body);
+    const user = await getUser(req.user._id);
+    const data = Object.assign(
+      { _ownerId: req.user._id },
+      { addedBy: user.username },
+      req.body
+    );
     const movie = await createMovie(data);
     await addMyMovie(req.user._id, movie._id);
     res.status(200).json(movie);

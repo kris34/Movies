@@ -3,6 +3,7 @@ const { model, Schema, Types } = require('mongoose');
 const IMAGE_REGEX = /^https?:\/\/.+$/i;
 
 const movieSchema = new Schema({
+  addedBy: { type: String, required: true },
   title: {
     type: String,
     required: true,
@@ -37,7 +38,6 @@ const movieSchema = new Schema({
     required: true,
     minLength: [10, 'Description should be at least 10 charakters long!'],
   },
-
   likes: { type: [Types.ObjectId], ref: 'User', default: [] },
   dislikes: { type: [Types.ObjectId], ref: 'User', default: [] },
   bookmarkedUsers: { type: [Types.ObjectId], ref: 'User', default: [] },

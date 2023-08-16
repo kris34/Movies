@@ -1,6 +1,7 @@
 import { IUser } from './user';
 
 export interface IMovie {
+  addedBy: string;
   title: string;
   genre: string;
   _id: string;
