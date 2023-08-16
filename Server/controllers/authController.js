@@ -26,12 +26,15 @@ authController.post(
       if (errors.length > 0) {
         throw errors;
       }
-
+      console.log(req.body);
       const token = await register(
         req.body.username,
         req.body.email,
-        req.body.password
+        req.body.password,
+        req.body.profilePic
       );
+
+      console.log(token);
 
       /*  res.cookie(`token`, token, {
         httpOnly: true,

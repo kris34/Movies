@@ -6,7 +6,7 @@ const JWT_SECRET = 'p-2-309r8wioeaf';
 const tokenBlacklist = new Set();
 
 //register
-async function register(username, email, password) {
+async function register(username, email, password, profilePic) {
   const existing = await User.findOne({ email }).collation({
     locale: 'en',
     strength: 2,
@@ -30,6 +30,7 @@ async function register(username, email, password) {
     email,
     username,
     hashedPassword: await bcrypt.hash(password, 10),
+    profilePic,
   });
 
   //return the user using createToken function

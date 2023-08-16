@@ -1,4 +1,5 @@
 const { model, Types, Schema } = require('mongoose');
+const IMAGE_REGEX = /^https?:\/\/.+$/i;
 
 const userSchema = new Schema({
   username: {
@@ -13,6 +14,16 @@ const userSchema = new Schema({
     type: String,
     required: true,
     minLength: [5, 'Password has to be at least 5 charakters long!'],
+  },
+  profilePic: {
+    type: String,
+    required: true,
+    validate: {
+      validator: (value) => {
+        IMAGE_REGEX.test(value);
+      },
+      message: 'Invalid Image URl!',
+    },
   },
   myMovies: { type: [Types.ObjectId], ref: 'Movie', default: [] },
   myWatchlist: { type: [Types.ObjectId], ref: 'Movie', default: [] },
