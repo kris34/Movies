@@ -18,7 +18,7 @@
             Please enter a valid username!
           </mat-error>
           <mat-error *ngIf="form.get('username')?.errors?.['minlength']">
-            Username has to be at least 5 charakters long!
+            Username has to be at least 3 charakters long!
           </mat-error>
         </mat-form-field>
 
@@ -33,6 +33,15 @@
           <mat-error *ngIf="form.get('email')?.errors?.['appEmailValidator']">
             Invalid Email!
           </mat-error>
+        </mat-form-field>
+
+        <mat-form-field  class="form-field">
+          <mat-label>Profile picture</mat-label>
+          <input type="text" matInput formControlName="profilePic" />
+
+          <!-- <mat-error *ngIf="form.get('imageUrl')?.errors?.['required']">
+            Profile picture required!
+          </mat-error> -->
         </mat-form-field>
 
         <!-- password -->

@@ -13,7 +13,7 @@ import { repassValidator } from 'src/app/shared/validators/repass-validator';
 export class RegisterComponent {
   pattern = '^[a-z0-9A-Z.-]{3,}@[a-z]+.[a-z]+$';
 
-  error: string = ""
+  error: string = '';
 
   passwordControl = new FormControl('', [
     Validators.required,
@@ -21,8 +21,9 @@ export class RegisterComponent {
   ]);
 
   form = this.fb.group({
-    username: ['', [Validators.minLength(5), Validators.required]],
+    username: ['', [Validators.minLength(3), Validators.required]],
     email: ['', [Validators.required, appEmailValidator()]],
+    profilePic: ['', []],
     password: this.passwordControl,
     repass: new FormControl('', [repassValidator(this.passwordControl)]),
   });
@@ -38,8 +39,8 @@ export class RegisterComponent {
       return;
     }
 
-    const { username, email, password } = this.form.value;
-    const user = { username, email, password };
+    const { username, email, profilePic, password } = this.form.value;
+    const user = { username,profilePic, email, password };
 
     this.auth.register(user).subscribe({
       next: () => {
