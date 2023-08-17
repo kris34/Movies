@@ -17,7 +17,6 @@ const userSchema = new Schema({
   },
   profilePic: {
     type: String,
-    required: true,
     validate: {
       validator: (value) => {
         IMAGE_REGEX.test(value);

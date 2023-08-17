@@ -1,6 +1,13 @@
 <div class="container">
+  <img
+    class="profile-pic"
+    src="{{ this.user?.profilePic }}"
+    alt="profile picture"
+  />
+
   <div class="user-info">
     <h2 class="title">User Info:</h2>
+    <!--  <div><img src="{{this.user?.profilePic}}" alt=""></div> -->
     <div class="stats">
       <p>Username: {{ this.user?.username }}</p>
       <p id="added-count">Added movies: {{ this.user?.myMovies?.length }}</p>
@@ -33,7 +40,7 @@
       <p class="m-added">Most recently added</p>
       <div class="small-movies">
         <div class="small-movie" *ngFor="let movie of watchlist">
-          <img src="{{ movie.imageUrl }}" alt="" />
+          <img src="{{ movie.imageUrl }}" alt="picture of a movie" />
           <a class="movie-title" routerLink="/movie/{{ movie._id }}">{{
             movie.title
           }}</a>
