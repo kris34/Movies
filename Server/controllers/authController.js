@@ -114,4 +114,14 @@ authController.post('/:id/remove-friend', async (req, res) => {
   }
 });
 
+authController.get('/:id/profile', async (req, res) => {
+  try {
+    const user = await getUser(req.params.id);
+
+    res.json(user);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
 module.exports = authController;

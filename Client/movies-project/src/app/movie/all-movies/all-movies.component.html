@@ -6,7 +6,8 @@
           <a routerLink="/movie/{{ movie._id }}"> {{ movie.title }}</a>
         </p>
         <img src="{{ movie.imageUrl }}" />
-        <div class="username">Added by: {{ movie.addedBy }}</div>
+        <div class="username">Added by: <a routerLink=""> {{ movie.addedBy }}</a></div>
+         
       </div>
     </div>
   </div>
