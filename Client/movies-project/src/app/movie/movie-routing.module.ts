@@ -8,6 +8,8 @@ import { AuthGuardService } from '../user/auth-guard.service';
 import { MovieGuardService } from './movie-guard.service';
 import { AllMoviesComponent } from './all-movies/all-movies.component';
 import { ProfileComponent } from '../user/profile/profile.component';
+import { OtherProfileComponent } from '../user/other-profile/other-profile.component';
+import { authenticationGuard } from '../shared/guards/guest.guard';
 
 const routes: Routes = [
   {
@@ -35,7 +37,11 @@ const routes: Routes = [
     component: EditComponent,
     canActivate: [MovieGuardService]
   },
-
+  {
+    path: ':id/profile',
+    component: ProfileComponent,
+    canActivate: [MovieGuardService]
+  },
 
 ];
 

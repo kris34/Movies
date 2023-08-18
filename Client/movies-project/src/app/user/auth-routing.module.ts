@@ -21,15 +21,11 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
-    path: 'profile',
+    path: ':id/profile',
     component: ProfileComponent,
     canActivate: [authenticationGuard()],
   },
-  {
-    path: ':id/profile',
-    component: OtherProfileComponent,
-    canActivate: [authenticationGuard()],
-  },
+ 
   {
     path: 'edit-profile',
     component: EditProfileComponent,

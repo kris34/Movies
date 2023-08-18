@@ -5,6 +5,7 @@ import { MovieService } from 'src/app/movie/movie.service';
 import { IMovie } from 'src/app/shared/interfaces/movie';
 import { ApiService } from 'src/app/api.service';
 import { subscribeOn } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -15,18 +16,24 @@ export class ProfileComponent {
   user: IUser | null = null;
   movies: IMovie[] = [];
   watchlist: IMovie[] = [];
+  id: string | null;
 
   constructor(
     private auth: AuthService,
     private api: ApiService,
-    private movieApi: MovieService
+    private movieApi: MovieService,
+    private route: ActivatedRoute
   ) {
-    this.getUser();
+    this.id = this.route.snapshot.paramMap.get('id');
+
+    this.getUser(this.id!);
   }
 
-  getUser() {
-    this.api.loadProfile().subscribe({
+  getUser(id: string) {
+    this.api.getProfile(id).subscribe({
       next: (v) => {
+        console.log(v);
+        
         this.user = v;
         let ids = this.user.myMovies;
         let watchlistIds = this.user.myWatchlist;

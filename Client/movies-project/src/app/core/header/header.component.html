@@ -18,7 +18,7 @@
   </mat-menu>
 
   <ng-template #loggedInTemplate>
-    <a mat-menu-item routerLink="/auth/profile">Your profile</a>
+    <a mat-menu-item routerLink="/auth/{{this.user?._id}}/profile">Your profile</a>
     <a mat-menu-item routerLink="/auth/list">Added Movies</a>
     <a mat-menu-item routerLink="/auth/watchlist">Your Watchlist</a>
     <a mat-menu-item routerLink="/movie/create">Add Movie</a>

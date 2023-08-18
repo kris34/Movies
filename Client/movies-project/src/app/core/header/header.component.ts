@@ -25,4 +25,6 @@ export class HeaderComponent {
   goToPage(location: string){ 
     this.router.navigate([`${location}`])
   }
+
+  
 }
