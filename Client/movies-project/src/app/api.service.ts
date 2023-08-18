@@ -30,6 +30,12 @@ export class ApiService {
     });
   }
 
+  getProfile(id: string) {
+    return this.http.get<IUser>(`${apiUrl}/${id}/profile`, {
+      headers: { 'x-authorization': getSession().accessToken },
+    });
+  }
+
   loadUserWatchlist() {
     return this.http.get<any>(`${apiUrl}/watchlist`, {
       headers: { 'x-authorization': getSession().accessToken },

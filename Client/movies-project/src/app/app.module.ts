@@ -14,10 +14,11 @@ import { MovieModule } from './movie/movie.module';
 import { MovieRoutingModule } from './movie/movie-routing.module';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { OtherProfileComponent } from './user/other-profile/other-profile.component';
 //import { httpInterceptorProviders } from './app.interceptor';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, OtherProfileComponent],
   imports: [
     BrowserModule,
     AuthModule,

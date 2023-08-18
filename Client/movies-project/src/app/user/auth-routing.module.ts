@@ -7,39 +7,44 @@ import { AuthGuardService } from './auth-guard.service';
 import { WatchlistComponent } from './watchlist/watchlist.component';
 import { ListComponent } from './list/list.component';
 import { authenticationGuard } from '../shared/guards/guest.guard';
+import { OtherProfileComponent } from './other-profile/other-profile.component';
 
 const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
-    canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService],
   },
   {
     path: 'login',
     component: LoginComponent,
-    canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService],
   },
   {
     path: 'profile',
     component: ProfileComponent,
-    canActivate: [authenticationGuard()]
+    canActivate: [authenticationGuard()],
   },
   {
-    path: "edit-profile",
+    path: ':id/profile',
+    component: OtherProfileComponent,
+    canActivate: [authenticationGuard()],
+  },
+  {
+    path: 'edit-profile',
     component: EditProfileComponent,
-    canActivate: [authenticationGuard()]
-
+    canActivate: [authenticationGuard()],
   },
   {
-    path: "watchlist",
+    path: 'watchlist',
     component: WatchlistComponent,
-    canActivate: [authenticationGuard()]
+    canActivate: [authenticationGuard()],
   },
   {
-    path: "list",
+    path: 'list',
     component: ListComponent,
-    canActivate: [authenticationGuard()]
-  }
+    canActivate: [authenticationGuard()],
+  },
 ];
 
 export const AuthRoutingModule = RouterModule.forChild(routes);

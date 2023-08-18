@@ -1,0 +1,106 @@
+.container {
+    width: 990px;
+    height: 500px;
+    /*  border-style: dotted; */
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
+  }
+  
+  .profile-pic {
+    height: 150px;
+    width: 130px;
+    position: absolute;
+    margin-left: 1.6%;
+    top: 10px
+  }
+  
+  .user-info {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: 10px;
+    left: 15.4%;
+    /*  border-style: dotted; */
+  }
+  
+  .title {
+    color: black;
+    margin-top: 5px;
+    margin-left: 5%;
+  }
+  
+  .stats {
+    color: black;
+    margin-bottom: 3px;
+    font-size: 20px;
+    margin-left: 5%;
+    position: relative;
+  }
+  
+  #added-count {
+    margin-top: -10px;
+  }
+  
+  #bookmarked-count {
+    margin-top: -10px;
+  }
+  
+  .added-movies {
+    height: 300px;
+    width: 470px;
+    position: relative;
+    margin-left: 1.6%;
+    position: center;
+  
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+  }
+  
+  .your-movies-title {
+    position: relative;
+    left: 5px;
+    bottom: 15px;
+  }
+  
+  .m-added {
+    position: relative;
+    left: 5px;
+    bottom: 16px;
+    margin-top: -10px;
+  }
+  
+  .small-movie {
+    height: 180px;
+    width: 150px;
+    position: relative;
+    bottom: 15px;
+    margin-right: 5px;
+    left: 5px;
+  }
+  
+  img {
+    height: 180px;
+    width: 150px;
+  }
+  
+  .small-movies {
+    display: flex;
+  }
+  
+  .movie-title {
+    position: relative;
+    bottom: 2%;
+  }
+  
+  .containers {
+    display: flex;
+    bottom: 25%;
+    position: relative;
+  }
+  
