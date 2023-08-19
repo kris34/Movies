@@ -37,11 +37,6 @@ const routes: Routes = [
     component: EditComponent,
     canActivate: [MovieGuardService]
   },
-  {
-    path: ':id/profile',
-    component: ProfileComponent,
-    canActivate: [MovieGuardService]
-  },
 
 ];
 
