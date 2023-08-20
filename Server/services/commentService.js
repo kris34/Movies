@@ -34,9 +34,14 @@ async function getMovieComments(movieId) {
   return movieComments;
 }
 
+async function deleteComment(commendId) {
+  return await Comment.findByIdAndDelete(commendId);
+}
+
 module.exports = {
   postComment,
   getAllComments,
   getUserComments,
   getMovieComments,
+  deleteComment 
 };

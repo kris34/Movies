@@ -5,6 +5,7 @@ const {
   getMovieComments,
   getUserComments,
   getAllComments,
+  deleteComment,
 } = require('../services/commentService');
 
 const {
@@ -246,6 +247,13 @@ siteController.get('/user/comments', hasUser(), async (req, res) => {
   }
 });
 
-
+siteController.delete('/:id/comment/delete', hasUser(), async (req, res) => {
+  try {
+    const deleted = await deleteComment(req.params.id);
+    res.status(200).json(deleted);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
 
 module.exports = siteController;
